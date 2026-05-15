@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Quiet Achiever — Tim Yeo",
+  title: "Tim Yeo — Introvert Coach · Homepage Revamp",
   description:
-    "Tiny habits for quiet achievers to have impact at work without pretending to be extroverts.",
+    "I help quiet achievers have impact at work — without pretending to be an extrovert. Coaching, a book, a school, and practical tiny habits.",
 };
 
 export default function RootLayout({

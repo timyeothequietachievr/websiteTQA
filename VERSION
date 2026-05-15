@@ -1,15 +1,18 @@
-v1 — 2026-05-15
+v2 — 2026-05-15
 
-First complete Quiet Achiever marketing homepage in Next.js:
+Claude Design homepage revamp ported to Next.js:
 
-- Brand tokens, fonts, and assets from the Quiet Achiever design system
-- Homepage sections ported from the Claude Design UI kit (nav → footer)
-- Reference materials under `design/` (system + Tailwind marketing components)
+- Full revamp layout from homepage.html (portrait-split hero, segmenter, thesis,
+  coaching, Toni, book, school, playbooks, newsletter, footer, Toni bubble)
+- Tim masthead photography in public/assets/
+- Components under src/components/revamp/
 
-Git tag: `v1`
+Git tag: `v2`
 
 Revert to this point:
-  git checkout v1
+  git checkout v2
 
 Branch from here:
-  git checkout -b my-branch v1
+  git checkout -b my-branch v2
+
+Previous release: v1 (UI kit homepage sections)
