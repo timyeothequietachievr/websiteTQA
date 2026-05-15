@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design backups (original zips remain in ~/Downloads)
+/design/_source-archives/

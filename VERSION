@@ -1,0 +1,15 @@
+v1 — 2026-05-15
+
+First complete Quiet Achiever marketing homepage in Next.js:
+
+- Brand tokens, fonts, and assets from the Quiet Achiever design system
+- Homepage sections ported from the Claude Design UI kit (nav → footer)
+- Reference materials under `design/` (system + Tailwind marketing components)
+
+Git tag: `v1`
+
+Revert to this point:
+  git checkout v1
+
+Branch from here:
+  git checkout -b my-branch v1
