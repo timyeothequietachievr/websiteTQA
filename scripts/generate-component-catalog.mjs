@@ -4,6 +4,18 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
+const base = "https://websitetqa.thequietachievr.com";
+const previewBase = `${base}/component-previews`;
+
+function previewImageUrl(code) {
+  const previewPage = `${base}/preview/${code}`;
+  const localPng = path.join(ROOT, "public/component-previews", `${code}.png`);
+  if (fs.existsSync(localPng)) {
+    return `${previewBase}/${code}.png`;
+  }
+  // Live thumbnail via public preview route (works in Notion gallery before PNG capture)
+  return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(previewPage)}?w=900`;
+}
 
 const revampCatalog = [
   { code: "c1", slug: "navigation", title: "Navigation", source: "revamp" },
@@ -43,12 +55,25 @@ const idMatches = [
 ];
 
 const revampCount = revampCatalog.length;
-const tailwind = idMatches.map((match, index) => ({
-  code: `c${revampCount + index + 1}`,
-  slug: match[1],
-  title: match[3].replace(/-/g, " "),
-  source: "tailwind",
-  category: match[2],
+const tailwind = idMatches.map((match, index) => {
+  const code = `c${revampCount + index + 1}`;
+  return {
+    code,
+    slug: match[1],
+    title: match[3].replace(/-/g, " "),
+    source: "tailwind",
+    category: match[2],
+    previewImage: previewImageUrl(code),
+    previewPage: `${base}/preview/${code}`,
+    visualLibrary: `${base}/visual-library#${match[1]}`,
+  };
+});
+
+const revampWithUrls = revampCatalog.map((item) => ({
+  ...item,
+  previewImage: previewImageUrl(item.code),
+  previewPage: `${base}/preview/${item.code}`,
+  visualLibrary: `${base}/visual-library#${item.slug}`,
 }));
 
 const catalog = {
@@ -59,7 +84,7 @@ const catalog = {
       ? `${tailwind[0].code}–${tailwind[tailwind.length - 1].code}`
       : null,
   total: revampCount + tailwind.length,
-  components: [...revampCatalog, ...tailwind],
+  components: [...revampWithUrls, ...tailwind],
   revampAlternates: revampAlt,
 };
 

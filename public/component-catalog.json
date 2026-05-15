@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T09:37:03.831Z",
+  "generatedAt": "2026-05-15T13:05:18.691Z",
   "revampRange": "c1–c17",
   "tailwindRange": "c18–c196",
   "total": 196,
@@ -8,1356 +8,1944 @@
       "code": "c1",
       "slug": "navigation",
       "title": "Navigation",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc1?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c1",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#navigation"
     },
     {
       "code": "c2",
       "slug": "hero-portrait-split",
       "title": "Hero — portrait split",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc2?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c2",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#hero-portrait-split"
     },
     {
       "code": "c3",
       "slug": "segmenter",
       "title": "Segmenter",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc3?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c3",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#segmenter"
     },
     {
       "code": "c4",
       "slug": "thesis-band",
       "title": "Thesis band",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc4?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c4",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#thesis-band"
     },
     {
       "code": "c5",
       "slug": "social-proof-strip",
       "title": "Social proof strip",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc5?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c5",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#social-proof-strip"
     },
     {
       "code": "c6",
       "slug": "sound-familiar",
       "title": "Sound familiar",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc6?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c6",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sound-familiar"
     },
     {
       "code": "c7",
       "slug": "coaching-summary",
       "title": "Coaching summary",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc7?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c7",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#coaching-summary"
     },
     {
       "code": "c8",
       "slug": "toni-block",
       "title": "Toni block",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc8?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c8",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#toni-block"
     },
     {
       "code": "c9",
       "slug": "book-block",
       "title": "Book block",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc9?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c9",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#book-block"
     },
     {
       "code": "c10",
       "slug": "latest-writing",
       "title": "Latest writing",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc10?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c10",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#latest-writing"
     },
     {
       "code": "c11",
       "slug": "start-here",
       "title": "Start here",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc11?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c11",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#start-here"
     },
     {
       "code": "c12",
       "slug": "school-block",
       "title": "School block",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc12?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c12",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#school-block"
     },
     {
       "code": "c13",
       "slug": "playbooks-band",
       "title": "Playbooks band",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc13?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c13",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#playbooks-band"
     },
     {
       "code": "c14",
       "slug": "newsletter-band",
       "title": "Newsletter band",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc14?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c14",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#newsletter-band"
     },
     {
       "code": "c15",
       "slug": "elsewhere-strip",
       "title": "Elsewhere strip",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc15?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c15",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elsewhere-strip"
     },
     {
       "code": "c16",
       "slug": "footer-rev",
       "title": "Footer",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc16?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c16",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#footer-rev"
     },
     {
       "code": "c17",
       "slug": "toni-bubble",
       "title": "Toni bubble (floating)",
-      "source": "revamp"
+      "source": "revamp",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc17?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c17",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#toni-bubble"
     },
     {
       "code": "c18",
       "slug": "elements-banners-01-with-button",
       "title": "01 with button",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc18?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c18",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-01-with-button"
     },
     {
       "code": "c19",
       "slug": "elements-banners-02-on-dark",
       "title": "02 on dark",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc19?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c19",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-02-on-dark"
     },
     {
       "code": "c20",
       "slug": "elements-banners-03-on-brand",
       "title": "03 on brand",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc20?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c20",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-03-on-brand"
     },
     {
       "code": "c21",
       "slug": "elements-banners-04-with-background-glow",
       "title": "04 with background glow",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc21?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c21",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-04-with-background-glow"
     },
     {
       "code": "c22",
       "slug": "elements-banners-05-with-link",
       "title": "05 with link",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc22?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c22",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-05-with-link"
     },
     {
       "code": "c23",
       "slug": "elements-banners-06-left-aligned",
       "title": "06 left aligned",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc23?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c23",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-06-left-aligned"
     },
     {
       "code": "c24",
       "slug": "elements-banners-07-bottom-aligned",
       "title": "07 bottom aligned",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc24?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c24",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-07-bottom-aligned"
     },
     {
       "code": "c25",
       "slug": "elements-banners-08-floating-at-bottom",
       "title": "08 floating at bottom",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc25?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c25",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-08-floating-at-bottom"
     },
     {
       "code": "c26",
       "slug": "elements-banners-09-floating-at-bottom-centered",
       "title": "09 floating at bottom centered",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc26?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c26",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-09-floating-at-bottom-centered"
     },
     {
       "code": "c27",
       "slug": "elements-banners-10-privacy-notice-right-aligned",
       "title": "10 privacy notice right aligned",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc27?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c27",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-10-privacy-notice-right-aligned"
     },
     {
       "code": "c28",
       "slug": "elements-banners-11-privacy-notice-centered",
       "title": "11 privacy notice centered",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc28?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c28",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-11-privacy-notice-centered"
     },
     {
       "code": "c29",
       "slug": "elements-banners-12-privacy-notice-left-aligned",
       "title": "12 privacy notice left aligned",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc29?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c29",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-12-privacy-notice-left-aligned"
     },
     {
       "code": "c30",
       "slug": "elements-banners-13-privacy-notice-full-width",
       "title": "13 privacy notice full width",
       "source": "tailwind",
-      "category": "elements / banners"
+      "category": "elements / banners",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc30?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c30",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-banners-13-privacy-notice-full-width"
     },
     {
       "code": "c31",
       "slug": "elements-flyout-menus-01-stacked-with-footer-actions",
       "title": "01 stacked with footer actions",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc31?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c31",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-01-stacked-with-footer-actions"
     },
     {
       "code": "c32",
       "slug": "elements-flyout-menus-02-full-width-two-columns",
       "title": "02 full width two columns",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc32?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c32",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-02-full-width-two-columns"
     },
     {
       "code": "c33",
       "slug": "elements-flyout-menus-03-stacked-with-footer-list",
       "title": "03 stacked with footer list",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc33?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c33",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-03-stacked-with-footer-list"
     },
     {
       "code": "c34",
       "slug": "elements-flyout-menus-04-full-width",
       "title": "04 full width",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc34?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c34",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-04-full-width"
     },
     {
       "code": "c35",
       "slug": "elements-flyout-menus-05-simple-with-descriptions",
       "title": "05 simple with descriptions",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc35?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c35",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-05-simple-with-descriptions"
     },
     {
       "code": "c36",
       "slug": "elements-flyout-menus-06-two-column",
       "title": "06 two column",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc36?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c36",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-06-two-column"
     },
     {
       "code": "c37",
       "slug": "elements-flyout-menus-07-simple",
       "title": "07 simple",
       "source": "tailwind",
-      "category": "elements / flyout-menus"
+      "category": "elements / flyout-menus",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc37?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c37",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-flyout-menus-07-simple"
     },
     {
       "code": "c38",
       "slug": "elements-headers-01-with-stacked-flyout-menu",
       "title": "01 with stacked flyout menu",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc38?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c38",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-01-with-stacked-flyout-menu"
     },
     {
       "code": "c39",
       "slug": "elements-headers-02-constrained",
       "title": "02 constrained",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc39?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c39",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-02-constrained"
     },
     {
       "code": "c40",
       "slug": "elements-headers-04-on-brand-background",
       "title": "04 on brand background",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc40?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c40",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-04-on-brand-background"
     },
     {
       "code": "c41",
       "slug": "elements-headers-05-with-full-width-flyout-menu",
       "title": "05 with full width flyout menu",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc41?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c41",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-05-with-full-width-flyout-menu"
     },
     {
       "code": "c42",
       "slug": "elements-headers-06-full-width",
       "title": "06 full width",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc42?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c42",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-06-full-width"
     },
     {
       "code": "c43",
       "slug": "elements-headers-07-with-call-to-action",
       "title": "07 with call to action",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc43?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c43",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-07-with-call-to-action"
     },
     {
       "code": "c44",
       "slug": "elements-headers-08-with-multiple-flyout-menus",
       "title": "08 with multiple flyout menus",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc44?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c44",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-08-with-multiple-flyout-menus"
     },
     {
       "code": "c45",
       "slug": "elements-headers-09-with-icons-in-mobile-menu",
       "title": "09 with icons in mobile menu",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc45?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c45",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-09-with-icons-in-mobile-menu"
     },
     {
       "code": "c46",
       "slug": "elements-headers-10-with-left-aligned-nav",
       "title": "10 with left aligned nav",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc46?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c46",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-10-with-left-aligned-nav"
     },
     {
       "code": "c47",
       "slug": "elements-headers-11-with-right-aligned-nav",
       "title": "11 with right aligned nav",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc47?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c47",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-11-with-right-aligned-nav"
     },
     {
       "code": "c48",
       "slug": "elements-headers-12-with-centered-logo",
       "title": "12 with centered logo",
       "source": "tailwind",
-      "category": "elements / headers"
+      "category": "elements / headers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc48?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c48",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#elements-headers-12-with-centered-logo"
     },
     {
       "code": "c49",
       "slug": "feedback-404-pages-01-simple",
       "title": "01 simple",
       "source": "tailwind",
-      "category": "feedback / 404-pages"
+      "category": "feedback / 404-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc49?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c49",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#feedback-404-pages-01-simple"
     },
     {
       "code": "c50",
       "slug": "feedback-404-pages-02-split-with-image",
       "title": "02 split with image",
       "source": "tailwind",
-      "category": "feedback / 404-pages"
+      "category": "feedback / 404-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc50?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c50",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#feedback-404-pages-02-split-with-image"
     },
     {
       "code": "c51",
       "slug": "feedback-404-pages-03-with-popular-pages",
       "title": "03 with popular pages",
       "source": "tailwind",
-      "category": "feedback / 404-pages"
+      "category": "feedback / 404-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc51?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c51",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#feedback-404-pages-03-with-popular-pages"
     },
     {
       "code": "c52",
       "slug": "feedback-404-pages-05-with-background-image",
       "title": "05 with background image",
       "source": "tailwind",
-      "category": "feedback / 404-pages"
+      "category": "feedback / 404-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc52?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c52",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#feedback-404-pages-05-with-background-image"
     },
     {
       "code": "c53",
       "slug": "feedback-404-pages-06-with-navbar-and-footer",
       "title": "06 with navbar and footer",
       "source": "tailwind",
-      "category": "feedback / 404-pages"
+      "category": "feedback / 404-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc53?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c53",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#feedback-404-pages-06-with-navbar-and-footer"
     },
     {
       "code": "c54",
       "slug": "page-examples-about-pages-01-with-image-tiles",
       "title": "01 with image tiles",
       "source": "tailwind",
-      "category": "page-examples / about-pages"
+      "category": "page-examples / about-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc54?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c54",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-about-pages-01-with-image-tiles"
     },
     {
       "code": "c55",
       "slug": "page-examples-about-pages-02-with-timeline-and-stats",
       "title": "02 with timeline and stats",
       "source": "tailwind",
-      "category": "page-examples / about-pages"
+      "category": "page-examples / about-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc55?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c55",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-about-pages-02-with-timeline-and-stats"
     },
     {
       "code": "c56",
       "slug": "page-examples-about-pages-03-with-two-column-description",
       "title": "03 with two column description",
       "source": "tailwind",
-      "category": "page-examples / about-pages"
+      "category": "page-examples / about-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc56?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c56",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-about-pages-03-with-two-column-description"
     },
     {
       "code": "c57",
       "slug": "page-examples-landing-pages-01-with-screenshots-and-stats",
       "title": "01 with screenshots and stats",
       "source": "tailwind",
-      "category": "page-examples / landing-pages"
+      "category": "page-examples / landing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc57?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c57",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-landing-pages-01-with-screenshots-and-stats"
     },
     {
       "code": "c58",
       "slug": "page-examples-landing-pages-02-with-large-screenshot-and-testimonial",
       "title": "02 with large screenshot and testimonial",
       "source": "tailwind",
-      "category": "page-examples / landing-pages"
+      "category": "page-examples / landing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc58?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c58",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-landing-pages-02-with-large-screenshot-and-testimonial"
     },
     {
       "code": "c59",
       "slug": "page-examples-landing-pages-03-with-background-image-hero-and-pricing-section",
       "title": "03 with background image hero and pricing section",
       "source": "tailwind",
-      "category": "page-examples / landing-pages"
+      "category": "page-examples / landing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc59?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c59",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-landing-pages-03-with-background-image-hero-and-pricing-section"
     },
     {
       "code": "c60",
       "slug": "page-examples-landing-pages-04-with-mobile-screenshot-and-testimonials-grid",
       "title": "04 with mobile screenshot and testimonials grid",
       "source": "tailwind",
-      "category": "page-examples / landing-pages"
+      "category": "page-examples / landing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc60?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c60",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-landing-pages-04-with-mobile-screenshot-and-testimonials-grid"
     },
     {
       "code": "c61",
       "slug": "page-examples-pricing-pages-01-with-four-tiers",
       "title": "01 with four tiers",
       "source": "tailwind",
-      "category": "page-examples / pricing-pages"
+      "category": "page-examples / pricing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc61?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c61",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-pricing-pages-01-with-four-tiers"
     },
     {
       "code": "c62",
       "slug": "page-examples-pricing-pages-02-with-comparison-table",
       "title": "02 with comparison table",
       "source": "tailwind",
-      "category": "page-examples / pricing-pages"
+      "category": "page-examples / pricing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc62?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c62",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-pricing-pages-02-with-comparison-table"
     },
     {
       "code": "c63",
       "slug": "page-examples-pricing-pages-03-with-three-tiers-and-testimonials",
       "title": "03 with three tiers and testimonials",
       "source": "tailwind",
-      "category": "page-examples / pricing-pages"
+      "category": "page-examples / pricing-pages",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc63?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c63",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#page-examples-pricing-pages-03-with-three-tiers-and-testimonials"
     },
     {
       "code": "c64",
       "slug": "sections-bento-grids-01-three-column-bento-grid",
       "title": "01 three column bento grid",
       "source": "tailwind",
-      "category": "sections / bento-grids"
+      "category": "sections / bento-grids",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc64?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c64",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-bento-grids-01-three-column-bento-grid"
     },
     {
       "code": "c65",
       "slug": "sections-bento-grids-02-two-row-bento-grid",
       "title": "02 two row bento grid",
       "source": "tailwind",
-      "category": "sections / bento-grids"
+      "category": "sections / bento-grids",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc65?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c65",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-bento-grids-02-two-row-bento-grid"
     },
     {
       "code": "c66",
       "slug": "sections-bento-grids-03-two-row-bento-grid-with-three-column-second-row",
       "title": "03 two row bento grid with three column second row",
       "source": "tailwind",
-      "category": "sections / bento-grids"
+      "category": "sections / bento-grids",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc66?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c66",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-bento-grids-03-two-row-bento-grid-with-three-column-second-row"
     },
     {
       "code": "c67",
       "slug": "sections-blog-sections-01-three-column",
       "title": "01 three column",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc67?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c67",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-01-three-column"
     },
     {
       "code": "c68",
       "slug": "sections-blog-sections-02-three-column-with-images",
       "title": "02 three column with images",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc68?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c68",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-02-three-column-with-images"
     },
     {
       "code": "c69",
       "slug": "sections-blog-sections-03-three-column-with-background-images",
       "title": "03 three column with background images",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc69?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c69",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-03-three-column-with-background-images"
     },
     {
       "code": "c70",
       "slug": "sections-blog-sections-04-single-column",
       "title": "04 single column",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc70?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c70",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-04-single-column"
     },
     {
       "code": "c71",
       "slug": "sections-blog-sections-05-single-column-with-images",
       "title": "05 single column with images",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc71?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c71",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-05-single-column-with-images"
     },
     {
       "code": "c72",
       "slug": "sections-blog-sections-06-with-featured-post",
       "title": "06 with featured post",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc72?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c72",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-06-with-featured-post"
     },
     {
       "code": "c73",
       "slug": "sections-blog-sections-07-with-photo-and-list",
       "title": "07 with photo and list",
       "source": "tailwind",
-      "category": "sections / blog-sections"
+      "category": "sections / blog-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc73?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c73",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-blog-sections-07-with-photo-and-list"
     },
     {
       "code": "c74",
       "slug": "sections-contact-sections-01-centered",
       "title": "01 centered",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc74?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c74",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-01-centered"
     },
     {
       "code": "c75",
       "slug": "sections-contact-sections-02-side-by-side-grid",
       "title": "02 side by side grid",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc75?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c75",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-02-side-by-side-grid"
     },
     {
       "code": "c76",
       "slug": "sections-contact-sections-03-split-with-pattern",
       "title": "03 split with pattern",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc76?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c76",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-03-split-with-pattern"
     },
     {
       "code": "c77",
       "slug": "sections-contact-sections-05-simple-four-column",
       "title": "05 simple four column",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc77?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c77",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-05-simple-four-column"
     },
     {
       "code": "c78",
       "slug": "sections-contact-sections-06-simple-centered",
       "title": "06 simple centered",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc78?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c78",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-06-simple-centered"
     },
     {
       "code": "c79",
       "slug": "sections-contact-sections-07-with-testimonial",
       "title": "07 with testimonial",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc79?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c79",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-07-with-testimonial"
     },
     {
       "code": "c80",
       "slug": "sections-contact-sections-08-split-with-image",
       "title": "08 split with image",
       "source": "tailwind",
-      "category": "sections / contact-sections"
+      "category": "sections / contact-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc80?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c80",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-contact-sections-08-split-with-image"
     },
     {
       "code": "c81",
       "slug": "sections-content-sections-01-with-sticky-product-screenshot",
       "title": "01 with sticky product screenshot",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc81?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c81",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-01-with-sticky-product-screenshot"
     },
     {
       "code": "c82",
       "slug": "sections-content-sections-02-with-testimonial",
       "title": "02 with testimonial",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc82?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c82",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-02-with-testimonial"
     },
     {
       "code": "c83",
       "slug": "sections-content-sections-03-with-image-tiles",
       "title": "03 with image tiles",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc83?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c83",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-03-with-image-tiles"
     },
     {
       "code": "c84",
       "slug": "sections-content-sections-04-two-columns-with-screenshot",
       "title": "04 two columns with screenshot",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc84?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c84",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-04-two-columns-with-screenshot"
     },
     {
       "code": "c85",
       "slug": "sections-content-sections-05-with-testimonial-and-stats",
       "title": "05 with testimonial and stats",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc85?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c85",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-05-with-testimonial-and-stats"
     },
     {
       "code": "c86",
       "slug": "sections-content-sections-06-split-with-image",
       "title": "06 split with image",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc86?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c86",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-06-split-with-image"
     },
     {
       "code": "c87",
       "slug": "sections-content-sections-07-centered",
       "title": "07 centered",
       "source": "tailwind",
-      "category": "sections / content-sections"
+      "category": "sections / content-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc87?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c87",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-content-sections-07-centered"
     },
     {
       "code": "c88",
       "slug": "sections-cta-sections-01-dark-panel-with-app-screenshot",
       "title": "01 dark panel with app screenshot",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc88?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c88",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-01-dark-panel-with-app-screenshot"
     },
     {
       "code": "c89",
       "slug": "sections-cta-sections-02-simple-stacked",
       "title": "02 simple stacked",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc89?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c89",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-02-simple-stacked"
     },
     {
       "code": "c90",
       "slug": "sections-cta-sections-03-centered-on-dark-panel",
       "title": "03 centered on dark panel",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc90?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c90",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-03-centered-on-dark-panel"
     },
     {
       "code": "c91",
       "slug": "sections-cta-sections-04-simple-centered",
       "title": "04 simple centered",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc91?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c91",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-04-simple-centered"
     },
     {
       "code": "c92",
       "slug": "sections-cta-sections-05-simple-centered-with-gradient",
       "title": "05 simple centered with gradient",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc92?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c92",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-05-simple-centered-with-gradient"
     },
     {
       "code": "c93",
       "slug": "sections-cta-sections-06-simple-centered-on-brand",
       "title": "06 simple centered on brand",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc93?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c93",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-06-simple-centered-on-brand"
     },
     {
       "code": "c94",
       "slug": "sections-cta-sections-07-simple-justified",
       "title": "07 simple justified",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc94?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c94",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-07-simple-justified"
     },
     {
       "code": "c95",
       "slug": "sections-cta-sections-08-simple-justified-on-subtle-brand",
       "title": "08 simple justified on subtle brand",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc95?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c95",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-08-simple-justified-on-subtle-brand"
     },
     {
       "code": "c96",
       "slug": "sections-cta-sections-09-split-with-image",
       "title": "09 split with image",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc96?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c96",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-09-split-with-image"
     },
     {
       "code": "c97",
       "slug": "sections-cta-sections-10-two-columns-with-photo",
       "title": "10 two columns with photo",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc97?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c97",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-10-two-columns-with-photo"
     },
     {
       "code": "c98",
       "slug": "sections-cta-sections-11-with-image-tiles",
       "title": "11 with image tiles",
       "source": "tailwind",
-      "category": "sections / cta-sections"
+      "category": "sections / cta-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc98?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c98",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-cta-sections-11-with-image-tiles"
     },
     {
       "code": "c99",
       "slug": "sections-faq-sections-01-offset-with-supporting-text",
       "title": "01 offset with supporting text",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc99?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c99",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-01-offset-with-supporting-text"
     },
     {
       "code": "c100",
       "slug": "sections-faq-sections-02-centered-accordion",
       "title": "02 centered accordion",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc100?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c100",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-02-centered-accordion"
     },
     {
       "code": "c101",
       "slug": "sections-faq-sections-04-side-by-side",
       "title": "04 side by side",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc101?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c101",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-04-side-by-side"
     },
     {
       "code": "c102",
       "slug": "sections-faq-sections-05-three-columns",
       "title": "05 three columns",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc102?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c102",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-05-three-columns"
     },
     {
       "code": "c103",
       "slug": "sections-faq-sections-07-three-columns-with-centered-introduction",
       "title": "07 three columns with centered introduction",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc103?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c103",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-07-three-columns-with-centered-introduction"
     },
     {
       "code": "c104",
       "slug": "sections-faq-sections-08-two-columns",
       "title": "08 two columns",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc104?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c104",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-08-two-columns"
     },
     {
       "code": "c105",
       "slug": "sections-faq-sections-10-two-columns-with-centered-introduction",
       "title": "10 two columns with centered introduction",
       "source": "tailwind",
-      "category": "sections / faq-sections"
+      "category": "sections / faq-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc105?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c105",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-faq-sections-10-two-columns-with-centered-introduction"
     },
     {
       "code": "c106",
       "slug": "sections-feature-sections-01.with-product-screenshot",
       "title": "01.with product screenshot",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc106?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c106",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-01.with-product-screenshot"
     },
     {
       "code": "c107",
       "slug": "sections-feature-sections-03.with-large-screenshot",
       "title": "03.with large screenshot",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc107?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c107",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-03.with-large-screenshot"
     },
     {
       "code": "c108",
       "slug": "sections-feature-sections-05.with-large-bordered-screenshot",
       "title": "05.with large bordered screenshot",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc108?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c108",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-05.with-large-bordered-screenshot"
     },
     {
       "code": "c109",
       "slug": "sections-feature-sections-07.simple-three-column-with-small-icons",
       "title": "07.simple three column with small icons",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc109?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c109",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-07.simple-three-column-with-small-icons"
     },
     {
       "code": "c110",
       "slug": "sections-feature-sections-09.with-product-screenshot-on-left",
       "title": "09.with product screenshot on left",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc110?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c110",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-09.with-product-screenshot-on-left"
     },
     {
       "code": "c111",
       "slug": "sections-feature-sections-10.simple-three-column-with-large-icons",
       "title": "10.simple three column with large icons",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc111?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c111",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-10.simple-three-column-with-large-icons"
     },
     {
       "code": "c112",
       "slug": "sections-feature-sections-12.contained-in-panel",
       "title": "12.contained in panel",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc112?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c112",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-12.contained-in-panel"
     },
     {
       "code": "c113",
       "slug": "sections-feature-sections-13.with-product-screenshot-panel",
       "title": "13.with product screenshot panel",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc113?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c113",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-13.with-product-screenshot-panel"
     },
     {
       "code": "c114",
       "slug": "sections-feature-sections-14.with-testimonial",
       "title": "14.with testimonial",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc114?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c114",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-14.with-testimonial"
     },
     {
       "code": "c115",
       "slug": "sections-feature-sections-15.offset-2x2-grid",
       "title": "15.offset 2x2 grid",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc115?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c115",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-15.offset-2x2-grid"
     },
     {
       "code": "c116",
       "slug": "sections-feature-sections-16.with-code-example-panel",
       "title": "16.with code example panel",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc116?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c116",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-16.with-code-example-panel"
     },
     {
       "code": "c117",
       "slug": "sections-feature-sections-17.offset-with-feature-list",
       "title": "17.offset with feature list",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc117?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c117",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-17.offset-with-feature-list"
     },
     {
       "code": "c118",
       "slug": "sections-feature-sections-18.simple",
       "title": "18.simple",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc118?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c118",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-18.simple"
     },
     {
       "code": "c119",
       "slug": "sections-feature-sections-19.centered-2x2-grid",
       "title": "19.centered 2x2 grid",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc119?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c119",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-19.centered-2x2-grid"
     },
     {
       "code": "c120",
       "slug": "sections-feature-sections-20.simple-3x2-grid",
       "title": "20.simple 3x2 grid",
       "source": "tailwind",
-      "category": "sections / feature-sections"
+      "category": "sections / feature-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc120?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c120",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-feature-sections-20.simple-3x2-grid"
     },
     {
       "code": "c121",
       "slug": "sections-footers-02-4-column-with-company-mission",
       "title": "02 4 column with company mission",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc121?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c121",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-02-4-column-with-company-mission"
     },
     {
       "code": "c122",
       "slug": "sections-footers-04-4-column-with-call-to-action",
       "title": "04 4 column with call to action",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc122?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c122",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-04-4-column-with-call-to-action"
     },
     {
       "code": "c123",
       "slug": "sections-footers-06-4-column-simple",
       "title": "06 4 column simple",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc123?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c123",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-06-4-column-simple"
     },
     {
       "code": "c124",
       "slug": "sections-footers-08-4-column-with-newsletter",
       "title": "08 4 column with newsletter",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc124?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c124",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-08-4-column-with-newsletter"
     },
     {
       "code": "c125",
       "slug": "sections-footers-10-4-column-with-newsletter-below",
       "title": "10 4 column with newsletter below",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc125?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c125",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-10-4-column-with-newsletter-below"
     },
     {
       "code": "c126",
       "slug": "sections-footers-12-simple-centered",
       "title": "12 simple centered",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc126?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c126",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-12-simple-centered"
     },
     {
       "code": "c127",
       "slug": "sections-footers-14-simple-with-social-links",
       "title": "14 simple with social links",
       "source": "tailwind",
-      "category": "sections / footers"
+      "category": "sections / footers",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc127?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c127",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-footers-14-simple-with-social-links"
     },
     {
       "code": "c128",
       "slug": "sections-header-01-with-stats",
       "title": "01 with stats",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc128?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c128",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-01-with-stats"
     },
     {
       "code": "c129",
       "slug": "sections-header-02-centered",
       "title": "02 centered",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc129?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c129",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-02-centered"
     },
     {
       "code": "c130",
       "slug": "sections-header-03-centered-with-eyebrow",
       "title": "03 centered with eyebrow",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc130?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c130",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-03-centered-with-eyebrow"
     },
     {
       "code": "c131",
       "slug": "sections-header-04-with-cards",
       "title": "04 with cards",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc131?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c131",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-04-with-cards"
     },
     {
       "code": "c132",
       "slug": "sections-header-05-simple",
       "title": "05 simple",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc132?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c132",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-05-simple"
     },
     {
       "code": "c133",
       "slug": "sections-header-06-simple-with-eyebrow",
       "title": "06 simple with eyebrow",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc133?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c133",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-06-simple-with-eyebrow"
     },
     {
       "code": "c134",
       "slug": "sections-header-07-simple-with-background-image",
       "title": "07 simple with background image",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc134?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c134",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-07-simple-with-background-image"
     },
     {
       "code": "c135",
       "slug": "sections-header-08-centered-with-background-image",
       "title": "08 centered with background image",
       "source": "tailwind",
-      "category": "sections / header"
+      "category": "sections / header",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc135?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c135",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-header-08-centered-with-background-image"
     },
     {
       "code": "c136",
       "slug": "sections-heroes-01-simple-centered",
       "title": "01 simple centered",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc136?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c136",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-01-simple-centered"
     },
     {
       "code": "c137",
       "slug": "sections-heroes-02-split-with-screenshot",
       "title": "02 split with screenshot",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc137?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c137",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-02-split-with-screenshot"
     },
     {
       "code": "c138",
       "slug": "sections-heroes-03-split-with-bordered-screenshot",
       "title": "03 split with bordered screenshot",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc138?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c138",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-03-split-with-bordered-screenshot"
     },
     {
       "code": "c139",
       "slug": "sections-heroes-04-split-with-code-example",
       "title": "04 split with code example",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc139?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c139",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-04-split-with-code-example"
     },
     {
       "code": "c140",
       "slug": "sections-heroes-05-simple-centered-with-background-image",
       "title": "05 simple centered with background image",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc140?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c140",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-05-simple-centered-with-background-image"
     },
     {
       "code": "c141",
       "slug": "sections-heroes-06-with-bordered-app-screenshot",
       "title": "06 with bordered app screenshot",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc141?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c141",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-06-with-bordered-app-screenshot"
     },
     {
       "code": "c142",
       "slug": "sections-heroes-07-with-app-screenshot",
       "title": "07 with app screenshot",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc142?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c142",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-07-with-app-screenshot"
     },
     {
       "code": "c143",
       "slug": "sections-heroes-08-with-phone-mockup",
       "title": "08 with phone mockup",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc143?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c143",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-08-with-phone-mockup"
     },
     {
       "code": "c144",
       "slug": "sections-heroes-09-split-with-image",
       "title": "09 split with image",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc144?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c144",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-09-split-with-image"
     },
     {
       "code": "c145",
       "slug": "sections-heroes-10-with-angled-image-on-right",
       "title": "10 with angled image on right",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc145?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c145",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-10-with-angled-image-on-right"
     },
     {
       "code": "c146",
       "slug": "sections-heroes-11-with-image-tiles",
       "title": "11 with image tiles",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc146?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c146",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-11-with-image-tiles"
     },
     {
       "code": "c147",
       "slug": "sections-heroes-12-with-offset-image",
       "title": "12 with offset image",
       "source": "tailwind",
-      "category": "sections / heroes"
+      "category": "sections / heroes",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc147?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c147",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-heroes-12-with-offset-image"
     },
     {
       "code": "c148",
       "slug": "sections-logo-clouds-01-simple-with-heading",
       "title": "01 simple with heading",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc148?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c148",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-01-simple-with-heading"
     },
     {
       "code": "c149",
       "slug": "sections-logo-clouds-03-simple-with-call-to-action",
       "title": "03 simple with call to action",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc149?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c149",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-03-simple-with-call-to-action"
     },
     {
       "code": "c150",
       "slug": "sections-logo-clouds-05-simple-left-aligned",
       "title": "05 simple left aligned",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc150?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c150",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-05-simple-left-aligned"
     },
     {
       "code": "c151",
       "slug": "sections-logo-clouds-07-split-with-logos-on-right",
       "title": "07 split with logos on right",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc151?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c151",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-07-split-with-logos-on-right"
     },
     {
       "code": "c152",
       "slug": "sections-logo-clouds-09-simple",
       "title": "09 simple",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc152?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c152",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-09-simple"
     },
     {
       "code": "c153",
       "slug": "sections-logo-clouds-11-grid",
       "title": "11 grid",
       "source": "tailwind",
-      "category": "sections / logo-clouds"
+      "category": "sections / logo-clouds",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc153?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c153",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-logo-clouds-11-grid"
     },
     {
       "code": "c154",
       "slug": "sections-newsletter-sections-01-side-by-side-with-details",
       "title": "01 side by side with details",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc154?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c154",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-01-side-by-side-with-details"
     },
     {
       "code": "c155",
       "slug": "sections-newsletter-sections-02-simple-side-by-side",
       "title": "02 simple side by side",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc155?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c155",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-02-simple-side-by-side"
     },
     {
       "code": "c156",
       "slug": "sections-newsletter-sections-04-simple-side-by-side-on-brand",
       "title": "04 simple side by side on brand",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc156?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c156",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-04-simple-side-by-side-on-brand"
     },
     {
       "code": "c157",
       "slug": "sections-newsletter-sections-05-simple-stacked",
       "title": "05 simple stacked",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc157?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c157",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-05-simple-stacked"
     },
     {
       "code": "c158",
       "slug": "sections-newsletter-sections-06-centered-card",
       "title": "06 centered card",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc158?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c158",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-06-centered-card"
     },
     {
       "code": "c159",
       "slug": "sections-newsletter-sections-07-side-by-side-on-card",
       "title": "07 side by side on card",
       "source": "tailwind",
-      "category": "sections / newsletter-sections"
+      "category": "sections / newsletter-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc159?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c159",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-newsletter-sections-07-side-by-side-on-card"
     },
     {
       "code": "c160",
       "slug": "sections-pricing-01-two-tiers-with-emphasized-right-tier",
       "title": "01 two tiers with emphasized right tier",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc160?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c160",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-01-two-tiers-with-emphasized-right-tier"
     },
     {
       "code": "c161",
       "slug": "sections-pricing-02-two-tiers-with-emphasized-left-tier",
       "title": "02 two tiers with emphasized left tier",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc161?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c161",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-02-two-tiers-with-emphasized-left-tier"
     },
     {
       "code": "c162",
       "slug": "sections-pricing-03-three-tiers-with-logos-and-feature-comparison",
       "title": "03 three tiers with logos and feature comparison",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc162?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c162",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-03-three-tiers-with-logos-and-feature-comparison"
     },
     {
       "code": "c163",
       "slug": "sections-pricing-04-two-tiers-with-extra-tier",
       "title": "04 two tiers with extra tier",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc163?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c163",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-04-two-tiers-with-extra-tier"
     },
     {
       "code": "c164",
       "slug": "sections-pricing-05-single-price-with-details",
       "title": "05 single price with details",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc164?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c164",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-05-single-price-with-details"
     },
     {
       "code": "c165",
       "slug": "sections-pricing-06-three-tiers",
       "title": "06 three tiers",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc165?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c165",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-06-three-tiers"
     },
     {
       "code": "c166",
       "slug": "sections-pricing-07-three-tiers-with-dividers",
       "title": "07 three tiers with dividers",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc166?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c166",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-07-three-tiers-with-dividers"
     },
     {
       "code": "c167",
       "slug": "sections-pricing-08-three-tiers-with-emphasized-tier",
       "title": "08 three tiers with emphasized tier",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc167?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c167",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-08-three-tiers-with-emphasized-tier"
     },
     {
       "code": "c168",
       "slug": "sections-pricing-09-three-tiers-with-toggle",
       "title": "09 three tiers with toggle",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc168?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c168",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-09-three-tiers-with-toggle"
     },
     {
       "code": "c169",
       "slug": "sections-pricing-11-four-tiers-with-toggle",
       "title": "11 four tiers with toggle",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc169?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c169",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-11-four-tiers-with-toggle"
     },
     {
       "code": "c170",
       "slug": "sections-pricing-12-with-comparison-table",
       "title": "12 with comparison table",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc170?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c170",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-12-with-comparison-table"
     },
     {
       "code": "c171",
       "slug": "sections-pricing-14-three-tiers-with-feature-comparison",
       "title": "14 three tiers with feature comparison",
       "source": "tailwind",
-      "category": "sections / pricing"
+      "category": "sections / pricing",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc171?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c171",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-pricing-14-three-tiers-with-feature-comparison"
     },
     {
       "code": "c172",
       "slug": "sections-stats-sections-01-simple",
       "title": "01 simple",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc172?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c172",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-01-simple"
     },
     {
       "code": "c173",
       "slug": "sections-stats-sections-03-simple-grid",
       "title": "03 simple grid",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc173?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c173",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-03-simple-grid"
     },
     {
       "code": "c174",
       "slug": "sections-stats-sections-05-with-background-image",
       "title": "05 with background image",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc174?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c174",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-05-with-background-image"
     },
     {
       "code": "c175",
       "slug": "sections-stats-sections-06-split-with-image",
       "title": "06 split with image",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc175?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c175",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-06-split-with-image"
     },
     {
       "code": "c176",
       "slug": "sections-stats-sections-07-timeline",
       "title": "07 timeline",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc176?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c176",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-07-timeline"
     },
     {
       "code": "c177",
       "slug": "sections-stats-sections-08-stepped",
       "title": "08 stepped",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc177?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c177",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-08-stepped"
     },
     {
       "code": "c178",
       "slug": "sections-stats-sections-09-two-column-description",
       "title": "09 two column description",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc178?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c178",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-09-two-column-description"
     },
     {
       "code": "c179",
       "slug": "sections-stats-sections-10-with-description",
       "title": "10 with description",
       "source": "tailwind",
-      "category": "sections / stats-sections"
+      "category": "sections / stats-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc179?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c179",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-stats-sections-10-with-description"
     },
     {
       "code": "c180",
       "slug": "sections-team-sections-01-small-images",
       "title": "01 small images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc180?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c180",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-01-small-images"
     },
     {
       "code": "c181",
       "slug": "sections-team-sections-02-large-images",
       "title": "02 large images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc181?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c181",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-02-large-images"
     },
     {
       "code": "c182",
       "slug": "sections-team-sections-03-grid-with-round-images",
       "title": "03 grid with round images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc182?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c182",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-03-grid-with-round-images"
     },
     {
       "code": "c183",
       "slug": "sections-team-sections-04-large-grid-with-cards",
       "title": "04 large grid with cards",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc183?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c183",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-04-large-grid-with-cards"
     },
     {
       "code": "c184",
       "slug": "sections-team-sections-05-with-image-and-short-paragraph",
       "title": "05 with image and short paragraph",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc184?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c184",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-05-with-image-and-short-paragraph"
     },
     {
       "code": "c185",
       "slug": "sections-team-sections-06-with-vertical-images",
       "title": "06 with vertical images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc185?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c185",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-06-with-vertical-images"
     },
     {
       "code": "c186",
       "slug": "sections-team-sections-07-with-vertical-images-full-width",
       "title": "07 with vertical images full width",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc186?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c186",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-07-with-vertical-images-full-width"
     },
     {
       "code": "c187",
       "slug": "sections-team-sections-08-grid-with-large-round-images",
       "title": "08 grid with large round images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc187?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c187",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-08-grid-with-large-round-images"
     },
     {
       "code": "c188",
       "slug": "sections-team-sections-09-medium-images",
       "title": "09 medium images",
       "source": "tailwind",
-      "category": "sections / team-sections"
+      "category": "sections / team-sections",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc188?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c188",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-team-sections-09-medium-images"
     },
     {
       "code": "c189",
       "slug": "sections-testimonials-02-simple-centered",
       "title": "02 simple centered",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc189?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c189",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-02-simple-centered"
     },
     {
       "code": "c190",
       "slug": "sections-testimonials-03-with-large-avatar",
       "title": "03 with large avatar",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc190?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c190",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-03-with-large-avatar"
     },
     {
       "code": "c191",
       "slug": "sections-testimonials-04-with-overlapping-image",
       "title": "04 with overlapping image",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc191?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c191",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-04-with-overlapping-image"
     },
     {
       "code": "c192",
       "slug": "sections-testimonials-05-with-background-image",
       "title": "05 with background image",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc192?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c192",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-05-with-background-image"
     },
     {
       "code": "c193",
       "slug": "sections-testimonials-06-side-by-side",
       "title": "06 side by side",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc193?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c193",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-06-side-by-side"
     },
     {
       "code": "c194",
       "slug": "sections-testimonials-08-with-star-rating",
       "title": "08 with star rating",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc194?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c194",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-08-with-star-rating"
     },
     {
       "code": "c195",
       "slug": "sections-testimonials-09-grid",
       "title": "09 grid",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc195?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c195",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-09-grid"
     },
     {
       "code": "c196",
       "slug": "sections-testimonials-10-subtle-grid",
       "title": "10 subtle grid",
       "source": "tailwind",
-      "category": "sections / testimonials"
+      "category": "sections / testimonials",
+      "previewImage": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwebsitetqa.thequietachievr.com%2Fpreview%2Fc196?w=900",
+      "previewPage": "https://websitetqa.thequietachievr.com/preview/c196",
+      "visualLibrary": "https://websitetqa.thequietachievr.com/visual-library#sections-testimonials-10-subtle-grid"
     }
   ],
   "revampAlternates": [

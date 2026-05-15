@@ -32,19 +32,22 @@ export function ComponentLabelBadge({
 export function LabeledComponent({
   code,
   title,
+  slug,
   children,
   className = "",
   as: Tag = "div",
 }: {
   code: string;
   title?: string;
+  slug?: string;
   children: ReactNode;
   className?: string;
   as?: "header" | "footer" | "section" | "div" | "nav";
 }) {
   return (
     <Tag
-      className={`relative ${className}`}
+      id={slug}
+      className={`relative scroll-mt-24 ${className}`}
       data-component-code={code}
       data-component-title={title}
     >

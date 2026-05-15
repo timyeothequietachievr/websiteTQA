@@ -9,13 +9,14 @@ import {
 } from "@/lib/component-catalog";
 import { tailwindShowcaseRegistry } from "./registry";
 
-export function TailwindComponentShowcase() {
+export function TailwindComponentShowcase({ eager = false }: { eager?: boolean }) {
   const sectionRef = useRef<HTMLElement>(null);
-  const [showBlocks, setShowBlocks] = useState(false);
+  const [showBlocks, setShowBlocks] = useState(eager);
 
   const categories = [...new Set(tailwindShowcaseRegistry.map((e) => e.category))];
 
   useEffect(() => {
+    if (eager) return;
     const node = sectionRef.current;
     if (!node) return;
 
@@ -31,7 +32,7 @@ export function TailwindComponentShowcase() {
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   const firstTailwindCode = tailwindComponentCode(0);
   const lastTailwindCode = tailwindComponentCode(
@@ -97,7 +98,7 @@ export function TailwindComponentShowcase() {
                       <article
                         key={entry.id}
                         id={entry.id}
-                        className="overflow-hidden border-y border-paper-200 bg-paper"
+                        className="scroll-mt-24 overflow-hidden border-y border-paper-200 bg-paper"
                         data-component-code={code}
                       >
                         <Container wide className="py-3">
