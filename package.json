@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-component-catalog.mjs && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:tailwind-showcase": "node scripts/build-tailwind-showcase.mjs && node scripts/generate-component-catalog.mjs",
+    "generate:component-catalog": "node scripts/generate-component-catalog.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

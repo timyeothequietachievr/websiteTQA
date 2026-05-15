@@ -70,7 +70,7 @@ export function Navigation() {
   return (
     <header
       id="top"
-      className="sticky top-0 z-40"
+      className="sticky top-0 z-[100]"
       style={{
         background: scrolled ? "rgba(245,240,211,0.92)" : "transparent",
         backdropFilter: scrolled ? "saturate(140%) blur(8px)" : "none",

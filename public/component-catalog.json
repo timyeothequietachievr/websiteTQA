@@ -1,0 +1,1383 @@
+{
+  "generatedAt": "2026-05-15T09:37:03.831Z",
+  "revampRange": "c1–c17",
+  "tailwindRange": "c18–c196",
+  "total": 196,
+  "components": [
+    {
+      "code": "c1",
+      "slug": "navigation",
+      "title": "Navigation",
+      "source": "revamp"
+    },
+    {
+      "code": "c2",
+      "slug": "hero-portrait-split",
+      "title": "Hero — portrait split",
+      "source": "revamp"
+    },
+    {
+      "code": "c3",
+      "slug": "segmenter",
+      "title": "Segmenter",
+      "source": "revamp"
+    },
+    {
+      "code": "c4",
+      "slug": "thesis-band",
+      "title": "Thesis band",
+      "source": "revamp"
+    },
+    {
+      "code": "c5",
+      "slug": "social-proof-strip",
+      "title": "Social proof strip",
+      "source": "revamp"
+    },
+    {
+      "code": "c6",
+      "slug": "sound-familiar",
+      "title": "Sound familiar",
+      "source": "revamp"
+    },
+    {
+      "code": "c7",
+      "slug": "coaching-summary",
+      "title": "Coaching summary",
+      "source": "revamp"
+    },
+    {
+      "code": "c8",
+      "slug": "toni-block",
+      "title": "Toni block",
+      "source": "revamp"
+    },
+    {
+      "code": "c9",
+      "slug": "book-block",
+      "title": "Book block",
+      "source": "revamp"
+    },
+    {
+      "code": "c10",
+      "slug": "latest-writing",
+      "title": "Latest writing",
+      "source": "revamp"
+    },
+    {
+      "code": "c11",
+      "slug": "start-here",
+      "title": "Start here",
+      "source": "revamp"
+    },
+    {
+      "code": "c12",
+      "slug": "school-block",
+      "title": "School block",
+      "source": "revamp"
+    },
+    {
+      "code": "c13",
+      "slug": "playbooks-band",
+      "title": "Playbooks band",
+      "source": "revamp"
+    },
+    {
+      "code": "c14",
+      "slug": "newsletter-band",
+      "title": "Newsletter band",
+      "source": "revamp"
+    },
+    {
+      "code": "c15",
+      "slug": "elsewhere-strip",
+      "title": "Elsewhere strip",
+      "source": "revamp"
+    },
+    {
+      "code": "c16",
+      "slug": "footer-rev",
+      "title": "Footer",
+      "source": "revamp"
+    },
+    {
+      "code": "c17",
+      "slug": "toni-bubble",
+      "title": "Toni bubble (floating)",
+      "source": "revamp"
+    },
+    {
+      "code": "c18",
+      "slug": "elements-banners-01-with-button",
+      "title": "01 with button",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c19",
+      "slug": "elements-banners-02-on-dark",
+      "title": "02 on dark",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c20",
+      "slug": "elements-banners-03-on-brand",
+      "title": "03 on brand",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c21",
+      "slug": "elements-banners-04-with-background-glow",
+      "title": "04 with background glow",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c22",
+      "slug": "elements-banners-05-with-link",
+      "title": "05 with link",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c23",
+      "slug": "elements-banners-06-left-aligned",
+      "title": "06 left aligned",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c24",
+      "slug": "elements-banners-07-bottom-aligned",
+      "title": "07 bottom aligned",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c25",
+      "slug": "elements-banners-08-floating-at-bottom",
+      "title": "08 floating at bottom",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c26",
+      "slug": "elements-banners-09-floating-at-bottom-centered",
+      "title": "09 floating at bottom centered",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c27",
+      "slug": "elements-banners-10-privacy-notice-right-aligned",
+      "title": "10 privacy notice right aligned",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c28",
+      "slug": "elements-banners-11-privacy-notice-centered",
+      "title": "11 privacy notice centered",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c29",
+      "slug": "elements-banners-12-privacy-notice-left-aligned",
+      "title": "12 privacy notice left aligned",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c30",
+      "slug": "elements-banners-13-privacy-notice-full-width",
+      "title": "13 privacy notice full width",
+      "source": "tailwind",
+      "category": "elements / banners"
+    },
+    {
+      "code": "c31",
+      "slug": "elements-flyout-menus-01-stacked-with-footer-actions",
+      "title": "01 stacked with footer actions",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c32",
+      "slug": "elements-flyout-menus-02-full-width-two-columns",
+      "title": "02 full width two columns",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c33",
+      "slug": "elements-flyout-menus-03-stacked-with-footer-list",
+      "title": "03 stacked with footer list",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c34",
+      "slug": "elements-flyout-menus-04-full-width",
+      "title": "04 full width",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c35",
+      "slug": "elements-flyout-menus-05-simple-with-descriptions",
+      "title": "05 simple with descriptions",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c36",
+      "slug": "elements-flyout-menus-06-two-column",
+      "title": "06 two column",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c37",
+      "slug": "elements-flyout-menus-07-simple",
+      "title": "07 simple",
+      "source": "tailwind",
+      "category": "elements / flyout-menus"
+    },
+    {
+      "code": "c38",
+      "slug": "elements-headers-01-with-stacked-flyout-menu",
+      "title": "01 with stacked flyout menu",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c39",
+      "slug": "elements-headers-02-constrained",
+      "title": "02 constrained",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c40",
+      "slug": "elements-headers-04-on-brand-background",
+      "title": "04 on brand background",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c41",
+      "slug": "elements-headers-05-with-full-width-flyout-menu",
+      "title": "05 with full width flyout menu",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c42",
+      "slug": "elements-headers-06-full-width",
+      "title": "06 full width",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c43",
+      "slug": "elements-headers-07-with-call-to-action",
+      "title": "07 with call to action",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c44",
+      "slug": "elements-headers-08-with-multiple-flyout-menus",
+      "title": "08 with multiple flyout menus",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c45",
+      "slug": "elements-headers-09-with-icons-in-mobile-menu",
+      "title": "09 with icons in mobile menu",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c46",
+      "slug": "elements-headers-10-with-left-aligned-nav",
+      "title": "10 with left aligned nav",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c47",
+      "slug": "elements-headers-11-with-right-aligned-nav",
+      "title": "11 with right aligned nav",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c48",
+      "slug": "elements-headers-12-with-centered-logo",
+      "title": "12 with centered logo",
+      "source": "tailwind",
+      "category": "elements / headers"
+    },
+    {
+      "code": "c49",
+      "slug": "feedback-404-pages-01-simple",
+      "title": "01 simple",
+      "source": "tailwind",
+      "category": "feedback / 404-pages"
+    },
+    {
+      "code": "c50",
+      "slug": "feedback-404-pages-02-split-with-image",
+      "title": "02 split with image",
+      "source": "tailwind",
+      "category": "feedback / 404-pages"
+    },
+    {
+      "code": "c51",
+      "slug": "feedback-404-pages-03-with-popular-pages",
+      "title": "03 with popular pages",
+      "source": "tailwind",
+      "category": "feedback / 404-pages"
+    },
+    {
+      "code": "c52",
+      "slug": "feedback-404-pages-05-with-background-image",
+      "title": "05 with background image",
+      "source": "tailwind",
+      "category": "feedback / 404-pages"
+    },
+    {
+      "code": "c53",
+      "slug": "feedback-404-pages-06-with-navbar-and-footer",
+      "title": "06 with navbar and footer",
+      "source": "tailwind",
+      "category": "feedback / 404-pages"
+    },
+    {
+      "code": "c54",
+      "slug": "page-examples-about-pages-01-with-image-tiles",
+      "title": "01 with image tiles",
+      "source": "tailwind",
+      "category": "page-examples / about-pages"
+    },
+    {
+      "code": "c55",
+      "slug": "page-examples-about-pages-02-with-timeline-and-stats",
+      "title": "02 with timeline and stats",
+      "source": "tailwind",
+      "category": "page-examples / about-pages"
+    },
+    {
+      "code": "c56",
+      "slug": "page-examples-about-pages-03-with-two-column-description",
+      "title": "03 with two column description",
+      "source": "tailwind",
+      "category": "page-examples / about-pages"
+    },
+    {
+      "code": "c57",
+      "slug": "page-examples-landing-pages-01-with-screenshots-and-stats",
+      "title": "01 with screenshots and stats",
+      "source": "tailwind",
+      "category": "page-examples / landing-pages"
+    },
+    {
+      "code": "c58",
+      "slug": "page-examples-landing-pages-02-with-large-screenshot-and-testimonial",
+      "title": "02 with large screenshot and testimonial",
+      "source": "tailwind",
+      "category": "page-examples / landing-pages"
+    },
+    {
+      "code": "c59",
+      "slug": "page-examples-landing-pages-03-with-background-image-hero-and-pricing-section",
+      "title": "03 with background image hero and pricing section",
+      "source": "tailwind",
+      "category": "page-examples / landing-pages"
+    },
+    {
+      "code": "c60",
+      "slug": "page-examples-landing-pages-04-with-mobile-screenshot-and-testimonials-grid",
+      "title": "04 with mobile screenshot and testimonials grid",
+      "source": "tailwind",
+      "category": "page-examples / landing-pages"
+    },
+    {
+      "code": "c61",
+      "slug": "page-examples-pricing-pages-01-with-four-tiers",
+      "title": "01 with four tiers",
+      "source": "tailwind",
+      "category": "page-examples / pricing-pages"
+    },
+    {
+      "code": "c62",
+      "slug": "page-examples-pricing-pages-02-with-comparison-table",
+      "title": "02 with comparison table",
+      "source": "tailwind",
+      "category": "page-examples / pricing-pages"
+    },
+    {
+      "code": "c63",
+      "slug": "page-examples-pricing-pages-03-with-three-tiers-and-testimonials",
+      "title": "03 with three tiers and testimonials",
+      "source": "tailwind",
+      "category": "page-examples / pricing-pages"
+    },
+    {
+      "code": "c64",
+      "slug": "sections-bento-grids-01-three-column-bento-grid",
+      "title": "01 three column bento grid",
+      "source": "tailwind",
+      "category": "sections / bento-grids"
+    },
+    {
+      "code": "c65",
+      "slug": "sections-bento-grids-02-two-row-bento-grid",
+      "title": "02 two row bento grid",
+      "source": "tailwind",
+      "category": "sections / bento-grids"
+    },
+    {
+      "code": "c66",
+      "slug": "sections-bento-grids-03-two-row-bento-grid-with-three-column-second-row",
+      "title": "03 two row bento grid with three column second row",
+      "source": "tailwind",
+      "category": "sections / bento-grids"
+    },
+    {
+      "code": "c67",
+      "slug": "sections-blog-sections-01-three-column",
+      "title": "01 three column",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c68",
+      "slug": "sections-blog-sections-02-three-column-with-images",
+      "title": "02 three column with images",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c69",
+      "slug": "sections-blog-sections-03-three-column-with-background-images",
+      "title": "03 three column with background images",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c70",
+      "slug": "sections-blog-sections-04-single-column",
+      "title": "04 single column",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c71",
+      "slug": "sections-blog-sections-05-single-column-with-images",
+      "title": "05 single column with images",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c72",
+      "slug": "sections-blog-sections-06-with-featured-post",
+      "title": "06 with featured post",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c73",
+      "slug": "sections-blog-sections-07-with-photo-and-list",
+      "title": "07 with photo and list",
+      "source": "tailwind",
+      "category": "sections / blog-sections"
+    },
+    {
+      "code": "c74",
+      "slug": "sections-contact-sections-01-centered",
+      "title": "01 centered",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c75",
+      "slug": "sections-contact-sections-02-side-by-side-grid",
+      "title": "02 side by side grid",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c76",
+      "slug": "sections-contact-sections-03-split-with-pattern",
+      "title": "03 split with pattern",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c77",
+      "slug": "sections-contact-sections-05-simple-four-column",
+      "title": "05 simple four column",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c78",
+      "slug": "sections-contact-sections-06-simple-centered",
+      "title": "06 simple centered",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c79",
+      "slug": "sections-contact-sections-07-with-testimonial",
+      "title": "07 with testimonial",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c80",
+      "slug": "sections-contact-sections-08-split-with-image",
+      "title": "08 split with image",
+      "source": "tailwind",
+      "category": "sections / contact-sections"
+    },
+    {
+      "code": "c81",
+      "slug": "sections-content-sections-01-with-sticky-product-screenshot",
+      "title": "01 with sticky product screenshot",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c82",
+      "slug": "sections-content-sections-02-with-testimonial",
+      "title": "02 with testimonial",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c83",
+      "slug": "sections-content-sections-03-with-image-tiles",
+      "title": "03 with image tiles",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c84",
+      "slug": "sections-content-sections-04-two-columns-with-screenshot",
+      "title": "04 two columns with screenshot",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c85",
+      "slug": "sections-content-sections-05-with-testimonial-and-stats",
+      "title": "05 with testimonial and stats",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c86",
+      "slug": "sections-content-sections-06-split-with-image",
+      "title": "06 split with image",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c87",
+      "slug": "sections-content-sections-07-centered",
+      "title": "07 centered",
+      "source": "tailwind",
+      "category": "sections / content-sections"
+    },
+    {
+      "code": "c88",
+      "slug": "sections-cta-sections-01-dark-panel-with-app-screenshot",
+      "title": "01 dark panel with app screenshot",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c89",
+      "slug": "sections-cta-sections-02-simple-stacked",
+      "title": "02 simple stacked",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c90",
+      "slug": "sections-cta-sections-03-centered-on-dark-panel",
+      "title": "03 centered on dark panel",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c91",
+      "slug": "sections-cta-sections-04-simple-centered",
+      "title": "04 simple centered",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c92",
+      "slug": "sections-cta-sections-05-simple-centered-with-gradient",
+      "title": "05 simple centered with gradient",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c93",
+      "slug": "sections-cta-sections-06-simple-centered-on-brand",
+      "title": "06 simple centered on brand",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c94",
+      "slug": "sections-cta-sections-07-simple-justified",
+      "title": "07 simple justified",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c95",
+      "slug": "sections-cta-sections-08-simple-justified-on-subtle-brand",
+      "title": "08 simple justified on subtle brand",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c96",
+      "slug": "sections-cta-sections-09-split-with-image",
+      "title": "09 split with image",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c97",
+      "slug": "sections-cta-sections-10-two-columns-with-photo",
+      "title": "10 two columns with photo",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c98",
+      "slug": "sections-cta-sections-11-with-image-tiles",
+      "title": "11 with image tiles",
+      "source": "tailwind",
+      "category": "sections / cta-sections"
+    },
+    {
+      "code": "c99",
+      "slug": "sections-faq-sections-01-offset-with-supporting-text",
+      "title": "01 offset with supporting text",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c100",
+      "slug": "sections-faq-sections-02-centered-accordion",
+      "title": "02 centered accordion",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c101",
+      "slug": "sections-faq-sections-04-side-by-side",
+      "title": "04 side by side",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c102",
+      "slug": "sections-faq-sections-05-three-columns",
+      "title": "05 three columns",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c103",
+      "slug": "sections-faq-sections-07-three-columns-with-centered-introduction",
+      "title": "07 three columns with centered introduction",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c104",
+      "slug": "sections-faq-sections-08-two-columns",
+      "title": "08 two columns",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c105",
+      "slug": "sections-faq-sections-10-two-columns-with-centered-introduction",
+      "title": "10 two columns with centered introduction",
+      "source": "tailwind",
+      "category": "sections / faq-sections"
+    },
+    {
+      "code": "c106",
+      "slug": "sections-feature-sections-01.with-product-screenshot",
+      "title": "01.with product screenshot",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c107",
+      "slug": "sections-feature-sections-03.with-large-screenshot",
+      "title": "03.with large screenshot",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c108",
+      "slug": "sections-feature-sections-05.with-large-bordered-screenshot",
+      "title": "05.with large bordered screenshot",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c109",
+      "slug": "sections-feature-sections-07.simple-three-column-with-small-icons",
+      "title": "07.simple three column with small icons",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c110",
+      "slug": "sections-feature-sections-09.with-product-screenshot-on-left",
+      "title": "09.with product screenshot on left",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c111",
+      "slug": "sections-feature-sections-10.simple-three-column-with-large-icons",
+      "title": "10.simple three column with large icons",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c112",
+      "slug": "sections-feature-sections-12.contained-in-panel",
+      "title": "12.contained in panel",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c113",
+      "slug": "sections-feature-sections-13.with-product-screenshot-panel",
+      "title": "13.with product screenshot panel",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c114",
+      "slug": "sections-feature-sections-14.with-testimonial",
+      "title": "14.with testimonial",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c115",
+      "slug": "sections-feature-sections-15.offset-2x2-grid",
+      "title": "15.offset 2x2 grid",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c116",
+      "slug": "sections-feature-sections-16.with-code-example-panel",
+      "title": "16.with code example panel",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c117",
+      "slug": "sections-feature-sections-17.offset-with-feature-list",
+      "title": "17.offset with feature list",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c118",
+      "slug": "sections-feature-sections-18.simple",
+      "title": "18.simple",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c119",
+      "slug": "sections-feature-sections-19.centered-2x2-grid",
+      "title": "19.centered 2x2 grid",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c120",
+      "slug": "sections-feature-sections-20.simple-3x2-grid",
+      "title": "20.simple 3x2 grid",
+      "source": "tailwind",
+      "category": "sections / feature-sections"
+    },
+    {
+      "code": "c121",
+      "slug": "sections-footers-02-4-column-with-company-mission",
+      "title": "02 4 column with company mission",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c122",
+      "slug": "sections-footers-04-4-column-with-call-to-action",
+      "title": "04 4 column with call to action",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c123",
+      "slug": "sections-footers-06-4-column-simple",
+      "title": "06 4 column simple",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c124",
+      "slug": "sections-footers-08-4-column-with-newsletter",
+      "title": "08 4 column with newsletter",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c125",
+      "slug": "sections-footers-10-4-column-with-newsletter-below",
+      "title": "10 4 column with newsletter below",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c126",
+      "slug": "sections-footers-12-simple-centered",
+      "title": "12 simple centered",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c127",
+      "slug": "sections-footers-14-simple-with-social-links",
+      "title": "14 simple with social links",
+      "source": "tailwind",
+      "category": "sections / footers"
+    },
+    {
+      "code": "c128",
+      "slug": "sections-header-01-with-stats",
+      "title": "01 with stats",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c129",
+      "slug": "sections-header-02-centered",
+      "title": "02 centered",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c130",
+      "slug": "sections-header-03-centered-with-eyebrow",
+      "title": "03 centered with eyebrow",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c131",
+      "slug": "sections-header-04-with-cards",
+      "title": "04 with cards",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c132",
+      "slug": "sections-header-05-simple",
+      "title": "05 simple",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c133",
+      "slug": "sections-header-06-simple-with-eyebrow",
+      "title": "06 simple with eyebrow",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c134",
+      "slug": "sections-header-07-simple-with-background-image",
+      "title": "07 simple with background image",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c135",
+      "slug": "sections-header-08-centered-with-background-image",
+      "title": "08 centered with background image",
+      "source": "tailwind",
+      "category": "sections / header"
+    },
+    {
+      "code": "c136",
+      "slug": "sections-heroes-01-simple-centered",
+      "title": "01 simple centered",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c137",
+      "slug": "sections-heroes-02-split-with-screenshot",
+      "title": "02 split with screenshot",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c138",
+      "slug": "sections-heroes-03-split-with-bordered-screenshot",
+      "title": "03 split with bordered screenshot",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c139",
+      "slug": "sections-heroes-04-split-with-code-example",
+      "title": "04 split with code example",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c140",
+      "slug": "sections-heroes-05-simple-centered-with-background-image",
+      "title": "05 simple centered with background image",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c141",
+      "slug": "sections-heroes-06-with-bordered-app-screenshot",
+      "title": "06 with bordered app screenshot",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c142",
+      "slug": "sections-heroes-07-with-app-screenshot",
+      "title": "07 with app screenshot",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c143",
+      "slug": "sections-heroes-08-with-phone-mockup",
+      "title": "08 with phone mockup",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c144",
+      "slug": "sections-heroes-09-split-with-image",
+      "title": "09 split with image",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c145",
+      "slug": "sections-heroes-10-with-angled-image-on-right",
+      "title": "10 with angled image on right",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c146",
+      "slug": "sections-heroes-11-with-image-tiles",
+      "title": "11 with image tiles",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c147",
+      "slug": "sections-heroes-12-with-offset-image",
+      "title": "12 with offset image",
+      "source": "tailwind",
+      "category": "sections / heroes"
+    },
+    {
+      "code": "c148",
+      "slug": "sections-logo-clouds-01-simple-with-heading",
+      "title": "01 simple with heading",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c149",
+      "slug": "sections-logo-clouds-03-simple-with-call-to-action",
+      "title": "03 simple with call to action",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c150",
+      "slug": "sections-logo-clouds-05-simple-left-aligned",
+      "title": "05 simple left aligned",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c151",
+      "slug": "sections-logo-clouds-07-split-with-logos-on-right",
+      "title": "07 split with logos on right",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c152",
+      "slug": "sections-logo-clouds-09-simple",
+      "title": "09 simple",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c153",
+      "slug": "sections-logo-clouds-11-grid",
+      "title": "11 grid",
+      "source": "tailwind",
+      "category": "sections / logo-clouds"
+    },
+    {
+      "code": "c154",
+      "slug": "sections-newsletter-sections-01-side-by-side-with-details",
+      "title": "01 side by side with details",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c155",
+      "slug": "sections-newsletter-sections-02-simple-side-by-side",
+      "title": "02 simple side by side",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c156",
+      "slug": "sections-newsletter-sections-04-simple-side-by-side-on-brand",
+      "title": "04 simple side by side on brand",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c157",
+      "slug": "sections-newsletter-sections-05-simple-stacked",
+      "title": "05 simple stacked",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c158",
+      "slug": "sections-newsletter-sections-06-centered-card",
+      "title": "06 centered card",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c159",
+      "slug": "sections-newsletter-sections-07-side-by-side-on-card",
+      "title": "07 side by side on card",
+      "source": "tailwind",
+      "category": "sections / newsletter-sections"
+    },
+    {
+      "code": "c160",
+      "slug": "sections-pricing-01-two-tiers-with-emphasized-right-tier",
+      "title": "01 two tiers with emphasized right tier",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c161",
+      "slug": "sections-pricing-02-two-tiers-with-emphasized-left-tier",
+      "title": "02 two tiers with emphasized left tier",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c162",
+      "slug": "sections-pricing-03-three-tiers-with-logos-and-feature-comparison",
+      "title": "03 three tiers with logos and feature comparison",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c163",
+      "slug": "sections-pricing-04-two-tiers-with-extra-tier",
+      "title": "04 two tiers with extra tier",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c164",
+      "slug": "sections-pricing-05-single-price-with-details",
+      "title": "05 single price with details",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c165",
+      "slug": "sections-pricing-06-three-tiers",
+      "title": "06 three tiers",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c166",
+      "slug": "sections-pricing-07-three-tiers-with-dividers",
+      "title": "07 three tiers with dividers",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c167",
+      "slug": "sections-pricing-08-three-tiers-with-emphasized-tier",
+      "title": "08 three tiers with emphasized tier",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c168",
+      "slug": "sections-pricing-09-three-tiers-with-toggle",
+      "title": "09 three tiers with toggle",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c169",
+      "slug": "sections-pricing-11-four-tiers-with-toggle",
+      "title": "11 four tiers with toggle",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c170",
+      "slug": "sections-pricing-12-with-comparison-table",
+      "title": "12 with comparison table",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c171",
+      "slug": "sections-pricing-14-three-tiers-with-feature-comparison",
+      "title": "14 three tiers with feature comparison",
+      "source": "tailwind",
+      "category": "sections / pricing"
+    },
+    {
+      "code": "c172",
+      "slug": "sections-stats-sections-01-simple",
+      "title": "01 simple",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c173",
+      "slug": "sections-stats-sections-03-simple-grid",
+      "title": "03 simple grid",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c174",
+      "slug": "sections-stats-sections-05-with-background-image",
+      "title": "05 with background image",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c175",
+      "slug": "sections-stats-sections-06-split-with-image",
+      "title": "06 split with image",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c176",
+      "slug": "sections-stats-sections-07-timeline",
+      "title": "07 timeline",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c177",
+      "slug": "sections-stats-sections-08-stepped",
+      "title": "08 stepped",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c178",
+      "slug": "sections-stats-sections-09-two-column-description",
+      "title": "09 two column description",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c179",
+      "slug": "sections-stats-sections-10-with-description",
+      "title": "10 with description",
+      "source": "tailwind",
+      "category": "sections / stats-sections"
+    },
+    {
+      "code": "c180",
+      "slug": "sections-team-sections-01-small-images",
+      "title": "01 small images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c181",
+      "slug": "sections-team-sections-02-large-images",
+      "title": "02 large images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c182",
+      "slug": "sections-team-sections-03-grid-with-round-images",
+      "title": "03 grid with round images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c183",
+      "slug": "sections-team-sections-04-large-grid-with-cards",
+      "title": "04 large grid with cards",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c184",
+      "slug": "sections-team-sections-05-with-image-and-short-paragraph",
+      "title": "05 with image and short paragraph",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c185",
+      "slug": "sections-team-sections-06-with-vertical-images",
+      "title": "06 with vertical images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c186",
+      "slug": "sections-team-sections-07-with-vertical-images-full-width",
+      "title": "07 with vertical images full width",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c187",
+      "slug": "sections-team-sections-08-grid-with-large-round-images",
+      "title": "08 grid with large round images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c188",
+      "slug": "sections-team-sections-09-medium-images",
+      "title": "09 medium images",
+      "source": "tailwind",
+      "category": "sections / team-sections"
+    },
+    {
+      "code": "c189",
+      "slug": "sections-testimonials-02-simple-centered",
+      "title": "02 simple centered",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c190",
+      "slug": "sections-testimonials-03-with-large-avatar",
+      "title": "03 with large avatar",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c191",
+      "slug": "sections-testimonials-04-with-overlapping-image",
+      "title": "04 with overlapping image",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c192",
+      "slug": "sections-testimonials-05-with-background-image",
+      "title": "05 with background image",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c193",
+      "slug": "sections-testimonials-06-side-by-side",
+      "title": "06 side by side",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c194",
+      "slug": "sections-testimonials-08-with-star-rating",
+      "title": "08 with star rating",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c195",
+      "slug": "sections-testimonials-09-grid",
+      "title": "09 grid",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    },
+    {
+      "code": "c196",
+      "slug": "sections-testimonials-10-subtle-grid",
+      "title": "10 subtle grid",
+      "source": "tailwind",
+      "category": "sections / testimonials"
+    }
+  ],
+  "revampAlternates": [
+    {
+      "code": null,
+      "slug": "hero-editorial",
+      "title": "Hero — editorial (alt)",
+      "source": "revamp"
+    },
+    {
+      "code": null,
+      "slug": "hero-magazine",
+      "title": "Hero — magazine (alt)",
+      "source": "revamp"
+    },
+    {
+      "code": null,
+      "slug": "hero-masthead",
+      "title": "Hero — masthead (alt)",
+      "source": "revamp"
+    }
+  ]
+}
