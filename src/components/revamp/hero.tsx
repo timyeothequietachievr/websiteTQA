@@ -50,7 +50,7 @@ function HeroEditorial() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4" style={{ marginTop: "36px" }}>
-              <Button variant="primary" size="lg" href="#chemistrycall">
+              <Button variant="primary" size="lg" href="#coaching">
                 Book a chemistry call
                 <span aria-hidden>→</span>
               </Button>
@@ -253,7 +253,7 @@ function HeroMagazine() {
                 </span>
               </h1>
               <div className="flex flex-wrap items-center gap-4 mt-7">
-                <Button variant="primary" size="lg" href="#chemistrycall">
+                <Button variant="primary" size="lg" href="#coaching">
                   Book a chemistry call
                   <span aria-hidden>→</span>
                 </Button>
@@ -459,7 +459,7 @@ function HeroMasthead() {
               className="flex flex-wrap items-center gap-4"
               style={{ marginTop: "28px" }}
             >
-              <Button variant="primary" size="lg" href="#chemistrycall">
+              <Button variant="primary" size="lg" href="#coaching">
                 Book a chemistry call
                 <span aria-hidden>→</span>
               </Button>
@@ -546,10 +546,9 @@ function HeroPortraitSplit() {
                 textWrap: "balance",
               }}
             >
-              I help{" "}
-              <span style={{ color: "var(--tqa-paper)" }}>quiet&nbsp;achievers</span>
+              Be seen, be heard and get the credit you deserve
               <span style={{ display: "block", color: "var(--tqa-ember)", fontStyle: "italic", fontWeight: 600 }}>
-                have impact at work.
+                without pretending to be an extrovert.
               </span>
             </h1>
 
@@ -563,7 +562,9 @@ function HeroPortraitSplit() {
                 maxWidth: "52ch",
               }}
             >
-              Without pretending to be an extrovert. 1:1 coaching, a book and a school of practical tiny habits — built on 20+ years in tech and over a thousand coaching conversations since 2021.
+              20+ years in tech. 1,000+ quiet achievers coached. Life is too short to be
+              living someone else&apos;s version of success. Stop pretending. Start practicing.
+              Remain your true authentic self.
             </p>
 
             <ul
@@ -607,7 +608,7 @@ function HeroPortraitSplit() {
 
             <div className="flex flex-wrap items-center gap-3" style={{ marginTop: "32px" }}>
               <a
-                href="#chemistrycall"
+                href="#coaching"
                 className="font-sans inline-flex items-center gap-2"
                 style={{
                   background: "var(--tqa-ember)",
@@ -622,7 +623,7 @@ function HeroPortraitSplit() {
                 onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
                 onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
               >
-                Book a chemistry call <span aria-hidden>→</span>
+                Work with me <span aria-hidden>→</span>
               </a>
               <a
                 href="#playbooks"
@@ -641,7 +642,7 @@ function HeroPortraitSplit() {
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--tqa-paper)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(245,240,211,0.30)"; }}
               >
-                Free playbooks <span aria-hidden style={{ fontSize: "12px" }}>↗</span>
+                Free Playbooks <span aria-hidden style={{ fontSize: "12px" }}>↗</span>
               </a>
             </div>
 

@@ -1,18 +1,20 @@
-v2 — 2026-05-15
+v3.1 — 2026-05-17
 
-Claude Design homepage revamp ported to Next.js:
+Homepage and book page content release:
 
-- Full revamp layout from homepage.html (portrait-split hero, segmenter, thesis,
-  coaching, Toni, book, school, playbooks, newsletter, footer, Toni bubble)
-- Tim masthead photography in public/assets/
-- Components under src/components/revamp/
+- New standalone /book landing page with masthead, logo cloud, content sections,
+  format cards, bookstore links, bulk orders, newsletter, and footer
+- Homepage content synced to the latest Notion revamp copy
+- Homepage navigation links Book to /book and hides component labels on the
+  production homepage
+- Company logo cloud updated with black wordmark assets
 
-Git tag: `v2`
+Git tag: `v3.1`
 
 Revert to this point:
-  git checkout v2
+  git checkout v3.1
 
 Branch from here:
-  git checkout -b my-branch v2
+  git checkout -b my-branch v3.1
 
-Previous release: v1 (UI kit homepage sections)
+Previous release: v3 (component labels, Tailwind showcase, and brand logo)

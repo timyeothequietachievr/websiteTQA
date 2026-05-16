@@ -55,7 +55,7 @@ function NavLink({ href, children }: { href: string; children: ReactNode }) {
 export function Navigation() {
   const NAV = [
     { name: "Coaching", href: "#coaching" },
-    { name: "Book", href: "#book" },
+    { name: "Book", href: "/book" },
     { name: "School", href: "#school" },
     { name: "Playbooks", href: "#playbooks" },
     { name: "Newsletter", href: "#newsletter" },
@@ -91,7 +91,7 @@ export function Navigation() {
           </nav>
           <div className="flex items-center gap-3">
             <a
-              href="#chemistrycall"
+              href="#coaching"
               className="hidden sm:inline-flex items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
               style={{
                 background: "var(--tqa-ember)",

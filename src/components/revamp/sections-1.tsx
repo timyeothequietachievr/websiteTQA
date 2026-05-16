@@ -8,10 +8,9 @@ import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./
 
 function Segmenter() {
   const items = [
-    { goal: "get promoted", tone: "ember",   note: "Without changing who you are.", playbook: "Promotions playbook" },
-    { goal: "speak up in meetings", tone: "ink", note: "Buy yourself time, then say it.", playbook: "Meetings playbook" },
-    { goal: "lead a quiet team", tone: "sunrise", note: "Get the best out of quiet people.", playbook: "Leading quiet teams" },
-    { goal: "stop saying yes when I mean no", tone: "maroon", note: "Five tactics, politely.", playbook: "Saying no playbook" },
+    { goal: "Coaching", tone: "ember", note: "1:1 & personal.", playbook: "Work with me" },
+    { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen.", playbook: "Get the book" },
+    { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI.", playbook: "See curriculum" },
   ];
   const palette = {
     ember:   { bg: "#D54A2F", fg: "#F5F0D3", note: "rgba(245,240,211,0.78)" },
@@ -23,9 +22,9 @@ function Segmenter() {
     <section style={{ paddingTop: "64px", paddingBottom: "64px" }}>
       <Container>
         <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
-          <SectionLabel number={1} label="Where to start" />
+          <SectionLabel number={3} label="Work with me" />
           <div className="font-sans italic text-[14px]" style={{ color: "var(--neutral-700)" }}>
-            Pick the one that stings most. We&rsquo;ll work on it.
+            Pick how you learn.
           </div>
         </div>
         <h2
@@ -40,9 +39,12 @@ function Segmenter() {
             marginBottom: "32px",
           }}
         >
-          I want to&hellip;
+          I&rsquo;m a coach, author and designer.
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "-16px", marginBottom: "32px", maxWidth: "58ch", lineHeight: 1.6 }}>
+          I help you get promoted, get that new role, get the recognition you deserve.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {items.map((it, i) => {
             const p = palette[it.tone];
             return (
@@ -74,7 +76,6 @@ function Segmenter() {
                     className="font-display"
                     style={{ fontSize: "26px", lineHeight: 1.05, fontWeight: 600, letterSpacing: "-0.018em" }}
                   >
-                    <span style={{ opacity: 0.7, fontStyle: "italic", fontWeight: 400 }}>I want to&nbsp;</span>
                     {it.goal}.
                   </div>
                   <div
@@ -160,19 +161,25 @@ function ThesisBand() {
 
 function SocialProofStrip() {
   const logos = [
-    "IxDA Milan",
-    "UX Australia",
-    "Ezra Coaching",
-    "Standard Chartered",
-    "ADPList",
-    "Design Buddies",
+    "Apple",
+    "Wise",
+    "Stripe",
+    "Canva",
+    "Google",
+    "PayPal",
+    "Atlassian",
+    "Shopify",
+    "Adobe",
+    "Deliveroo",
+    "HubSpot",
+    "McKinsey & Company",
   ];
   return (
     <section style={{ background: "var(--tqa-paper-soft)", padding: "72px 0", borderTop: "1px solid rgba(30,30,30,0.06)", borderBottom: "1px solid rgba(30,30,30,0.06)" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5">
-            <Eyebrow tone="ember">Receipts</Eyebrow>
+            <Eyebrow tone="ember">Trust strip</Eyebrow>
             <div
               className="font-display"
               style={{
@@ -184,9 +191,9 @@ function SocialProofStrip() {
                 marginTop: "12px",
               }}
             >
-              <span style={{ color: "var(--tqa-ember)" }}>1,000+</span>
+              <span style={{ color: "var(--tqa-ember)" }}>Trusted</span>
               <span style={{ display: "block", fontSize: "0.42em", fontStyle: "italic", fontWeight: 400, color: "var(--neutral-700)", marginTop: "10px", letterSpacing: "-0.01em" }}>
-                introverts coached since 2021.
+                by quiet achievers at top companies.
               </span>
             </div>
           </div>
@@ -195,7 +202,7 @@ function SocialProofStrip() {
               className="font-mono uppercase"
               style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--neutral-500)", marginBottom: "20px" }}
             >
-              Spoken at &middot; trained &middot; coached
+              Quiet achievers from
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4">
               {logos.map((l) => (
@@ -224,18 +231,18 @@ function SocialProofStrip() {
 
 function SoundFamiliar() {
   const lines = [
-    "You do great work but louder colleagues get the credit.",
-    "You freeze in meetings — the right thing to say comes ten minutes too late.",
-    "You dread networking events and find yourself counting the minutes till you can leave.",
-    "You're up for promotion but feel like an impostor every time a senior leader's in the room.",
-    "You've been told to “be more visible” — but no one's told you how.",
+    "For years, I pretended to be an extrovert at work to fit the “extrovert ideal”. And it worked. But I was also exhausted.",
+    "I wondered, “What is wrong with me? How do others make it look so easy? Maybe I am just not good enough.”",
+    "I felt invisible. But I refused to give up, and found another path to success.",
+    "The Quiet Achiever is a collection of tiny habits I developed to have impact and influence at work while remaining my true authentic self.",
+    "Since then, I’ve coached nearly a thousand quiet achievers get jobs, get promoted and get the recognition they deserved.",
   ];
   return (
     <section style={{ padding: "112px 0" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5 lg:sticky lg:top-24 self-start">
-            <SectionLabel number={2} label="Sound familiar?" />
+            <SectionLabel number={5} label="Hi, I’m Tim Yeo" />
             <h2
               className="font-display"
               style={{
@@ -248,9 +255,9 @@ function SoundFamiliar() {
                 textWrap: "balance",
               }}
             >
-              You don&rsquo;t need to become someone else.
+              Being a quiet achiever in a noisy world is hard.
               <span style={{ display: "block", fontStyle: "italic", color: "var(--tqa-ember)", fontWeight: 500 }}>
-                You need tiny habits that work for who you already are.
+                I know because I lived it.
               </span>
             </h2>
           </div>

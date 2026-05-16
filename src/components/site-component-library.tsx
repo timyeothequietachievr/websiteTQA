@@ -10,7 +10,6 @@ import {
 } from "@/components/revamp/sections-1";
 import { CoachingSummary, ToniBlock, BookBlock } from "@/components/revamp/sections-2";
 import {
-  LatestWriting,
   StartHere,
   SchoolBlock,
   PlaybooksBand,
@@ -57,6 +56,28 @@ export function SiteComponentLibrary({
   eagerShowcase = false,
   showLibraryIntro = false,
 }: SiteComponentLibraryProps) {
+  if (!showLibraryIntro) {
+    return (
+      <div data-screen-label="Homepage">
+        <Navigation />
+        <HeroPortraitSplit />
+        <SocialProofStrip />
+        <Segmenter />
+        <SoundFamiliar />
+        <ThesisBand />
+        <CoachingSummary />
+        <BookBlock />
+        <SchoolBlock />
+        <StartHere />
+        <PlaybooksBand />
+        <ToniBlock />
+        <NewsletterBand />
+        <ElsewhereStrip />
+        <FooterRev />
+      </div>
+    );
+  }
+
   return (
     <div data-screen-label={showLibraryIntro ? "Visual library" : "Homepage"}>
       {showLibraryIntro ? (
@@ -99,18 +120,15 @@ export function SiteComponentLibrary({
       >
         <HeroPortraitSplit />
       </LabeledComponent>
-      <LabeledComponent code={R.segmenter.code} title={R.segmenter.title} slug={R.segmenter.slug}>
-        <Segmenter />
-      </LabeledComponent>
-      <LabeledComponent code={R["thesis-band"].code} title={R["thesis-band"].title} slug={R["thesis-band"].slug}>
-        <ThesisBand />
-      </LabeledComponent>
       <LabeledComponent
         code={R["social-proof-strip"].code}
         title={R["social-proof-strip"].title}
         slug={R["social-proof-strip"].slug}
       >
         <SocialProofStrip />
+      </LabeledComponent>
+      <LabeledComponent code={R.segmenter.code} title={R.segmenter.title} slug={R.segmenter.slug}>
+        <Segmenter />
       </LabeledComponent>
       <LabeledComponent
         code={R["sound-familiar"].code}
@@ -119,6 +137,9 @@ export function SiteComponentLibrary({
       >
         <SoundFamiliar />
       </LabeledComponent>
+      <LabeledComponent code={R["thesis-band"].code} title={R["thesis-band"].title} slug={R["thesis-band"].slug}>
+        <ThesisBand />
+      </LabeledComponent>
       <LabeledComponent
         code={R["coaching-summary"].code}
         title={R["coaching-summary"].title}
@@ -126,24 +147,14 @@ export function SiteComponentLibrary({
       >
         <CoachingSummary />
       </LabeledComponent>
-      <LabeledComponent code={R["toni-block"].code} title={R["toni-block"].title} slug={R["toni-block"].slug}>
-        <ToniBlock />
-      </LabeledComponent>
       <LabeledComponent code={R["book-block"].code} title={R["book-block"].title} slug={R["book-block"].slug}>
         <BookBlock />
       </LabeledComponent>
-      <LabeledComponent
-        code={R["latest-writing"].code}
-        title={R["latest-writing"].title}
-        slug={R["latest-writing"].slug}
-      >
-        <LatestWriting />
+      <LabeledComponent code={R["school-block"].code} title={R["school-block"].title} slug={R["school-block"].slug}>
+        <SchoolBlock />
       </LabeledComponent>
       <LabeledComponent code={R["start-here"].code} title={R["start-here"].title} slug={R["start-here"].slug}>
         <StartHere />
-      </LabeledComponent>
-      <LabeledComponent code={R["school-block"].code} title={R["school-block"].title} slug={R["school-block"].slug}>
-        <SchoolBlock />
       </LabeledComponent>
       <LabeledComponent
         code={R["playbooks-band"].code}
@@ -151,6 +162,9 @@ export function SiteComponentLibrary({
         slug={R["playbooks-band"].slug}
       >
         <PlaybooksBand />
+      </LabeledComponent>
+      <LabeledComponent code={R["toni-block"].code} title={R["toni-block"].title} slug={R["toni-block"].slug}>
+        <ToniBlock />
       </LabeledComponent>
       <LabeledComponent
         code={R["newsletter-band"].code}

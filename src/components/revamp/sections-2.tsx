@@ -8,21 +8,21 @@ import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./
 
 function CoachingSummary() {
   const outcomes = [
-    "Walk into meetings with talking points and the confidence to use them.",
-    "Have the difficult conversations you've been avoiding.",
-    "Get promoted without pretending to be someone you're not.",
+    "We unpack your challenges and define what success looks like for you.",
+    "We make an action plan, and then we get to work.",
+    "Confidence comes from evidence. Results only come if you practise.",
   ];
   const steps = [
-    { n: "01", t: "Chemistry call", d: "30 min, free. We talk through what you're stuck on. If we're not a fit, I'll tell you." },
-    { n: "02", t: "Deep Dive",      d: "90 min workshop. Identify the problem, set success measures. Output: your Coaching Plan." },
-    { n: "03", t: "Coaching plan",  d: "Fortnightly sessions plus Text/WhatsApp between. The work happens between sessions." },
+    { n: "01", t: "Chemistry call", d: "20-min video call. We talk about your challenges and see if we are a fit. Free." },
+    { n: "02", t: "Deep Dive", d: "90min goal-setting workshop. You get clarity and a Coaching Plan with actions." },
+    { n: "03", t: "Coaching plan", d: "Fortnightly sessions. Tiny habits, practised in real situations. Text support between sessions." },
   ];
   return (
     <section id="coaching" style={{ padding: "112px 0", background: "var(--tqa-paper)" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <SectionLabel number={3} label="The primary offer" />
+            <SectionLabel number={7} label="Coaching" />
             <h2
               className="font-display"
               style={{
@@ -35,16 +35,17 @@ function CoachingSummary() {
                 textWrap: "balance",
               }}
             >
-              Coach with me, <em style={{ color: "var(--tqa-ember)", fontStyle: "italic" }}>1:1</em>.
+              It&rsquo;s just you and me.
             </h2>
             <p
               className="font-sans"
               style={{ fontSize: "17px", lineHeight: 1.6, color: "var(--neutral-700)", marginTop: "24px", maxWidth: "44ch" }}
             >
-              I work with a very specific group: ambitious quiet achievers and introverts who want to step into leadership without losing themselves. If that&rsquo;s you, let&rsquo;s talk.
+              We unpack your challenges and define what success looks like for you. Then, we make an
+              action plan, and we get to work. No results? 100% money-back guarantee.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="lg" href="#chemistrycall">
+              <Button variant="primary" size="lg" href="#coaching">
                 Book a chemistry call
                 <span aria-hidden>→</span>
               </Button>
@@ -62,7 +63,7 @@ function CoachingSummary() {
               className="font-mono uppercase"
               style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--neutral-500)", marginBottom: "16px" }}
             >
-              In three months, you will&hellip;
+              How coaching helps
             </div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {outcomes.map((o, i) => (
@@ -132,7 +133,7 @@ function ToniBlock() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <SectionLabel number={4} label="If you're not ready yet" />
+            <SectionLabel number={8} label="If you're not ready yet" />
             <h2
               className="font-display"
               style={{
@@ -271,10 +272,10 @@ function ToniChatPreview() {
 
 function BookBlock() {
   const blurbs = [
-    { title: "Intro",      copy: "Quiet is a strength, not a flaw. Same success, different path." },
-    { title: "Small talk", copy: "Three openers that don&rsquo;t feel ick — for the bus stop and the all-hands." },
-    { title: "Meetings",   copy: "Five tiny habits to buy yourself time and say the thing you wanted to say." },
-    { title: "Saying no",  copy: "Five tactics, politely. Without burning bridges or your evenings." },
+    { title: "10 chapters", copy: "Practical topics from small talk and meetings to difficult conversations and networking." },
+    { title: "100 tiny habits", copy: "Small actions you can practise immediately, not vague inspiration." },
+    { title: "Be seen & heard", copy: "Build visibility while remaining your true self." },
+    { title: "Free checklist", copy: "Download every habit in the book on one page." },
   ];
   return (
     <section id="book" style={{ padding: "120px 0", background: "var(--tqa-paper-soft)" }}>
@@ -311,7 +312,7 @@ function BookBlock() {
           </div>
 
           <div className="lg:col-span-8 lg:pl-6">
-            <SectionLabel number={5} label="The book" />
+            <SectionLabel number={9} label="The book" />
             <h2
               className="font-display"
               style={{
@@ -324,10 +325,10 @@ function BookBlock() {
                 textWrap: "balance",
               }}
             >
-              <em style={{ fontStyle: "italic", color: "var(--tqa-ember)" }}>The Quiet Achiever</em> &mdash; tiny habits to have impact at work.
+              <em style={{ fontStyle: "italic", color: "var(--tqa-ember)" }}>The Quiet Achiever</em> &mdash; tiny habits to have impact at work without pretending to be an extrovert.
             </h2>
             <p className="font-sans italic" style={{ fontSize: "17px", color: "var(--tqa-ember-deep)", marginTop: "16px" }}>
-              (without pretending to be an extrovert)
+              10 chapters. 100 tiny habits. Be seen &amp; be heard while remaining your true self.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-10">

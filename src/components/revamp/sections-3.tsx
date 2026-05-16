@@ -53,18 +53,18 @@ function LatestWriting() {
 
 function StartHere() {
   const tiles = [
-    { icon: "🎙️", label: "Best podcast appearance", note: "30 minutes on Lenny&rsquo;s Podcast", cta: "Listen" },
-    { icon: "📋", label: "Tiny Habits Checklist",    note: "Every habit in the book, on one page", cta: "Free download" },
-    { icon: "📖", label: "Free book chapter",        note: "Chapter 1 — straight to your inbox",   cta: "Read free" },
+    { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen" },
+    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Download" },
+    { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read" },
   ];
   return (
     <section style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
         <div className="text-center" style={{ maxWidth: "640px", margin: "0 auto 56px" }}>
-          <Eyebrow tone="ember">New here?</Eyebrow>
+          <Eyebrow tone="ember">Learn differently</Eyebrow>
           <h2 className="font-display"
               style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px" }}>
-            Start with these three.
+            Choose the format that fits how you learn.
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -99,23 +99,26 @@ function StartHere() {
 
 function SchoolBlock() {
   const courses = [
-    { title: "Public Speaking",        meta: "6 lessons · self-paced" },
-    { title: "Difficult Conversations", meta: "5 lessons · self-paced" },
-    { title: "Saying No",              meta: "4 lessons · self-paced" },
-    { title: "Networking",             meta: "5 lessons · self-paced" },
-    { title: "Interviews",             meta: "7 lessons · self-paced" },
-    { title: "Executive Communication",meta: "8 lessons · self-paced" },
+    { title: "Public Speaking", meta: "On-demand video lessons" },
+    { title: "Difficult Conversations", meta: "Self-paced and practical" },
+    { title: "Say No (politely)", meta: "Skip to what you need today" },
+    { title: "Facilitation", meta: "Structured lessons" },
+    { title: "Networking", meta: "Practical skills" },
+    { title: "Executive Communication & Stakeholder Influence", meta: "Leadership communication" },
   ];
   return (
     <section id="school" style={{ padding: "112px 0" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10">
           <div className="lg:col-span-7">
-            <SectionLabel number={7} label="The school" />
+            <SectionLabel number={10} label="The school" />
             <h2 className="font-display"
                 style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px", textWrap: "balance" }}>
               Learn the skills you need, on your own time.
             </h2>
+            <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "54ch", lineHeight: 1.6 }}>
+              On-demand video lessons. Self-paced. Practical. Skip to the topic you need today.
+            </p>
           </div>
           <div className="lg:col-span-5 lg:flex lg:items-end">
             <a href="#school-all" className="font-sans inline-flex items-center gap-2 font-semibold" style={{ fontSize: "14px", color: "var(--tqa-ember)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
@@ -155,22 +158,22 @@ function SchoolBlock() {
 
 function PlaybooksBand() {
   const books = [
-    { tag: "Meetings",   title: "How to speak up in meetings — five tiny habits to buy yourself time", pages: "8 pages" },
-    { tag: "Saying no",  title: "How to say no, politely — five tactics", pages: "6 pages" },
-    { tag: "Visibility", title: "How to introduce yourself in three sizes (S / M / L)", pages: "10 pages" },
+    { tag: "Checklist", title: "Tiny Habits Checklist — every habit in the book on one page", pages: "1 page" },
+    { tag: "Visibility", title: "How to introduce yourself in three sizes", pages: "Small · medium · large" },
+    { tag: "Meetings", title: "How to speak up in meetings — five tiny habits to buy yourself time", pages: "5 habits" },
   ];
   return (
     <section id="playbooks" style={{ padding: "112px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10">
           <div className="lg:col-span-7">
-            <SectionLabel number={8} label="Free playbooks" />
+            <SectionLabel number={13} label="Free playbooks" />
             <h2 className="font-display"
                 style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px", textWrap: "balance" }}>
               Free playbooks for quiet achievers.
             </h2>
             <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "56ch", lineHeight: 1.6 }}>
-              One PDF, one tiny habit. Every playbook gets an audio companion in Tim&rsquo;s voice — listen on your walk.
+              Tiny how-to guides for specific situations. One topic. All action. Free.
             </p>
           </div>
         </div>
@@ -197,7 +200,7 @@ function PlaybooksBand() {
               </div>
               <div className="flex items-center justify-between mt-6">
                 <div className="font-mono" style={{ fontSize: "11px", letterSpacing: "0.14em", color: "var(--neutral-500)", textTransform: "uppercase" }}>
-                  PDF · {b.pages} · 🎧 audio
+                  PDF · {b.pages}
                 </div>
                 <div className="font-sans inline-flex items-center gap-1.5 font-bold" style={{ fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--tqa-ember)" }}>
                   Free <span aria-hidden>↓</span>
@@ -223,7 +226,7 @@ function NewsletterBand() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-sunrise)", fontWeight: 700 }}>
-              Newsletter · weekly · audio included
+              Newsletter
             </div>
             <h2 className="font-display" style={{
               fontSize: "clamp(40px, 5vw, 64px)",
@@ -234,10 +237,10 @@ function NewsletterBand() {
               marginTop: "14px",
               textWrap: "balance",
             }}>
-              <em style={{ fontStyle: "italic" }}>Tiny Habits</em> for Quiet Achievers.
+              Proven tiny habits in your inbox.
             </h2>
             <p className="font-reading" style={{ fontSize: "18px", lineHeight: 1.55, color: "rgba(245,240,211,0.88)", marginTop: "18px", maxWidth: "52ch" }}>
-              One short, useful email a week. One tiny habit at a time. No fluff. Audio version in Tim&rsquo;s voice. Unsubscribe anytime.
+              One short, useful email a week. No fluff. Unsubscribe anytime.
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -273,7 +276,7 @@ function NewsletterBand() {
               </button>
             </form>
             <div className="font-mono" style={{ fontSize: "11px", letterSpacing: "0.14em", color: "rgba(245,240,211,0.65)", marginTop: "14px", textTransform: "uppercase" }}>
-              Joining 8,400+ quiet achievers
+              No spam. Unsubscribe anytime.
             </div>
           </div>
         </div>
@@ -320,10 +323,10 @@ function ElsewhereStrip() {
 
 function FooterRev() {
   const cols = [
-    { h: "Coach", links: ["Coaching plans", "Chemistry call", "Speaking", "Contact"] },
-    { h: "Read & listen", links: ["The book", "Newsletter", "Podcast", "Playbooks"] },
-    { h: "Learn", links: ["The school", "Toni (AI coach)", "Free chapter", "Tiny Habits Checklist"] },
-    { h: "About", links: ["Tim's story", "Press kit", "Terms", "Privacy"] },
+    { h: "Work with Tim", links: ["Coaching", "School", "Speaking"] },
+    { h: "Read & listen", links: ["Book", "Podcast", "Playbooks", "Toni (AI)"] },
+    { h: "About", links: ["About Tim", "Contact", "Terms", "Privacy"] },
+    { h: "Subscribe", links: ["One short, useful email a week.", "Newsletter"] },
   ];
   return (
     <footer style={{ background: "var(--tqa-ink-deep)", color: "var(--tqa-paper)", padding: "72px 0 48px" }}>
@@ -337,10 +340,10 @@ function FooterRev() {
               Introvert Coach
             </div>
             <p className="font-sans" style={{ fontSize: "14px", color: "rgba(245,240,211,0.7)", marginTop: "20px", lineHeight: 1.6, maxWidth: "36ch" }}>
-              Coaching, a book, a school, a newsletter. All for quiet achievers who want impact at work — without pretending to be extroverts.
+              Coaching, a book, a school, and practical playbooks for quiet achievers who want impact at work — without pretending to be extroverts.
             </p>
             <div className="mt-8">
-              <a href="#chemistrycall" className="font-sans inline-flex items-center gap-2" style={{
+              <a href="#coaching" className="font-sans inline-flex items-center gap-2" style={{
                 background: "var(--tqa-ember)",
                 color: "var(--tqa-paper)",
                 padding: "12px 18px",
@@ -374,7 +377,7 @@ function FooterRev() {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-16 pt-8" style={{ borderTop: "1px solid rgba(245,240,211,0.12)" }}>
           <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(245,240,211,0.55)" }}>
-            © 2026 Tim Yeo · thequietachievr.com · Adelaide, SA
+            © 2026 The Quiet Achiever · Adelaide, Australia
           </div>
           <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(245,240,211,0.55)" }}>
             Built quietly.
