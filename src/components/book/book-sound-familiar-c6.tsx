@@ -16,7 +16,7 @@ const PAIN_POINTS = [
 
 export function BookSoundFamiliarC6() {
   return (
-    <section id="sound-familiar" data-component-code="c6" style={{ padding: "112px 0" }}>
+    <section id="sound-familiar" data-component-code="c6" style={{ padding: "72px 0" }}>
       <Container>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
@@ -71,7 +71,7 @@ export function BookSoundFamiliarC6() {
               ))}
             </ol>
             <p
-              className="font-display mt-6 text-xl font-medium italic"
+              className="font-display mt-6 text-xl font-bold italic"
               style={{ color: "var(--tqa-ink)" }}
             >
               👉🏻 If your answer is YES, this book is for you.

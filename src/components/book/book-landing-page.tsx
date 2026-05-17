@@ -285,17 +285,42 @@ const quotePalette: Record<string, { bg: string; fg: string }> = {
   maroon: { bg: "var(--tqa-ember-deep)", fg: "var(--tqa-paper)" },
 };
 
-function SectionHeading({ n, children }: { n: string; children: ReactNode }) {
+function SectionHeading({ n, children }: { n?: string; children: ReactNode }) {
   return (
     <div className="mb-10">
-      <span
-        className="font-mono text-[11px] font-bold tracking-[0.2em] uppercase"
-        style={{ color: "var(--tqa-ember)" }}
-      >
-        {n}
-      </span>
-      <div className="mt-2">{children}</div>
+      {n ? (
+        <span
+          className="font-mono text-[11px] font-bold tracking-[0.2em] uppercase"
+          style={{ color: "var(--tqa-ember)" }}
+        >
+          {n}
+        </span>
+      ) : null}
+      <div className={n ? "mt-2" : ""}>{children}</div>
     </div>
+  );
+}
+
+function AmazonRating() {
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <span aria-label="4.5 out of 5 stars" className="inline-flex items-center gap-0.5">
+        <span style={{ color: "var(--tqa-sunrise)" }}>★★★★</span>
+        <span
+          aria-hidden
+          style={{
+            background: "linear-gradient(90deg, var(--tqa-sunrise) 50%, #fff 50%)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          ★
+        </span>
+      </span>
+      <span>4.5 on Amazon</span>
+    </span>
   );
 }
 
@@ -370,11 +395,11 @@ function BookHero() {
               </a>
             </div>
             <p className="font-sans mt-3 text-sm text-warm-500">
-              Available in print, eBook, and audiobook formats.
+              Available in print, eBook, and audiobook (narrated by me 🎤).
             </p>
 
             <p className="font-sans mt-6 text-sm font-semibold text-charcoal">
-              <span style={{ color: "var(--tqa-sunrise)" }}>★★★★½</span> 4.5★ on Amazon.
+              <AmazonRating />
             </p>
 
           </div>
@@ -388,7 +413,7 @@ function ChaptersTable() {
   return (
     <section id="chapters" style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
-        <SectionHeading n="03">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
@@ -437,12 +462,12 @@ function ChecklistLead() {
   return (
     <section id="checklist" style={{ padding: "96px 0" }}>
       <Container>
-        <SectionHeading n="04">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)", lineHeight: 1.08 }}
           >
-            Free — Tiny Habits Checklist + Chapter 1
+            Download free chapter
           </h2>
         </SectionHeading>
         <div
@@ -450,9 +475,7 @@ function ChecklistLead() {
           style={{ background: "var(--tqa-sunrise-soft)" }}
         >
           <p className="font-reading max-w-2xl text-lg leading-relaxed text-charcoal">
-            <strong>Every tiny habit in the book on one page — plus Chapter 1 free.</strong> The checklist
-            quiet achievers tape to the wall behind their monitor. Read Chapter 1 (
-            <em>Introducing yourself</em>) before you decide to buy.
+            Read Chapter 1 plus a checklist of every tiny habit in the book.
           </p>
           <form
             className="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
@@ -472,12 +495,9 @@ function ChecklistLead() {
               className="h-12 rounded px-6 font-sans text-[15px] font-bold"
               style={{ background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}
             >
-              Send me the checklist + Chapter 1 →
+              Download Now →
             </button>
           </form>
-          <p className="font-mono mt-3 text-[11px] tracking-wide text-warm-700 uppercase">
-            One tiny habit a week after that. Unsubscribe anytime.
-          </p>
         </div>
       </Container>
     </section>
@@ -488,13 +508,16 @@ function TimBio() {
   return (
     <section id="about-tim" style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
-        <SectionHeading n="05">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
           >
-            Hi, I&rsquo;m Tim Yeo
+            👋 I&rsquo;m Tim Yeo
           </h2>
+          <p className="font-sans mt-3 text-sm italic text-warm-500">
+            (pronounced Yo like &ldquo;Yo, what&rsquo;s up?&rdquo;)
+          </p>
         </SectionHeading>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
@@ -507,11 +530,8 @@ function TimBio() {
               />
             </div>
           </div>
-          <div className="lg:col-span-7">
-            <p className="font-sans text-sm italic text-warm-500">
-              (Yeo pronounced Yo — like &ldquo;Yo, what&rsquo;s up?&rdquo;)
-            </p>
-            <p className="font-reading mt-4 text-[18px] leading-relaxed text-charcoal">
+          <div className="lg:col-span-7 self-start">
+            <p className="font-reading text-[18px] leading-relaxed text-charcoal">
               <strong>
                 Over 20+ years, I&rsquo;ve worked as a designer and a leader in tech, in companies
                 dominated by big personalities with strong opinions and loud voices.
@@ -544,7 +564,7 @@ function PraiseSection() {
   return (
     <section id="praise" style={{ padding: "96px 0" }}>
       <Container>
-        <SectionHeading n="06">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
@@ -553,7 +573,7 @@ function PraiseSection() {
           </h2>
         </SectionHeading>
         <p className="font-sans mb-10 text-sm font-semibold text-charcoal">
-          <span className="text-sunrise">★★★★½</span> 4.5★ on Amazon.
+          <AmazonRating />
         </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
@@ -586,12 +606,12 @@ function BookQuotes() {
   return (
     <section style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
-        <SectionHeading n="07">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
           >
-            Quotes from the book
+            Book quotes
           </h2>
         </SectionHeading>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -622,7 +642,7 @@ function FaqSection() {
   return (
     <section id="faq" style={{ padding: "96px 0" }}>
       <Container>
-        <SectionHeading n="08">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
@@ -707,35 +727,36 @@ function FormatCards({
 
 function FormatsSection() {
   return (
-    <section id="formats" style={{ padding: "96px 0", background: "var(--tqa-ink)", color: "var(--tqa-paper)" }}>
+    <section id="formats" style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
-        <SectionHeading n="09">
+        <SectionHeading>
           <h2
-            className="font-display font-semibold"
-            style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05, color: "var(--tqa-paper)" }}
+            className="font-display font-semibold text-charcoal"
+            style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05 }}
           >
-            Choose your format
+            Available as
           </h2>
         </SectionHeading>
-        <div className="text-paper">
-          <FormatCards title="📲 eBook & Audiobook" formats={DIGITAL_FORMATS} />
-          <FormatCards title="📖 Hardcover & Paperback" formats={PRINT_FORMATS} />
+        <div>
+          <FormatCards title="eBook & audiobook" formats={DIGITAL_FORMATS} />
+          <FormatCards title="Hardcover & paperback" formats={PRINT_FORMATS} />
         </div>
-        <div className="mt-8 border-t border-paper/20 pt-8">
-          <h3 className="font-display text-xl font-semibold">🌍 Also available at</h3>
-          <p className="font-reading mt-3 max-w-3xl text-sm leading-relaxed opacity-85">
-            Shipping a physical book outside Australia can be costly. If you can&rsquo;t buy direct,
-            grab it from your favourite store:
+        <div className="mt-8 border-t border-charcoal/10 pt-8">
+          <h3 className="font-display text-xl font-semibold text-charcoal">
+            You can also buy from
+          </h3>
+          <p className="font-reading mt-3 max-w-3xl text-sm leading-relaxed text-warm-700">
+            Grab it from your favourite store:
           </p>
-          <div className="mt-5 flex flex-wrap gap-x-4 gap-y-3 font-sans text-sm font-semibold opacity-90">
+          <div className="mt-5 flex flex-wrap gap-x-4 gap-y-3 font-sans text-sm font-semibold">
             {BOOKSTORE_LINKS.map((store) => (
               <a
                 key={store.label}
                 href={store.href}
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4"
-                style={{ color: "var(--tqa-paper)" }}
+                className="rounded-full px-3 py-1 underline-offset-4 transition hover:underline"
+                style={{ background: "var(--tqa-paper)", color: "var(--tqa-ember-deep)" }}
               >
                 {store.label} →
               </a>
@@ -751,7 +772,7 @@ function BulkOrderSection() {
   return (
     <section style={{ padding: "80px 0" }}>
       <Container>
-        <SectionHeading n="10">
+        <SectionHeading>
           <h2
             className="font-display font-semibold text-charcoal"
             style={{ fontSize: "clamp(28px, 3vw, 36px)", lineHeight: 1.08 }}
@@ -759,21 +780,48 @@ function BulkOrderSection() {
             Bulk order today
           </h2>
         </SectionHeading>
-        <div className="max-w-2xl rounded border border-paper-200 bg-paper-soft p-8">
-          <p className="font-reading text-[17px] leading-relaxed text-charcoal">
-            When you bulk order 70+ copies of <em>The Quiet Achiever</em>, Tim will be happy to
-            design a custom bonus experience for you and your colleagues.
-          </p>
-          <p className="font-reading mt-4 text-[17px] leading-relaxed text-warm-700">
-            Email our team about your ordering needs. We can collaborate on ways to enhance your book
-            experience through speaking, workshops, training sessions, and more.
-          </p>
-          <a
-            href="mailto:bulkorder@thequietachievr.com?subject=Bulk%20Order%3A%20The%20Quiet%20Achiever%20book"
-            className="mt-6 inline-flex font-sans text-[15px] font-semibold text-ember underline underline-offset-4"
+        <div className="grid grid-cols-1 items-stretch gap-8 rounded border border-paper-200 bg-paper-soft p-8 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div
+              className="flex h-full min-h-[260px] items-center justify-center rounded bg-paper p-6 text-center ring-1 ring-charcoal/10"
+              aria-label="Placeholder image showing stacks of The Quiet Achiever books"
+            >
+              <div>
+                <div className="mx-auto grid w-44 grid-cols-3 gap-2">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="rounded-sm"
+                      style={{
+                        height: `${44 + (i % 3) * 10}px`,
+                        background: i % 2 === 0 ? "var(--tqa-ember)" : "var(--tqa-ink)",
+                        boxShadow: "0 8px 18px -12px rgba(30,30,30,0.45)",
+                      }}
+                    />
+                  ))}
+                </div>
+                <p className="font-mono mt-5 text-[11px] font-bold tracking-[0.18em] text-warm-500 uppercase">
+                  Image placeholder: stacked books
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="font-reading text-[17px] leading-relaxed text-charcoal">
+              When you bulk order 70+ copies of <em>The Quiet Achiever</em>, Tim will be happy to
+              design a custom bonus experience for you and your colleagues.
+            </p>
+            <p className="font-reading mt-4 text-[17px] leading-relaxed text-warm-700">
+              Email our team about your ordering needs. We can collaborate on ways to enhance your book
+              experience through speaking, workshops, training sessions, and more.
+            </p>
+            <a
+              href="mailto:bulkorder@thequietachievr.com?subject=Bulk%20Order%3A%20The%20Quiet%20Achiever%20book"
+              className="mt-6 inline-flex font-sans text-[15px] font-semibold text-ember underline underline-offset-4"
           >
-            Contact team →
-          </a>
+              Contact team →
+            </a>
+          </div>
         </div>
       </Container>
     </section>

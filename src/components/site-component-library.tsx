@@ -79,6 +79,7 @@ export function SiteComponentLibrary({
         <NewsletterBand />
         <ElsewhereStrip />
         <FooterRev />
+        <ToniBubble />
       </div>
     );
   }
