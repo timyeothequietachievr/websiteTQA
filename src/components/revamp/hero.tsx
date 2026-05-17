@@ -492,12 +492,6 @@ function HeroMasthead() {
    bullet checklist of outcomes, two CTAs, stat plate floating bottom of the
    portrait. */
 function HeroPortraitSplit() {
-  const outcomes = [
-    "Speak up in meetings",
-    "Get promoted on your terms",
-    "Have the hard conversations",
-    "Lead a quiet team well",
-  ];
   return (
     <section style={{ paddingTop: "12px", paddingBottom: "0" }}>
       <Container wide>
@@ -531,7 +525,7 @@ function HeroPortraitSplit() {
               }}
             >
               <span style={{ color: "var(--tqa-ember)" }}>●</span>
-              Now accepting chemistry calls
+              Introducing Toni [AI]
             </div>
 
             <h1
@@ -546,7 +540,7 @@ function HeroPortraitSplit() {
                 textWrap: "balance",
               }}
             >
-              Be seen, be heard and get the credit you deserve
+              Be seen, be heard & get the credit you deserve
               <span style={{ display: "block", color: "var(--tqa-ember)", fontStyle: "italic", fontWeight: 600 }}>
                 without pretending to be an extrovert.
               </span>
@@ -562,53 +556,13 @@ function HeroPortraitSplit() {
                 maxWidth: "52ch",
               }}
             >
-              20+ years in tech. 1,000+ quiet achievers coached. Life is too short to be
-              living someone else&apos;s version of success. Stop pretending. Start practicing.
+              Life is too short to be living someone else&apos;s version of success. Stop pretending. Start practicing.
               Remain your true authentic self.
             </p>
 
-            <ul
-              className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3"
-              style={{ listStyle: "none", padding: 0, margin: "28px 0 0" }}
-            >
-              {outcomes.map((o) => (
-                <li
-                  key={o}
-                  className="font-sans"
-                  style={{
-                    fontSize: "14px",
-                    color: "rgba(245,240,211,0.85)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    style={{
-                      width: "16px",
-                      height: "16px",
-                      borderRadius: "999px",
-                      border: "1.5px solid var(--tqa-sunrise)",
-                      color: "var(--tqa-sunrise)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "10px",
-                      fontWeight: 700,
-                      flexShrink: 0,
-                    }}
-                  >
-                    ✓
-                  </span>
-                  {o}
-                </li>
-              ))}
-            </ul>
-
             <div className="flex flex-wrap items-center gap-3" style={{ marginTop: "32px" }}>
               <a
-                href="#coaching"
+                href="#work-with-me"
                 className="font-sans inline-flex items-center gap-2"
                 style={{
                   background: "var(--tqa-ember)",
@@ -741,7 +695,7 @@ function HeroPortraitSplit() {
                       lineHeight: 1,
                     }}
                   >
-                    20<span style={{ color: "var(--tqa-sunrise)" }}>yrs</span>
+                    20<span style={{ color: "var(--tqa-sunrise)" }}>+</span><span style={{ color: "var(--tqa-sunrise)", fontSize: "0.5em", verticalAlign: "baseline" }}>YRS</span>
                   </div>
                   <div
                     className="font-mono uppercase"

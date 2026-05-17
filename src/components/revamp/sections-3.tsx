@@ -54,17 +54,16 @@ function LatestWriting() {
 function StartHere() {
   const tiles = [
     { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen" },
-    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Download" },
+    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Read" },
     { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read" },
   ];
   return (
     <section style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
         <div className="text-center" style={{ maxWidth: "640px", margin: "0 auto 56px" }}>
-          <Eyebrow tone="ember">Learn differently</Eyebrow>
           <h2 className="font-display"
               style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px" }}>
-            Choose the format that fits how you learn.
+            Learn for free
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -99,31 +98,27 @@ function StartHere() {
 
 function SchoolBlock() {
   const courses = [
-    { title: "Public Speaking", meta: "On-demand video lessons" },
-    { title: "Difficult Conversations", meta: "Self-paced and practical" },
-    { title: "Say No (politely)", meta: "Skip to what you need today" },
-    { title: "Facilitation", meta: "Structured lessons" },
-    { title: "Networking", meta: "Practical skills" },
-    { title: "Executive Communication & Stakeholder Influence", meta: "Leadership communication" },
+    { title: "Public Speaking" },
+    { title: "Difficult Conversations" },
+    { title: "Say No (politely)" },
+    { title: "Facilitation" },
+    { title: "Networking" },
+    { title: "Executive Communication & Stakeholder Influence" },
   ];
   return (
     <section id="school" style={{ padding: "112px 0" }}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10">
-          <div className="lg:col-span-7">
-            <SectionLabel number={10} label="The school" />
+        <div className="mb-10">
+          <div>
             <h2 className="font-display"
                 style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px", textWrap: "balance" }}>
-              Learn the skills you need, on your own time.
+              Quiet Leadership School
             </h2>
-            <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "54ch", lineHeight: 1.6 }}>
-              On-demand video lessons. Self-paced. Practical. Skip to the topic you need today.
+            <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "none", lineHeight: 1.6 }}>
+              The School&rsquo;s courses offer a structured, step-by-step guide on how to practise all the
+              tiny habits from the book, and more. Binge watch all the videos or skip around and watch
+              a video you want to practise right now.
             </p>
-          </div>
-          <div className="lg:col-span-5 lg:flex lg:items-end">
-            <a href="#school-all" className="font-sans inline-flex items-center gap-2 font-semibold" style={{ fontSize: "14px", color: "var(--tqa-ember)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
-              Browse the whole school <span aria-hidden>→</span>
-            </a>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -145,11 +140,13 @@ function SchoolBlock() {
               <div className="font-display" style={{ fontSize: "20px", letterSpacing: "-0.016em", fontWeight: 600, color: "var(--tqa-charcoal)" }}>
                 {c.title}
               </div>
-              <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.16em", color: "var(--neutral-500)", marginTop: "6px" }}>
-                {c.meta}
-              </div>
             </a>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <a href="/school" className="font-sans inline-flex items-center gap-2 font-semibold" style={{ fontSize: "14px", color: "var(--tqa-ember)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
+            See curriculum <span aria-hidden>→</span>
+          </a>
         </div>
       </Container>
     </section>
@@ -158,19 +155,18 @@ function SchoolBlock() {
 
 function PlaybooksBand() {
   const books = [
-    { tag: "Checklist", title: "Tiny Habits Checklist — every habit in the book on one page", pages: "1 page" },
-    { tag: "Visibility", title: "How to introduce yourself in three sizes", pages: "Small · medium · large" },
-    { tag: "Meetings", title: "How to speak up in meetings — five tiny habits to buy yourself time", pages: "5 habits" },
+    { tag: "Checklist", title: "Tiny Habits Checklist", copy: "Every habit in the book on one page." },
+    { tag: "Visibility", title: "How to introduce yourself in three sizes", copy: "Small (10 sec), medium (1–3 min), large (5 min)." },
+    { tag: "Meetings", title: "How to speak up in meetings", copy: "Five tiny habits to buy yourself time on the spot." },
   ];
   return (
     <section id="playbooks" style={{ padding: "112px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10">
           <div className="lg:col-span-7">
-            <SectionLabel number={13} label="Free playbooks" />
             <h2 className="font-display"
                 style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px", textWrap: "balance" }}>
-              Free playbooks for quiet achievers.
+              Playbooks for quiet achievers.
             </h2>
             <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "56ch", lineHeight: 1.6 }}>
               Tiny how-to guides for specific situations. One topic. All action. Free.
@@ -197,11 +193,11 @@ function PlaybooksBand() {
                 <div className="font-display" style={{ fontSize: "22px", lineHeight: 1.15, letterSpacing: "-0.018em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "14px" }}>
                   {b.title}
                 </div>
+                <p className="font-sans" style={{ fontSize: "14px", color: "var(--neutral-700)", marginTop: "12px", lineHeight: 1.5 }}>
+                  {b.copy}
+                </p>
               </div>
               <div className="flex items-center justify-between mt-6">
-                <div className="font-mono" style={{ fontSize: "11px", letterSpacing: "0.14em", color: "var(--neutral-500)", textTransform: "uppercase" }}>
-                  PDF · {b.pages}
-                </div>
                 <div className="font-sans inline-flex items-center gap-1.5 font-bold" style={{ fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--tqa-ember)" }}>
                   Free <span aria-hidden>↓</span>
                 </div>
@@ -237,10 +233,10 @@ function NewsletterBand() {
               marginTop: "14px",
               textWrap: "balance",
             }}>
-              Proven tiny habits in your inbox.
+              Tiny habits in your inbox.
             </h2>
             <p className="font-reading" style={{ fontSize: "18px", lineHeight: 1.55, color: "rgba(245,240,211,0.88)", marginTop: "18px", maxWidth: "52ch" }}>
-              One short, useful email a week. No fluff. Unsubscribe anytime.
+              One short, useful email a week.
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -287,18 +283,19 @@ function NewsletterBand() {
 
 function ElsewhereStrip() {
   const items = [
-    { label: "Podcast", note: "Tim on other people's shows" },
-    { label: "Speaking", note: "For event organisers" },
-    { label: "LinkedIn", note: "Tim&rsquo;s longer essays" },
+    { label: "LinkedIn", note: "Longer essays and updates" },
     { label: "YouTube", note: "Talks &amp; long-form" },
+    { label: "Threads", note: "Short thoughts" },
+    { label: "Instagram", note: "Behind the scenes" },
+    { label: "Facebook", note: "Follow along" },
   ];
   return (
     <section style={{ padding: "80px 0", background: "var(--tqa-paper)" }}>
       <Container>
         <div className="font-mono uppercase mb-6" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--neutral-500)" }}>
-          Tim elsewhere
+          Follow Tim on
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {items.map((it, i) => (
             <a key={i} href="#elsewhere" style={{
               display: "block",
@@ -321,12 +318,59 @@ function ElsewhereStrip() {
   );
 }
 
+function SchoolQuotes() {
+  const quotes = [
+    {
+      quote:
+        "The Leadership for Introverts course provided me with easy-to-apply tools to boost my confidence and increase my visibility in my org. The bite-sized video format fit perfectly into my hectic schedule.",
+      name: "Patricia Avila",
+      role: "Senior Director Product Design, Artera, USA",
+    },
+    {
+      quote:
+        "Watching Tim on video is like listening to a supportive, knowledgeable, empathetic friend. Tim gave me incredible advice and methods I could use in real-life scenarios. I highly recommend.",
+      name: "Leonardo Mattei",
+      role: "Senior Product Designer, Apple, UK",
+    },
+    {
+      quote:
+        "The course’s impact has been nothing short of transformative, especially for an executive like myself. His expertise and clear communication style made the learning experience concise yet comprehensive, focusing on practical skills and a mindset shift tailored for introverts.",
+      name: "Claire Erickson",
+      role: "VP, Product & Tech Strategy & Operations, Blackhawk Network, USA",
+    },
+  ];
+  return (
+    <section style={{ padding: "80px 0", background: "var(--tqa-paper-soft)" }}>
+      <Container>
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {quotes.map((item) => (
+            <figure key={item.name} className="rounded-lg bg-paper p-6 ring-1 ring-charcoal/10">
+              <blockquote className="font-reading text-[16px] leading-relaxed text-charcoal italic">
+                &ldquo;{item.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-4 font-sans text-sm text-warm-700">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
+                  {item.name.split(" ").map((part) => part[0]).join("")}
+                </div>
+                <div>
+                  <strong className="text-charcoal">{item.name}</strong>
+                  <br />
+                  {item.role}
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function FooterRev() {
   const cols = [
-    { h: "Work with Tim", links: ["Coaching", "School", "Speaking"] },
+    { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
     { h: "Read & listen", links: ["Book", "Podcast", "Playbooks", "Toni (AI)"] },
-    { h: "About", links: ["About Tim", "Contact", "Terms", "Privacy"] },
-    { h: "Subscribe", links: ["One short, useful email a week.", "Newsletter"] },
+    { h: "About", links: ["About", "Contact", "Terms", "Privacy"] },
   ];
   return (
     <footer style={{ background: "var(--tqa-ink-deep)", color: "var(--tqa-paper)", padding: "72px 0 48px" }}>
@@ -340,7 +384,9 @@ function FooterRev() {
               Introvert Coach
             </div>
             <p className="font-sans" style={{ fontSize: "14px", color: "rgba(245,240,211,0.7)", marginTop: "20px", lineHeight: 1.6, maxWidth: "36ch" }}>
-              Coaching, a book, a school, and practical playbooks for quiet achievers who want impact at work — without pretending to be extroverts.
+              Life is too short to be living someone else&rsquo;s version of success. Stop pretending. Start practicing.
+              <br />
+              Remain your true authentic self.
             </p>
             <div className="mt-8">
               <a href="#coaching" className="font-sans inline-flex items-center gap-2" style={{
@@ -356,28 +402,30 @@ function FooterRev() {
               </a>
             </div>
           </div>
-          {cols.map((c) => (
-            <div key={c.h} className="lg:col-span-2">
-              <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-sunrise)", fontWeight: 700, marginBottom: "16px" }}>
-                {c.h}
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:col-span-8">
+            {cols.map((c) => (
+              <div key={c.h}>
+                <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-sunrise)", fontWeight: 700, marginBottom: "16px" }}>
+                  {c.h}
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {c.links.map((l) => (
+                    <li key={l}>
+                      <a href="#footer" className="font-sans" style={{ color: "rgba(245,240,211,0.78)", fontSize: "14px", textDecoration: "none" }}
+                         onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-paper)")}
+                         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,211,0.78)")}>
+                        {l}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#footer" className="font-sans" style={{ color: "rgba(245,240,211,0.78)", fontSize: "14px", textDecoration: "none" }}
-                       onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-paper)")}
-                       onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,211,0.78)")}>
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-16 pt-8" style={{ borderTop: "1px solid rgba(245,240,211,0.12)" }}>
           <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(245,240,211,0.55)" }}>
-            © 2026 The Quiet Achiever · Adelaide, Australia
+            © 2026 The Quiet Achiever
           </div>
           <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(245,240,211,0.55)" }}>
             Built quietly.
@@ -451,4 +499,4 @@ function ToniBubble() {
 
 
 
-export { LatestWriting, StartHere, SchoolBlock, PlaybooksBand, NewsletterBand, ElsewhereStrip, FooterRev, ToniBubble };
+export { LatestWriting, StartHere, SchoolBlock, SchoolQuotes, PlaybooksBand, NewsletterBand, ElsewhereStrip, FooterRev, ToniBubble };

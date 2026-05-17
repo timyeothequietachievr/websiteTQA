@@ -57,11 +57,13 @@ export function Navigation() {
     { name: "Coaching", href: "#coaching" },
     { name: "Book", href: "/book" },
     { name: "School", href: "#school" },
+    { name: "Speaking", href: "#speaking" },
     { name: "Playbooks", href: "#playbooks" },
     { name: "Newsletter", href: "#newsletter" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
   ];
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
@@ -104,8 +106,56 @@ export function Navigation() {
               Book a chemistry call
               <span aria-hidden>→</span>
             </a>
+            <button
+              type="button"
+              className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded"
+              aria-label="Open navigation menu"
+              aria-expanded={open}
+              onClick={() => setOpen((value) => !value)}
+              style={{
+                border: "1px solid rgba(30,30,30,0.14)",
+                color: "var(--tqa-charcoal)",
+                background: "rgba(245,240,211,0.72)",
+              }}
+            >
+              <span aria-hidden style={{ fontSize: "22px", lineHeight: 1 }}>
+                {open ? "×" : "☰"}
+              </span>
+            </button>
           </div>
         </div>
+        {open ? (
+          <nav
+            className="lg:hidden pb-5"
+            style={{ borderTop: "1px solid rgba(30,30,30,0.08)" }}
+          >
+            <div className="flex flex-col gap-4 pt-5">
+              {NAV.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="font-sans text-[17px] font-semibold"
+                  style={{ color: "var(--tqa-charcoal)", textDecoration: "none" }}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <a
+                href="#coaching"
+                className="font-sans inline-flex h-11 items-center justify-center rounded font-bold"
+                style={{
+                  background: "var(--tqa-ember)",
+                  color: "var(--tqa-paper)",
+                  textDecoration: "none",
+                }}
+                onClick={() => setOpen(false)}
+              >
+                Book a chemistry call →
+              </a>
+            </div>
+          </nav>
+        ) : null}
       </Container>
     </header>
   );

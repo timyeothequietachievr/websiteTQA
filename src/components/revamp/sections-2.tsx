@@ -7,11 +7,6 @@ import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./
 /* Coaching summary, Toni introduction, Book block */
 
 function CoachingSummary() {
-  const outcomes = [
-    "We unpack your challenges and define what success looks like for you.",
-    "We make an action plan, and then we get to work.",
-    "Confidence comes from evidence. Results only come if you practise.",
-  ];
   const steps = [
     { n: "01", t: "Chemistry call", d: "20-min video call. We talk about your challenges and see if we are a fit. Free." },
     { n: "02", t: "Deep Dive", d: "90min goal-setting workshop. You get clarity and a Coaching Plan with actions." },
@@ -22,7 +17,6 @@ function CoachingSummary() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <SectionLabel number={7} label="Coaching" />
             <h2
               className="font-display"
               style={{
@@ -31,65 +25,44 @@ function CoachingSummary() {
                 letterSpacing: "-0.022em",
                 fontWeight: 600,
                 color: "var(--tqa-charcoal)",
-                marginTop: "20px",
                 textWrap: "balance",
               }}
             >
-              It&rsquo;s just you and me.
+              Coaching
             </h2>
             <p
               className="font-sans"
               style={{ fontSize: "17px", lineHeight: 1.6, color: "var(--neutral-700)", marginTop: "24px", maxWidth: "44ch" }}
             >
+              <strong style={{ color: "var(--tqa-charcoal)" }}>It&rsquo;s just you and me.</strong>{" "}
               We unpack your challenges and define what success looks like for you. Then, we make an
-              action plan, and we get to work. No results? 100% money-back guarantee.
+              action plan, and we get to work. Confidence comes from evidence. My approach focuses on
+              progress through action. Results only come if you practise.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="lg" href="#coaching">
-                Book a chemistry call
-                <span aria-hidden>→</span>
-              </Button>
-              <a href="#coaching-detail" className="font-sans font-medium text-[15px]" style={{ color: "var(--tqa-charcoal)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
-                See offers &amp; pricing
-              </a>
+            <div
+              className="font-sans"
+              style={{
+                background: "var(--tqa-paper-soft)",
+                border: "1px solid rgba(30,30,30,0.08)",
+                borderRadius: "8px",
+                color: "var(--tqa-charcoal)",
+                fontSize: "15px",
+                fontWeight: 700,
+                lineHeight: 1.45,
+                marginTop: "22px",
+                maxWidth: "44ch",
+                padding: "14px 16px",
+              }}
+            >
+              100% money-back guarantee.
             </div>
-            <p className="font-sans italic" style={{ fontSize: "13px", color: "var(--neutral-500)", marginTop: "20px", maxWidth: "44ch", lineHeight: 1.5 }}>
+            <p className="font-sans italic" style={{ fontSize: "13px", color: "var(--neutral-500)", marginTop: "14px", maxWidth: "44ch", lineHeight: 1.5 }}>
               Chemistry matters. If we&rsquo;re not a fit, I&rsquo;ll tell you — and point you somewhere that is.
             </p>
           </div>
 
           <div className="lg:col-span-7">
-            <div
-              className="font-mono uppercase"
-              style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--neutral-500)", marginBottom: "16px" }}
-            >
-              How coaching helps
-            </div>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {outcomes.map((o, i) => (
-                <li
-                  key={i}
-                  className="font-reading"
-                  style={{
-                    fontSize: "22px",
-                    lineHeight: 1.4,
-                    color: "var(--tqa-charcoal)",
-                    padding: "20px 0",
-                    borderTop: "1px solid rgba(30,30,30,0.12)",
-                    display: "flex",
-                    gap: "20px",
-                    alignItems: "baseline",
-                  }}
-                >
-                  <span style={{ color: "var(--tqa-ember)", fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600, fontSize: "26px", flexShrink: 0 }}>
-                    {String(i + 1).padStart(2, "0")}.
-                  </span>
-                  <span>{o}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-12">
+            <div>
               <div
                 className="font-sans uppercase"
                 style={{ fontSize: "12px", letterSpacing: "0.18em", color: "var(--tqa-ember)", fontWeight: 700, marginBottom: "20px" }}
@@ -119,6 +92,12 @@ function CoachingSummary() {
                   </li>
                 ))}
               </ol>
+              <div className="mt-8">
+                <Button variant="primary" size="lg" href="#coaching">
+                  Book a chemistry call
+                  <span aria-hidden>→</span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -133,7 +112,6 @@ function ToniBlock() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <SectionLabel number={8} label="If you're not ready yet" />
             <h2
               className="font-display"
               style={{
@@ -146,9 +124,9 @@ function ToniBlock() {
                 textWrap: "balance",
               }}
             >
-              Not ready to talk to Tim?
+              Introducing Toni,
               <span style={{ display: "block", fontStyle: "italic", color: "var(--tqa-ember)" }}>
-                Talk to Toni.
+                Tim&rsquo;s AI-bot.
               </span>
             </h2>
             <p className="font-sans" style={{ fontSize: "17px", lineHeight: 1.6, color: "var(--neutral-700)", marginTop: "20px", maxWidth: "48ch" }}>
@@ -271,12 +249,6 @@ function ToniChatPreview() {
 }
 
 function BookBlock() {
-  const blurbs = [
-    { title: "10 chapters", copy: "Practical topics from small talk and meetings to difficult conversations and networking." },
-    { title: "100 tiny habits", copy: "Small actions you can practise immediately, not vague inspiration." },
-    { title: "Be seen & heard", copy: "Build visibility while remaining your true self." },
-    { title: "Free checklist", copy: "Download every habit in the book on one page." },
-  ];
   return (
     <section id="book" style={{ padding: "120px 0", background: "var(--tqa-paper-soft)" }}>
       <Container>
@@ -312,7 +284,6 @@ function BookBlock() {
           </div>
 
           <div className="lg:col-span-8 lg:pl-6">
-            <SectionLabel number={9} label="The book" />
             <h2
               className="font-display"
               style={{
@@ -330,31 +301,15 @@ function BookBlock() {
             <p className="font-sans italic" style={{ fontSize: "17px", color: "var(--tqa-ember-deep)", marginTop: "16px" }}>
               10 chapters. 100 tiny habits. Be seen &amp; be heard while remaining your true self.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-10">
-              {blurbs.map((b) => (
-                <div key={b.title} style={{ borderTop: "1px solid rgba(30,30,30,0.12)", paddingTop: "16px" }}>
-                  <div
-                    className="font-mono uppercase"
-                    style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-ember)", fontWeight: 700, marginBottom: "8px" }}
-                  >
-                    {b.title}
-                  </div>
-                  <div className="font-reading" style={{ fontSize: "16px", lineHeight: 1.5, color: "var(--tqa-charcoal)" }}
-                       dangerouslySetInnerHTML={{ __html: b.copy }}
-                  />
-                </div>
-              ))}
-            </div>
+            <p className="font-reading mt-5 text-[17px] leading-relaxed text-warm-700">
+              Available in print, eBook, and audiobook (narrated by me👋).
+            </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="lg" href="#book-buy">
+              <Button variant="primary" size="lg" href="/book">
                 Get the book
                 <span aria-hidden>→</span>
               </Button>
-              <a href="#checklist" className="font-sans font-medium text-[15px]" style={{ color: "var(--tqa-charcoal)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
-                Or download the Tiny Habits Checklist <span style={{ color: "var(--neutral-500)" }}>(free)</span>
-              </a>
             </div>
           </div>
         </div>
@@ -363,6 +318,33 @@ function BookBlock() {
   );
 }
 
+function VincentQuote() {
+  return (
+    <section style={{ padding: "80px 0", background: "var(--tqa-paper)" }}>
+      <Container>
+        <figure className="rounded-xl bg-paper-soft p-8 ring-1 ring-charcoal/10 sm:p-10">
+          <blockquote className="font-reading text-[20px] leading-relaxed text-charcoal italic">
+            &ldquo;Do you like reading IKEA instructions? I DO! Tim&rsquo;s teaching gives me the user manual
+            to myself. Accompanied with relatable stories, practical tips and practices, I now have
+            a better understanding of my own way of communicating — and practical tips to amplify the
+            impact of what I want to say, to my friends, my lovers, my colleagues and anyone I care about.
+            HIGHLY RECOMMEND!&rdquo;
+          </blockquote>
+          <figcaption className="mt-8 flex items-center gap-4 font-sans text-sm text-warm-700">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
+              VK
+            </div>
+            <div>
+              <strong className="text-charcoal">Vincent Kavanagh</strong>
+              <br />
+              UK · ★★★★★ Amazon, verified purchase
+            </div>
+          </figcaption>
+        </figure>
+      </Container>
+    </section>
+  );
+}
 
 
-export { CoachingSummary, ToniBlock, BookBlock };
+export { CoachingSummary, ToniBlock, BookBlock, VincentQuote };

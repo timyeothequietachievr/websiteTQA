@@ -3,14 +3,16 @@
 
 import { useEffect, useState } from "react";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
 /* Segmenter ("I want to..."), Thesis band, Social proof, Sound Familiar */
 
 function Segmenter() {
   const items = [
-    { goal: "Coaching", tone: "ember", note: "1:1 & personal.", playbook: "Work with me" },
-    { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen.", playbook: "Get the book" },
-    { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI.", playbook: "See curriculum" },
+    { goal: "Coaching", tone: "ember", note: "1:1 & personal", playbook: "How coaching works", href: "#coaching" },
+    { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen", playbook: "Get the book", href: "/book" },
+    { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI", playbook: "See lessons", href: "#school" },
+    { goal: "Speaking", tone: "maroon", note: "Book Tim to speak at your event", playbook: "See details", href: "#speaking" },
   ];
   const palette = {
     ember:   { bg: "#D54A2F", fg: "#F5F0D3", note: "rgba(245,240,211,0.78)" },
@@ -19,38 +21,33 @@ function Segmenter() {
     maroon:  { bg: "#8A2A1C", fg: "#F5F0D3", note: "rgba(245,240,211,0.78)" },
   };
   return (
-    <section style={{ paddingTop: "64px", paddingBottom: "64px" }}>
+    <section id="work-with-me" style={{ paddingTop: "72px", paddingBottom: "64px" }}>
       <Container>
-        <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
-          <SectionLabel number={3} label="Work with me" />
-          <div className="font-sans italic text-[14px]" style={{ color: "var(--neutral-700)" }}>
-            Pick how you learn.
-          </div>
-        </div>
         <h2
           className="font-display"
           style={{
-            fontSize: "clamp(28px, 3.4vw, 40px)",
+            fontSize: "clamp(36px, 4.4vw, 56px)",
             fontWeight: 600,
             letterSpacing: "-0.018em",
-            lineHeight: 1.1,
+            lineHeight: 1.0,
             color: "var(--tqa-charcoal)",
-            maxWidth: "22ch",
-            marginBottom: "32px",
+            marginBottom: "20px",
           }}
         >
-          I&rsquo;m a coach, author and designer.
+          How we work together
         </h2>
-        <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "-16px", marginBottom: "32px", maxWidth: "58ch", lineHeight: 1.6 }}>
-          I help you get promoted, get that new role, get the recognition you deserve.
+        <p className="font-sans" style={{ fontSize: "17px", color: "var(--neutral-700)", marginBottom: "34px", maxWidth: "62ch", lineHeight: 1.6 }}>
+          I&rsquo;m a coach, author and speaker. I help quiet achievers get promoted, get that new role,
+          and get the recognition you deserve.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((it, i) => {
             const p = palette[it.tone];
             return (
               <a
                 key={it.goal}
-                href={`#${it.goal.replace(/\s/g, "-")}`}
+                id={it.goal === "Speaking" ? "speaking" : undefined}
+                href={it.href}
                 className="group relative block"
                 style={{
                   background: p.bg,
@@ -125,7 +122,6 @@ function ThesisBand() {
             &ldquo;
           </div>
           <div className="relative" style={{ maxWidth: "1000px" }}>
-            <Eyebrow tone="sunrise">The thesis</Eyebrow>
             <blockquote
               className="font-display"
               style={{
@@ -134,7 +130,6 @@ function ThesisBand() {
                 letterSpacing: "-0.02em",
                 fontWeight: 500,
                 color: "var(--tqa-paper)",
-                marginTop: "24px",
                 textWrap: "balance",
               }}
             >
@@ -150,7 +145,7 @@ function ThesisBand() {
                 fontWeight: 700,
               }}
             >
-              From the book — The Quiet Achiever, Chapter 1
+              From The Quiet Achiever book
             </div>
           </div>
         </div>
@@ -160,89 +155,86 @@ function ThesisBand() {
 }
 
 function SocialProofStrip() {
-  const logos = [
-    "Apple",
-    "Wise",
-    "Stripe",
-    "Canva",
-    "Google",
-    "PayPal",
-    "Atlassian",
-    "Shopify",
-    "Adobe",
-    "Deliveroo",
-    "HubSpot",
-    "McKinsey & Company",
-  ];
   return (
-    <section style={{ background: "var(--tqa-paper-soft)", padding: "72px 0", borderTop: "1px solid rgba(30,30,30,0.06)", borderBottom: "1px solid rgba(30,30,30,0.06)" }}>
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5">
-            <Eyebrow tone="ember">Trust strip</Eyebrow>
-            <div
-              className="font-display"
-              style={{
-                fontSize: "clamp(40px, 5vw, 72px)",
-                lineHeight: 0.98,
-                letterSpacing: "-0.025em",
-                fontWeight: 600,
-                color: "var(--tqa-charcoal)",
-                marginTop: "12px",
-              }}
-            >
-              <span style={{ color: "var(--tqa-ember)" }}>Trusted</span>
-              <span style={{ display: "block", fontSize: "0.42em", fontStyle: "italic", fontWeight: 400, color: "var(--neutral-700)", marginTop: "10px", letterSpacing: "-0.01em" }}>
-                by quiet achievers at top companies.
-              </span>
-            </div>
-          </div>
-          <div className="lg:col-span-7">
-            <div
-              className="font-mono uppercase"
-              style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--neutral-500)", marginBottom: "20px" }}
-            >
-              Quiet achievers from
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4">
-              {logos.map((l) => (
-                <div
-                  key={l}
-                  className="font-display italic"
-                  style={{
-                    fontSize: "20px",
-                    color: "var(--tqa-ink)",
-                    letterSpacing: "-0.012em",
-                    fontWeight: 500,
-                    borderBottom: "1px solid rgba(30,30,30,0.10)",
-                    paddingBottom: "12px",
-                  }}
-                >
-                  {l}
-                </div>
+    <section style={{ borderBottom: "1px solid rgba(30,30,30,0.08)" }}>
+      <div className="bg-paper py-5 sm:py-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-center text-lg/7 font-semibold text-charcoal">
+            Trusted by quiet achievers from top companies around the world
+          </h2>
+          <div className="mx-auto mt-4 grid max-w-lg grid-cols-4 items-center gap-x-6 gap-y-4 sm:max-w-xl sm:grid-cols-6 sm:gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            {BOOK_COMPANY_LOGOS.map((logo) => (
+              <img
+                key={logo.name}
+                alt={logo.name}
+                src={logo.src}
+                width={158}
+                height={48}
+                className={`col-span-2 w-full object-contain object-center lg:col-span-1 ${logo.wordmark ? "max-h-9" : "max-h-10"}`}
+              />
               ))}
-            </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function RodQuote() {
+  return (
+    <section style={{ padding: "72px 0", background: "var(--tqa-paper-soft)" }}>
+      <Container>
+        <figure className="mx-auto max-w-4xl rounded-xl bg-paper p-8 shadow-[0_24px_48px_-28px_rgba(30,30,30,0.3)] ring-1 ring-charcoal/10 sm:p-10">
+          <blockquote className="font-reading text-[22px] leading-relaxed text-charcoal italic">
+            &ldquo;It was such a breath of fresh air to work with a coach who understands me. Tim was
+            always able to relate to my situation and often felt like he had been there himself.
+            I left our sessions with many practical tips and strategies I could use the very next day.&rdquo;
+          </blockquote>
+          <figcaption className="mt-8 flex items-center gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
+              RN
+            </div>
+            <div>
+              <div className="font-sans font-bold text-charcoal">Rod Naber</div>
+              <div className="font-sans text-sm text-warm-600">Lead Product Designer, Stripe, USA</div>
+            </div>
+          </figcaption>
+        </figure>
       </Container>
     </section>
   );
 }
 
 function SoundFamiliar() {
-  const lines = [
-    "For years, I pretended to be an extrovert at work to fit the “extrovert ideal”. And it worked. But I was also exhausted.",
-    "I wondered, “What is wrong with me? How do others make it look so easy? Maybe I am just not good enough.”",
-    "I felt invisible. But I refused to give up, and found another path to success.",
-    "The Quiet Achiever is a collection of tiny habits I developed to have impact and influence at work while remaining my true authentic self.",
-    "Since then, I’ve coached nearly a thousand quiet achievers get jobs, get promoted and get the recognition they deserved.",
-  ];
   return (
-    <section style={{ padding: "112px 0" }}>
+    <section id="about" style={{ padding: "112px 0" }}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <div className="lg:col-span-5 lg:sticky lg:top-24 self-start">
-            <SectionLabel number={5} label="Hi, I’m Tim Yeo" />
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div className="relative">
+              <div
+                aria-hidden
+                style={{
+                  position: "absolute",
+                  inset: "22px -24px -24px 24px",
+                  background: "var(--tqa-ink)",
+                  borderRadius: "10px",
+                }}
+              />
+              <div className="relative overflow-hidden rounded-lg" style={{ aspectRatio: "3 / 4" }}>
+                <img
+                  src="/assets/tim-masthead.jpg"
+                  alt="Tim Yeo"
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: "center 22%" }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.18em]" style={{ color: "var(--tqa-ember)" }}>
+              👋 Hi, I&rsquo;m Tim Yeo
+            </p>
             <h2
               className="font-display"
               style={{
@@ -251,51 +243,35 @@ function SoundFamiliar() {
                 letterSpacing: "-0.022em",
                 fontWeight: 600,
                 color: "var(--tqa-charcoal)",
-                marginTop: "20px",
+                marginTop: "14px",
+                marginBottom: "24px",
                 textWrap: "balance",
               }}
             >
-              Being a quiet achiever in a noisy world is hard.
-              <span style={{ display: "block", fontStyle: "italic", color: "var(--tqa-ember)", fontWeight: 500 }}>
-                I know because I lived it.
-              </span>
+              Being a quiet achiever in a noisy world is hard
             </h2>
-          </div>
-          <div className="lg:col-span-7">
-            <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {lines.map((line, i) => (
-                <li
-                  key={i}
-                  className="font-reading"
-                  style={{
-                    fontSize: "20px",
-                    lineHeight: 1.45,
-                    color: "var(--tqa-charcoal)",
-                    padding: "26px 0",
-                    borderTop: i === 0 ? "1px solid rgba(30,30,30,0.12)" : "none",
-                    borderBottom: "1px solid rgba(30,30,30,0.12)",
-                    display: "flex",
-                    alignItems: "baseline",
-                    gap: "20px",
-                  }}
-                >
-                  <span
-                    className="font-mono"
-                    style={{
-                      fontSize: "12px",
-                      color: "var(--tqa-ember)",
-                      letterSpacing: "0.18em",
-                      fontWeight: 700,
-                      flexShrink: 0,
-                      width: "28px",
-                    }}
-                  >
-                    0{i + 1}
-                  </span>
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ol>
+            <div className="space-y-4 font-reading text-[17px] leading-relaxed text-warm-700">
+              <p>
+                Over 20+ years, I&rsquo;ve worked as a designer and a leader in tech. Companies
+                dominated by <strong className="text-charcoal">big personalities, strong opinions</strong> and{" "}
+                <strong className="text-charcoal">loud voices</strong>.
+              </p>
+              <p>
+                For years, I pretended to be an extrovert at work to fit the “extrovert ideal”.
+                And it worked. But I was also exhausted, because I was pretending to be someone I was not.
+              </p>
+              <p>
+                I felt invisible. But I refused to give up, and found another path to success. The Quiet
+                Achiever is a collection of tiny habits I developed to have impact and influence at work,
+                while remaining my true authentic self.
+              </p>
+            </div>
+            <a
+              href="/about"
+              className="mt-8 inline-flex font-sans text-[15px] font-semibold text-ember underline underline-offset-4"
+            >
+              Read my full story →
+            </a>
           </div>
         </div>
       </Container>
@@ -305,4 +281,4 @@ function SoundFamiliar() {
 
 
 
-export { Segmenter, ThesisBand, SocialProofStrip, SoundFamiliar };
+export { Segmenter, RodQuote, ThesisBand, SocialProofStrip, SoundFamiliar };

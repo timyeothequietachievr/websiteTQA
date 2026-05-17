@@ -4,14 +4,16 @@ import { Navigation } from "@/components/revamp/navigation";
 import { HeroPortraitSplit } from "@/components/revamp/hero";
 import {
   Segmenter,
+  RodQuote,
   ThesisBand,
   SocialProofStrip,
   SoundFamiliar,
 } from "@/components/revamp/sections-1";
-import { CoachingSummary, ToniBlock, BookBlock } from "@/components/revamp/sections-2";
+import { CoachingSummary, ToniBlock, BookBlock, VincentQuote } from "@/components/revamp/sections-2";
 import {
   StartHere,
   SchoolBlock,
+  SchoolQuotes,
   PlaybooksBand,
   NewsletterBand,
   ElsewhereStrip,
@@ -63,11 +65,14 @@ export function SiteComponentLibrary({
         <HeroPortraitSplit />
         <SocialProofStrip />
         <Segmenter />
+        <RodQuote />
         <SoundFamiliar />
         <ThesisBand />
         <CoachingSummary />
         <BookBlock />
+        <VincentQuote />
         <SchoolBlock />
+        <SchoolQuotes />
         <StartHere />
         <PlaybooksBand />
         <ToniBlock />
