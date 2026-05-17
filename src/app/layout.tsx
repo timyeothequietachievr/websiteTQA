@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { GoogleAnalyticsProvider } from "@/components/analytics/google-analytics-provider";
 import { PostHogProvider } from "@/components/analytics/posthog-provider";
 import "./globals.css";
 
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col">
         <Suspense fallback={null}>
-          <PostHogProvider>{children}</PostHogProvider>
+          <GoogleAnalyticsProvider>
+            <PostHogProvider>{children}</PostHogProvider>
+          </GoogleAnalyticsProvider>
         </Suspense>
       </body>
     </html>
