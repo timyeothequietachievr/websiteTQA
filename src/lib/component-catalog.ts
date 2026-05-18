@@ -1,6 +1,6 @@
 /**
- * Stable component IDs for Notion → build workflow.
- * c1–c17: homepage revamp (v2). c18+: Tailwind UI marketing blocks (registry order).
+ * Stable component IDs for Notion -> build workflow.
+ * c1-c17: homepage revamp. c18+: Tailwind UI blocks (marketing, application UI, ecommerce).
  */
 export type ComponentCatalogEntry = {
   code: string;

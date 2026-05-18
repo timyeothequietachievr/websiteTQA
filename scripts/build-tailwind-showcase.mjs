@@ -4,10 +4,29 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const SOURCE = path.join(
-  ROOT,
-  "design/components/tailwind-marketing-v4/react",
-);
+const SOURCES = [
+  {
+    kit: "marketing",
+    source: path.join(ROOT, "design/components/tailwind-marketing-v4/react"),
+    outPrefix: "",
+    categoryPrefix: "",
+    idPrefix: "",
+  },
+  {
+    kit: "application-ui",
+    source: path.join(ROOT, "design/components/application-ui-v4/react"),
+    outPrefix: "application-ui",
+    categoryPrefix: "application-ui / ",
+    idPrefix: "application-ui-",
+  },
+  {
+    kit: "ecommerce",
+    source: path.join(ROOT, "design/components/ecommerce-v4/react"),
+    outPrefix: "ecommerce",
+    categoryPrefix: "ecommerce / ",
+    idPrefix: "ecommerce-",
+  },
+];
 const OUT = path.join(ROOT, "src/components/tailwind-showcase/blocks");
 
 function toExportName(relPath) {
@@ -110,28 +129,41 @@ function walk(dir, files = []) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 
-const files = walk(SOURCE).sort();
 const registry = [];
 
-for (const file of files) {
-  const rel = path.relative(SOURCE, file);
-  const exportName = toExportName(rel);
-  const category = rel.split(path.sep).slice(0, -1).join(" / ");
-  const label = path.basename(rel, ".jsx");
+for (const sourceDef of SOURCES) {
+  if (!fs.existsSync(sourceDef.source)) {
+    console.warn(`Skipping ${sourceDef.kit}; source not found at ${sourceDef.source}`);
+    continue;
+  }
 
-  const content = restyle(fs.readFileSync(file, "utf8"), rel);
-  const outRel = rel.replace(/\.jsx$/, ".tsx");
-  const outPath = path.join(OUT, outRel);
-  fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, content);
+  const files = walk(sourceDef.source).sort();
 
-  registry.push({
-    id: rel.replace(/\.jsx$/, "").replace(/[/\\]/g, "-"),
-    exportName,
-    importPath: `./blocks/${outRel.replace(/\\/g, "/").replace(/\.tsx$/, "")}`,
-    category,
-    label,
-  });
+  for (const file of files) {
+    const rel = path.relative(sourceDef.source, file);
+    const outRel = path
+      .join(sourceDef.outPrefix, rel)
+      .replace(/\.jsx$/, ".tsx");
+    const exportName = toExportName(outRel);
+    const category = `${sourceDef.categoryPrefix}${rel
+      .split(path.sep)
+      .slice(0, -1)
+      .join(" / ")}`;
+    const label = path.basename(rel, ".jsx");
+
+    const content = restyle(fs.readFileSync(file, "utf8"), rel);
+    const outPath = path.join(OUT, outRel);
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    fs.writeFileSync(outPath, content);
+
+    registry.push({
+      id: `${sourceDef.idPrefix}${rel.replace(/\.jsx$/, "").replace(/[/\\]/g, "-")}`,
+      exportName,
+      importPath: `./blocks/${outRel.replace(/\\/g, "/").replace(/\.tsx$/, "")}`,
+      category,
+      label,
+    });
+  }
 }
 
 const registryTs = `// @ts-nocheck

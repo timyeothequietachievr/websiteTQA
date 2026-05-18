@@ -4,7 +4,7 @@ import { SiteComponentLibrary } from "@/components/site-component-library";
 export const metadata: Metadata = {
   title: "Visual library | The Quiet Achiever",
   description:
-    "Full-page scroll of every homepage and Tailwind UI component (c1–c196) for design review.",
+    "Full-page scroll of every homepage and Tailwind UI component for design review.",
   robots: { index: false, follow: false },
 };
 

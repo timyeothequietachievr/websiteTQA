@@ -20,28 +20,13 @@ import {
   FooterRev,
   ToniBubble,
 } from "@/components/revamp/sections-3";
-import dynamic from "next/dynamic";
 import {
   ComponentLabelBadge,
   LabeledComponent,
 } from "@/components/component-label";
 import { REVAMP_COMPONENT_CATALOG } from "@/lib/component-catalog";
 import { Container } from "@/components/revamp/primitives";
-
-const TailwindComponentShowcase = dynamic(
-  () =>
-    import("@/components/tailwind-showcase/showcase").then(
-      (m) => m.TailwindComponentShowcase,
-    ),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="border-t-4 border-ember bg-paper-soft py-24 text-center font-sans text-warm-700">
-        Loading Tailwind component library…
-      </div>
-    ),
-  },
-);
+import { TailwindComponentShowcase } from "@/components/tailwind-showcase/showcase";
 
 const R = Object.fromEntries(
   REVAMP_COMPONENT_CATALOG.map((entry) => [entry.slug, entry]),
@@ -100,16 +85,18 @@ export function SiteComponentLibrary({
             </h1>
             <p className="mt-4 max-w-3xl font-sans text-base leading-relaxed text-paper/85 sm:text-lg">
               Scroll the assembled page exactly as on the homepage — every revamp
-              section (c1–c17) and Tailwind block (c18–c196) with labels. Use{" "}
+              section and Tailwind block with labels. Use{" "}
               <a href="/" className="text-sunrise-soft underline">
                 /
               </a>{" "}
-              for production; this view loads everything at once for picking and
-              review.
+              for production; this view now loads Tailwind blocks one category at
+              a time for stable browsing.
             </p>
           </Container>
         </div>
       ) : null}
+
+      {showLibraryIntro ? <TailwindComponentShowcase eager={eagerShowcase} /> : null}
 
       <LabeledComponent
         code={R.navigation.code}
@@ -189,7 +176,7 @@ export function SiteComponentLibrary({
       <LabeledComponent code={R["footer-rev"].code} title={R["footer-rev"].title} slug={R["footer-rev"].slug} as="footer">
         <FooterRev />
       </LabeledComponent>
-      <TailwindComponentShowcase eager={eagerShowcase} />
+      {!showLibraryIntro ? <TailwindComponentShowcase eager={eagerShowcase} /> : null}
       <ComponentLabelBadge
         code={R["toni-bubble"].code}
         title={R["toni-bubble"].title}
