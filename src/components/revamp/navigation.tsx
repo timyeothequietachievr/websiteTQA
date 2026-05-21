@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import Link from "next/link";
+import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container } from "./primitives";
 
 /* Top navigation with the locked Jeremy Cabral two-line wordmark */
@@ -8,7 +10,7 @@ import { Container } from "./primitives";
 function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
   const scale = size === "sm" ? 0.85 : 1;
   return (
-    <a href="#top" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Introvert Coach">
+    <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Introvert Coach">
       <span
         className="font-display"
         style={{
@@ -34,13 +36,13 @@ function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
       >
         Introvert Coach
       </span>
-    </a>
+    </Link>
   );
 }
 
 function NavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a
+    <Link
       href={href}
       className="font-sans text-[15px] font-medium relative"
       style={{ color: "var(--tqa-charcoal)" }}
@@ -48,18 +50,19 @@ function NavLink({ href, children }: { href: string; children: ReactNode }) {
       onMouseLeave={(e) => (e.currentTarget.style.color = "var(--tqa-charcoal)")}
     >
       {children}
-    </a>
+    </Link>
   );
 }
 
 export function Navigation() {
   const NAV = [
-    { name: "Coaching", href: "#coaching" },
+    { name: "Coaching", href: "/#coaching" },
     { name: "Book", href: "/book" },
-    { name: "School", href: "#school" },
-    { name: "Speaking", href: "#speaking" },
-    { name: "Playbooks", href: "#playbooks" },
-    { name: "Newsletter", href: "#newsletter" },
+    { name: "School", href: "/#school" },
+    { name: "Toni", href: "/toni" },
+    { name: "Speaking", href: "/speaking" },
+    { name: "Playbooks", href: "/#playbooks" },
+    { name: "Newsletter", href: "/#newsletter" },
     { name: "About", href: "/about" },
   ];
   const [scrolled, setScrolled] = useState(false);
@@ -92,8 +95,8 @@ export function Navigation() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <a
-              href="#coaching"
+            <Link
+              href={DISCOVERY_CALL_URL}
               className="hidden sm:inline-flex items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
               style={{
                 background: "var(--tqa-ember)",
@@ -103,9 +106,9 @@ export function Navigation() {
               onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
             >
-              Book a chemistry call
+              Book a discovery call
               <span aria-hidden>→</span>
-            </a>
+            </Link>
             <button
               type="button"
               className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded"
@@ -131,7 +134,7 @@ export function Navigation() {
           >
             <div className="flex flex-col gap-4 pt-5">
               {NAV.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="font-sans text-[17px] font-semibold"
@@ -139,10 +142,10 @@ export function Navigation() {
                   onClick={() => setOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#coaching"
+              <Link
+                href={DISCOVERY_CALL_URL}
                 className="font-sans inline-flex h-11 items-center justify-center rounded font-bold"
                 style={{
                   background: "var(--tqa-ember)",
@@ -151,8 +154,8 @@ export function Navigation() {
                 }}
                 onClick={() => setOpen(false)}
               >
-                Book a chemistry call →
-              </a>
+                Book a discovery call →
+              </Link>
             </div>
           </nav>
         ) : null}

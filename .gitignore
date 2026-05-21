@@ -44,3 +44,6 @@ next-env.d.ts
 # design backups (original zips remain in ~/Downloads)
 /design/_source-archives/
 .notion-batches/
+
+# Toni runtime logs (local dev only)
+/data/toni/

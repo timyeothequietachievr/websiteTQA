@@ -2,13 +2,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
 
 /* Coaching summary, Toni introduction, Book block */
 
 function CoachingSummary() {
   const steps = [
-    { n: "01", t: "Chemistry call", d: "20-min video call. We talk about your challenges and see if we are a fit. Free." },
+    { n: "01", t: "Discovery call", d: "20-min video call. We talk about your challenges and see if we are a fit. Free." },
     { n: "02", t: "Deep Dive", d: "90min goal-setting workshop. You get clarity and a Coaching Plan with actions." },
     { n: "03", t: "Coaching plan", d: "Fortnightly sessions. Tiny habits, practised in real situations. Text support between sessions." },
   ];
@@ -93,8 +94,8 @@ function CoachingSummary() {
                 ))}
               </ol>
               <div className="mt-8">
-                <Button variant="primary" size="lg" href="#coaching">
-                  Book a chemistry call
+                <Button variant="primary" size="lg" href={DISCOVERY_CALL_URL}>
+                  Book a discovery call
                   <span aria-hidden>→</span>
                 </Button>
               </div>
@@ -124,7 +125,7 @@ function ToniBlock() {
                 textWrap: "balance",
               }}
             >
-              Introducing Toni,
+              Meet Toni,
               <span style={{ display: "block", fontStyle: "italic", color: "var(--tqa-ember)" }}>
                 Tim&rsquo;s AI-bot.
               </span>
@@ -133,8 +134,8 @@ function ToniBlock() {
               Toni is an AI coach trained on Tim&rsquo;s book and methodology. Ask her about a specific situation — a meeting, a piece of feedback, saying no, getting promoted — and get a thoughtful answer in Tim&rsquo;s voice. When she&rsquo;s not sure, Tim takes over.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
-              <Button variant="secondary" size="md" href="#ai">
-                Start a conversation with Toni
+              <Button variant="secondary" size="md" href="/toni">
+                Open the Toni chat
                 <span aria-hidden>→</span>
               </Button>
               <span className="font-mono" style={{ fontSize: "11px", letterSpacing: "0.16em", color: "var(--neutral-500)", textTransform: "uppercase" }}>

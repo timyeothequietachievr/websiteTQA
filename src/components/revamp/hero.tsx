@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
 
 /* Tim-forward hero — two variants */
@@ -50,8 +51,8 @@ function HeroEditorial() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4" style={{ marginTop: "36px" }}>
-              <Button variant="primary" size="lg" href="#coaching">
-                Book a chemistry call
+              <Button variant="primary" size="lg" href={DISCOVERY_CALL_URL}>
+                Book a discovery call
                 <span aria-hidden>→</span>
               </Button>
               <a
@@ -253,8 +254,8 @@ function HeroMagazine() {
                 </span>
               </h1>
               <div className="flex flex-wrap items-center gap-4 mt-7">
-                <Button variant="primary" size="lg" href="#coaching">
-                  Book a chemistry call
+                <Button variant="primary" size="lg" href={DISCOVERY_CALL_URL}>
+                  Book a discovery call
                   <span aria-hidden>→</span>
                 </Button>
                 <a
@@ -459,8 +460,8 @@ function HeroMasthead() {
               className="flex flex-wrap items-center gap-4"
               style={{ marginTop: "28px" }}
             >
-              <Button variant="primary" size="lg" href="#coaching">
-                Book a chemistry call
+              <Button variant="primary" size="lg" href={DISCOVERY_CALL_URL}>
+                Book a discovery call
                 <span aria-hidden>→</span>
               </Button>
             </div>
@@ -525,7 +526,7 @@ function HeroPortraitSplit() {
               }}
             >
               <span style={{ color: "var(--tqa-ember)" }}>●</span>
-              Introducing Toni [AI]
+              For quiet achievers
             </div>
 
             <h1

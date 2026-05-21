@@ -12,7 +12,7 @@ function Segmenter() {
     { goal: "Coaching", tone: "ember", note: "1:1 & personal", playbook: "How coaching works", href: "#coaching" },
     { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen", playbook: "Get the book", href: "/book" },
     { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI", playbook: "See lessons", href: "#school" },
-    { goal: "Speaking", tone: "maroon", note: "Book Tim to speak at your event", playbook: "See details", href: "#speaking" },
+    { goal: "Speaking", tone: "maroon", note: "Book Tim to speak at your event", playbook: "See details", href: "/speaking" },
   ];
   const palette = {
     ember:   { bg: "#D54A2F", fg: "#F5F0D3", note: "rgba(245,240,211,0.78)" },

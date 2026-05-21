@@ -1,5 +1,5 @@
-import { HomepageRevamp } from "@/components/revamp/homepage";
+import { MarketingHomepage } from "@/components/revamp/marketing-homepage";
 
 export function HomePage() {
-  return <HomepageRevamp />;
+  return <MarketingHomepage />;
 }

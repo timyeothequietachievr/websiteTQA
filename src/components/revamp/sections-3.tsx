@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
 
 /* Latest writing, Start here, School, Playbooks, Newsletter, Tim Elsewhere, Footer, Sticky Toni */
@@ -369,7 +370,7 @@ function SchoolQuotes() {
 function FooterRev() {
   const cols = [
     { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
-    { h: "Read & listen", links: ["Book", "Podcast", "Playbooks", "Toni (AI)"] },
+    { h: "Read & listen", links: ["Book", "Podcast", "Playbooks"] },
     { h: "About", links: ["About", "Contact", "Terms", "Privacy"] },
   ];
   return (
@@ -389,7 +390,7 @@ function FooterRev() {
               Remain your true authentic self.
             </p>
             <div className="mt-8">
-              <a href="#coaching" className="font-sans inline-flex items-center gap-2" style={{
+              <a href={DISCOVERY_CALL_URL} className="font-sans inline-flex items-center gap-2" style={{
                 background: "var(--tqa-ember)",
                 color: "var(--tqa-paper)",
                 padding: "12px 18px",
@@ -398,7 +399,7 @@ function FooterRev() {
                 fontWeight: 700,
                 textDecoration: "none",
               }}>
-                Book a chemistry call <span aria-hidden>→</span>
+                Book a discovery call <span aria-hidden>→</span>
               </a>
             </div>
           </div>
@@ -491,7 +492,7 @@ function ToniBubble() {
         gap: "8px",
       }}>
         <span style={{ width: "20px", height: "20px", borderRadius: "999px", background: "var(--tqa-sunrise)", color: "var(--tqa-ink)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "11px" }}>T</span>
-        {open ? "Toni is here" : "Talk to Toni"}
+        {open ? "Toni is here" : "Open Toni"}
       </button>
     </div>
   );

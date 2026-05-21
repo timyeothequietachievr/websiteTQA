@@ -7,7 +7,7 @@ import { BookMasthead } from "./book-masthead";
 import { BookLogoCloudC148 } from "./book-logo-cloud-c148";
 import { BookSoundFamiliarC6 } from "./book-sound-familiar-c6";
 import { Container, Button } from "@/components/revamp/primitives";
-import { FooterRev, NewsletterBand, ToniBubble } from "@/components/revamp/sections-3";
+import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
 
 /* Component refs: c9 hero, c148 logos, c6 pain, c100 FAQ, c14 newsletter, c16 footer */
 
@@ -845,7 +845,6 @@ export function BookLandingPage() {
       <BulkOrderSection />
       <NewsletterBand />
       <FooterRev />
-      <ToniBubble />
     </div>
   );
 }

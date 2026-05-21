@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-component-catalog.mjs && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "build:tailwind-showcase": "node scripts/build-tailwind-showcase.mjs && node scripts/generate-component-catalog.mjs",
-    "generate:component-catalog": "node scripts/generate-component-catalog.mjs",
-    "capture:component-previews": "node scripts/capture-component-previews.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
@@ -26,7 +23,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
-    "playwright": "^1.60.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -133,37 +133,4 @@
     line-height: 0.95;
   }
 
-  /* Contain Tailwind UI fixed/absolute headers so they never overlay the site nav */
-  .tailwind-showcase-sandbox {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    transform: translateZ(0);
-    z-index: 0;
-  }
-
-  .tailwind-showcase-sandbox header,
-  .tailwind-showcase-sandbox nav[aria-label="Global"] {
-    position: relative !important;
-    inset: auto !important;
-    top: auto !important;
-    z-index: 1 !important;
-  }
-
-  .tailwind-showcase-sandbox .fixed,
-  .tailwind-showcase-sandbox .sticky {
-    position: absolute !important;
-  }
-
-  .tailwind-showcase-block {
-    --tw-ring-color: color-mix(in srgb, var(--tqa-charcoal) 12%, transparent);
-  }
-
-  .tailwind-showcase-block a:not([class*="bg-"]) {
-    color: var(--tqa-ember);
-  }
-
-  .tailwind-showcase-block a:not([class*="bg-"]):hover {
-    color: var(--tqa-ember-deep);
-  }
 }
