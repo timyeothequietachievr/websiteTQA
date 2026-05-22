@@ -6,7 +6,7 @@ import { Container, Button, Eyebrow } from "@/components/revamp/primitives";
 
 export function SpeakingPageShell({
   children,
-  ctaLabel = "Enquire about speaking",
+  ctaLabel = "Inquire about speaking",
   ctaHref = "mailto:speaker@thequietachievr.com?subject=Speaking%20enquiry",
 }: {
   children: ReactNode;
@@ -39,17 +39,9 @@ export function SpeakingMasthead({
             <span className="font-display text-[22px] font-bold tracking-tight text-charcoal">Tim Yeo</span>
             <span className="font-display mt-0.5 text-[13px] italic text-ember-deep">Introvert Coach</span>
           </Link>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/speakerkit"
-              className="hidden font-sans text-[14px] font-semibold text-charcoal underline-offset-4 hover:text-ember hover:underline sm:inline"
-            >
-              Speaker kit
-            </Link>
-            <Button href={ctaHref} size="sm">
-              {ctaLabel}
-            </Button>
-          </div>
+          <Button href={ctaHref} size="sm">
+            {ctaLabel}
+          </Button>
         </div>
       </Container>
     </header>
@@ -59,33 +51,41 @@ export function SpeakingMasthead({
 export function SectionBlock({
   eyebrow,
   title,
+  subtitle,
   children,
   dark = false,
+  accent = false,
   className = "",
   id,
 }: {
   eyebrow?: string;
   title?: string;
+  subtitle?: string;
   children: ReactNode;
   dark?: boolean;
+  /** Sunrise (brand orange) wash — ink text, ember eyebrow */
+  accent?: boolean;
   className?: string;
   id?: string;
 }) {
+  const bg = dark ? "bg-ink text-paper" : accent ? "bg-sunrise text-ink" : "bg-paper";
+  const eyebrowTone = dark ? "cream" : accent ? "ember" : "ember";
+  const titleClass = dark ? "text-paper" : accent ? "text-ink" : "text-charcoal";
+  const subtitleClass = dark ? "text-paper/75" : accent ? "text-ink/80" : "text-warm-600";
+
   return (
-    <section
-      id={id}
-      className={`py-16 sm:py-20 ${dark ? "bg-ink text-paper" : "bg-paper"} ${className}`}
-    >
+    <section id={id} className={`py-16 sm:py-20 ${bg} ${className}`}>
       <Container>
-        {eyebrow ? <Eyebrow tone={dark ? "cream" : "ember"}>{eyebrow}</Eyebrow> : null}
+        {eyebrow ? <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow> : null}
         {title ? (
           <h2
-            className={`font-display mt-4 font-semibold tracking-tight ${dark ? "text-paper" : "text-charcoal"}`}
+            className={`font-display mt-4 font-semibold tracking-tight ${titleClass}`}
             style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.05 }}
           >
             {title}
           </h2>
         ) : null}
+        {subtitle ? <p className={`mt-2 font-sans text-base ${subtitleClass}`}>{subtitle}</p> : null}
         <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
       </Container>
     </section>

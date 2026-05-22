@@ -2,7 +2,6 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
-import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container } from "./primitives";
 
 /* Top navigation with the locked Jeremy Cabral two-line wordmark */
@@ -54,9 +53,19 @@ function NavLink({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-export function Navigation() {
+export function Navigation({
+  ctaLabel = "Work with me",
+  ctaHref = "/#work-with-me",
+  hideNavLinks = false,
+}: {
+  ctaLabel?: string;
+  ctaHref?: string;
+  /** Coaching page: wordmark + CTA only */
+  hideNavLinks?: boolean;
+} = {}) {
   const NAV = [
-    { name: "Coaching", href: "/#coaching" },
+    { name: "Coaching", href: "/coaching" },
+    { name: "Podcast", href: "/podcast" },
     { name: "Book", href: "/book" },
     { name: "School", href: "/#school" },
     { name: "Toni", href: "/toni" },
@@ -87,17 +96,21 @@ export function Navigation() {
       <Container>
         <div className="flex items-center justify-between" style={{ height: "76px" }}>
           <Wordmark />
-          <nav className="hidden lg:flex items-center gap-8">
-            {NAV.map((item) => (
-              <NavLink key={item.name} href={item.href}>
-                {item.name}
-              </NavLink>
-            ))}
-          </nav>
+          {!hideNavLinks ? (
+            <nav className="hidden lg:flex items-center gap-8">
+              {NAV.map((item) => (
+                <NavLink key={item.name} href={item.href}>
+                  {item.name}
+                </NavLink>
+              ))}
+            </nav>
+          ) : (
+            <div className="hidden lg:block" aria-hidden />
+          )}
           <div className="flex items-center gap-3">
             <Link
-              href={DISCOVERY_CALL_URL}
-              className="hidden sm:inline-flex items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
+              href={ctaHref}
+              className={`${hideNavLinks ? "inline-flex" : "hidden sm:inline-flex"} items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]`}
               style={{
                 background: "var(--tqa-ember)",
                 color: "var(--tqa-paper)",
@@ -106,28 +119,30 @@ export function Navigation() {
               onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
             >
-              Book a discovery call
+              {ctaLabel}
               <span aria-hidden>→</span>
             </Link>
-            <button
-              type="button"
-              className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded"
-              aria-label="Open navigation menu"
-              aria-expanded={open}
-              onClick={() => setOpen((value) => !value)}
-              style={{
-                border: "1px solid rgba(30,30,30,0.14)",
-                color: "var(--tqa-charcoal)",
-                background: "rgba(245,240,211,0.72)",
-              }}
-            >
-              <span aria-hidden style={{ fontSize: "22px", lineHeight: 1 }}>
-                {open ? "×" : "☰"}
-              </span>
-            </button>
+            {!hideNavLinks ? (
+              <button
+                type="button"
+                className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded"
+                aria-label="Open navigation menu"
+                aria-expanded={open}
+                onClick={() => setOpen((value) => !value)}
+                style={{
+                  border: "1px solid rgba(30,30,30,0.14)",
+                  color: "var(--tqa-charcoal)",
+                  background: "rgba(245,240,211,0.72)",
+                }}
+              >
+                <span aria-hidden style={{ fontSize: "22px", lineHeight: 1 }}>
+                  {open ? "×" : "☰"}
+                </span>
+              </button>
+            ) : null}
           </div>
         </div>
-        {open ? (
+        {open && !hideNavLinks ? (
           <nav
             className="lg:hidden pb-5"
             style={{ borderTop: "1px solid rgba(30,30,30,0.08)" }}
@@ -145,7 +160,7 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
-                href={DISCOVERY_CALL_URL}
+                href={ctaHref}
                 className="font-sans inline-flex h-11 items-center justify-center rounded font-bold"
                 style={{
                   background: "var(--tqa-ember)",
@@ -154,7 +169,7 @@ export function Navigation() {
                 }}
                 onClick={() => setOpen(false)}
               >
-                Book a discovery call →
+                {ctaLabel} →
               </Link>
             </div>
           </nav>

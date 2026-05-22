@@ -7,7 +7,7 @@ import {
   SocialProofStrip,
   SoundFamiliar,
 } from "@/components/revamp/sections-1";
-import { CoachingSummary, BookBlock, VincentQuote } from "@/components/revamp/sections-2";
+import { CoachingSummary, BookBlock, LemonQuote } from "@/components/revamp/sections-2";
 import {
   StartHere,
   SchoolBlock,
@@ -31,14 +31,14 @@ export function MarketingHomepage() {
       <ThesisBand />
       <CoachingSummary />
       <BookBlock />
-      <VincentQuote />
+      <LemonQuote />
       <SchoolBlock />
       <SchoolQuotes />
       <StartHere />
       <PlaybooksBand />
       <NewsletterBand />
       <ElsewhereStrip />
-      <FooterRev />
+      <FooterRev cta={{ label: "Work with me", href: "/#work-with-me" }} ctaAsButton showDiscoveryCta={false} />
     </div>
   );
 }

@@ -1,15 +1,16 @@
 // @ts-nocheck
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { ProfileAvatar } from "./profile-avatar";
 import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
 /* Segmenter ("I want to..."), Thesis band, Social proof, Sound Familiar */
 
 function Segmenter() {
   const items = [
-    { goal: "Coaching", tone: "ember", note: "1:1 & personal", playbook: "How coaching works", href: "#coaching" },
+    { goal: "Coaching", tone: "ember", note: "1:1 & personal", playbook: "How coaching works", href: "/coaching" },
     { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen", playbook: "Get the book", href: "/book" },
     { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI", playbook: "See lessons", href: "#school" },
     { goal: "Speaking", tone: "maroon", note: "Book Tim to speak at your event", playbook: "See details", href: "/speaking" },
@@ -98,12 +99,22 @@ function Segmenter() {
   );
 }
 
-function ThesisBand() {
+function ThesisBand({
+  quote = (
+    <>
+      Just because you are <em style={{ color: "var(--tqa-sunrise)", fontStyle: "italic" }}>quiet</em> doesn&rsquo;t mean you have{" "}
+      <em style={{ color: "var(--tqa-sunrise)", fontStyle: "italic" }}>nothing to say</em>.
+    </>
+  ),
+  attribution = "From The Quiet Achiever book",
+}: {
+  quote?: ReactNode;
+  attribution?: string | null;
+}) {
   return (
     <section style={{ background: "var(--tqa-ink)", padding: "96px 0", position: "relative", overflow: "hidden" }}>
       <Container>
         <div className="relative">
-          {/* big quote mark */}
           <div
             aria-hidden
             className="font-display"
@@ -133,20 +144,22 @@ function ThesisBand() {
                 textWrap: "balance",
               }}
             >
-              Just because you are <em style={{ color: "var(--tqa-sunrise)", fontStyle: "italic" }}>quiet</em> doesn&rsquo;t mean you have <em style={{ color: "var(--tqa-sunrise)", fontStyle: "italic" }}>nothing to say</em>.
+              {quote}
             </blockquote>
-            <div
-              className="font-sans uppercase"
-              style={{
-                marginTop: "32px",
-                color: "rgba(245,240,211,0.6)",
-                fontSize: "12px",
-                letterSpacing: "0.18em",
-                fontWeight: 700,
-              }}
-            >
-              From The Quiet Achiever book
-            </div>
+            {attribution ? (
+              <div
+                className="font-sans uppercase"
+                style={{
+                  marginTop: "32px",
+                  color: "rgba(245,240,211,0.6)",
+                  fontSize: "12px",
+                  letterSpacing: "0.18em",
+                  fontWeight: 700,
+                }}
+              >
+                {attribution}
+              </div>
+            ) : null}
           </div>
         </div>
       </Container>
@@ -191,9 +204,7 @@ function RodQuote() {
             I left our sessions with many practical tips and strategies I could use the very next day.&rdquo;
           </blockquote>
           <figcaption className="mt-8 flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
-              RN
-            </div>
+            <ProfileAvatar name="Rod Naber" size={56} />
             <div>
               <div className="font-sans font-bold text-charcoal">Rod Naber</div>
               <div className="font-sans text-sm text-warm-600">Lead Product Designer, Stripe, USA</div>

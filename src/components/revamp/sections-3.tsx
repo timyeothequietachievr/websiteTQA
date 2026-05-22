@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { ProfileAvatar } from "./profile-avatar";
 
 /* Latest writing, Start here, School, Playbooks, Newsletter, Tim Elsewhere, Footer, Sticky Toni */
 
@@ -54,9 +55,9 @@ function LatestWriting() {
 
 function StartHere() {
   const tiles = [
-    { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen" },
+    { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen", href: "/podcast" },
     { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Read" },
-    { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read" },
+    { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read", href: "/book#checklist" },
   ];
   return (
     <section style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
@@ -69,7 +70,7 @@ function StartHere() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {tiles.map((t, i) => (
-            <a key={i} href="#start" className="block" style={{
+            <a key={i} href={"href" in t && t.href ? t.href : "#start"} className="block" style={{
               background: "var(--tqa-paper)",
               border: "1px solid rgba(30,30,30,0.10)",
               borderRadius: "8px",
@@ -350,9 +351,7 @@ function SchoolQuotes() {
                 &ldquo;{item.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-4 font-sans text-sm text-warm-700">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
-                  {item.name.split(" ").map((part) => part[0]).join("")}
-                </div>
+                <ProfileAvatar name={item.name} size={56} />
                 <div>
                   <strong className="text-charcoal">{item.name}</strong>
                   <br />
@@ -367,7 +366,29 @@ function SchoolQuotes() {
   );
 }
 
-function FooterRev() {
+const FOOTER_LINKS: Record<string, string> = {
+  Coaching: "/coaching",
+  School: "/#school",
+  Speaking: "/speaking",
+  Book: "/book",
+  Podcast: "/podcast",
+  Playbooks: "/#playbooks",
+  About: "/about",
+  Contact: "/about#contact",
+  Terms: "/terms",
+  Privacy: "/privacy",
+};
+
+function FooterRev({
+  cta,
+  ctaAsButton = false,
+  showDiscoveryCta = true,
+}: {
+  cta?: { label: string; href: string };
+  /** Render `cta` as the ember button (homepage Work with me) instead of a text link */
+  ctaAsButton?: boolean;
+  showDiscoveryCta?: boolean;
+} = {}) {
   const cols = [
     { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
     { h: "Read & listen", links: ["Book", "Podcast", "Playbooks"] },
@@ -389,19 +410,51 @@ function FooterRev() {
               <br />
               Remain your true authentic self.
             </p>
-            <div className="mt-8">
-              <a href={DISCOVERY_CALL_URL} className="font-sans inline-flex items-center gap-2" style={{
-                background: "var(--tqa-ember)",
-                color: "var(--tqa-paper)",
-                padding: "12px 18px",
-                borderRadius: "4px",
-                fontSize: "14px",
-                fontWeight: 700,
-                textDecoration: "none",
-              }}>
-                Book a discovery call <span aria-hidden>→</span>
-              </a>
-            </div>
+            {cta ? (
+              <div className="mt-8">
+                <a
+                  href={cta.href}
+                  className={`font-sans inline-flex items-center ${ctaAsButton ? "gap-2" : "gap-1.5 text-[15px] font-semibold"}`}
+                  style={
+                    ctaAsButton
+                      ? {
+                          background: "var(--tqa-ember)",
+                          color: "var(--tqa-paper)",
+                          padding: "12px 18px",
+                          borderRadius: "4px",
+                          fontSize: "14px",
+                          fontWeight: 700,
+                          textDecoration: "none",
+                        }
+                      : {
+                          color: "var(--tqa-sunrise)",
+                          textDecoration: "underline",
+                          textUnderlineOffset: "4px",
+                        }
+                  }
+                >
+                  {cta.label} <span aria-hidden>→</span>
+                </a>
+              </div>
+            ) : showDiscoveryCta ? (
+              <div className="mt-8">
+                <a
+                  href={DISCOVERY_CALL_URL}
+                  className="font-sans inline-flex items-center gap-2"
+                  style={{
+                    background: "var(--tqa-ember)",
+                    color: "var(--tqa-paper)",
+                    padding: "12px 18px",
+                    borderRadius: "4px",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                  }}
+                >
+                  Book a discovery call <span aria-hidden>→</span>
+                </a>
+              </div>
+            ) : null}
           </div>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:col-span-8">
             {cols.map((c) => (
@@ -412,7 +465,7 @@ function FooterRev() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
                   {c.links.map((l) => (
                     <li key={l}>
-                      <a href="#footer" className="font-sans" style={{ color: "rgba(245,240,211,0.78)", fontSize: "14px", textDecoration: "none" }}
+                      <a href={FOOTER_LINKS[l] ?? "#footer"} className="font-sans" style={{ color: "rgba(245,240,211,0.78)", fontSize: "14px", textDecoration: "none" }}
                          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-paper)")}
                          onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,211,0.78)")}>
                         {l}

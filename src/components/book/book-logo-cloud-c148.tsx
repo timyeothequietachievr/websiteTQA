@@ -1,7 +1,7 @@
 /** c148 — sections/logo-clouds/01-simple-with-heading */
 import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
-export function BookLogoCloudC148() {
+export function BookLogoCloudC148({ reviewsHref = "#praise" }: { reviewsHref?: string }) {
   return (
     <section
       data-component-code="c148"
@@ -26,7 +26,7 @@ export function BookLogoCloudC148() {
           </div>
           <div className="mt-4 flex justify-center px-2">
             <a
-              href="#praise"
+              href={reviewsHref}
               className="inline-flex items-center justify-center rounded-full bg-paper-soft px-5 py-2 text-center font-sans text-sm font-medium text-charcoal ring-1 ring-charcoal/10 transition hover:text-ember hover:ring-ember/35"
             >
               Read their reviews →

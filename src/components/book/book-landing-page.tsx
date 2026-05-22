@@ -1,12 +1,15 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
-import { BookMasthead } from "./book-masthead";
+import { Navigation } from "@/components/revamp/navigation";
+import { BookFreeChapterForm } from "./book-free-chapter-form";
 import { BookLogoCloudC148 } from "./book-logo-cloud-c148";
 import { BookSoundFamiliarC6 } from "./book-sound-familiar-c6";
 import { Container, Button } from "@/components/revamp/primitives";
+import { ProfileAvatar } from "@/components/revamp/profile-avatar";
+import { getProfilePhoto } from "@/lib/profile-photos";
 import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
 
 /* Component refs: c9 hero, c148 logos, c6 pain, c100 FAQ, c14 newsletter, c16 footer */
@@ -78,7 +81,7 @@ const TESTIMONIALS = [
   {
     quote:
       "Do you like reading IKEA instructions? I DO! Tim's teaching gives me the user manual to myself. Accompanied with relatable stories, practical tips and practices, I now have a better understanding of my own way of communicating — and practical tips to amplify the impact of what I want to say, to my friends, my lovers, my colleagues and anyone I care about. HIGHLY RECOMMEND!",
-    name: "Vincent Kavanagh",
+    name: "Lemon Mingyue Wang",
     place: "UK",
     note: "★★★★★ Amazon, verified purchase",
   },
@@ -326,7 +329,7 @@ function AmazonRating() {
 
 function BookHero() {
   return (
-    <section id="hero" style={{ padding: "56px 0 80px", background: "var(--tqa-paper-soft)" }}>
+    <section id="hero" style={{ padding: "112px 0 80px", background: "var(--tqa-paper-soft)" }}>
       <Container>
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
@@ -457,8 +460,6 @@ function ChaptersTable() {
 }
 
 function ChecklistLead() {
-  const [email, setEmail] = useState("");
-
   return (
     <section id="checklist" style={{ padding: "96px 0" }}>
       <Container>
@@ -477,27 +478,7 @@ function ChecklistLead() {
           <p className="font-reading max-w-2xl text-lg leading-relaxed text-charcoal">
             Read Chapter 1 plus a checklist of every tiny habit in the book.
           </p>
-          <form
-            className="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              className="h-12 flex-1 rounded border-0 px-4 font-sans text-[15px] text-charcoal outline-none"
-              style={{ background: "var(--tqa-paper)" }}
-            />
-            <button
-              type="submit"
-              className="h-12 rounded px-6 font-sans text-[15px] font-bold"
-              style={{ background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}
-            >
-              Download Now →
-            </button>
-          </form>
+          <BookFreeChapterForm />
         </div>
       </Container>
     </section>
@@ -584,15 +565,18 @@ function PraiseSection() {
               <p className="font-reading text-[15px] leading-relaxed text-charcoal italic">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <footer className="mt-4 font-sans text-sm text-warm-700">
-                <strong className="text-charcoal">{t.name}</strong>
-                {t.place ? ` · ${t.place}` : ""}
-                {t.note ? (
-                  <>
-                    <br />
-                    <span className="text-xs">{t.note}</span>
-                  </>
-                ) : null}
+              <footer className="mt-4 flex items-center gap-3 font-sans text-sm text-warm-700">
+                {getProfilePhoto(t.name) ? <ProfileAvatar name={t.name} size={44} /> : null}
+                <div>
+                  <strong className="text-charcoal">{t.name}</strong>
+                  {t.place ? ` · ${t.place}` : ""}
+                  {t.note ? (
+                    <>
+                      <br />
+                      <span className="text-xs">{t.note}</span>
+                    </>
+                  ) : null}
+                </div>
               </footer>
             </blockquote>
           ))}
@@ -831,7 +815,7 @@ function BulkOrderSection() {
 export function BookLandingPage() {
   return (
     <div className="bg-paper" data-screen-label="Book landing page">
-      <BookMasthead />
+      <Navigation />
       <BookHero />
       <BookLogoCloudC148 />
       <BookSoundFamiliarC6 />

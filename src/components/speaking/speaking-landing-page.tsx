@@ -3,15 +3,90 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Navigation } from "@/components/revamp/navigation";
-import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
-import { Container, Button, Eyebrow } from "@/components/revamp/primitives";
-import { SectionBlock, CtaBand, QuoteCard, DataTable } from "@/components/speaking/shared";
+import { ThesisBand } from "@/components/revamp/sections-1";
+import { FooterRev } from "@/components/revamp/sections-3";
+import { Container, Button } from "@/components/revamp/primitives";
+import { SectionBlock, QuoteCard, DataTable } from "@/components/speaking/shared";
+import { SpeakingHero } from "@/components/speaking/speaking-hero";
 
-const SPEAKER_EMAIL = "mailto:speaker@thequietachievr.com?subject=Speaking%20enquiry";
-const LINKEDIN = "https://www.linkedin.com/in/timyeo/";
-const YOUTUBE_TALK = "https://www.youtube.com/embed/Am-6BhOOIpM";
-const YOUTUBE_TALK_WATCH = "https://youtu.be/Am-6BhOOIpM";
-import { DISCOVERY_CALL_URL } from "@/lib/site-data";
+import {
+  LEADING_DESIGN_2021_WATCH,
+  MAIN_TALK_EMBED,
+  MAIN_TALK_WATCH,
+  SPEAKER_EMAIL,
+} from "@/lib/speaking-content";
+
+function ProblemCopy() {
+  return (
+    <div className="max-w-3xl space-y-4 font-reading text-[17px] leading-relaxed text-warm-700">
+      <p>
+        We live in a world that desires the extrovert ideal. Most leadership advice works for people who are
+        energised by people-ing and for whom being loud comes naturally.
+      </p>
+      <p>
+        But research shows{" "}
+        <strong className="font-semibold text-charcoal">30–40% of the world identifies as quiet or introverted</strong>.
+        Which means a third to half of your team probably skews introvert.
+      </p>
+      <p>
+        Chances are, you&rsquo;re only hearing the loudest ideas in the room. And{" "}
+        <strong className="font-semibold text-charcoal">loud ≠ best</strong>. You&rsquo;re leaving a huge chunk of
+        ideas on the table, unheard.
+      </p>
+      <p>
+        Meanwhile,{" "}
+        <strong className="font-semibold text-charcoal">your quiet achievers are silently suffering</strong>.
+        They&rsquo;re probably blaming themselves for not being good enough; I know, because that was me. If only they
+        got the help they needed to level up.
+      </p>
+      <p>
+        I&rsquo;ve watched many leadership speakers and read many leadership books.{" "}
+        <strong className="font-semibold text-charcoal">
+          Most leave you feeling good; but after, you don&rsquo;t quite know where to start
+        </strong>
+        .
+      </p>
+      <p>
+        Unlike other talks, I share tiny habits quiet achievers can apply the very next day — no extrovert performance
+        required. Your quiet achievers leave feeling seen and empowered, often for the first time. You&rsquo;ll be
+        surprised by what they do next.
+      </p>
+    </div>
+  );
+}
+
+const BOOKING_STEPS = [
+  {
+    step: "1",
+    text: "Email and tell me about your event — date and time, location, audience, attendee count, format, and the outcomes you want. I'll tell you if I'm the right fit.",
+  },
+  {
+    step: "2",
+    text: "Book a discovery call — we talk about your audience, why me, and finalise the topics.",
+  },
+  {
+    step: "3",
+    text: "Proposal & contract — I send an invoice with talk topics, logistics, and fee. Once deposit is paid, the date is held (and travel arrangements made).",
+  },
+  { step: "4", text: "Talk delivered & invoice balance paid." },
+] as const;
+
+function BookingStepText({ text }: { text: string }) {
+  const dash = text.indexOf(" — ");
+  if (dash === -1) {
+    return (
+      <p className="font-reading text-[17px] leading-relaxed text-warm-700">
+        <strong className="text-charcoal">{text}</strong>
+      </p>
+    );
+  }
+  return (
+    <p className="font-reading text-[17px] leading-relaxed text-warm-700">
+      <strong className="text-charcoal">{text.slice(0, dash)}</strong>
+      {text.slice(dash)}
+    </p>
+  );
+}
 
 const AUDIENCE_QUOTES = [
   {
@@ -91,7 +166,7 @@ const SPEAKING_HISTORY: (string | ReactNode)[][] = [
     "2021",
     "Leading Design — Design leadership for introverts",
     "Talk",
-    <a key="ld" href={YOUTUBE_TALK_WATCH} className="text-ember underline">
+    <a key="ld" href={LEADING_DESIGN_2021_WATCH} className="text-ember underline">
       Watch
     </a>,
   ],
@@ -107,7 +182,7 @@ const SPEAKING_HISTORY: (string | ReactNode)[][] = [
     "2020",
     "IxDA Milan — Design leadership for introverts",
     "Talk",
-    <a key="ixm" href="https://ixda.org/video/design-leadership-for-introverts/" className="text-ember underline">
+    <a key="ixm" href={MAIN_TALK_WATCH} className="text-ember underline">
       Watch
     </a>,
   ],
@@ -124,55 +199,22 @@ const SPEAKING_HISTORY: (string | ReactNode)[][] = [
 export function SpeakingLandingPage() {
   return (
     <div className="min-h-full bg-paper">
-      <Navigation />
+      <Navigation ctaLabel="Inquire about speaking" ctaHref={SPEAKER_EMAIL} />
       <main>
-        <section className="border-b border-charcoal/10 pt-28 pb-16 sm:pt-32 sm:pb-20">
-          <Container>
-            <div className="max-w-3xl rounded-lg border-l-4 border-ember bg-paper-soft px-6 py-5 font-reading text-[18px] italic leading-relaxed text-charcoal">
-              Just because we are <em className="font-semibold text-ember not-italic">quiet</em> does not mean we have{" "}
-              <em className="font-semibold text-ember not-italic">nothing to say</em>.
-            </div>
-            <h1
-              className="font-display mt-8 font-semibold text-charcoal"
-              style={{ fontSize: "clamp(40px, 5vw, 72px)", lineHeight: 1.02, letterSpacing: "-0.02em" }}
-            >
-              Book Tim Yeo to speak at your event
-            </h1>
-            <p className="mt-6 max-w-2xl font-reading text-lg leading-relaxed text-warm-700">
-              I help quiet achievers have impact at work — without pretending to be extroverts. Keynotes and fireside
-              chats for conferences, leadership offsites, and company all-hands. In-person and remote, globally.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={SPEAKER_EMAIL}>Enquire about speaking</Button>
-              <Button href={LINKEDIN} variant="secondary">
-                LinkedIn
-              </Button>
-              <Button href={YOUTUBE_TALK_WATCH} variant="secondary">
-                Watch the talk
-              </Button>
-            </div>
-            <p className="mt-6 font-sans text-sm text-warm-600">
-              Organisers: bios, headshots, AV, fees, and recording terms in the{" "}
-              <Link href="/speakerkit" className="font-semibold text-ember underline underline-offset-4">
-                Speaker kit
-              </Link>
-              .
-            </p>
-          </Container>
-        </section>
+        <SpeakingHero />
 
-        <SectionBlock eyebrow="Watch" title="Leading Design 2021 — Design leadership for introverts">
+        <SectionBlock eyebrow="Watch" title="Watch Tim speak" subtitle="IxDA Design Conference — Milan 2020">
           <div className="aspect-video w-full max-w-4xl overflow-hidden rounded-lg ring-1 ring-charcoal/10">
             <iframe
-              title="Tim Yeo — Leading Design keynote"
-              src={YOUTUBE_TALK}
+              title="Tim Yeo — IxDA Milan 2020"
+              src={MAIN_TALK_EMBED}
               className="h-full w-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
           <p className="mt-4 font-sans text-sm text-warm-600">
-            More talks:{" "}
+            More talks at{" "}
             <a href="https://uxaustralia.com.au/conferences/ux-australia-2022/presentation/design-leadership-for-introverts/" className="text-ember underline">
               UX Australia 2022
             </a>
@@ -182,13 +224,17 @@ export function SpeakingLandingPage() {
             </a>
             ,{" "}
             <a href="https://youtu.be/LdxDN2xOrEg" className="text-ember underline">
-              ADPList 2023
+              ADPList BeMore Festival 2023
             </a>
-            ,{" "}
-            <a href="https://ixda.org/video/design-leadership-for-introverts/" className="text-ember underline">
-              IxDA Milan 2020
+            , or{" "}
+            <a href={LEADING_DESIGN_2021_WATCH} className="text-ember underline">
+              Leading Design Conference 2021
             </a>
             . Full list in the{" "}
+            <Link href="/podcast" className="text-ember underline">
+              podcast &amp; talks page
+            </Link>{" "}
+            and{" "}
             <Link href="/speakerkit" className="text-ember underline">
               Speaker kit
             </Link>
@@ -198,21 +244,20 @@ export function SpeakingLandingPage() {
 
         <section className="border-y border-charcoal/10 bg-ink py-12">
           <Container>
-            <p className="text-center font-display text-4xl font-semibold text-sunrise sm:text-5xl">97%</p>
-            <p className="mx-auto mt-3 max-w-2xl text-center font-reading text-lg text-paper/90">
-              of audiences rate the keynote &ldquo;Excellent&rdquo; or &ldquo;Good&rdquo;. 1,000+ quiet achievers
-              coached · 20+ years in tech leadership · Spoken globally — Standard Chartered, Ezra Coaching, UX
-              Australia, Leading Design, IxDA, ADPList, UCD Gathering, Web Directions.
+            <p className="text-center font-display text-5xl font-semibold text-sunrise sm:text-6xl md:text-7xl">
+              97%
             </p>
-            <div className="mt-8 text-center">
-              <Button href={SPEAKER_EMAIL} variant="cream">
-                Sound like your audience? Tell me about your event
-              </Button>
-            </div>
+            <p className="mx-auto mt-4 max-w-2xl text-center font-reading text-lg text-paper sm:text-xl">
+              Audiences rate the keynote excellent or good
+            </p>
           </Container>
         </section>
 
-        <SectionBlock eyebrow="Who this is for" title="Events where this lands well">
+        <SectionBlock eyebrow="The problem" title="What most leadership speakers miss">
+          <ProblemCopy />
+        </SectionBlock>
+
+        <SectionBlock eyebrow="Popular demand" title="Who this is for">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
               <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-ember">Event types</h3>
@@ -240,7 +285,8 @@ export function SpeakingLandingPage() {
                 {[
                   "Individual contributors who want to be seen and heard",
                   "People leaders who want their teams to work better together",
-                  "Managers of mixed introvert/extrovert teams",
+                  "Leaders of teams who, more than once, wished \"why don't they speak up more?\"",
+                  "Managers of mixed introvert/extrovert teams who want to get the most out of their people",
                   "Mid-career professionals navigating visibility, promotion, and presence",
                 ].map((item) => (
                   <li key={item} className="flex gap-2">
@@ -255,70 +301,86 @@ export function SpeakingLandingPage() {
           </div>
         </SectionBlock>
 
-        <SectionBlock eyebrow="Signature keynote" title="Quiet Leadership for Introverts" className="bg-paper-soft">
-          <p className="max-w-3xl font-reading text-[17px] leading-relaxed text-warm-700">
+        <SectionBlock id="signature-keynote" eyebrow="Signature keynote" title="Quiet Leadership for Introverts" accent>
+          <p className="max-w-3xl font-reading text-[17px] leading-relaxed text-ink/90">
             Tim shares practical, tiny habits he&rsquo;s used to have impact at work without pretending to be an
             extrovert — plus how leaders can get the best out of quiet people and help quiet + loud teammates work
             better together.
           </p>
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
-            <div>
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-charcoal">Core topics (always included)</h3>
-              <ol className="mt-4 list-decimal space-y-3 pl-5 font-reading text-[17px] leading-relaxed text-warm-700">
+            <div className="rounded-lg bg-paper/95 p-6 ring-1 ring-ink/15">
+              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-ink">Core topics (always included)</h3>
+              <ol className="mt-4 list-decimal space-y-3 pl-5 font-reading text-[17px] leading-relaxed text-ink/85">
                 <li>
-                  <strong className="text-charcoal">Speaking up in meetings</strong> — being seen and heard in rooms
+                  <strong className="text-ink">Speaking up in meetings</strong> — being seen and heard in rooms
                   full of strong opinions; tactics that work in-person and remote.
                 </li>
                 <li>
-                  <strong className="text-charcoal">Team management</strong> — introverts and extroverts working better
+                  <strong className="text-ink">Team management</strong> — introverts and extroverts working better
                   together: team selection, norms, and behaviours that earn trust.
                 </li>
                 <li>
-                  <strong className="text-charcoal">Networking</strong> — growing influence by growing who can help you
+                  <strong className="text-ink">Networking</strong> — growing influence by growing who can help you
                   and who you can help, inside and outside your organisation.
                 </li>
               </ol>
             </div>
-            <div>
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-charcoal">Pick one extra topic</h3>
-              <ol className="mt-4 list-decimal space-y-3 pl-5 font-reading text-[17px] leading-relaxed text-warm-700" start={4}>
+            <div className="rounded-lg bg-paper/95 p-6 ring-1 ring-ink/15">
+              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-ink">Pick one extra topic</h3>
+              <ol className="mt-4 list-decimal space-y-3 pl-5 font-reading text-[17px] leading-relaxed text-ink/85" start={4}>
                 <li>Be more visible in your org</li>
                 <li>Handling difficult conversations</li>
                 <li>How to say no (politely)</li>
                 <li>Public speaking — prepare and practise with confidence</li>
               </ol>
-              <p className="mt-4 font-reading text-sm italic text-warm-600">
+              <p className="mt-4 font-reading text-sm italic text-ink/75">
                 Tell me your audience and outcome and I&rsquo;ll suggest the right extra topic.
               </p>
             </div>
           </div>
         </SectionBlock>
 
-        <SectionBlock eyebrow="The problem" title="What most leadership speakers miss">
-          <div className="max-w-3xl space-y-4 font-reading text-[17px] leading-relaxed text-warm-700">
-            <p>
-              We live in a world that desires the extrovert ideal. Most leadership advice works for people energised by
-              people-ing and for whom being loud comes naturally.
-            </p>
-            <p>
-              Research shows <strong className="text-charcoal">30–40% of the world identifies as quiet or introverted</strong> —
-              which means a third to half of your team probably skews introvert. Chances are you&rsquo;re only hearing the
-              loudest ideas in the room. And loud ≠ best.
-            </p>
-            <p>
-              My talks share <strong className="text-charcoal">tiny habits</strong> quiet achievers can apply the very next
-              day — no extrovert performance required. Your quiet achievers leave feeling seen and empowered, often for
-              the first time.
-            </p>
-          </div>
+        <SectionBlock id="formats" title="Popular formats">
+          <DataTable
+            headers={["Format", "Length", "Q&A", "Best for"]}
+            rows={[
+              ["Keynote", "45 min talk", "15 min", "Conference openers, all-hands, leadership offsites"],
+              ["Fireside / AMA", "20 min talk", "40 min", "Smaller groups, focused audiences, interactive sessions"],
+            ]}
+          />
         </SectionBlock>
 
-        <SectionBlock eyebrow="Feedback" title="What audiences say">
+        <ThesisBand quote="Introversion is a superpower." attribution={null} />
+
+        <SectionBlock eyebrow="Feedback" title="What audiences say" className="bg-paper-soft">
           <div className="grid gap-6 sm:grid-cols-2">
             {AUDIENCE_QUOTES.map((q) => (
               <QuoteCard key={q.quote.slice(0, 40)} quote={q.quote} attribution={q.attribution} />
             ))}
           </div>
+        </SectionBlock>
+
+        <SectionBlock eyebrow="Inclusive by design" title="Introvert-friendly features for quiet attendees">
+          <p className="mb-6 max-w-2xl font-reading text-[17px] text-warm-700">
+            Interactive ways to make your event work for quiet and loud attendees.
+          </p>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {[
+              "QR-code question submission — questions via Slido, Mentimeter, or QuestionWave. Attendees upvote so the best rise to the top.",
+              "Anonymity — questions are judged on merit, not who asked.",
+              "Bring your own Q&A tool — share the URL at least a day before the event and we'll integrate it.",
+            ].map((item) => (
+              <li
+                key={item}
+                className="flex gap-3 rounded-lg bg-paper-soft p-4 font-reading text-[16px] leading-relaxed text-warm-700 ring-1 ring-charcoal/10"
+              >
+                <span className="text-ember" aria-hidden>
+                  ✓
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </SectionBlock>
 
         <SectionBlock eyebrow="Track record" title="Selected speaking history" className="bg-paper-soft">
@@ -357,13 +419,6 @@ export function SpeakingLandingPage() {
                 </Link>
                 .
               </p>
-              <p>
-                Full bio, headshots, and assets in the{" "}
-                <Link href="/speakerkit" className="font-semibold text-ember underline">
-                  Speaker kit
-                </Link>
-                .
-              </p>
               <Link href="/about" className="inline-flex font-sans text-[15px] font-semibold text-ember underline underline-offset-4">
                 Read Tim&rsquo;s full story →
               </Link>
@@ -371,61 +426,9 @@ export function SpeakingLandingPage() {
           </div>
         </SectionBlock>
 
-        <SectionBlock id="formats" eyebrow="Formats" title="How Tim shows up at your event">
-          <DataTable
-            headers={["Format", "Length", "Q&A", "Best for"]}
-            rows={[
-              ["Keynote", "45 min talk", "15 min", "Conference openers, all-hands, leadership offsites"],
-              ["Fireside / AMA", "20 min talk", "40 min", "Smaller groups, focused audiences, interactive sessions"],
-            ]}
-          />
-          <p className="mt-6 font-reading text-[16px] text-warm-700">
-            Bios, headshots, AV, fees, recording terms, and bulk book orders:{" "}
-            <Link href="/speakerkit" className="font-semibold text-ember underline">
-              Speaker kit →
-            </Link>
-          </p>
-        </SectionBlock>
-
-        <SectionBlock eyebrow="Inclusive by design" title="Introvert-friendly features for quiet attendees" className="bg-paper-soft">
-          <p className="mb-6 max-w-2xl font-reading text-[17px] text-warm-700">
-            Simple, low-cost ways to make your event work for everyone. Happy to help you set any of these up.
-          </p>
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {[
-              "QR-code question submission (Slido, Mentimeter, QuestionWave) — upvoted so the best questions rise",
-              "Anonymity — questions judged on merit, not who asked",
-              "Bring your own Q&A tool — share the URL at least a day before and we'll integrate it",
-            ].map((item) => (
-              <li
-                key={item}
-                className="flex gap-3 rounded-lg bg-paper p-4 font-reading text-[16px] leading-relaxed text-warm-700 ring-1 ring-charcoal/10"
-              >
-                <span className="text-ember" aria-hidden>
-                  ✓
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </SectionBlock>
-
-        <SectionBlock eyebrow="Book Tim" title="How to book">
+        <SectionBlock title="How to book">
           <ol className="max-w-2xl space-y-6">
-            {[
-              {
-                step: "1",
-                text: "Email speaker@thequietachievr.com — date, audience, attendee count, format, and outcomes you want.",
-              },
-              {
-                step: "2",
-                text: "Discovery call (30 min) — we make sure I'm the right fit and finalise the topic.",
-                link: DISCOVERY_CALL_URL,
-                linkLabel: "Book discovery call",
-              },
-              { step: "3", text: "Proposal & contract — invoice with topic, logistics, and fee. Deposit holds the date." },
-              { step: "4", text: "Talk delivered & invoice balance paid." },
-            ].map(({ step, text, link, linkLabel }) => (
+            {BOOKING_STEPS.map(({ step, text }) => (
               <li key={step} className="flex gap-4">
                 <span
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ember font-sans text-sm font-bold text-paper"
@@ -434,35 +437,47 @@ export function SpeakingLandingPage() {
                   {step}
                 </span>
                 <div className="pt-1.5">
-                  <p className="font-reading text-[17px] leading-relaxed text-warm-700">{text}</p>
-                  {link ? (
-                    <a href={link} className="mt-2 inline-block font-sans text-sm font-semibold text-ember underline">
-                      {linkLabel}
-                    </a>
-                  ) : null}
+                  <BookingStepText text={text} />
                 </div>
               </li>
             ))}
           </ol>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button href={SPEAKER_EMAIL}>Tell me about your event</Button>
-            <Button href="/speakerkit" variant="secondary">
+          <p className="mt-8 max-w-2xl font-reading text-[15px] text-warm-600">
+            For event organisers — bios, headshots, speaker requirements (AV, languages), fees, recording terms, and
+            bulk book orders are all in the{" "}
+            <Link href="/speakerkit" className="font-semibold text-ember underline">
               Speaker kit
-            </Button>
-          </div>
+            </Link>
+            .
+          </p>
         </SectionBlock>
 
-        <CtaBand
-          title="Ready to give your quiet achievers their moment?"
-          body="Whether or not we work together, I hope your event gives every quiet achiever in the room a moment to be truly seen."
-          primaryHref={SPEAKER_EMAIL}
-          primaryLabel="speaker@thequietachievr.com"
-          secondaryHref={DISCOVERY_CALL_URL}
-          secondaryLabel="Discovery call"
-        />
+        <section className="bg-paper-soft py-14 sm:py-16">
+          <Container>
+            <div className="rounded-xl bg-ink p-8 sm:p-10">
+              <p
+                className="max-w-3xl font-display font-semibold text-paper"
+                style={{ fontSize: "clamp(22px, 2.8vw, 32px)", lineHeight: 1.15, textWrap: "balance" }}
+              >
+                I hope your event gives every quiet achiever in the room a moment to be truly seen.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-6">
+                <Button href={SPEAKER_EMAIL} variant="cream" size="lg">
+                  Inquire about speaking
+                  <span aria-hidden>→</span>
+                </Button>
+                <Link
+                  href="#signature-keynote"
+                  className="font-sans text-[15px] font-semibold text-sunrise underline underline-offset-4 hover:text-paper"
+                >
+                  Read signature keynote →
+                </Link>
+              </div>
+            </div>
+          </Container>
+        </section>
       </main>
-      <NewsletterBand />
-      <FooterRev />
+      <FooterRev cta={{ label: "Inquire about speaking", href: SPEAKER_EMAIL }} />
     </div>
   );
 }

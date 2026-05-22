@@ -2,10 +2,10 @@ export const DISCOVERY_CALL_URL = "https://www.thequietachievr.com/discoverycall
 
 export const NAV_ITEMS = [
   { name: "School", href: "#school" },
-  { name: "Coaching", href: "#coaching" },
+  { name: "Coaching", href: "/coaching" },
   { name: "Book", href: "#book" },
   { name: "Podcast", href: "#podcast" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
 ] as const;
 
 export const TOPICS = [

@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { ProfileAvatar } from "./profile-avatar";
 
 /* Coaching summary, Toni introduction, Book block */
 
@@ -93,11 +94,17 @@ function CoachingSummary() {
                   </li>
                 ))}
               </ol>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap items-center gap-5">
                 <Button variant="primary" size="lg" href={DISCOVERY_CALL_URL}>
                   Book a discovery call
                   <span aria-hidden>→</span>
                 </Button>
+                <a
+                  href="/coaching"
+                  className="font-sans text-[15px] font-semibold text-charcoal underline underline-offset-4 hover:text-ember"
+                >
+                  How coaching works
+                </a>
               </div>
             </div>
           </div>
@@ -319,7 +326,7 @@ function BookBlock() {
   );
 }
 
-function VincentQuote() {
+function LemonQuote() {
   return (
     <section style={{ padding: "80px 0", background: "var(--tqa-paper)" }}>
       <Container>
@@ -332,11 +339,9 @@ function VincentQuote() {
             HIGHLY RECOMMEND!&rdquo;
           </blockquote>
           <figcaption className="mt-8 flex items-center gap-4 font-sans text-sm text-warm-700">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-lg font-semibold text-paper">
-              VK
-            </div>
+            <ProfileAvatar name="Lemon Mingyue Wang" size={56} />
             <div>
-              <strong className="text-charcoal">Vincent Kavanagh</strong>
+              <strong className="text-charcoal">Lemon Mingyue Wang</strong>
               <br />
               UK · ★★★★★ Amazon, verified purchase
             </div>
@@ -348,4 +353,4 @@ function VincentQuote() {
 }
 
 
-export { CoachingSummary, ToniBlock, BookBlock, VincentQuote };
+export { CoachingSummary, ToniBlock, BookBlock, LemonQuote };
