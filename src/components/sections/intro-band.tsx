@@ -20,7 +20,7 @@ export function IntroBand() {
           >
             designer and leader in startups for 18 years
           </a>
-          , he&apos;s coached nearly a hundred introverts and has spoken at{" "}
+          , he&apos;s coached 1,000+ quiet achievers and has spoken at{" "}
           <a
             href="#"
             className="text-sunrise underline decoration-sunrise/60 underline-offset-4 hover:text-sunrise-soft"

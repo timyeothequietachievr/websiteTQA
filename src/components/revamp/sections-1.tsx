@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { Container, ContainedBand, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
 import { ProfileAvatar } from "./profile-avatar";
 import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
@@ -112,58 +112,53 @@ function ThesisBand({
   attribution?: string | null;
 }) {
   return (
-    <section style={{ background: "var(--tqa-ink)", padding: "96px 0", position: "relative", overflow: "hidden" }}>
-      <Container>
-        <div className="relative">
+    <ContainedBand tone="ink" innerClassName="relative">
+      <div
+        aria-hidden
+        className="font-display pointer-events-none"
+        style={{
+          position: "absolute",
+          top: "-80px",
+          left: "-20px",
+          fontSize: "300px",
+          lineHeight: 1,
+          color: "var(--tqa-ember)",
+          opacity: 0.18,
+          fontStyle: "italic",
+          fontWeight: 600,
+        }}
+      >
+        &ldquo;
+      </div>
+      <div className="relative" style={{ maxWidth: "1000px" }}>
+        <blockquote
+          className="font-display"
+          style={{
+            fontSize: "clamp(34px, 4.4vw, 64px)",
+            lineHeight: 1.04,
+            letterSpacing: "-0.02em",
+            fontWeight: 500,
+            textWrap: "balance",
+          }}
+        >
+          {quote}
+        </blockquote>
+        {attribution ? (
           <div
-            aria-hidden
-            className="font-display"
+            className="font-sans uppercase"
             style={{
-              position: "absolute",
-              top: "-80px",
-              left: "-20px",
-              fontSize: "300px",
-              lineHeight: 1,
-              color: "var(--tqa-ember)",
-              opacity: 0.18,
-              fontStyle: "italic",
-              fontWeight: 600,
+              marginTop: "32px",
+              color: "rgba(245,240,211,0.6)",
+              fontSize: "12px",
+              letterSpacing: "0.18em",
+              fontWeight: 700,
             }}
           >
-            &ldquo;
+            {attribution}
           </div>
-          <div className="relative" style={{ maxWidth: "1000px" }}>
-            <blockquote
-              className="font-display"
-              style={{
-                fontSize: "clamp(34px, 4.4vw, 64px)",
-                lineHeight: 1.04,
-                letterSpacing: "-0.02em",
-                fontWeight: 500,
-                color: "var(--tqa-paper)",
-                textWrap: "balance",
-              }}
-            >
-              {quote}
-            </blockquote>
-            {attribution ? (
-              <div
-                className="font-sans uppercase"
-                style={{
-                  marginTop: "32px",
-                  color: "rgba(245,240,211,0.6)",
-                  fontSize: "12px",
-                  letterSpacing: "0.18em",
-                  fontWeight: 700,
-                }}
-              >
-                {attribution}
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </Container>
-    </section>
+        ) : null}
+      </div>
+    </ContainedBand>
   );
 }
 
@@ -218,7 +213,7 @@ function RodQuote() {
 
 function SoundFamiliar() {
   return (
-    <section id="about" style={{ padding: "112px 0" }}>
+    <section id="about-tim" style={{ padding: "112px 0" }}>
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">

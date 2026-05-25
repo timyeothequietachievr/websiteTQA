@@ -49,7 +49,7 @@ export function CoachingHero() {
               className="mt-5 max-w-[52ch] font-sans text-[15px] italic leading-relaxed"
               style={{ color: "rgba(245,240,211,0.78)" }}
             >
-              Coached 1,000+ introverts since 2021. 20+ years leading design teams in tech.
+              Coached 1,000+ quiet achievers since 2021. 20+ years leading design teams in tech.
             </p>
           </div>
 

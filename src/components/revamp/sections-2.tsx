@@ -10,7 +10,7 @@ import { ProfileAvatar } from "./profile-avatar";
 
 function CoachingSummary() {
   const steps = [
-    { n: "01", t: "Discovery call", d: "20-min video call. We talk about your challenges and see if we are a fit. Free." },
+    { n: "01", t: "Discovery call", d: "30-min video call. We talk about your challenges and see if we are a fit. Free." },
     { n: "02", t: "Deep Dive", d: "90min goal-setting workshop. You get clarity and a Coaching Plan with actions." },
     { n: "03", t: "Coaching plan", d: "Fortnightly sessions. Tiny habits, practised in real situations. Text support between sessions." },
   ];
@@ -58,9 +58,6 @@ function CoachingSummary() {
             >
               100% money-back guarantee.
             </div>
-            <p className="font-sans italic" style={{ fontSize: "13px", color: "var(--neutral-500)", marginTop: "14px", maxWidth: "44ch", lineHeight: 1.5 }}>
-              Chemistry matters. If we&rsquo;re not a fit, I&rsquo;ll tell you — and point you somewhere that is.
-            </p>
           </div>
 
           <div className="lg:col-span-7">
@@ -326,26 +323,38 @@ function BookBlock() {
   );
 }
 
+const LEMON_REVIEW = {
+  quote:
+    "Do you like reading IKEA instructions? I DO! Tim\u2019s teaching gives me the user manual to myself. Accompanied with relatable stories, practical tips and practices, I now have a better understanding of my own way of communicating \u2014 and practical tips to amplify the impact of what I want to say, to my friends, my lovers, my colleagues and anyone I care about. HIGHLY RECOMMEND!",
+  name: "Lemon Mingyue Wang",
+  role: "UK \u00b7 \u2605\u2605\u2605\u2605\u2605 Amazon, verified purchase",
+  photo: "/assets/profile-lemon.jpg",
+} as const;
+
 function LemonQuote() {
   return (
     <section style={{ padding: "80px 0", background: "var(--tqa-paper)" }}>
       <Container>
-        <figure className="rounded-xl bg-paper-soft p-8 ring-1 ring-charcoal/10 sm:p-10">
-          <blockquote className="font-reading text-[20px] leading-relaxed text-charcoal italic">
-            &ldquo;Do you like reading IKEA instructions? I DO! Tim&rsquo;s teaching gives me the user manual
-            to myself. Accompanied with relatable stories, practical tips and practices, I now have
-            a better understanding of my own way of communicating — and practical tips to amplify the
-            impact of what I want to say, to my friends, my lovers, my colleagues and anyone I care about.
-            HIGHLY RECOMMEND!&rdquo;
-          </blockquote>
-          <figcaption className="mt-8 flex items-center gap-4 font-sans text-sm text-warm-700">
-            <ProfileAvatar name="Lemon Mingyue Wang" size={56} />
-            <div>
-              <strong className="text-charcoal">Lemon Mingyue Wang</strong>
-              <br />
-              UK · ★★★★★ Amazon, verified purchase
+        <figure className="mx-auto max-w-4xl rounded-xl bg-paper-soft p-8 ring-1 ring-charcoal/10 sm:p-10">
+          <div className="grid grid-cols-1 items-start gap-8 sm:grid-cols-[auto_1fr] sm:gap-10">
+            <div className="flex justify-center sm:justify-start">
+              <ProfileAvatar
+                name={LEMON_REVIEW.name}
+                photo={LEMON_REVIEW.photo}
+                size={80}
+                className="ring-2 ring-paper"
+              />
             </div>
-          </figcaption>
+            <div className="min-w-0">
+              <blockquote className="font-reading text-[18px] leading-relaxed text-charcoal italic sm:text-[20px]">
+                &ldquo;{LEMON_REVIEW.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-6 border-t border-charcoal/10 pt-6 font-sans text-sm text-warm-700">
+                <strong className="text-charcoal">{LEMON_REVIEW.name}</strong>
+                <div className="mt-0.5">{LEMON_REVIEW.role}</div>
+              </figcaption>
+            </div>
+          </div>
         </figure>
       </Container>
     </section>

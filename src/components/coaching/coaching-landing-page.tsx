@@ -5,12 +5,13 @@ import Link from "next/link";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { BookLogoCloudC148 } from "@/components/book/book-logo-cloud-c148";
+import { CoachingDifferent } from "@/components/coaching/coaching-different";
 import { CoachingFeaturedQuote } from "@/components/coaching/coaching-featured-quote";
 import { CoachingHero } from "@/components/coaching/coaching-hero";
 import { CoachingStory } from "@/components/coaching/coaching-story";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
-import { Container, Button } from "@/components/revamp/primitives";
+import { Container, ContainedBand, Button } from "@/components/revamp/primitives";
 import { ProfileAvatar } from "@/components/revamp/profile-avatar";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import {
@@ -36,14 +37,10 @@ function AccentSection({
   children: ReactNode;
   id?: string;
 }) {
-  const isInk = tone === "ink";
   return (
-    <section
-      id={id}
-      className={`py-14 sm:py-16 ${isInk ? "bg-ink text-paper" : "bg-sunrise text-ink"}`}
-    >
-      <Container>{children}</Container>
-    </section>
+    <ContainedBand tone={tone} id={id} padY="clamp(56px, 6vw, 80px)">
+      <div className="mx-auto max-w-[1200px]">{children}</div>
+    </ContainedBand>
   );
 }
 
@@ -161,18 +158,20 @@ export function CoachingLandingPage() {
             </ul>
             <div className="mt-8 space-y-4 font-reading text-[17px] leading-relaxed text-paper/85">
               <p>
-                <strong className="font-semibold text-paper">To be clear, this is a decision call.</strong> By the end
+                <em className="text-paper">To be clear, this is a decision call.</em> By the end
                 of the call, you should have everything you need to help you make a decision if coaching is for you or
-                not. <strong className="font-semibold text-paper">Come prepared</strong>. Bring any questions you have.
-                I&rsquo;m happy to address them, but by the end of the call you should have everything you need to decide
-                if this is something you want to progress with or not. Whatever you decide, it would be lovely to meet
-                you.
+                not.
+              </p>
+              <p>
+                <em className="text-paper">Come prepared.</em> Bring any questions you have.
+                I&rsquo;m happy to address them. By the end of the call, you should have everything you need to decide if
+                this is something you want to progress with or not.
               </p>
             </div>
           </div>
 
           <div className="mt-12 border-t border-paper/15 pt-10">
-            <h3 className="font-display text-xl font-semibold text-paper sm:text-2xl">What you get</h3>
+            <h3 className="font-display text-xl font-semibold text-paper sm:text-2xl">What you get with coaching</h3>
             <ul className="mt-6 max-w-3xl space-y-3 font-reading text-[17px] leading-relaxed text-paper/85">
               {WHAT_YOU_GET_ITEMS.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -186,6 +185,8 @@ export function CoachingLandingPage() {
             <p className="mt-6 font-reading text-[17px] font-semibold text-paper">{WHAT_YOU_GET_PERIOD}</p>
           </div>
         </AccentSection>
+
+        <CoachingDifferent />
 
         <section className="bg-paper-soft py-14 sm:py-16">
           <Container>
@@ -267,25 +268,23 @@ export function CoachingLandingPage() {
           </Container>
         </section>
 
-        <section className="bg-sunrise py-14 sm:py-16">
-          <Container>
-            <div className="mx-auto max-w-3xl rounded-xl bg-paper px-8 py-10 ring-1 ring-ink/10 sm:px-10 sm:py-12">
-              <h2
-                className="font-display font-semibold text-ink"
-                style={{ fontSize: "clamp(26px, 3.2vw, 40px)", lineHeight: 1.1, textWrap: "balance" }}
-              >
-                You don&rsquo;t need to pretend to be someone else
-              </h2>
-              <p className="mt-4 font-reading text-[17px] leading-relaxed text-ink/90">
-                Who you are is enough. You don&rsquo;t need to change who you are. You just need tiny habits that work
-                for who you already are.
-              </p>
-              <div className="mt-8">
-                <DiscoveryCta />
-              </div>
+        <ContainedBand tone="sunrise" padY="clamp(48px, 6vw, 72px)">
+          <div className="mx-auto max-w-3xl">
+            <h2
+              className="font-display font-semibold"
+              style={{ fontSize: "clamp(26px, 3.2vw, 40px)", lineHeight: 1.1, textWrap: "balance" }}
+            >
+              You don&rsquo;t need to pretend to be someone else
+            </h2>
+            <p className="mt-4 font-reading text-[17px] leading-relaxed text-ink/90">
+              Who you are is enough. You don&rsquo;t need to change who you are. You just need tiny habits that work for
+              who you already are.
+            </p>
+            <div className="mt-8">
+              <DiscoveryCta />
             </div>
-          </Container>
-        </section>
+          </div>
+        </ContainedBand>
       </main>
       <FooterRev showDiscoveryCta={false} />
     </div>

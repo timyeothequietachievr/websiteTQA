@@ -10,7 +10,8 @@ import { BookSoundFamiliarC6 } from "./book-sound-familiar-c6";
 import { Container, Button } from "@/components/revamp/primitives";
 import { ProfileAvatar } from "@/components/revamp/profile-avatar";
 import { getProfilePhoto } from "@/lib/profile-photos";
-import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
+import { ThirtyHabitsPromoSection } from "@/components/thirty-habits/thirty-habits-promo-section";
+import { FooterRev } from "@/components/revamp/sections-3";
 
 /* Component refs: c9 hero, c148 logos, c6 pain, c100 FAQ, c14 newsletter, c16 footer */
 
@@ -815,7 +816,7 @@ function BulkOrderSection() {
 export function BookLandingPage() {
   return (
     <div className="bg-paper" data-screen-label="Book landing page">
-      <Navigation />
+      <Navigation hideNavLinks ctaLabel="Buy the book" ctaHref="#formats" />
       <BookHero />
       <BookLogoCloudC148 />
       <BookSoundFamiliarC6 />
@@ -826,9 +827,9 @@ export function BookLandingPage() {
       <BookQuotes />
       <FaqSection />
       <FormatsSection />
+      <ThirtyHabitsPromoSection />
       <BulkOrderSection />
-      <NewsletterBand />
-      <FooterRev />
+      <FooterRev cta={{ label: "Buy the book", href: "#formats" }} ctaAsButton showDiscoveryCta={false} />
     </div>
   );
 }

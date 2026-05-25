@@ -36,8 +36,8 @@ export function MarketingHomepage() {
       <SchoolQuotes />
       <StartHere />
       <PlaybooksBand />
-      <NewsletterBand />
       <ElsewhereStrip />
+      <NewsletterBand />
       <FooterRev cta={{ label: "Work with me", href: "/#work-with-me" }} ctaAsButton showDiscoveryCta={false} />
     </div>
   );

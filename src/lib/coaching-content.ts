@@ -15,6 +15,59 @@ export const DISCOVERY_CALL_TOPICS = [
   "Any questions you have to make a decision; I'll answer.",
 ] as const;
 
+export type CoachingDifferentSegment = { text: string; bold?: boolean };
+
+export type CoachingDifferentParagraph = {
+  segments: readonly CoachingDifferentSegment[];
+};
+
+export const COACHING_DIFFERENT = {
+  title: "What makes Tim\u2019s coaching different?",
+  paragraphs: [
+    {
+      segments: [
+        { text: "Our belief is that " },
+        {
+          text: "your identity is separate from the skills you need to achieve success",
+          bold: true,
+        },
+        { text: "." },
+      ],
+    },
+    {
+      segments: [{ text: "The things you need to have impact at work are skills." }],
+    },
+    {
+      segments: [
+        { text: "Skills can be practised", bold: true },
+        { text: ". With practise, skills improve." },
+      ],
+    },
+    {
+      segments: [
+        { text: "Confidence grows", bold: true },
+        { text: ". Impact and influence increases." },
+      ],
+    },
+    {
+      segments: [
+        { text: "Who you are, your identity, " },
+        { text: "shouldn\u2019t limit you", bold: true },
+        { text: " (unless you let it)" },
+      ],
+    },
+    {
+      segments: [
+        { text: "We establish a " },
+        {
+          text: "curriculum of practise specifically designed for introverts & quiet achievers",
+          bold: true,
+        },
+      ],
+    },
+  ] satisfies readonly CoachingDifferentParagraph[],
+} as const;
+
 export const HELP_WITH = [
   {
     title: "New quiet leader",
@@ -109,7 +162,7 @@ export const COACH_TRAITS = [
   },
   {
     title: "Drawing from experience",
-    body: "I've coached hundreds of people worldwide. I also have 20+ years in tech, startups, and consulting — I've seen and heard a lot.",
+    body: "I've coached 1000+ quiet achievers worldwide. I also have 20+ years in tech, startups, and consulting — I've seen and heard a lot.",
   },
   {
     title: "Limiting beliefs and norms",
@@ -227,15 +280,19 @@ export const TESTIMONIALS: CoachingTestimonial[] = [
 export const FAQS = [
   {
     q: "How much are coaching engagements?",
-    a: "Clients typically make an investment of $6,000 and upwards over a period of 3–6 months. Based on the discovery call, we will agree on the right cadence and package to achieve all your goals.",
+    a: "Clients typically make an investment of $6,000 and upwards over a coaching period of 3–12 months. Based on the discovery call, we will agree on the right cadence and package to achieve all your goals.",
   },
   {
     q: "How does the 100% money-back guarantee work?",
     a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value, we'll give you your money back.",
   },
   {
+    q: "Do you have a payment plan?",
+    a: "Yes. You can Pay in 4 (i.e. 4 consecutive fortnightly payments, paid over 8 weeks).",
+  },
+  {
     q: "Can my company pay?",
-    a: "Yes. Many clients have coaching paid by their employer in full or in part. We can talk through options on your discovery call.",
+    a: "Yes. We can split payment and provide separate invoices to your employer and yourself.",
   },
   {
     q: "What's a discovery call exactly?",
@@ -244,11 +301,11 @@ export const FAQS = [
   },
   {
     q: "Do you work with extroverts or managers of quiet people?",
-    a: "Yes — about a third of my clients are managers of quiet teams who want to lead them better. The principles work for anyone who collaborates with quiet achievers.",
+    a: "Yes — I coach managers of quiet teams who want to lead them better. We focus on creating ways of working that get the most out of all your people, and help louder and quieter teammates work better together.",
   },
   {
     q: "What if we're not a fit?",
-    a: "I'll tell you, kindly, and where I can I'll point you to someone better suited. No dramas.",
+    a: "If I can't help you, I'll tell you during the discovery call and refer you to someone who can. No dramas.",
   },
 ] as const;
 

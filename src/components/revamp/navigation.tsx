@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
+import { MAIN_NAV } from "@/lib/main-nav";
 import { Container } from "./primitives";
 
 /* Top navigation with the locked Jeremy Cabral two-line wordmark */
@@ -63,17 +64,7 @@ export function Navigation({
   /** Coaching page: wordmark + CTA only */
   hideNavLinks?: boolean;
 } = {}) {
-  const NAV = [
-    { name: "Coaching", href: "/coaching" },
-    { name: "Podcast", href: "/podcast" },
-    { name: "Book", href: "/book" },
-    { name: "School", href: "/#school" },
-    { name: "Toni", href: "/toni" },
-    { name: "Speaking", href: "/speaking" },
-    { name: "Playbooks", href: "/#playbooks" },
-    { name: "Newsletter", href: "/#newsletter" },
-    { name: "About", href: "/about" },
-  ];
+  const NAV = MAIN_NAV;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -110,7 +101,7 @@ export function Navigation({
           <div className="flex items-center gap-3">
             <Link
               href={ctaHref}
-              className={`${hideNavLinks ? "inline-flex" : "hidden sm:inline-flex"} items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]`}
+              className="inline-flex shrink-0 items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
               style={{
                 background: "var(--tqa-ember)",
                 color: "var(--tqa-paper)",
@@ -159,18 +150,6 @@ export function Navigation({
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href={ctaHref}
-                className="font-sans inline-flex h-11 items-center justify-center rounded font-bold"
-                style={{
-                  background: "var(--tqa-ember)",
-                  color: "var(--tqa-paper)",
-                  textDecoration: "none",
-                }}
-                onClick={() => setOpen(false)}
-              >
-                {ctaLabel} →
-              </Link>
             </div>
           </nav>
         ) : null}

@@ -73,3 +73,63 @@ export async function createFreeChapterContact(email: string): Promise<CreateLis
       : "Could not subscribe right now. Please try again.";
   return { ok: false, message };
 }
+
+function getPlaybooksConfig() {
+  const apiKey = process.env.EMAILOCTOPUS_API_KEY?.trim();
+  const listId =
+    process.env.EMAILOCTOPUS_PLAYBOOKS_LIST_ID?.trim() ||
+    process.env.EMAILOCTOPUS_FREE_CHAPTER_LIST_ID?.trim();
+  if (!apiKey || !listId) return null;
+  return { apiKey, listId };
+}
+
+/** Subscribe + tag for playbook delivery automation (first browser access). */
+export async function createPlaybookContact(
+  email: string,
+  playbookSlug: string,
+): Promise<CreateListContactResult> {
+  const config = getPlaybooksConfig();
+  if (!config) {
+    return { ok: false, message: "Playbook email delivery is not configured yet." };
+  }
+
+  const baseTag = process.env.EMAILOCTOPUS_PLAYBOOKS_TAG?.trim() || "playbook";
+  const tags = [baseTag, `${baseTag}-${playbookSlug}`];
+
+  const res = await fetch(
+    `${EMAIL_OCTOPUS_API}/lists/${encodeURIComponent(config.listId)}/contacts`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        api_key: config.apiKey,
+        email_address: email,
+        tags,
+        status: "SUBSCRIBED",
+      }),
+    },
+  );
+
+  const body = (await res.json().catch(() => null)) as
+    | EmailOctopusSuccessBody
+    | EmailOctopusErrorBody
+    | null;
+
+  if (res.ok) {
+    return {
+      ok: true,
+      status: body && "status" in body && body.status ? body.status : "SUBSCRIBED",
+    };
+  }
+
+  const code = body && "error" in body ? body.error?.code : undefined;
+  if (code === "MEMBER_EXISTS_WITH_EMAIL_ADDRESS") {
+    return { ok: true, status: "SUBSCRIBED", alreadyExists: true };
+  }
+
+  const message =
+    body && "error" in body && body.error?.message
+      ? body.error.message
+      : "Could not subscribe right now. Please try again.";
+  return { ok: false, message };
+}

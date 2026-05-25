@@ -6,6 +6,7 @@ import { Navigation } from "@/components/revamp/navigation";
 import { ThesisBand } from "@/components/revamp/sections-1";
 import { FooterRev } from "@/components/revamp/sections-3";
 import { Container, Button } from "@/components/revamp/primitives";
+import { ContainedBand } from "@/components/revamp/primitives";
 import { SectionBlock, QuoteCard, DataTable } from "@/components/speaking/shared";
 import { SpeakingHero } from "@/components/speaking/speaking-hero";
 
@@ -199,7 +200,7 @@ const SPEAKING_HISTORY: (string | ReactNode)[][] = [
 export function SpeakingLandingPage() {
   return (
     <div className="min-h-full bg-paper">
-      <Navigation ctaLabel="Inquire about speaking" ctaHref={SPEAKER_EMAIL} />
+      <Navigation hideNavLinks ctaLabel="Enquire about speaking" ctaHref={SPEAKER_EMAIL} />
       <main>
         <SpeakingHero />
 
@@ -231,7 +232,7 @@ export function SpeakingLandingPage() {
               Leading Design Conference 2021
             </a>
             . Full list in the{" "}
-            <Link href="/podcast" className="text-ember underline">
+            <Link href="/free-resources#podcast" className="text-ember underline">
               podcast &amp; talks page
             </Link>{" "}
             and{" "}
@@ -242,16 +243,18 @@ export function SpeakingLandingPage() {
           </p>
         </SectionBlock>
 
-        <section className="border-y border-charcoal/10 bg-ink py-12">
-          <Container>
-            <p className="text-center font-display text-5xl font-semibold text-sunrise sm:text-6xl md:text-7xl">
-              97%
+        <ContainedBand tone="ink" padY="clamp(40px, 5vw, 56px)">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="font-display text-5xl font-semibold text-sunrise sm:text-6xl md:text-7xl">97%</p>
+            <p className="mt-2 font-reading text-lg font-semibold text-sunrise sm:text-xl">
+              audiences rated{" "}
+              <span aria-label="5 out of 5 stars">★★★★★</span>
             </p>
-            <p className="mx-auto mt-4 max-w-2xl text-center font-reading text-lg text-paper sm:text-xl">
-              Audiences rate the keynote excellent or good
+            <p className="mt-4 font-reading text-lg text-paper sm:text-xl">
+              Audiences rated the keynote excellent or good
             </p>
-          </Container>
-        </section>
+          </div>
+        </ContainedBand>
 
         <SectionBlock eyebrow="The problem" title="What most leadership speakers miss">
           <ProblemCopy />
@@ -452,32 +455,24 @@ export function SpeakingLandingPage() {
           </p>
         </SectionBlock>
 
-        <section className="bg-paper-soft py-14 sm:py-16">
-          <Container>
-            <div className="rounded-xl bg-ink p-8 sm:p-10">
-              <p
-                className="max-w-3xl font-display font-semibold text-paper"
-                style={{ fontSize: "clamp(22px, 2.8vw, 32px)", lineHeight: 1.15, textWrap: "balance" }}
-              >
-                I hope your event gives every quiet achiever in the room a moment to be truly seen.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-6">
-                <Button href={SPEAKER_EMAIL} variant="cream" size="lg">
-                  Inquire about speaking
-                  <span aria-hidden>→</span>
-                </Button>
-                <Link
-                  href="#signature-keynote"
-                  className="font-sans text-[15px] font-semibold text-sunrise underline underline-offset-4 hover:text-paper"
-                >
-                  Read signature keynote →
-                </Link>
-              </div>
+        <ContainedBand tone="ink" padY="clamp(48px, 5vw, 64px)">
+          <div className="mx-auto max-w-3xl">
+            <p
+              className="font-display font-semibold"
+              style={{ fontSize: "clamp(22px, 2.8vw, 32px)", lineHeight: 1.15, textWrap: "balance" }}
+            >
+              Every quiet achiever in the room deserves a moment to be truly seen.
+            </p>
+            <div className="mt-8">
+              <Button href={SPEAKER_EMAIL} variant="cream" size="lg">
+                Enquire about speaking
+                <span aria-hidden>→</span>
+              </Button>
             </div>
-          </Container>
-        </section>
+          </div>
+        </ContainedBand>
       </main>
-      <FooterRev cta={{ label: "Inquire about speaking", href: SPEAKER_EMAIL }} />
+      <FooterRev cta={{ label: "Enquire about speaking", href: SPEAKER_EMAIL }} ctaAsButton showDiscoveryCta={false} />
     </div>
   );
 }

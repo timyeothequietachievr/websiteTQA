@@ -59,7 +59,7 @@ export function SpeakingHero() {
         </p>
         <div className="mt-8">
           <Button href={SPEAKER_EMAIL} size="lg">
-            Inquire about speaking
+            Enquire about speaking
             <span aria-hidden>→</span>
           </Button>
         </div>

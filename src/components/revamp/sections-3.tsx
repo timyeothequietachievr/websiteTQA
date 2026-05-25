@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
 import { ProfileAvatar } from "./profile-avatar";
+import { PlaybooksSection } from "@/components/playbooks/playbooks-section";
 
 /* Latest writing, Start here, School, Playbooks, Newsletter, Tim Elsewhere, Footer, Sticky Toni */
 
@@ -55,8 +56,8 @@ function LatestWriting() {
 
 function StartHere() {
   const tiles = [
-    { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen", href: "/podcast" },
-    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Read" },
+    { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen", href: "/free-resources#podcast" },
+    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Read", href: "/playbooks" },
     { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read", href: "/book#checklist" },
   ];
   return (
@@ -156,65 +157,7 @@ function SchoolBlock() {
 }
 
 function PlaybooksBand() {
-  const books = [
-    { tag: "Checklist", title: "Tiny Habits Checklist", copy: "Every habit in the book on one page." },
-    { tag: "Visibility", title: "How to introduce yourself in three sizes", copy: "Small (10 sec), medium (1–3 min), large (5 min)." },
-    { tag: "Meetings", title: "How to speak up in meetings", copy: "Five tiny habits to buy yourself time on the spot." },
-  ];
-  return (
-    <section id="playbooks" style={{ padding: "112px 0", background: "var(--tqa-paper-soft)" }}>
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10">
-          <div className="lg:col-span-7">
-            <h2 className="font-display"
-                style={{ fontSize: "clamp(36px, 4.4vw, 56px)", lineHeight: 1.0, letterSpacing: "-0.022em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "16px", textWrap: "balance" }}>
-              Playbooks for quiet achievers.
-            </h2>
-            <p className="font-sans" style={{ fontSize: "16px", color: "var(--neutral-700)", marginTop: "16px", maxWidth: "56ch", lineHeight: 1.6 }}>
-              Tiny how-to guides for specific situations. One topic. All action. Free.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {books.map((b, i) => (
-            <a key={i} href="#playbook" style={{
-              display: "flex",
-              flexDirection: "column",
-              background: "var(--tqa-paper)",
-              border: "1px solid rgba(30,30,30,0.10)",
-              borderRadius: "8px",
-              padding: "28px 24px",
-              textDecoration: "none",
-              minHeight: "260px",
-              justifyContent: "space-between",
-            }}>
-              <div>
-                <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-ember)", fontWeight: 700 }}>
-                  {b.tag}
-                </div>
-                <div className="font-display" style={{ fontSize: "22px", lineHeight: 1.15, letterSpacing: "-0.018em", fontWeight: 600, color: "var(--tqa-charcoal)", marginTop: "14px" }}>
-                  {b.title}
-                </div>
-                <p className="font-sans" style={{ fontSize: "14px", color: "var(--neutral-700)", marginTop: "12px", lineHeight: 1.5 }}>
-                  {b.copy}
-                </p>
-              </div>
-              <div className="flex items-center justify-between mt-6">
-                <div className="font-sans inline-flex items-center gap-1.5 font-bold" style={{ fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--tqa-ember)" }}>
-                  Free <span aria-hidden>↓</span>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-        <div className="text-center mt-10">
-          <a href="#playbooks-all" className="font-sans inline-flex items-center gap-2 font-semibold" style={{ fontSize: "14px", color: "var(--tqa-charcoal)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
-            See all playbooks <span aria-hidden>→</span>
-          </a>
-        </div>
-      </Container>
-    </section>
-  );
+  return <PlaybooksSection />;
 }
 
 function NewsletterBand() {
@@ -371,13 +314,40 @@ const FOOTER_LINKS: Record<string, string> = {
   School: "/#school",
   Speaking: "/speaking",
   Book: "/book",
-  Podcast: "/podcast",
-  Playbooks: "/#playbooks",
+  "30 Habits in 30 Days": "/30-habits-in-30-days",
+  "Free Resources": "/free-resources",
+  Podcast: "/free-resources#podcast",
+  Playbooks: "/playbooks",
   About: "/about",
   Contact: "/about#contact",
-  Terms: "/terms",
-  Privacy: "/privacy",
 };
+
+const FOOTER_LINK_TEXT_STYLE = {
+  color: "rgba(245,240,211,0.78)",
+  fontSize: "14px",
+} as const;
+
+function FooterLinkItem({ label }: { label: string }) {
+  const href = FOOTER_LINKS[label];
+  if (!href) {
+    return (
+      <span className="font-sans" style={FOOTER_LINK_TEXT_STYLE}>
+        {label}
+      </span>
+    );
+  }
+  return (
+    <a
+      href={href}
+      className="font-sans"
+      style={{ ...FOOTER_LINK_TEXT_STYLE, textDecoration: "none" }}
+      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-paper)")}
+      onMouseLeave={(e) => (e.currentTarget.style.color = FOOTER_LINK_TEXT_STYLE.color)}
+    >
+      {label}
+    </a>
+  );
+}
 
 function FooterRev({
   cta,
@@ -390,8 +360,8 @@ function FooterRev({
   showDiscoveryCta?: boolean;
 } = {}) {
   const cols = [
-    { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
-    { h: "Read & listen", links: ["Book", "Podcast", "Playbooks"] },
+    { h: "Work with me", links: ["Coaching", "School", "Speaking", "Toni"] },
+    { h: "Read & listen", links: ["Book", "30 Habits in 30 Days", "Free Resources"] },
     { h: "About", links: ["About", "Contact", "Terms", "Privacy"] },
   ];
   return (
@@ -465,11 +435,7 @@ function FooterRev({
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
                   {c.links.map((l) => (
                     <li key={l}>
-                      <a href={FOOTER_LINKS[l] ?? "#footer"} className="font-sans" style={{ color: "rgba(245,240,211,0.78)", fontSize: "14px", textDecoration: "none" }}
-                         onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-paper)")}
-                         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,211,0.78)")}>
-                        {l}
-                      </a>
+                      <FooterLinkItem label={l} />
                     </li>
                   ))}
                 </ul>

@@ -1,11 +1,15 @@
-/** About page copy */
+/** About page copy — synced from Notion “V2 content” */
 
 export const ABOUT_HERO = {
   eyebrow: "chief introvert",
-  title: "Meet Tim Yeo",
+  title: "👋 Hello!",
   imageSrc: "/assets/about-hero.jpg",
   imageAlt: "Tim Yeo",
-  bio: "Tim Yeo is the author of and chief introvert at The Quiet Achiever. Best known for saying complex things simply.",
+  bioParagraphs: [
+    "Tim Yeo is the chief introvert of The Quiet Achiever.",
+    "He coaches and runs The Quiet Achiever School to help quiet achievers have impact at work without pretending to be extroverts.",
+    "Best known for saying complex things simply.",
+  ],
 } as const;
 
 export type AboutStorySection = {
@@ -23,8 +27,10 @@ export const ABOUT_STORY_SECTIONS: AboutStorySection[] = [
   {
     title: "Like you, I struggled to manage my introversion.",
     paragraphs: [
+      "Born Chinese in Singapore in an English-speaking family, I moved to Australia in 2012; and what a culture shock it was.",
       "I felt invisible.",
-      'For years, I read self-help books on public speaking. I modeled social butterflies at networking events. I watched in awe as company leaders delivered speeches effortlessly. I pretended to be an extrovert at work to fit the "extrovert ideal".',
+      "Work cultures rewarded those who spoke up — even though those who said the most didn't have the most to say.",
+      'For years, I read self-help books on public speaking. I watched every TED Talk, copying their every move. I modeled social butterflies at networking events. I watched in awe as company leaders delivered speeches effortlessly. I pretended to be an extrovert at work to fit the "extrovert ideal".',
     ],
   },
   {
@@ -39,6 +45,10 @@ export const ABOUT_STORY_SECTIONS: AboutStorySection[] = [
       "There had to be a better way. I refused to give up, and found another path to success.",
       "I did not realise it at the time. But I took the best of what I learned. I stopped pretending and started practicing, making those techniques my own.",
     ],
+  },
+  {
+    title: "I didn't have to be loud. I could be quiet; and still be heard.",
+    paragraphs: [],
   },
   {
     title:

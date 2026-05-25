@@ -5,6 +5,7 @@ const PROFILE_PHOTOS: Record<string, string> = {
   "Leonardo Mattei": "/assets/profile-leonardo.jpg",
   "Claire Erickson": "/assets/profile-claire.jpg",
   "Lemon Mingyue Wang": "/assets/profile-lemon.jpg",
+  "Thuan Nguyen": "/assets/profile-thuan.jpg",
   "Kumari Pacheco": "/assets/profile-kumari.jpg",
   "Nada Salem": "/assets/profile-nada.jpg",
 };

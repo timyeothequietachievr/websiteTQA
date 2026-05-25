@@ -47,7 +47,7 @@ function HeroEditorial() {
                 maxWidth: "56ch",
               }}
             >
-              1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and over a thousand coaching conversations with introverts since 2021.
+              1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and coached 1,000+ quiet achievers since 2021.
             </p>
 
             <div className="flex flex-wrap items-center gap-4" style={{ marginTop: "36px" }}>
@@ -281,7 +281,7 @@ function HeroMagazine() {
               textAlign: "center",
             }}
           >
-            1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and over a thousand coaching conversations with introverts since 2021.
+            1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and coached 1,000+ quiet achievers since 2021.
           </p>
         </div>
       </Container>
@@ -454,7 +454,7 @@ function HeroMasthead() {
                 maxWidth: "44ch",
               }}
             >
-              1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and over a thousand coaching conversations with introverts since 2021.
+              1:1 coaching, a book, and a school of practical tiny habits — built on 20+ years as a designer and design leader in tech, and coached 1,000+ quiet achievers since 2021.
             </p>
             <div
               className="flex flex-wrap items-center gap-4"
@@ -581,23 +581,11 @@ function HeroPortraitSplit() {
                 Work with me <span aria-hidden>→</span>
               </a>
               <a
-                href="#playbooks"
-                className="font-sans inline-flex items-center gap-2"
-                style={{
-                  background: "transparent",
-                  color: "var(--tqa-paper)",
-                  padding: "0 22px",
-                  height: "52px",
-                  borderRadius: "4px",
-                  fontWeight: 600,
-                  fontSize: "15px",
-                  textDecoration: "none",
-                  border: "1.5px solid rgba(245,240,211,0.30)",
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--tqa-paper)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(245,240,211,0.30)"; }}
+                href="#about-tim"
+                className="inline-flex h-[52px] items-center gap-1 font-sans text-[15px] font-semibold text-paper underline underline-offset-4 hover:text-sunrise"
               >
-                Free Playbooks <span aria-hidden style={{ fontSize: "12px" }}>↗</span>
+                Read Tim&rsquo;s full story
+                <span aria-hidden>→</span>
               </a>
             </div>
 
@@ -682,7 +670,7 @@ function HeroPortraitSplit() {
                       fontWeight: 700,
                     }}
                   >
-                    Introverts coached
+                    Quiet achievers coached
                   </div>
                 </div>
                 <div>

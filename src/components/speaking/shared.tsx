@@ -2,11 +2,11 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Container, Button, Eyebrow } from "@/components/revamp/primitives";
+import { Container, ContainedBand, Button, Eyebrow } from "@/components/revamp/primitives";
 
 export function SpeakingPageShell({
   children,
-  ctaLabel = "Inquire about speaking",
+  ctaLabel = "Enquire about speaking",
   ctaHref = "mailto:speaker@thequietachievr.com?subject=Speaking%20enquiry",
 }: {
   children: ReactNode;
@@ -68,26 +68,43 @@ export function SectionBlock({
   className?: string;
   id?: string;
 }) {
-  const bg = dark ? "bg-ink text-paper" : accent ? "bg-sunrise text-ink" : "bg-paper";
+  const contained = dark || accent;
   const eyebrowTone = dark ? "cream" : accent ? "ember" : "ember";
   const titleClass = dark ? "text-paper" : accent ? "text-ink" : "text-charcoal";
   const subtitleClass = dark ? "text-paper/75" : accent ? "text-ink/80" : "text-warm-600";
 
+  const body = (
+    <>
+      {eyebrow ? <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow> : null}
+      {title ? (
+        <h2
+          className={`font-display mt-4 font-semibold tracking-tight ${titleClass}`}
+          style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.05 }}
+        >
+          {title}
+        </h2>
+      ) : null}
+      {subtitle ? <p className={`mt-2 font-sans text-base ${subtitleClass}`}>{subtitle}</p> : null}
+      <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
+    </>
+  );
+
+  if (contained) {
+    return (
+      <ContainedBand
+        id={id}
+        tone={dark ? "ink" : "sunrise"}
+        className={className}
+        padY="clamp(56px, 6vw, 80px)"
+      >
+        <div className="mx-auto max-w-[1200px]">{body}</div>
+      </ContainedBand>
+    );
+  }
+
   return (
-    <section id={id} className={`py-16 sm:py-20 ${bg} ${className}`}>
-      <Container>
-        {eyebrow ? <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow> : null}
-        {title ? (
-          <h2
-            className={`font-display mt-4 font-semibold tracking-tight ${titleClass}`}
-            style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.05 }}
-          >
-            {title}
-          </h2>
-        ) : null}
-        {subtitle ? <p className={`mt-2 font-sans text-base ${subtitleClass}`}>{subtitle}</p> : null}
-        <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
-      </Container>
+    <section id={id} className={`bg-paper py-16 sm:py-20 ${className}`}>
+      <Container>{body}</Container>
     </section>
   );
 }
@@ -108,24 +125,22 @@ export function CtaBand({
   secondaryLabel?: string;
 }) {
   return (
-    <section className="bg-paper-soft py-14 sm:py-16">
-      <Container>
-        <div className="rounded-xl bg-ink p-8 sm:p-10">
-          <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">{title}</h2>
-          {body ? <p className="mt-3 max-w-2xl font-reading text-base leading-relaxed text-paper/85">{body}</p> : null}
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button href={primaryHref} variant="primary">
-              {primaryLabel}
+    <ContainedBand tone="ink" padY="clamp(48px, 5vw, 64px)">
+      <div className="mx-auto max-w-[1200px]">
+        <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">{title}</h2>
+        {body ? <p className="mt-3 max-w-2xl font-reading text-base leading-relaxed text-paper/85">{body}</p> : null}
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Button href={primaryHref} variant="primary">
+            {primaryLabel}
+          </Button>
+          {secondaryHref && secondaryLabel ? (
+            <Button href={secondaryHref} variant="cream">
+              {secondaryLabel}
             </Button>
-            {secondaryHref && secondaryLabel ? (
-              <Button href={secondaryHref} variant="cream">
-                {secondaryLabel}
-              </Button>
-            ) : null}
-          </div>
+          ) : null}
         </div>
-      </Container>
-    </section>
+      </div>
+    </ContainedBand>
   );
 }
 

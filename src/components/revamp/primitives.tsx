@@ -20,6 +20,52 @@ export function Container({
   );
 }
 
+type ContainedBandTone = "ink" | "ink-deep" | "sunrise";
+
+const CONTAINED_BAND_TONES: Record<ContainedBandTone, { background: string; color: string }> = {
+  ink: { background: "var(--tqa-ink)", color: "var(--tqa-paper)" },
+  "ink-deep": { background: "var(--tqa-ink-deep)", color: "var(--tqa-paper)" },
+  sunrise: { background: "var(--tqa-sunrise)", color: "var(--tqa-ink)" },
+};
+
+/** Full-width paper section with a rounded ink/sunrise panel — matches homepage masthead. */
+export function ContainedBand({
+  children,
+  tone = "ink",
+  id,
+  className = "",
+  innerClassName = "",
+  padY = "clamp(64px, 8vw, 96px)",
+}: {
+  children: ReactNode;
+  tone?: ContainedBandTone;
+  id?: string;
+  className?: string;
+  innerClassName?: string;
+  padY?: string;
+}) {
+  const palette = CONTAINED_BAND_TONES[tone];
+  return (
+    <section id={id} className={`bg-paper ${className}`} style={{ paddingTop: "12px", paddingBottom: "12px" }}>
+      <Container wide>
+        <div
+          className={`overflow-hidden rounded-[10px] ${innerClassName}`}
+          style={{
+            background: palette.background,
+            color: palette.color,
+            paddingTop: padY,
+            paddingBottom: padY,
+            paddingLeft: "clamp(24px, 4vw, 48px)",
+            paddingRight: "clamp(24px, 4vw, 48px)",
+          }}
+        >
+          {children}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 type EyebrowTone = "ink" | "ember" | "cream" | "sunrise";
 
 export function Eyebrow({

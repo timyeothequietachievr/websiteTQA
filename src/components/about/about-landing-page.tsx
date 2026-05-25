@@ -2,7 +2,7 @@
 
 import { Navigation } from "@/components/revamp/navigation";
 import { Container } from "@/components/revamp/primitives";
-import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
+import { FooterRev } from "@/components/revamp/sections-3";
 import { ABOUT_HERO, ABOUT_STORY_SECTIONS } from "@/lib/about-content";
 
 export function AboutLandingPage() {
@@ -48,7 +48,11 @@ export function AboutLandingPage() {
                 >
                   {ABOUT_HERO.title}
                 </h1>
-                <p className="mt-6 font-reading text-lg leading-relaxed text-warm-700">{ABOUT_HERO.bio}</p>
+                <div className="mt-6 space-y-4 font-reading text-lg leading-relaxed text-warm-700">
+                  {ABOUT_HERO.bioParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </Container>
@@ -65,18 +69,19 @@ export function AboutLandingPage() {
                   >
                     {section.title}
                   </h2>
-                  <div className="mt-4 space-y-4 font-reading text-[17px] leading-relaxed text-warm-700">
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
+                  {section.paragraphs.length > 0 ? (
+                    <div className="mt-4 space-y-4 font-reading text-[17px] leading-relaxed text-warm-700">
+                      {section.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+                  ) : null}
                 </article>
               ))}
             </div>
           </Container>
         </section>
       </main>
-      <NewsletterBand />
       <FooterRev cta={{ label: "Work with me", href: "/#work-with-me" }} ctaAsButton showDiscoveryCta={false} />
     </div>
   );

@@ -46,7 +46,7 @@ export function CoachingStory() {
           </p>
           <p>
             <Em>Today, I am no longer faking it</Em>. I am no longer pretending to be someone else. I no longer wear an
-            extrovert mask; and I&rsquo;ve coached hundreds of people to do the same.
+            extrovert mask; and I&rsquo;ve coached 1000+ quiet achievers to do the same.
           </p>
           <p>
             It&rsquo;s a different path to success, but <Em>it is a path I walk very comfortably in my own skin</Em>.
