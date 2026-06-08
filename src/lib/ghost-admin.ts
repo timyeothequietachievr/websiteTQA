@@ -81,9 +81,14 @@ type MembersListResponse = {
   members: GhostMember[];
 };
 
+function memberEmailFilter(email: string): string {
+  const escaped = email.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+  return encodeURIComponent(`email:'${escaped}'`);
+}
+
 export async function findGhostMemberByEmail(email: string): Promise<GhostMember | null> {
   const data = await ghostAdminFetch<MembersListResponse>(
-    `/members/?filter=email:${encodeURIComponent(email)}&limit=1`,
+    `/members/?filter=${memberEmailFilter(email)}&limit=1`,
   );
   return data.members[0] ?? null;
 }
@@ -124,17 +129,40 @@ export async function subscribeGhostMember(email: string, name?: string): Promis
     return data.members[0];
   }
 
-  const data = await ghostAdminFetch<MembersListResponse>("/members/", {
-    method: "POST",
-    json: {
-      members: [
-        {
-          email,
-          newsletters,
-          ...(name ? { name } : {}),
-        },
-      ],
-    },
-  });
-  return data.members[0];
+  try {
+    const data = await ghostAdminFetch<MembersListResponse>("/members/", {
+      method: "POST",
+      json: {
+        members: [
+          {
+            email,
+            newsletters,
+            ...(name ? { name } : {}),
+          },
+        ],
+      },
+    });
+    return data.members[0];
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "";
+    if (!message.includes("422") && !message.includes("already exists")) {
+      throw error;
+    }
+
+    const existing = await findGhostMemberByEmail(email);
+    if (!existing) throw error;
+
+    const data = await ghostAdminFetch<MembersListResponse>(`/members/${existing.id}/`, {
+      method: "PUT",
+      json: {
+        members: [
+          {
+            newsletters,
+            ...(name ? { name } : {}),
+          },
+        ],
+      },
+    });
+    return data.members[0];
+  }
 }

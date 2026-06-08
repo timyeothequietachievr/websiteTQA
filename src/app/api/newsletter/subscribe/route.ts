@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getGhostAdminConfig, subscribeGhostMember } from "@/lib/ghost-admin";
+import { isNotionCrmConfigured, upsertNewsletterSubscriberCrm } from "@/lib/notion-crm";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -25,7 +26,21 @@ export async function POST(request: Request) {
 
   try {
     const member = await subscribeGhostMember(email, name);
-    return NextResponse.json({ ok: true, memberId: member.id });
+
+    let crm: "created" | "updated" | false = false;
+    if (isNotionCrmConfigured()) {
+      try {
+        crm = await upsertNewsletterSubscriberCrm({
+          email,
+          ghostMemberId: member.id,
+          name,
+        });
+      } catch (crmError) {
+        console.error("[api/newsletter/subscribe] CRM sync failed:", crmError);
+      }
+    }
+
+    return NextResponse.json({ ok: true, memberId: member.id, crm });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Subscribe failed";
     console.error("[api/newsletter/subscribe]", message);
