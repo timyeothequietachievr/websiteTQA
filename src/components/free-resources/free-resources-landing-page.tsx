@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Navigation } from "@/components/revamp/navigation";
 import { Container } from "@/components/revamp/primitives";
+import { ComingSoonPill } from "@/components/revamp/coming-soon-pill";
 import { PodcastEpisodesSection } from "@/components/podcast/podcast-episodes-section";
 import { PlaybooksSection } from "@/components/playbooks/playbooks-section";
 import { FooterRev, NewsletterBand } from "@/components/revamp/sections-3";
@@ -31,23 +32,41 @@ export function FreeResourcesLandingPage() {
         <section className="py-16 sm:py-20">
           <Container>
             <div className="grid gap-6 md:grid-cols-3">
-              {FREE_RESOURCES.map(({ title, description, href, cta }) => (
-                <article
-                  key={title}
-                  className="flex flex-col rounded-lg bg-paper-soft p-6 ring-1 ring-charcoal/10"
-                >
-                  <h2 className="font-display text-2xl font-semibold text-charcoal">{title}</h2>
-                  <p className="mt-3 flex-1 font-reading text-[16px] leading-relaxed text-warm-700">
-                    {description}
-                  </p>
-                  <Link
-                    href={href}
-                    className="mt-6 inline-flex font-sans text-sm font-semibold text-ember underline underline-offset-4"
+              {FREE_RESOURCES.map((item) => {
+                const { title, description, href, cta } = item;
+                const comingSoon = "comingSoon" in item && item.comingSoon;
+                return comingSoon ? (
+                  <article
+                    key={title}
+                    aria-disabled
+                    className="flex min-h-[220px] flex-col rounded-lg bg-paper-soft p-6 ring-1 ring-charcoal/10"
                   >
-                    {cta} →
-                  </Link>
-                </article>
-              ))}
+                    <h2 className="font-display text-2xl font-semibold text-charcoal">{title}</h2>
+                    <p className="mt-3 flex-1 font-reading text-[16px] leading-relaxed text-warm-700">
+                      {description}
+                    </p>
+                    <div className="mt-6">
+                      <ComingSoonPill />
+                    </div>
+                  </article>
+                ) : (
+                  <article
+                    key={title}
+                    className="flex flex-col rounded-lg bg-paper-soft p-6 ring-1 ring-charcoal/10"
+                  >
+                    <h2 className="font-display text-2xl font-semibold text-charcoal">{title}</h2>
+                    <p className="mt-3 flex-1 font-reading text-[16px] leading-relaxed text-warm-700">
+                      {description}
+                    </p>
+                    <Link
+                      href={href}
+                      className="mt-6 inline-flex font-sans text-sm font-semibold text-ember underline underline-offset-4"
+                    >
+                      {cta} →
+                    </Link>
+                  </article>
+                );
+              })}
             </div>
           </Container>
         </section>
