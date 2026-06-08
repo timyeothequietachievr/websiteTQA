@@ -1,10 +1,15 @@
 /** Coaching page copy — primary: thequietachievr.com/coaching, secondary: Notion landing spec */
 
-export const COACHING_HERO_TITLE =
-  "My speciality is coaching introverts & quiet achievers who want to be seen and heard at work without pretending to be extroverts.";
+export const COACHING_HERO_SUBTITLE =
+  "20+ years leading design teams in tech. Coached 1,000+ quiet achievers since 2021.";
+
+/** Switch accent on ink-deep masthead: sunrise | sunrise-soft | ember */
+export type CoachingHeroAccent = "sunrise" | "sunrise-soft" | "ember";
+
+export const COACHING_HERO_ACCENT: CoachingHeroAccent = "ember";
 
 export const COACHING_STORY_TITLE =
-  "Being an introvert in a world that desires the extrovert ideal is hard";
+  "Being a quiet Asian in a loud tech company that desires the extrovert ideal is hard";
 
 export const DISCOVERY_CALL_TOPICS = [
   "What the challenges you are facing",
@@ -69,6 +74,10 @@ export const COACHING_DIFFERENT = {
 } as const;
 
 export const HELP_WITH = [
+  {
+    title: "Break through the bamboo ceiling",
+    body: "The bamboo ceiling for Asians is like the glass ceiling for women. Some work cultures have a picture of what a leader looks like — and it doesn\u2019t look like us. I\u2019ll show you how to overcome this bias and reap the rewards of your hard work, while staying true to your authentic self.",
+  },
   {
     title: "New quiet leader",
     body: "You are a leader or manager for the first time and not sure if you're doing it right. You are quiet by nature. You've been made a leader. You're feeling strong imposter syndrome. Every other leader around you is loud and has strong opinions. Your team is looking to you for answers, but you're unsure of what you are doing.",
@@ -152,6 +161,10 @@ export const TOPICS = [
 ] as const;
 
 export const COACH_TRAITS = [
+  {
+    title: "I'm Asian living/working in a western culture",
+    body: "I grew up in Singapore from Chinese heritage. I\u2019ve spent most of my career working in loud, extroverted tech startups in Australia; dominated by western cultures & beliefs, and no other leader looked like me.",
+  },
   {
     title: "I'm an introverted leader",
     body: "I understand what it's like to be quiet by nature when your peers in the room are loud and extroverted.",
@@ -284,7 +297,7 @@ export const FAQS = [
   },
   {
     q: "How does the 100% money-back guarantee work?",
-    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value, we'll give you your money back.",
+    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value 90 days after completing your coaching, we'll give you your money back.",
   },
   {
     q: "Do you have a payment plan?",
@@ -305,7 +318,7 @@ export const FAQS = [
   },
   {
     q: "What if we're not a fit?",
-    a: "If I can't help you, I'll tell you during the discovery call and refer you to someone who can. No dramas.",
+    a: "I only work with people I can help. If I can't, I'll tell you during the discovery call and refer you to someone who can. No dramas.",
   },
 ] as const;
 

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { LEGACY_SITE_REDIRECTS } from "./src/lib/site-redirects";
 
 const designSystemOrigin =
   process.env.NEXT_PUBLIC_DESIGN_SYSTEM_URL ?? "https://designsystem-weld-six.vercel.app";
@@ -9,6 +10,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...LEGACY_SITE_REDIRECTS,
       {
         source: "/design-system",
         destination: `${designSystemOrigin}/design-system`,

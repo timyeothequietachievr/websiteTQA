@@ -28,7 +28,7 @@ export function BookMasthead() {
     >
       <Container>
         <div className="flex h-[72px] items-center justify-between">
-          <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Introvert Coach">
+          <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Career Coach">
             <span
               className="font-display text-[22px] font-bold tracking-tight"
               style={{ color: "var(--tqa-charcoal)", lineHeight: 1 }}
@@ -39,7 +39,7 @@ export function BookMasthead() {
               className="font-display mt-0.5 text-[13px] italic"
               style={{ color: "var(--tqa-ember-deep)", lineHeight: 1 }}
             >
-              Introvert Coach
+              Career Coach
             </span>
           </Link>
           <a

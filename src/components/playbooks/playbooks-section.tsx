@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { Container } from "@/components/revamp/primitives";
+import { ComingSoonPill } from "@/components/revamp/coming-soon-pill";
 import { PlaybooksGrid } from "@/components/playbooks/playbooks-grid";
 import { getPlaybookSummaries } from "@/lib/playbooks";
+import { SITE_FEATURES } from "@/lib/site-features";
 
 export function PlaybooksSection({
   id = "playbooks",
@@ -19,6 +21,7 @@ export function PlaybooksSection({
       <Container>
         <div className="mb-10 grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
+            {SITE_FEATURES.playbooksComingSoon ? <ComingSoonPill className="mb-4" /> : null}
             <h2
               className="font-display font-semibold text-charcoal"
               style={{

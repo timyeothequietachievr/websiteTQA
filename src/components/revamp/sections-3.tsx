@@ -3,9 +3,14 @@
 
 import { useEffect, useState } from "react";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
-import { Container, Eyebrow, Button, SectionLabel, PainterPlaceholder } from "./primitives";
+import { Container, Eyebrow, Button, SectionLabel } from "./primitives";
+import { SchoolCourseGrid } from "./school-course-card";
 import { ProfileAvatar } from "./profile-avatar";
+import { NewsletterSignup } from "@/components/revamp/newsletter-signup";
+import { ComingSoonPill } from "@/components/revamp/coming-soon-pill";
 import { PlaybooksSection } from "@/components/playbooks/playbooks-section";
+import { SITE_FEATURES } from "@/lib/site-features";
+import { SOCIAL_LINK_ITEMS, SOCIAL_LINKS } from "@/lib/social-links";
 
 /* Latest writing, Start here, School, Playbooks, Newsletter, Tim Elsewhere, Footer, Sticky Toni */
 
@@ -57,7 +62,14 @@ function LatestWriting() {
 function StartHere() {
   const tiles = [
     { icon: "🎙️", label: "Podcast", note: "Episodes for your listening pleasure", cta: "Listen", href: "/free-resources#podcast" },
-    { icon: "📋", label: "Playbooks", note: "Tiny how-to guides for specific situations. One topic. All action. Free.", cta: "Read", href: "/playbooks" },
+    {
+      icon: "📋",
+      label: "Playbooks",
+      note: "Tiny how-to guides for specific situations. One topic. All action. Free.",
+      cta: SITE_FEATURES.playbooksComingSoon ? "Coming soon" : "Read",
+      href: "#playbooks",
+      comingSoon: SITE_FEATURES.playbooksComingSoon,
+    },
     { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read", href: "/book#checklist" },
   ];
   return (
@@ -71,7 +83,13 @@ function StartHere() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {tiles.map((t, i) => (
-            <a key={i} href={"href" in t && t.href ? t.href : "#start"} className="block" style={{
+            <a
+              key={i}
+              href={"href" in t && t.href ? t.href : "#start"}
+              className="block"
+              style={{
+              pointerEvents: "comingSoon" in t && t.comingSoon ? "none" : "auto",
+              opacity: "comingSoon" in t && t.comingSoon ? 0.92 : 1,
               background: "var(--tqa-paper)",
               border: "1px solid rgba(30,30,30,0.10)",
               borderRadius: "8px",
@@ -83,13 +101,26 @@ function StartHere() {
               justifyContent: "space-between",
             }}>
               <div>
-                <div style={{ fontSize: "32px", lineHeight: 1, marginBottom: "16px" }}>{t.icon}</div>
+                <div className="flex items-start justify-between gap-3">
+                  <div style={{ fontSize: "32px", lineHeight: 1, marginBottom: "16px" }}>{t.icon}</div>
+                  {"comingSoon" in t && t.comingSoon ? <ComingSoonPill /> : null}
+                </div>
                 <div className="font-display" style={{ fontSize: "22px", lineHeight: 1.15, letterSpacing: "-0.018em", fontWeight: 600, color: "var(--tqa-charcoal)" }}
                      dangerouslySetInnerHTML={{ __html: t.label }} />
                 <div className="font-sans" style={{ fontSize: "14px", color: "var(--neutral-700)", marginTop: "10px", lineHeight: 1.5 }}>{t.note}</div>
               </div>
-              <div className="font-sans inline-flex items-center gap-2" style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--tqa-ember)", marginTop: "20px" }}>
-                {t.cta} <span aria-hidden>→</span>
+              <div
+                className="font-sans inline-flex items-center gap-2"
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "comingSoon" in t && t.comingSoon ? "var(--neutral-500)" : "var(--tqa-ember)",
+                  marginTop: "20px",
+                }}
+              >
+                {t.cta} {"comingSoon" in t && t.comingSoon ? null : <span aria-hidden>→</span>}
               </div>
             </a>
           ))}
@@ -100,16 +131,8 @@ function StartHere() {
 }
 
 function SchoolBlock() {
-  const courses = [
-    { title: "Public Speaking" },
-    { title: "Difficult Conversations" },
-    { title: "Say No (politely)" },
-    { title: "Facilitation" },
-    { title: "Networking" },
-    { title: "Executive Communication & Stakeholder Influence" },
-  ];
   return (
-    <section id="school" style={{ padding: "112px 0" }}>
+    <section id="school" className="scroll-mt-28" style={{ padding: "112px 0" }}>
       <Container>
         <div className="mb-10">
           <div>
@@ -124,31 +147,14 @@ function SchoolBlock() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((c, i) => (
-            <a key={i} href="#course" style={{
-              display: "block",
-              background: "var(--tqa-paper-soft)",
-              border: "1px solid rgba(30,30,30,0.08)",
-              borderRadius: "6px",
-              padding: "20px",
-              textDecoration: "none",
-            }}>
-              <PainterPlaceholder
-                tone={["ember","ink","sunrise","maroon","ember","ink"][i % 6]}
-                label={c.title}
-                aspect="3 / 2"
-                className="mb-4"
-              />
-              <div className="font-display" style={{ fontSize: "20px", letterSpacing: "-0.016em", fontWeight: 600, color: "var(--tqa-charcoal)" }}>
-                {c.title}
-              </div>
-            </a>
-          ))}
-        </div>
+        <SchoolCourseGrid />
         <div className="mt-8 text-center">
-          <a href="/school" className="font-sans inline-flex items-center gap-2 font-semibold" style={{ fontSize: "14px", color: "var(--tqa-ember)", textDecoration: "underline", textUnderlineOffset: "5px" }}>
-            See curriculum <span aria-hidden>→</span>
+          <a
+            href="/coaching#what-you-get-with-coaching"
+            className="font-sans inline-flex items-center gap-2 font-semibold"
+            style={{ fontSize: "14px", color: "var(--tqa-ember)", textDecoration: "underline", textUnderlineOffset: "5px" }}
+          >
+            included with 1:1 Coaching <span aria-hidden>→</span>
           </a>
         </div>
       </Container>
@@ -162,7 +168,7 @@ function PlaybooksBand() {
 
 function NewsletterBand() {
   return (
-    <section id="newsletter" style={{ padding: "120px 0", background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}>
+    <section id="newsletter" className="scroll-mt-28" style={{ padding: "120px 0", background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
@@ -185,40 +191,7 @@ function NewsletterBand() {
             </p>
           </div>
           <div className="lg:col-span-5">
-            <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="font-sans flex-1"
-                style={{
-                  background: "var(--tqa-paper)",
-                  color: "var(--tqa-charcoal)",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "0 16px",
-                  height: "52px",
-                  fontSize: "15px",
-                  minWidth: "240px",
-                  outline: "none",
-                }}
-              />
-              <button type="submit" className="font-sans" style={{
-                height: "52px",
-                padding: "0 22px",
-                background: "var(--tqa-ink)",
-                color: "var(--tqa-paper)",
-                border: "none",
-                borderRadius: "4px",
-                fontWeight: 700,
-                fontSize: "15px",
-                cursor: "pointer",
-              }}>
-                Subscribe →
-              </button>
-            </form>
-            <div className="font-mono" style={{ fontSize: "11px", letterSpacing: "0.14em", color: "rgba(245,240,211,0.65)", marginTop: "14px", textTransform: "uppercase" }}>
-              No spam. Unsubscribe anytime.
-            </div>
+            <NewsletterSignup onDark />
           </div>
         </div>
       </Container>
@@ -227,13 +200,6 @@ function NewsletterBand() {
 }
 
 function ElsewhereStrip() {
-  const items = [
-    { label: "LinkedIn", note: "Longer essays and updates" },
-    { label: "YouTube", note: "Talks &amp; long-form" },
-    { label: "Threads", note: "Short thoughts" },
-    { label: "Instagram", note: "Behind the scenes" },
-    { label: "Facebook", note: "Follow along" },
-  ];
   return (
     <section style={{ padding: "80px 0", background: "var(--tqa-paper)" }}>
       <Container>
@@ -241,8 +207,13 @@ function ElsewhereStrip() {
           Follow Tim on
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {items.map((it, i) => (
-            <a key={i} href="#elsewhere" style={{
+          {SOCIAL_LINK_ITEMS.map((it) => (
+            <a
+              key={it.platform}
+              href={SOCIAL_LINKS[it.platform]}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
               display: "block",
               borderTop: "1.5px solid var(--tqa-charcoal)",
               padding: "20px 0",
@@ -253,8 +224,9 @@ function ElsewhereStrip() {
                 {it.label}
                 <span style={{ fontSize: "0.7em", color: "var(--tqa-ember)", marginLeft: "6px" }}>→</span>
               </div>
-              <div className="font-sans" style={{ fontSize: "13px", color: "var(--neutral-500)", marginTop: "6px" }}
-                   dangerouslySetInnerHTML={{ __html: it.note }} />
+              <div className="font-sans" style={{ fontSize: "13px", color: "var(--neutral-500)", marginTop: "6px" }}>
+                {it.note}
+              </div>
             </a>
           ))}
         </div>
@@ -319,7 +291,6 @@ const FOOTER_LINKS: Record<string, string> = {
   Podcast: "/free-resources#podcast",
   Playbooks: "/playbooks",
   About: "/about",
-  Contact: "/about#contact",
 };
 
 const FOOTER_LINK_TEXT_STYLE = {
@@ -360,9 +331,9 @@ function FooterRev({
   showDiscoveryCta?: boolean;
 } = {}) {
   const cols = [
-    { h: "Work with me", links: ["Coaching", "School", "Speaking", "Toni"] },
+    { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
     { h: "Read & listen", links: ["Book", "30 Habits in 30 Days", "Free Resources"] },
-    { h: "About", links: ["About", "Contact", "Terms", "Privacy"] },
+    { h: "About", links: ["About", "Terms", "Privacy"] },
   ];
   return (
     <footer style={{ background: "var(--tqa-ink-deep)", color: "var(--tqa-paper)", padding: "72px 0 48px" }}>
@@ -373,7 +344,7 @@ function FooterRev({
               Tim Yeo
             </div>
             <div className="font-display italic" style={{ fontSize: "16px", color: "var(--tqa-sunrise)", marginTop: "4px" }}>
-              Introvert Coach
+              Career Coach
             </div>
             <p className="font-sans" style={{ fontSize: "14px", color: "rgba(245,240,211,0.7)", marginTop: "20px", lineHeight: 1.6, maxWidth: "36ch" }}>
               Life is too short to be living someone else&rsquo;s version of success. Stop pretending. Start practicing.

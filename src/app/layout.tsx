@@ -4,10 +4,32 @@ import { GoogleAnalyticsProvider } from "@/components/analytics/google-analytics
 import { PostHogProvider } from "@/components/analytics/posthog-provider";
 import "./globals.css";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thequietachievr.com").replace(
+  /\/$/,
+  "",
+);
+
+const siteDescription =
+  "I help quiet achievers have impact at work — without pretending to be an extrovert. Coaching, a book, Quiet Leadership School, and practical tiny habits.";
+
 export const metadata: Metadata = {
-  title: "Tim Yeo — Introvert Coach · Homepage Revamp",
-  description:
-    "I help quiet achievers have impact at work — without pretending to be an extrovert. Coaching, a book, a school, and practical tiny habits.",
+  metadataBase: new URL(SITE_URL),
+  title: "Tim Yeo — Career Coach for Asian Men in Tech",
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    locale: "en_AU",
+    siteName: "The Quiet Achiever",
+    title: "Tim Yeo — Career Coach for Asian Men in Tech",
+    description: siteDescription,
+    images: [{ url: "/assets/tim-masthead-bc.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tim Yeo — Career Coach for Asian Men in Tech",
+    description: siteDescription,
+    images: ["/assets/tim-masthead-bc.jpg"],
+  },
 };
 
 export default function RootLayout({

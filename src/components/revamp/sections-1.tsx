@@ -10,9 +10,16 @@ import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
 function Segmenter() {
   const items = [
-    { goal: "Coaching", tone: "ember", note: "1:1 & personal", playbook: "How coaching works", href: "/coaching" },
+    {
+      goal: "Coaching",
+      tone: "ember",
+      note: "I help ambitious Asian men in tech break through the bamboo ceiling & land $250k\u2013$350k Principal & Leadership roles without dirty office politics",
+      playbook: "How coaching works",
+      href: "/coaching",
+      minHeight: 300,
+    },
     { goal: "Book", tone: "ink", note: "100+ tiny habits for you to read & listen", playbook: "Get the book", href: "/book" },
-    { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI", playbook: "See lessons", href: "#school" },
+    { goal: "Leadership School", tone: "sunrise", note: "Structured, videos, online, AI", playbook: "See lessons", href: "/#school" },
     { goal: "Speaking", tone: "maroon", note: "Book Tim to speak at your event", playbook: "See details", href: "/speaking" },
   ];
   const palette = {
@@ -55,7 +62,7 @@ function Segmenter() {
                   color: p.fg,
                   borderRadius: "6px",
                   padding: "28px 24px 24px",
-                  minHeight: "220px",
+                  minHeight: it.minHeight ? `${it.minHeight}px` : "220px",
                   textDecoration: "none",
                   display: "flex",
                   flexDirection: "column",

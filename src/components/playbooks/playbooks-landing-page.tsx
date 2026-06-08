@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { Navigation } from "@/components/revamp/navigation";
 import { Container } from "@/components/revamp/primitives";
+import { ComingSoonPill } from "@/components/revamp/coming-soon-pill";
+import { SITE_FEATURES } from "@/lib/site-features";
 import { PlaybooksGrid } from "@/components/playbooks/playbooks-grid";
 import { FooterRev } from "@/components/revamp/sections-3";
 import { PLAYBOOKS } from "@/lib/playbooks";
@@ -21,6 +23,7 @@ export function PlaybooksLandingPage() {
               ← Free resources
             </Link>
             <p className="mt-8 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ember">Free</p>
+            {SITE_FEATURES.playbooksComingSoon ? <ComingSoonPill className="mt-4" /> : null}
             <h1
               className="font-display mt-4 font-semibold text-charcoal"
               style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.05, textWrap: "balance" }}

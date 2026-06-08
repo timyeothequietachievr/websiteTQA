@@ -7,10 +7,16 @@ import { Container } from "./primitives";
 
 /* Top navigation with the locked Jeremy Cabral two-line wordmark */
 
-function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
+function Wordmark({
+  size = "md",
+  tagline = "Career Coach",
+}: {
+  size?: "sm" | "md";
+  tagline?: string;
+}) {
   const scale = size === "sm" ? 0.85 : 1;
   return (
-    <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Introvert Coach">
+    <Link href="/" className="inline-flex flex-col leading-none" aria-label={`Tim Yeo — ${tagline}`}>
       <span
         className="font-display"
         style={{
@@ -34,7 +40,7 @@ function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
           lineHeight: 1,
         }}
       >
-        Introvert Coach
+        {tagline}
       </span>
     </Link>
   );
@@ -58,11 +64,13 @@ export function Navigation({
   ctaLabel = "Work with me",
   ctaHref = "/#work-with-me",
   hideNavLinks = false,
+  wordmarkTagline = "Career Coach",
 }: {
   ctaLabel?: string;
   ctaHref?: string;
   /** Coaching page: wordmark + CTA only */
   hideNavLinks?: boolean;
+  wordmarkTagline?: string;
 } = {}) {
   const NAV = MAIN_NAV;
   const [scrolled, setScrolled] = useState(false);
@@ -86,7 +94,7 @@ export function Navigation({
     >
       <Container>
         <div className="flex items-center justify-between" style={{ height: "76px" }}>
-          <Wordmark />
+          <Wordmark tagline={wordmarkTagline} />
           {!hideNavLinks ? (
             <nav className="hidden lg:flex items-center gap-8">
               {NAV.map((item) => (

@@ -1,7 +1,22 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { Container } from "@/components/revamp/primitives";
-import { COACHING_HERO_TITLE } from "@/lib/coaching-content";
+import {
+  COACHING_HERO_ACCENT,
+  COACHING_HERO_SUBTITLE,
+  type CoachingHeroAccent,
+} from "@/lib/coaching-content";
+
+const HERO_ACCENT_CLASS: Record<CoachingHeroAccent, string> = {
+  sunrise: "text-sunrise",
+  "sunrise-soft": "text-sunrise-soft",
+  ember: "text-ember",
+};
+
+function HeroAccent({ children }: { children: ReactNode }) {
+  return <span className={HERO_ACCENT_CLASS[COACHING_HERO_ACCENT]}>{children}</span>;
+}
 
 /** Contained masthead — same pattern as homepage HeroPortraitSplit */
 export function CoachingHero() {
@@ -42,14 +57,17 @@ export function CoachingHero() {
                 textWrap: "balance",
               }}
             >
-              {COACHING_HERO_TITLE}
+              I help ambitious Asian men in tech{" "}
+              <HeroAccent>break through the bamboo ceiling</HeroAccent>{" "}
+              & land $250k&ndash;$350k Principal
+              &amp; Leadership roles <HeroAccent>without dirty office politics</HeroAccent>
             </h1>
 
             <p
               className="mt-5 max-w-[52ch] font-sans text-[15px] italic leading-relaxed"
               style={{ color: "rgba(245,240,211,0.78)" }}
             >
-              Coached 1,000+ quiet achievers since 2021. 20+ years leading design teams in tech.
+              {COACHING_HERO_SUBTITLE}
             </p>
           </div>
 
@@ -66,7 +84,7 @@ export function CoachingHero() {
             >
               <img
                 src="/assets/coaching-hero.jpg"
-                alt="Tim Yeo, introvert coach"
+                alt="Tim Yeo, career coach"
                 className="absolute left-1/2 top-0 h-full w-auto min-w-full -translate-x-1/2 object-cover"
                 style={{ objectPosition: "center 22%" }}
               />

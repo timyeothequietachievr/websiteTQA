@@ -35,9 +35,9 @@ export function SpeakingMasthead({
     >
       <Container>
         <div className="flex h-[72px] items-center justify-between gap-4">
-          <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Introvert Coach">
+          <Link href="/" className="inline-flex flex-col leading-none" aria-label="Tim Yeo — Career Coach">
             <span className="font-display text-[22px] font-bold tracking-tight text-charcoal">Tim Yeo</span>
-            <span className="font-display mt-0.5 text-[13px] italic text-ember-deep">Introvert Coach</span>
+            <span className="font-display mt-0.5 text-[13px] italic text-ember-deep">Career Coach</span>
           </Link>
           <Button href={ctaHref} size="sm">
             {ctaLabel}

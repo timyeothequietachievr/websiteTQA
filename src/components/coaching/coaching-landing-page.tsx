@@ -170,7 +170,7 @@ export function CoachingLandingPage() {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-paper/15 pt-10">
+          <div id="what-you-get-with-coaching" className="mt-12 border-t border-paper/15 pt-10 scroll-mt-28">
             <h3 className="font-display text-xl font-semibold text-paper sm:text-2xl">What you get with coaching</h3>
             <ul className="mt-6 max-w-3xl space-y-3 font-reading text-[17px] leading-relaxed text-paper/85">
               {WHAT_YOU_GET_ITEMS.map((item) => (
