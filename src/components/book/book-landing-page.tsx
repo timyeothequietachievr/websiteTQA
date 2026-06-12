@@ -4,7 +4,6 @@ import type { ReactNode } from "react";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 import { Navigation } from "@/components/revamp/navigation";
-import { BookFreeChapterForm } from "./book-free-chapter-form";
 import { BookLogoCloudC148 } from "./book-logo-cloud-c148";
 import { BookSoundFamiliarC6 } from "./book-sound-familiar-c6";
 import { Container, Button } from "@/components/revamp/primitives";
@@ -391,12 +390,6 @@ function BookHero() {
                 Buy the book
                 <span aria-hidden>→</span>
               </Button>
-              <a
-                href="#checklist"
-                className="inline-flex h-12 items-center rounded px-2 font-sans text-[15px] font-semibold text-charcoal underline underline-offset-4"
-              >
-                Download free chapter
-              </a>
             </div>
             <p className="font-sans mt-3 text-sm text-warm-500">
               Available in print, eBook, and audiobook (narrated by me 🎤).
@@ -454,32 +447,6 @@ function ChaptersTable() {
               ))}
             </tbody>
           </table>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function ChecklistLead() {
-  return (
-    <section id="checklist" style={{ padding: "96px 0" }}>
-      <Container>
-        <SectionHeading>
-          <h2
-            className="font-display font-semibold text-charcoal"
-            style={{ fontSize: "clamp(28px, 3.5vw, 40px)", lineHeight: 1.08 }}
-          >
-            Download free chapter
-          </h2>
-        </SectionHeading>
-        <div
-          className="rounded-lg border border-paper-200 p-8 sm:p-10"
-          style={{ background: "var(--tqa-sunrise-soft)" }}
-        >
-          <p className="font-reading max-w-2xl text-lg leading-relaxed text-charcoal">
-            Read Chapter 1 plus a checklist of every tiny habit in the book.
-          </p>
-          <BookFreeChapterForm />
         </div>
       </Container>
     </section>
@@ -821,7 +788,6 @@ export function BookLandingPage() {
       <BookLogoCloudC148 />
       <BookSoundFamiliarC6 />
       <ChaptersTable />
-      <ChecklistLead />
       <TimBio />
       <PraiseSection />
       <BookQuotes />

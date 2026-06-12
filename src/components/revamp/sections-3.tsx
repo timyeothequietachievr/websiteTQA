@@ -70,7 +70,6 @@ function StartHere() {
       href: "#playbooks",
       comingSoon: SITE_FEATURES.playbooksComingSoon,
     },
-    { icon: "📖", label: "Free book chapter", note: "Read Chapter 1", cta: "Read", href: "/book#checklist" },
   ];
   return (
     <section style={{ padding: "96px 0", background: "var(--tqa-paper-soft)" }}>
@@ -81,7 +80,7 @@ function StartHere() {
             Learn for free
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {tiles.map((t, i) => (
             <a
               key={i}
