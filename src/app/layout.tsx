@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     siteName: "The Quiet Achiever",
     title: "Tim Yeo — Career Coach for Asian Men in Tech",
     description: siteDescription,
-    images: [{ url: "/assets/tim-masthead-bc.jpg" }],
+    images: [{ url: "/assets/og.jpg", width: 1200, height: 630, alt: "Tim Yeo — The Quiet Achiever" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tim Yeo — Career Coach for Asian Men in Tech",
     description: siteDescription,
-    images: ["/assets/tim-masthead-bc.jpg"],
+    images: ["/assets/og.jpg"],
   },
 };
 
