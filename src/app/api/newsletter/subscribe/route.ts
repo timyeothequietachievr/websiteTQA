@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
-import { getGhostAdminConfig, subscribeGhostMember } from "@/lib/ghost-admin";
+import { createNewsletterContact, isNewsletterEmailOctopusConfigured } from "@/lib/emailoctopus";
 import { isNotionCrmConfigured, upsertNewsletterSubscriberCrm } from "@/lib/notion-crm";
-import { SITE_FEATURES } from "@/lib/site-features";
+import { isNewsletterSignupEnabled } from "@/lib/site-features";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
-  if (SITE_FEATURES.newsletterComingSoon) {
+  if (!isNewsletterSignupEnabled()) {
     return NextResponse.json({ error: "Newsletter signup is not open yet" }, { status: 503 });
   }
 
@@ -25,27 +25,32 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "A valid email is required" }, { status: 400 });
   }
 
-  if (!getGhostAdminConfig()) {
+  if (!isNewsletterEmailOctopusConfigured()) {
     return NextResponse.json({ error: "Newsletter signup is not configured yet" }, { status: 503 });
   }
 
   try {
-    const member = await subscribeGhostMember(email, name);
+    const result = await createNewsletterContact(email, name);
+
+    if (!result.ok) {
+      return NextResponse.json({ error: result.message }, { status: 502 });
+    }
 
     let crm: "created" | "updated" | false = false;
     if (isNotionCrmConfigured()) {
       try {
-        crm = await upsertNewsletterSubscriberCrm({
-          email,
-          ghostMemberId: member.id,
-          name,
-        });
+        crm = await upsertNewsletterSubscriberCrm({ email, name });
       } catch (crmError) {
         console.error("[api/newsletter/subscribe] CRM sync failed:", crmError);
       }
     }
 
-    return NextResponse.json({ ok: true, memberId: member.id, crm });
+    return NextResponse.json({
+      ok: true,
+      status: result.status,
+      alreadyExists: result.alreadyExists ?? false,
+      crm,
+    });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Subscribe failed";
     console.error("[api/newsletter/subscribe]", message);

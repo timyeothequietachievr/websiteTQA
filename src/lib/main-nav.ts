@@ -1,6 +1,6 @@
 /** Shared primary site navigation */
 
-import { SITE_FEATURES } from "@/lib/site-features";
+import { SITE_FEATURES, isNewsletterSignupEnabled } from "@/lib/site-features";
 
 export const MAIN_NAV = [
   { name: "Coaching", href: "/coaching" },
@@ -30,7 +30,7 @@ export const FREE_RESOURCES = [
     title: "Newsletter",
     description: "One short, useful email a week. Tiny habits in your inbox. No fluff.",
     href: "/free-resources#newsletter",
-    cta: SITE_FEATURES.newsletterComingSoon ? "Coming soon" : "Subscribe",
-    comingSoon: SITE_FEATURES.newsletterComingSoon,
+    cta: isNewsletterSignupEnabled() ? "Subscribe" : "Coming soon",
+    comingSoon: !isNewsletterSignupEnabled(),
   },
 ] as const;

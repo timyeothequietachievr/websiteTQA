@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SITE_FEATURES } from "@/lib/site-features";
+import { isNewsletterSignupEnabled } from "@/lib/site-features";
 import { ComingSoonPill } from "@/components/revamp/coming-soon-pill";
 
 export function NewsletterSignup({
@@ -11,7 +11,7 @@ export function NewsletterSignup({
   showPill?: boolean;
   onDark?: boolean;
 }) {
-  const comingSoon = SITE_FEATURES.newsletterComingSoon;
+  const comingSoon = !isNewsletterSignupEnabled();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -32,7 +32,11 @@ export function NewsletterSignup({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),
       });
-      const data = (await res.json().catch(() => null)) as { error?: string } | null;
+      const data = (await res.json().catch(() => null)) as {
+        error?: string;
+        status?: string;
+        alreadyExists?: boolean;
+      } | null;
 
       if (!res.ok) {
         setStatus("error");
@@ -41,7 +45,15 @@ export function NewsletterSignup({
       }
 
       setStatus("success");
-      setMessage("You’re in. Check your inbox for a welcome note.");
+      if (data?.alreadyExists && data?.status === "PENDING") {
+        setMessage("You’re already pending — check your inbox and click confirm to subscribe.");
+      } else if (data?.alreadyExists) {
+        setMessage("You’re already on the list.");
+      } else if (data?.status === "PENDING") {
+        setMessage("Almost there — check your inbox and click confirm to subscribe.");
+      } else {
+        setMessage("You’re in. Check your inbox for a welcome note.");
+      }
       setEmail("");
     } catch {
       setStatus("error");

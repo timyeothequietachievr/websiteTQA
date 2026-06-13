@@ -1,4 +1,5 @@
 import { findGhostMemberByEmail, getGhostAdminConfig, unsubscribeGhostMember } from "@/lib/ghost-admin";
+import { getEmailOctopusOptOutListIds } from "@/lib/emailoctopus";
 
 const NOTION_API = "https://api.notion.com/v1";
 const NOTION_VERSION = "2022-06-28";
@@ -94,16 +95,11 @@ async function optOutEmailOctopus(email: string): Promise<boolean> {
   const apiKey = process.env.EMAILOCTOPUS_API_KEY?.trim();
   if (!apiKey) return false;
 
-  const listIds = [
-    process.env.EMAILOCTOPUS_FREE_CHAPTER_LIST_ID?.trim(),
-    process.env.EMAILOCTOPUS_PLAYBOOKS_LIST_ID?.trim(),
-  ].filter(Boolean) as string[];
-
-  const uniqueListIds = [...new Set(listIds)];
-  if (uniqueListIds.length === 0) return false;
+  const listIds = getEmailOctopusOptOutListIds();
+  if (listIds.length === 0) return false;
 
   let any = false;
-  for (const listId of uniqueListIds) {
+  for (const listId of listIds) {
     const res = await fetch(`https://emailoctopus.com/api/1.6/lists/${encodeURIComponent(listId)}/contacts`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },

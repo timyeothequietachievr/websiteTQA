@@ -61,41 +61,47 @@ export function isNotionCrmConfigured(): boolean {
 /** Mirror Workflow A: create or update CRM when someone subscribes via the site. */
 export async function upsertNewsletterSubscriberCrm(options: {
   email: string;
-  ghostMemberId: string;
+  ghostMemberId?: string;
   name?: string;
 }): Promise<"created" | "updated"> {
   const email = options.email.trim().toLowerCase();
   const page = await findCrmByEmail(email);
   const today = melbourneToday();
+  const ghostId = options.ghostMemberId?.trim();
 
   if (!page) {
+    const properties: Record<string, unknown> = {
+      Name: {
+        title: [{ text: { content: options.name?.trim() || email } }],
+      },
+      Email: { email },
+      "Origin date": { date: { start: today } },
+    };
+    if (ghostId) {
+      properties["Ghost Member ID"] = { rich_text: [{ text: { content: ghostId } }] };
+    }
+
     await notionFetch("/pages", {
       method: "POST",
       json: {
         parent: { database_id: CRM_DATABASE_ID },
-        properties: {
-          Name: {
-            title: [{ text: { content: options.name?.trim() || email } }],
-          },
-          Email: { email },
-          "Ghost Member ID": { rich_text: [{ text: { content: options.ghostMemberId } }] },
-          "Origin date": { date: { start: today } },
-        },
+        properties,
       },
     });
     return "created";
   }
 
   const tags = readMultiSelect(page.properties["Newsletter tags"]).filter((t) => t !== "unsubscribed");
+  const properties: Record<string, unknown> = {
+    "Newsletter tags": { multi_select: tags.map((name) => ({ name })) },
+  };
+  if (ghostId) {
+    properties["Ghost Member ID"] = { rich_text: [{ text: { content: ghostId } }] };
+  }
 
   await notionFetch(`/pages/${page.id}`, {
     method: "PATCH",
-    json: {
-      properties: {
-        "Ghost Member ID": { rich_text: [{ text: { content: options.ghostMemberId } }] },
-        "Newsletter tags": { multi_select: tags.map((name) => ({ name })) },
-      },
-    },
+    json: { properties },
   });
   return "updated";
 }
