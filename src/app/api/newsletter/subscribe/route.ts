@@ -1,11 +1,16 @@
 import { NextResponse } from "next/server";
 import { getGhostAdminConfig, subscribeGhostMember } from "@/lib/ghost-admin";
 import { isNotionCrmConfigured, upsertNewsletterSubscriberCrm } from "@/lib/notion-crm";
+import { SITE_FEATURES } from "@/lib/site-features";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  if (SITE_FEATURES.newsletterComingSoon) {
+    return NextResponse.json({ error: "Newsletter signup is not open yet" }, { status: 503 });
+  }
+
   let body: { email?: string; name?: string };
   try {
     body = await request.json();
