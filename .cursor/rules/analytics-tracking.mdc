@@ -1,0 +1,66 @@
+---
+description: Require PostHog and GA tracking when adding links, buttons, or conversion CTAs on thequietachievr.com.
+globs: src/components/**/*.{tsx,jsx},src/app/**/*.{tsx,jsx},src/lib/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Analytics on thequietachievr.com
+
+When adding or changing **links, buttons, forms, or conversion CTAs**, ensure they are tracked in **PostHog** and **Google Analytics** (providers in `src/app/layout.tsx`).
+
+## Default behavior
+
+`PostHogProvider` and `GoogleAnalyticsProvider` already capture:
+
+- `$pageview` / page views on route change
+- `ui_click` on `<a>`, `<button>`, and `[role="button"]` clicks (label, href, path)
+
+That is not enough for **product analytics**. Add explicit events for CTAs that matter (book buy, coaching, newsletter, downloads, conversions).
+
+## Custom events — PostHog
+
+Import posthog in client components:
+
+```tsx
+import posthog from "posthog-js";
+
+if (posthog.__loaded) {
+  posthog.capture("event_name_snake_case", {
+    label: "...",
+    href: "...",
+    path: window.location.pathname,
+  });
+}
+```
+
+Follow existing names where possible: `ui_click`, `chapter_download_signup`, `playbook_access_granted`, `conversion_completed`, `bio_link_arrival`, `bio_link_touch`.
+
+## Custom events — Google Analytics
+
+Use the same pattern as `google-analytics-provider.tsx`:
+
+```tsx
+sendEvent("event_name_snake_case", { ...params });
+```
+
+Or rely on `ui_click` if the global handler is sufficient for a simple nav link.
+
+## Bio-link attribution
+
+Pages that receive traffic from `links.thequietachievr.com` should preserve:
+
+- URL params: `tqa_phid`, `utm_*`
+- Cookie: `tqa_attribution` (read via `src/lib/bio-attribution.ts`)
+
+Conversion pages (e.g. `/book/thank-you`) use `ConversionTracker` — add similar components for new funnel endpoints.
+
+## New outbound or buy links
+
+Append UTMs / `tqa_phid` when linking from owned surfaces, or document why not. Book/coaching CTAs should remain measurable in PostHog funnels.
+
+## Checklist before finishing
+
+- [ ] Meaningful CTAs have an explicit PostHog event (not only autocapture)
+- [ ] GA receives the same or equivalent event when GA is connected
+- [ ] Conversion flows fire a dedicated event (e.g. `conversion_completed`, form success)
+- [ ] No raw email or secrets in analytics payloads

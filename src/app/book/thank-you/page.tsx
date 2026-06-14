@@ -5,7 +5,7 @@ import { BookThankYouPage } from "@/components/book/book-thank-you-page";
 export const metadata: Metadata = {
   title: "Thank you for your purchase | The Quiet Achiever",
   description:
-    "Your order is confirmed. Start reading or listening to The Quiet Achiever today.",
+    "Your order is confirmed. Check your inbox for delivery details.",
   robots: {
     index: false,
     follow: false,
