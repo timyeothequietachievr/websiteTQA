@@ -3,6 +3,10 @@
 import { useEffect, type ReactNode } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
+import {
+  readBioAttributionCookie,
+  readBioUrlParams,
+} from "@/lib/bio-attribution";
 
 const POSTHOG_KEY =
   process.env.NEXT_PUBLIC_POSTHOG_KEY || "phc_vvzGombu49viAehfCEQd9fKbnSHo6dWoDFMaPGiSMgYc";
@@ -48,8 +52,38 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
       autocapture: true,
       capture_pageview: false,
       capture_pageleave: true,
+      cross_subdomain_cookie: true,
+      persistence: "cookie",
       disable_session_recording: false,
       loaded: (client) => {
+        if (typeof window !== "undefined") {
+          const urlAttribution = readBioUrlParams(window.location.search);
+          if (urlAttribution.bioDistinctId) {
+            client.alias(urlAttribution.bioDistinctId, client.get_distinct_id());
+            client.capture("bio_link_arrival", {
+              bio_distinct_id: urlAttribution.bioDistinctId,
+              landing_path: window.location.pathname,
+              utm_source: urlAttribution.utm_source,
+              utm_medium: urlAttribution.utm_medium,
+              utm_campaign: urlAttribution.utm_campaign,
+            });
+          }
+
+          const cookieAttribution = readBioAttributionCookie();
+          if (cookieAttribution) {
+            if (cookieAttribution.phid) {
+              client.alias(cookieAttribution.phid, client.get_distinct_id());
+            }
+
+            client.capture("bio_link_touch", {
+              bio_distinct_id: cookieAttribution.phid,
+              link_id: cookieAttribution.link_id,
+              link_text: cookieAttribution.link_text,
+              destination_kind: cookieAttribution.destination_kind,
+            });
+          }
+        }
+
         if (process.env.NODE_ENV === "development") {
           client.debug();
         }
