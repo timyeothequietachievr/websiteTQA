@@ -313,6 +313,10 @@ export const FAQS = [
     howItWorksAnchor: true,
   },
   {
+    q: "Is this just for job hunting & interviews?",
+    a: "No. The advice we give will help you become your company's Most Valuable Employee — individuals who are the first to be promoted, last to be fired and respected for their talents.",
+  },
+  {
     q: "Do you work with extroverts or managers of quiet people?",
     a: "Yes — I coach managers of quiet teams who want to lead them better. We focus on creating ways of working that get the most out of all your people, and help louder and quieter teammates work better together.",
   },
@@ -324,3 +328,49 @@ export const FAQS = [
 
 export const DISCOVERY_CTA_NOTE =
   "45-minute video call. If I can help, I'll share next steps. If not, I'll refer you to someone who can.";
+
+export const COACHING_CLOSING = {
+  title: "Congrats! You got to The End",
+  mostPeopleHeadline: "Funny thing is: most people who get here don't book a call.",
+  mostPeopleBecause: "That's because:",
+  mostPeopleReasons: [
+    "They want a “silver bullet” that magically makes all their problems go away. For free.",
+    "Their situation right now isn't THAT bad (yet). Things will get better; if they are lucky. If.",
+    "They want to complain but don't want to do the work",
+  ],
+  notForYouHeadline: "If this is you, don't book a call.",
+  notForYouBecause: "Why? Because:",
+  notForYouReasons: [
+    "You've got time & resources to try and fix things on your own.",
+    "All the best advice in the world won't change your career if you are not ready to accept help.",
+  ],
+  forYouHeadline: "Discovery calls are for people who:",
+  forYouReasons: [
+    "Have tried everything else but nothing seems to work",
+    "All the advice they've got seems designed for other people but doesn't suit them",
+    "Ready for change, ready to try something new",
+  ],
+  greeting: "If this is you:",
+  helloLead: "👋 Hello! I look forward to meeting you soon",
+  helloGuaranteeIntro: "I will guarantee you this:",
+  guarantees: [
+    {
+      lead: "By the end of the call",
+      body: "If I can help you, I'll say Yes. If I can't help you, I'll say No.",
+    },
+    {
+      lead: "You can apply my advice the very next day",
+      body: "Practical. Easy to apply. You just have to do it.",
+    },
+    {
+      lead: "Who you are is enough",
+      body: "You don't need to pretend to be someone else, you don't need to change who you are. You just need tiny habits that work for you.",
+    },
+  ],
+  rememberLabel: "Remember:",
+  remember:
+    "The best time to look for a job is when you don't need one. The next best time is now.",
+} as const;
+
+/** @deprecated Use COACHING_CLOSING */
+export const COACHING_CLOSING_OPTION_2 = COACHING_CLOSING;

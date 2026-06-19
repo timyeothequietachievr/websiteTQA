@@ -8,6 +8,7 @@ import { BookLogoCloudC148 } from "@/components/book/book-logo-cloud-c148";
 import { CoachingDifferent } from "@/components/coaching/coaching-different";
 import { CoachingFeaturedQuote } from "@/components/coaching/coaching-featured-quote";
 import { CoachingHero } from "@/components/coaching/coaching-hero";
+import { CoachingClosingSections } from "@/components/coaching/coaching-closing-sections";
 import { CoachingStory } from "@/components/coaching/coaching-story";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
@@ -268,23 +269,7 @@ export function CoachingLandingPage() {
           </Container>
         </section>
 
-        <ContainedBand tone="sunrise" padY="clamp(48px, 6vw, 72px)">
-          <div className="mx-auto max-w-3xl">
-            <h2
-              className="font-display font-semibold"
-              style={{ fontSize: "clamp(26px, 3.2vw, 40px)", lineHeight: 1.1, textWrap: "balance" }}
-            >
-              You don&rsquo;t need to pretend to be someone else
-            </h2>
-            <p className="mt-4 font-reading text-[17px] leading-relaxed text-ink/90">
-              Who you are is enough. You don&rsquo;t need to change who you are. You just need tiny habits that work for
-              who you already are.
-            </p>
-            <div className="mt-8">
-              <DiscoveryCta />
-            </div>
-          </div>
-        </ContainedBand>
+        <CoachingClosingSections />
       </main>
       <FooterRev showDiscoveryCta={false} />
     </div>
