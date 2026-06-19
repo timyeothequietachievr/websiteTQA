@@ -541,7 +541,7 @@ function HeroPortraitSplit() {
                 textWrap: "balance",
               }}
             >
-              Be seen, be heard & get the credit you deserve
+              Get the credit you deserve
               <span style={{ display: "block", color: "var(--tqa-ember)", fontStyle: "italic", fontWeight: 600 }}>
                 without pretending to be an extrovert.
               </span>

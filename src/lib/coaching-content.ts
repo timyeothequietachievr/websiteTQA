@@ -1,7 +1,7 @@
 /** Coaching page copy — primary: thequietachievr.com/coaching, secondary: Notion landing spec */
 
 export const COACHING_HERO_SUBTITLE =
-  "20+ years leading design teams in tech. Coached 1,000+ quiet achievers since 2021.";
+  "3 x leader in startups. 20+ years in tech. Coached 1,000+ quiet achievers.";
 
 /** Switch accent on ink-deep masthead: sunrise | sunrise-soft | ember */
 export type CoachingHeroAccent = "sunrise" | "sunrise-soft" | "ember";
@@ -297,7 +297,7 @@ export const FAQS = [
   },
   {
     q: "How does the 100% money-back guarantee work?",
-    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value 90 days after completing your coaching, we'll give you your money back.",
+    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value 90 days after completing your coaching, we'll give you your money back or we keep working till you do.",
   },
   {
     q: "Do you have a payment plan?",

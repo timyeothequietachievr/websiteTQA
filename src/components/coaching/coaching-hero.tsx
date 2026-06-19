@@ -18,35 +18,39 @@ function HeroAccent({ children }: { children: ReactNode }) {
   return <span className={HERO_ACCENT_CLASS[COACHING_HERO_ACCENT]}>{children}</span>;
 }
 
+function CoachingEyebrow({ children }: { children: ReactNode }) {
+  return (
+    <div
+      className="inline-flex items-center gap-2 self-start font-sans font-bold uppercase"
+      style={{
+        background: "rgba(138,42,28,0.38)",
+        color: "var(--tqa-sunrise-soft)",
+        border: "1px solid rgba(138,42,28,0.65)",
+        borderRadius: "999px",
+        padding: "8px 18px",
+        fontSize: "14px",
+        letterSpacing: "0.18em",
+      }}
+    >
+      <span aria-hidden style={{ color: "var(--tqa-sunrise-soft)" }}>
+        ●
+      </span>
+      {children}
+    </div>
+  );
+}
+
 /** Contained masthead — same pattern as homepage HeroPortraitSplit */
 export function CoachingHero() {
   return (
     <section className="bg-paper pt-3 pb-8 sm:pb-10">
       <Container wide>
-        <div
-          className="grid min-h-[520px] grid-cols-1 overflow-hidden rounded-[10px] bg-ink-deep text-paper lg:grid-cols-12 lg:min-h-[600px]"
-        >
+        <div className="grid min-h-[520px] grid-cols-1 overflow-hidden rounded-[10px] bg-ink-deep text-paper lg:grid-cols-12 lg:min-h-[600px]">
           <div
             className="flex flex-col justify-center lg:col-span-7"
             style={{ padding: "clamp(32px, 5vw, 72px)" }}
           >
-            <div
-              className="inline-flex items-center gap-2 self-start font-sans font-bold uppercase"
-              style={{
-                background: "rgba(213,74,47,0.18)",
-                color: "var(--tqa-ember)",
-                border: "1px solid rgba(213,74,47,0.45)",
-                borderRadius: "999px",
-                padding: "6px 14px",
-                fontSize: "11px",
-                letterSpacing: "0.18em",
-              }}
-            >
-              <span aria-hidden style={{ color: "var(--tqa-ember)" }}>
-                ●
-              </span>
-              1:1 coaching
-            </div>
+            <CoachingEyebrow>Asian Men in Tech</CoachingEyebrow>
 
             <h1
               className="mt-6 font-display font-semibold text-paper"
@@ -57,10 +61,8 @@ export function CoachingHero() {
                 textWrap: "balance",
               }}
             >
-              I help ambitious Asian men in tech{" "}
-              <HeroAccent>break through the bamboo ceiling</HeroAccent>{" "}
-              & land $250k&ndash;$350k Principal
-              &amp; Leadership roles <HeroAccent>without dirty office politics</HeroAccent>
+              Land $250k&ndash;$350k Principal or Leadership roles in{" "}
+              <HeroAccent>90 days</HeroAccent> — <HeroAccent>or your money back</HeroAccent>
             </h1>
 
             <p
