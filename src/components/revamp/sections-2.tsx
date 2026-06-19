@@ -10,7 +10,7 @@ import { ProfileAvatar } from "./profile-avatar";
 
 function CoachingSummary() {
   const steps = [
-    { n: "01", t: "Discovery call", d: "30-min video call. We talk about your challenges and see if we are a fit. Free." },
+    { n: "01", t: "Discovery call", d: "45-min video call. We talk about your challenges and see if we are a fit. Free." },
     { n: "02", t: "Deep Dive", d: "90min goal-setting workshop. You get clarity and a Coaching Plan with actions." },
     { n: "03", t: "Coaching plan", d: "Fortnightly sessions. Tiny habits, practised in real situations. Text support between sessions." },
   ];

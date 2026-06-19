@@ -127,7 +127,7 @@ export const STEPS = [
   {
     n: "01",
     title: "Discovery call",
-    meta: "30-min video call",
+    meta: "45-min video call",
     body: "We talk about the challenges you're facing and where you'd like help. Coaching requires chemistry — this is for both of us to see if we want to work together.",
   },
   {
@@ -323,4 +323,4 @@ export const FAQS = [
 ] as const;
 
 export const DISCOVERY_CTA_NOTE =
-  "30-minute video call. If I can help, I'll share next steps. If not, I'll refer you to someone who can.";
+  "45-minute video call. If I can help, I'll share next steps. If not, I'll refer you to someone who can.";
