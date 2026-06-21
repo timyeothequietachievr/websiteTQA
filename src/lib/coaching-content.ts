@@ -330,13 +330,12 @@ export const DISCOVERY_CTA_NOTE =
   "45-minute video call. If I can help, I'll share next steps. If not, I'll refer you to someone who can.";
 
 export const COACHING_CLOSING = {
-  title: "Congrats! You got to The End",
+  title: "Congrats! You've reached the end.",
   mostPeopleHeadline: "Funny thing is: most people who get here don't book a call.",
   mostPeopleBecause: "That's because:",
   mostPeopleReasons: [
     "They want a “silver bullet” that magically makes all their problems go away. For free.",
     "Their situation right now isn't THAT bad (yet). Things will get better; if they are lucky. If.",
-    "They want to complain but don't want to do the work",
   ],
   notForYouHeadline: "If this is you, don't book a call.",
   notForYouBecause: "Why? Because:",
@@ -346,9 +345,9 @@ export const COACHING_CLOSING = {
   ],
   forYouHeadline: "Discovery calls are for people who:",
   forYouReasons: [
-    "Have tried everything else but nothing seems to work",
-    "All the advice they've got seems designed for other people but doesn't suit them",
-    "Ready for change, ready to try something new",
+    "Have tried everything else but nothing seems to work.",
+    "All the advice they've got seems suited for other people but doesn't suit them.",
+    "Ready for change, ready to try something new.",
   ],
   greeting: "If this is you:",
   helloLead: "👋 Hello! I look forward to meeting you soon",
@@ -368,8 +367,8 @@ export const COACHING_CLOSING = {
     },
   ],
   rememberLabel: "Remember:",
-  remember:
-    "The best time to look for a job is when you don't need one. The next best time is now.",
+  rememberLead: "The best time to look for a job is when you don't need one.",
+  rememberClose: "The next best time is now.",
 } as const;
 
 /** @deprecated Use COACHING_CLOSING */

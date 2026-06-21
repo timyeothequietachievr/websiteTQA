@@ -31,8 +31,10 @@ function ClosingParagraph({ children, className = "" }: { children: ReactNode; c
 function RememberBlock({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="mt-8 rounded-lg bg-ink px-5 py-4 text-paper">
-      <p className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-sunrise">{label}</p>
-      <p className="mt-2 font-display text-xl italic leading-snug">{children}</p>
+      <p className="font-sans text-base font-bold text-sunrise">{label}</p>
+      <p className="mt-2 font-display text-xl italic leading-snug">
+        {children}
+      </p>
     </div>
   );
 }
@@ -100,7 +102,11 @@ export function CoachingClosingSections() {
           </ul>
         </div>
 
-        <RememberBlock label={copy.rememberLabel}>{copy.remember}</RememberBlock>
+        <RememberBlock label={copy.rememberLabel}>
+          {copy.rememberLead}
+          <br />
+          {copy.rememberClose}
+        </RememberBlock>
 
         <div className="mt-8">
           <Button href={DISCOVERY_CALL_URL} variant="primary" size="lg">
