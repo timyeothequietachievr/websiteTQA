@@ -296,8 +296,8 @@ export const FAQS = [
     a: "Clients typically make an investment of $6,000 and upwards over a coaching period of 3–12 months. Based on the discovery call, we will agree on the right cadence and package to achieve all your goals.",
   },
   {
-    q: "How does the 100% money-back guarantee work?",
-    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value 90 days after completing your coaching, we'll give you your money back or we keep working till you do.",
+    q: "How does the 100% work-for-free guarantee work?",
+    a: "You show up. You do the work. If you don't achieve the goals you set or recoup your investment in equivalent value 90 days after completing your coaching, we'll keep working, at no additional charge, till you do.",
   },
   {
     q: "Do you have a payment plan?",

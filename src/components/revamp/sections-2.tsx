@@ -56,7 +56,7 @@ function CoachingSummary() {
                 padding: "14px 16px",
               }}
             >
-              100% money-back guarantee.
+              100% work-for-free guarantee.
             </div>
           </div>
 

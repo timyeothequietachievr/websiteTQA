@@ -73,7 +73,7 @@ function DiscoveryCta({
       </Button>
       {withGuaranteeLabel ? (
         <p className={`mt-3 max-w-md font-sans text-sm leading-relaxed ${noteClass}`}>
-          100% money-back guarantee
+          100% work-for-free guarantee
         </p>
       ) : null}
     </div>
