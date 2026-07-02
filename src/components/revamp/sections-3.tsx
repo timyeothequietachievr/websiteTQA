@@ -290,6 +290,7 @@ const FOOTER_LINKS: Record<string, string> = {
   Podcast: "/free-resources#podcast",
   Playbooks: "/playbooks",
   About: "/about",
+  "Prompt My Notch": "https://www.promptmynotch.com/",
 };
 
 const FOOTER_LINK_TEXT_STYLE = {
@@ -332,6 +333,7 @@ function FooterRev({
   const cols = [
     { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
     { h: "Read & listen", links: ["Book", "30 Habits in 30 Days", "Free Resources"] },
+    { h: "Apps", links: ["Prompt My Notch"] },
     { h: "About", links: ["About", "Terms", "Privacy"] },
   ];
   return (
@@ -396,7 +398,7 @@ function FooterRev({
               </div>
             ) : null}
           </div>
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:col-span-8">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 lg:col-span-8">
             {cols.map((c) => (
               <div key={c.h}>
                 <div className="font-mono uppercase" style={{ fontSize: "11px", letterSpacing: "0.18em", color: "var(--tqa-sunrise)", fontWeight: 700, marginBottom: "16px" }}>

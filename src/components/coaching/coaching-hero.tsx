@@ -61,8 +61,7 @@ export function CoachingHero() {
                 textWrap: "balance",
               }}
             >
-              Land $250k&ndash;$350k Principal or Leadership roles in{" "}
-              <HeroAccent>90 days</HeroAccent> — <HeroAccent>or your money back</HeroAccent>
+              Land $250k&ndash;$350k Principal or Leadership roles <HeroAccent>in 12 weeks</HeroAccent>
             </h1>
 
             <p
