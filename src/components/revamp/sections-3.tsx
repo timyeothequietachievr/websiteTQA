@@ -289,6 +289,7 @@ const FOOTER_LINKS: Record<string, string> = {
   "Free Resources": "/free-resources",
   Podcast: "/free-resources#podcast",
   Playbooks: "/playbooks",
+  Testimonials: "/testimonials",
   About: "/about",
   "Prompt My Notch": "https://www.promptmynotch.com/",
 };
@@ -334,7 +335,7 @@ function FooterRev({
     { h: "Work with me", links: ["Coaching", "School", "Speaking"] },
     { h: "Read & listen", links: ["Book", "30 Habits in 30 Days", "Free Resources"] },
     { h: "Apps", links: ["Prompt My Notch"] },
-    { h: "About", links: ["About", "Terms", "Privacy"] },
+    { h: "About", links: ["Testimonials", "About", "Terms", "Privacy"] },
   ];
   return (
     <footer style={{ background: "var(--tqa-ink-deep)", color: "var(--tqa-paper)", padding: "72px 0 48px" }}>

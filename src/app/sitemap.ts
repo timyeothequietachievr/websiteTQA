@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/coaching",
     "/book",
     "/about",
+    "/testimonials",
     "/speaking",
     "/speakerkit",
     "/podcast",
