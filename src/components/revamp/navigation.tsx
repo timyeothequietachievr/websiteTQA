@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { MAIN_NAV } from "@/lib/main-nav";
+import { MasterclassPromoBanner } from "./masterclass-promo-banner";
 import { Container } from "./primitives";
 
 /* Top navigation with the locked Jeremy Cabral two-line wordmark */
@@ -92,6 +93,7 @@ export function Navigation({
         transition: "background .2s ease, border-color .2s ease",
       }}
     >
+      <MasterclassPromoBanner />
       <Container>
         <div className="flex items-center justify-between" style={{ height: "76px" }}>
           <Wordmark tagline={wordmarkTagline} />
