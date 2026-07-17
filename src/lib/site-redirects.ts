@@ -63,4 +63,5 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     destination: "https://www.notion.so/Proposal-e2605a306a024ac48d3d8ebadbf3539e",
     permanent: true,
   },
+  { source: "/masterclass", destination: "https://luma.com/m2fdcuh5", permanent: true },
 ];
