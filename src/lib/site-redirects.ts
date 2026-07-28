@@ -64,6 +64,8 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     permanent: true,
   },
   { source: "/masterclass", destination: "https://luma.com/m2fdcuh5", permanent: true },
+  { source: "/masterclassreplay", destination: "https://youtube.com/live/-j6DIZx628Q", permanent: true },
+  { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
   { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
   { source: "/giveaway", destination: "https://calendar.app.google/NpPTkc4a6ZbvoNnDA", permanent: true },
 ];
