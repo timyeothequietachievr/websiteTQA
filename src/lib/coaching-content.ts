@@ -3,11 +3,6 @@
 export const COACHING_HERO_SUBTITLE =
   "3x Head of Design at $700M startups. 20+ years in tech. Coached 1,000+ quiet achievers. 100% work-for-free guarantee.";
 
-/** Switch accent on ink-deep masthead: sunrise | sunrise-soft | ember */
-export type CoachingHeroAccent = "sunrise" | "sunrise-soft" | "ember";
-
-export const COACHING_HERO_ACCENT: CoachingHeroAccent = "ember";
-
 export const COACHING_STORY_TITLE =
   "Being a quiet Asian in a loud tech company that desires the extrovert ideal is hard";
 

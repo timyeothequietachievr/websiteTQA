@@ -2,21 +2,7 @@
 
 import type { ReactNode } from "react";
 import { Container } from "@/components/revamp/primitives";
-import {
-  COACHING_HERO_ACCENT,
-  COACHING_HERO_SUBTITLE,
-  type CoachingHeroAccent,
-} from "@/lib/coaching-content";
-
-const HERO_ACCENT_CLASS: Record<CoachingHeroAccent, string> = {
-  sunrise: "text-sunrise",
-  "sunrise-soft": "text-sunrise-soft",
-  ember: "text-ember",
-};
-
-function HeroAccent({ children }: { children: ReactNode }) {
-  return <span className={HERO_ACCENT_CLASS[COACHING_HERO_ACCENT]}>{children}</span>;
-}
+import { COACHING_HERO_SUBTITLE } from "@/lib/coaching-content";
 
 function CoachingEyebrow({ children }: { children: ReactNode }) {
   return (
@@ -61,8 +47,7 @@ export function CoachingHero() {
                 textWrap: "balance",
               }}
             >
-              Land $250k&ndash;$350k Principal or Leadership roles{" "}
-              <HeroAccent>without playing politics</HeroAccent>
+              Land $250k&ndash;$350k Principal or Leadership roles
             </h1>
 
             <p
