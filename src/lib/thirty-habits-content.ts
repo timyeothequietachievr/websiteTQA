@@ -1,5 +1,5 @@
-export const THIRTY_HABITS_BUY_URL = "https://buy.stripe.com/eVa2bMc959PV7VS6sT";
-export const THIRTY_HABITS_GIFT_URL = "https://buy.stripe.com/7sIcQq1urfafekgbNe";
+export const THIRTY_HABITS_BUY_URL = "https://payhip.com/b/CSGiJ";
+export const THIRTY_HABITS_GIFT_URL = "";
 export const THIRTY_HABITS_PAGE_PATH = "/30-habits-in-30-days";
 export const THIRTY_HABITS_VIDEO_EMBED = "https://www.youtube.com/embed/ZrtWg7pUZuc";
 export const THIRTY_HABITS_HOW_IT_WORKS_IMAGE = "/assets/course-30habits.jpg";

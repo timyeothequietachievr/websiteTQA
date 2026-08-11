@@ -13,7 +13,6 @@ import {
   THIRTY_DAYS_TOGETHER,
   THIRTY_HABITS_BUY_URL,
   THIRTY_HABITS_FAQS,
-  THIRTY_HABITS_GIFT_URL,
   THIRTY_HABITS_HOW_IT_WORKS_IMAGE,
   THIRTY_HABITS_PRICING_SECTION_ID,
   THIRTY_HABITS_TOASTER_COPY,
@@ -299,7 +298,7 @@ export function ThirtyHabitsLandingPage() {
                 <Button variant="primary" size="lg" href={THIRTY_HABITS_BUY_URL} className="flex-1">
                   Buy now
                 </Button>
-                <Button variant="secondary" size="lg" href={THIRTY_HABITS_GIFT_URL} className="flex-1">
+                <Button variant="secondary" size="lg" className="flex-1">
                   Gift it
                 </Button>
               </div>
