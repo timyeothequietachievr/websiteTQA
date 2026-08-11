@@ -3,6 +3,8 @@
  * Keep in sync with the live site so cutover to www.thequietachievr.com preserves all short links.
  */
 
+import { getMasterclassRedirectDestination } from "./masterclass-promo";
+
 export type SiteRedirect = {
   source: string;
   destination: string;
@@ -63,7 +65,7 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     destination: "https://www.notion.so/Proposal-e2605a306a024ac48d3d8ebadbf3539e",
     permanent: true,
   },
-  { source: "/masterclass", destination: "/masterclassreplay", permanent: false },
+  { source: "/masterclass", destination: getMasterclassRedirectDestination(), permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
   { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
   { source: "/giveaway", destination: "https://calendar.app.google/NpPTkc4a6ZbvoNnDA", permanent: true },

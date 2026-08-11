@@ -1,0 +1,22 @@
+---
+description: Monthly live vs replay masterclass toaster and /masterclass short link
+alwaysApply: true
+---
+
+# Masterclass promo (live ↔ replay)
+
+Single source of truth: `src/lib/masterclass-promo.ts` (`MASTERCLASS_PROMO`).
+
+## Cadence
+
+- **Before the live session (weeks leading up):** `mode: "live"`. Toaster + `/masterclass` go to the current Luma RSVP URL (`liveUrl`). Update `toasterLabel` with the new date/time copy and `liveUrl` when the next Luma event is created.
+- **After the session, when Tim asks to "post up the replay":** set `mode: "replay"`. Toaster + `/masterclass` go to `/masterclassreplay` (Email Octopus signup that emails replay links). Keep `/masterclassreplay` as the stable replay gate page.
+
+## Do not
+
+- Do not hardcode Luma or replay destinations in the toaster or `site-redirects.ts` — read from `masterclass-promo.ts`.
+- Do not ship unrelated wheel-of-names / other WIP when updating masterclass promo.
+
+## Deploy
+
+After changing `MASTERCLASS_PROMO`, commit those files and push to `main` only when Tim asks to push to prod. Restart local Next if redirect changes do not apply (config is loaded at boot).
