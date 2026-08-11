@@ -24,8 +24,7 @@ export const MASTERCLASS_PROMO = {
    * Sitewide toaster copy — line 1 (schedule) then line 2 (title).
    * Arrow is rendered separately after line 2.
    */
-  toasterLine1:
-    "Free Live Masterclass (25Aug 10am AEST 8am SG | 24Aug 8pm ET/5pm PST):",
+  toasterLine1: "Free Live Masterclass (25Aug AU | 24Aug US):",
   toasterLine2:
     "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
 } as const;
