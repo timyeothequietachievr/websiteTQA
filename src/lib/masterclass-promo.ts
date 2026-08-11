@@ -6,7 +6,7 @@
  * - "replay" → after the session: send people to /masterclassreplay (EO signup for replay links)
  *
  * When Tim asks to "post up the replay" → set mode to "replay" (and refresh Luma URL next cycle).
- * When promoting the next live session → set mode to "live" and update liveUrl + toasterLabel.
+ * When promoting the next live session → set mode to "live" and update liveUrl + toaster lines.
  */
 export type MasterclassPromoMode = "live" | "replay";
 
@@ -21,11 +21,13 @@ export const MASTERCLASS_PROMO = {
   replayPath: "/masterclassreplay",
 
   /**
-   * Sitewide toaster copy (arrow is rendered separately).
-   * Update dates/times with each live session.
+   * Sitewide toaster copy — line 1 (schedule) then line 2 (title).
+   * Arrow is rendered separately after line 2.
    */
-  toasterLabel:
-    "Free Live Masterclass (25Aug 10am AEST 8am SG | 24Aug 8pm ET/5pm PST): How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
+  toasterLine1:
+    "Free Live Masterclass (25Aug 10am AEST 8am SG | 24Aug 8pm ET/5pm PST):",
+  toasterLine2:
+    "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
 } as const;
 
 export function getMasterclassPromoHref(): string {
