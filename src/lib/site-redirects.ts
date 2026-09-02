@@ -45,6 +45,12 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     permanent: true,
   },
   { source: "/applyforcoaching", destination: "https://forms.gle/3NDnX989HwCbMeLQA", permanent: true },
+  {
+    source: "/coachingreview",
+    destination:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfJrGVMhltWxkfePLTs2qfcFT6sOnuSfuUz7z8BvCDy4AoxLA/viewform?usp=sharing&ouid=108271063629062705127",
+    permanent: true,
+  },
   { source: "/write-a-review", destination: "https://forms.gle/P3q28mSRBCz5ttMYA", permanent: true },
   { source: "/research", destination: "https://calendar.app.google/zpVsNckekLmVE3uX7", permanent: true },
   {
