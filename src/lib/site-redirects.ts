@@ -72,6 +72,9 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     permanent: true,
   },
   { source: "/masterclass", destination: getMasterclassRedirectDestination(), permanent: false },
+  // Per-session Luma links — kept temporary so they can be repointed each month.
+  { source: "/masterclass01", destination: "https://luma.com/chiw44oi", permanent: false },
+  { source: "/masterclass02", destination: "https://luma.com/pohpyrpt", permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
   { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
   { source: "/giveaway", destination: "https://calendar.app.google/NpPTkc4a6ZbvoNnDA", permanent: true },
