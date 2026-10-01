@@ -76,6 +76,9 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
   { source: "/masterclass01", destination: "https://luma.com/chiw44oi", permanent: false },
   { source: "/masterclass02", destination: "https://luma.com/pohpyrpt", permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
+  // Direct replay videos. Temporary so the YouTube URL can change without a cached 308.
+  { source: "/masterclassreplay", destination: "https://youtu.be/Vbw96ZcGR70", permanent: false },
+  { source: "/masterclassreplayjul26", destination: "https://youtu.be/ziv_zoiJRI4", permanent: false },
   { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
   { source: "/300kfollowup", destination: "https://calendar.app.google/6wYiWtx3Wmk8BxP47", permanent: true },
   { source: "/giveaway", destination: "https://calendar.app.google/NpPTkc4a6ZbvoNnDA", permanent: true },

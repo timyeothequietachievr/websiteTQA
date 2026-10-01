@@ -20,7 +20,7 @@ export type MasterclassSession = {
 
 export const MASTERCLASS_PROMO = {
   /** Flip this when switching between live RSVP and replay signup. */
-  mode: "live" as MasterclassPromoMode,
+  mode: "replay" as MasterclassPromoMode,
 
   /**
    * Fallback /masterclass destination when mode is "live".
@@ -35,7 +35,7 @@ export const MASTERCLASS_PROMO = {
    * Sitewide toaster copy — line 1 (lead) then line 2 (title).
    * Live mode also renders sessions[] as signup links under the title.
    */
-  toasterLine1: "Free Live Masterclass:",
+  toasterLine1: "Watch Masterclass Replay:",
   toasterLine2:
     "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
 
