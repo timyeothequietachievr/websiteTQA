@@ -74,7 +74,7 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
   { source: "/masterclass01", destination: "https://luma.com/fzslx2w9", permanent: false },
   { source: "/masterclass02", destination: "https://luma.com/64m0y3ed", permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
-  { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
+  { source: "/300k", destination: "https://cal.id/thequietachievr/300k", permanent: true },
   { source: "/300kfollowup", destination: "https://calendar.app.google/6wYiWtx3Wmk8BxP47", permanent: true },
   { source: "/giveaway", destination: "https://calendar.app.google/NpPTkc4a6ZbvoNnDA", permanent: true },
 ];
