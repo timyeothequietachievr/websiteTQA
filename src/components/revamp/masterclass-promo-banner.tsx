@@ -14,7 +14,7 @@ function linkProps(href: string) {
 
 /**
  * Sitewide top toaster — destination follows MASTERCLASS_PROMO.mode
- * (live → Luma RSVP sessions, replay → replay gate EO form).
+ * (live → /masterclass with session dates, replay → replay gate EO form).
  */
 export function MasterclassPromoBanner() {
   const isLive = MASTERCLASS_PROMO.mode === "live";
@@ -41,7 +41,7 @@ export function MasterclassPromoBanner() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
               {sessions.map((session, index) => (
-                <span key={session.href} className="inline-flex items-center gap-x-3">
+                <span key={`${session.label}-${session.href}`} className="inline-flex items-center gap-x-3">
                   {index > 0 ? (
                     <span aria-hidden className="text-paper/45">
                       |

@@ -1,12 +1,12 @@
 /**
- * Monthly masterclass promo — single switch for toaster + /masterclass short link.
+ * Monthly masterclass promo — single switch for the sitewide toaster.
  *
  * Modes:
- * - "live"   → weeks before the session: send people to Luma RSVP (sessions[] drive the toaster)
+ * - "live"   → weeks before the session: date + session links → /masterclass landing
  * - "replay" → after the session: send people to the current replay gate (EO signup)
  *
  * When Tim asks to "post up the replay" → set mode to "replay", point replayPath at the
- * month’s gate (e.g. /masterclassreplayaug26), and refresh Luma URL next cycle.
+ * month’s gate (e.g. /masterclassreplayaug26), and refresh session times next cycle.
  * When promoting the next live session → set mode to "live", update sessions[] + toaster lines.
  */
 export type MasterclassPromoMode = "live" | "replay";
@@ -14,19 +14,16 @@ export type MasterclassPromoMode = "live" | "replay";
 export type MasterclassSession = {
   /** Short label shown as the clickable time link in the toaster. */
   label: string;
-  /** Prefer site short links (/masterclass01) so destinations stay editable in redirects. */
+  /** Prefer /masterclass so the landing page owns RSVP; short links stay for ads. */
   href: string;
 };
 
 export const MASTERCLASS_PROMO = {
   /** Flip this when switching between live RSVP and replay signup. */
-  mode: "replay" as MasterclassPromoMode,
+  mode: "live" as MasterclassPromoMode,
 
-  /**
-   * Fallback /masterclass destination when mode is "live".
-   * Prefer the first session; update if a primary session changes.
-   */
-  liveUrl: "/masterclass01",
+  /** Primary live destination — the /masterclass landing page. */
+  liveUrl: "/masterclass",
 
   /** Dedicated replay gate (Email Octopus popup). Keep stable across months. */
   replayPath: "/masterclassreplayaug26",
@@ -35,19 +32,19 @@ export const MASTERCLASS_PROMO = {
    * Sitewide toaster copy — line 1 (lead) then line 2 (title).
    * Live mode also renders sessions[] as signup links under the title.
    */
-  toasterLine1: "Watch Masterclass Replay:",
+  toasterLine1: "Free Live Masterclass:",
   toasterLine2:
     "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
 
   /** Live RSVP options — one link per time slot. Empty when mode is "replay". */
   sessions: [
     {
-      label: "Session 1: 28Sep 5pm PST/8pm ET · 29Sep 10amAEST",
-      href: "/masterclass01",
+      label: "Session 1: 28 Oct 4pm PT / 7pm ET · 29 Oct 10am AEST",
+      href: "/masterclass",
     },
     {
-      label: "Session 2: 29 Sep 9am BST / 6pmAEST",
-      href: "/masterclass02",
+      label: "Session 2: 29 Oct 8am BST / 7pm AEST",
+      href: "/masterclass",
     },
   ] satisfies MasterclassSession[],
 } as const;
