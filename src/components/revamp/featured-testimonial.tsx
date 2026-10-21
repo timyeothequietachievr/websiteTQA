@@ -1,11 +1,27 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { Container } from "@/components/revamp/primitives";
 import { ProfileAvatar } from "@/components/revamp/profile-avatar";
+
+/** Renders **bold** markers inside a quote string. */
+function QuoteWithEmphasis({ quote }: { quote: string }): ReactNode {
+  const parts = quote.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={i} className="font-semibold not-italic text-charcoal">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <span key={i}>{part}</span>
+    ),
+  );
+}
 
 /**
  * Prominent single review — TQA pattern from homepage RodQuote + Tailwind “03 with large avatar”.
  * Cream card on soft paper, decorative quote mark, avatar + attribution.
+ * Optional **…** in `quote` renders as bold emphasis.
  */
 export function FeaturedTestimonial({
   quote,
@@ -43,7 +59,9 @@ export function FeaturedTestimonial({
                   Coaching review
                 </p>
                 <blockquote className="mt-4 font-reading text-[17px] leading-relaxed text-charcoal italic sm:text-[19px]">
-                  &ldquo;{quote}&rdquo;
+                  &ldquo;
+                  <QuoteWithEmphasis quote={quote} />
+                  &rdquo;
                 </blockquote>
                 <figcaption className="mt-6 border-t border-charcoal/10 pt-6 font-sans text-sm">
                   <div className="font-bold text-charcoal">{name}</div>

@@ -3,8 +3,6 @@
  * Keep in sync with the live site so cutover to www.thequietachievr.com preserves all short links.
  */
 
-import { getMasterclassRedirectDestination } from "./masterclass-promo";
-
 export type SiteRedirect = {
   source: string;
   destination: string;
@@ -71,10 +69,10 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
     destination: "https://www.notion.so/Proposal-e2605a306a024ac48d3d8ebadbf3539e",
     permanent: true,
   },
-  { source: "/masterclass", destination: getMasterclassRedirectDestination(), permanent: false },
-  // Per-session Luma links — kept temporary so they can be repointed each month.
-  { source: "/masterclass01", destination: "https://luma.com/chiw44oi", permanent: false },
-  { source: "/masterclass02", destination: "https://luma.com/pohpyrpt", permanent: false },
+  // /masterclass is a dedicated landing page (src/app/masterclass) — do not redirect it.
+  // Per-session Luma short links — keep in sync with MASTERCLASS_LANDING.register.sessions.
+  { source: "/masterclass01", destination: "https://luma.com/fzslx2w9", permanent: false },
+  { source: "/masterclass02", destination: "https://luma.com/64m0y3ed", permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
   { source: "/300k", destination: "https://calendar.app.google/djuSbPXPWza8hQPP6", permanent: true },
   { source: "/300kfollowup", destination: "https://calendar.app.google/6wYiWtx3Wmk8BxP47", permanent: true },

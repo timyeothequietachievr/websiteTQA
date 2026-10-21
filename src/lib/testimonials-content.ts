@@ -10,15 +10,24 @@ export const TESTIMONIALS_HERO = {
   title: "Reviews and Testimonials",
 } as const;
 
-/** Featured pull-quote at the top of /testimonials */
+/**
+ * Featured pull-quote at the top of /testimonials.
+ * Wrap emphasis in **…** — FeaturedTestimonial renders those as bold.
+ */
 export const FEATURED_SITE_TESTIMONIAL: SiteTestimonial = {
   quote:
-    "It was such a breath of fresh air to work with a coach that understands me. Tim was always able to relate to my situation and often felt like he had been there himself. I left our sessions with many take-aways but also with many practical tips and strategies I could utilize the very next day.",
-  name: "Rod Naber",
-  role: "Lead Product Designer, Stripe, USA",
+    "**Working with Tim was one of the best investments I've made in my career.** For more than a decade in tech, I did everything I thought I was supposed to — worked incredibly hard, shipped award-winning products, sought mentors, studied communication — and I still kept getting passed over. Tim helped me realize I didn't need to become someone else. As a thoughtful, empathetic introvert, I needed to understand the value of who I already was and turn those strengths into influence. **Once I started pulling the right levers, things changed.** I became a trusted thought partner to founders and company leaders. My work was called \"game-changing.\" I won a company-wide award. **After years of feeling invisible, suddenly I was being seen.** The title and compensation growth followed — but the biggest change wasn't my title or salary. I stopped feeling small. I started walking into rooms thinking: I belong here. My voice matters. If you're a thoughtful, hardworking someone who feels like you're doing everything right but still aren't being seen, **I genuinely believe Tim can change the trajectory of your career.**",
+  name: "Thuan Nguyen",
+  role: "Staff Product Designer, Brightline, USA",
 };
 
 export const SITE_TESTIMONIALS: SiteTestimonial[] = [
+  {
+    quote:
+      "I'd just been made redundant and really needed help finding another job quickly. I hadn't interviewed in over seven years, and wasn't prepared for today's brutal job market. Tim gave me a plan and the tools I needed — he wasn't just a career coach; he was a therapist, a friend, and my biggest fan. The biggest shift was my confidence. I aced the whiteboard challenge that got me the job, and walked away knowing I could do it again. Working with Tim was one of the best decisions I've made. I wouldn't have landed a job within four months on my own.",
+    name: "Dan Fowler",
+    role: "Senior Product Designer, hipages, Australia",
+  },
   {
     quote:
       "It was such a breath of fresh air to work with a coach that understands me. Tim was always able to relate to my situation and often felt like he had been there himself. I left our sessions with many take-aways but also with many practical tips and strategies I could utilize the very next day.",

@@ -66,12 +66,17 @@ export function Navigation({
   ctaHref = "/#work-with-me",
   hideNavLinks = false,
   wordmarkTagline = "Career Coach",
+  promoBanner,
+  hidePromoBanner = false,
 }: {
   ctaLabel?: string;
   ctaHref?: string;
   /** Coaching page: wordmark + CTA only */
   hideNavLinks?: boolean;
   wordmarkTagline?: string;
+  /** Replace the sitewide masterclass toaster (e.g. page-specific top bar). */
+  promoBanner?: ReactNode;
+  hidePromoBanner?: boolean;
 } = {}) {
   const NAV = MAIN_NAV;
   const [scrolled, setScrolled] = useState(false);
@@ -93,7 +98,7 @@ export function Navigation({
         transition: "background .2s ease, border-color .2s ease",
       }}
     >
-      <MasterclassPromoBanner />
+      {hidePromoBanner ? null : promoBanner !== undefined ? promoBanner : <MasterclassPromoBanner />}
       <Container>
         <div className="flex items-center justify-between" style={{ height: "76px" }}>
           <Wordmark tagline={wordmarkTagline} />
