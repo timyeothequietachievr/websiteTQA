@@ -169,7 +169,7 @@ export const MASTERCLASS_LANDING = {
       },
       {
         headline: "Leadership role in 11 weeks, after nearly 20 years stuck at Senior",
-        subline: "From Senior to Leadership.",
+        subline: "Product Design Lead on the Growth team",
         image: {
           src: "/masterclass/results/20-years-stuck-as-senior.webp",
           fallbackSrc: "/masterclass/results/20-years-stuck-as-senior.jpeg",
