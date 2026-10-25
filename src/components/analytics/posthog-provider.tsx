@@ -12,6 +12,10 @@ const POSTHOG_KEY =
   process.env.NEXT_PUBLIC_POSTHOG_KEY || "phc_vvzGombu49viAehfCEQd9fKbnSHo6dWoDFMaPGiSMgYc";
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
 
+// Survives the effect replay React runs on mount in development. A new document
+// (full load) starts fresh, and a later route still captures because the key changes.
+let lastCapturedPageviewKey: string | null = null;
+
 function getElementLabel(element: Element) {
   return (
     element.getAttribute("aria-label") ||
@@ -21,27 +25,36 @@ function getElementLabel(element: Element) {
   );
 }
 
-function PostHogPageView() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+function captureRoutePageview(pathname: string, search: string) {
+  if (!POSTHOG_KEY || !POSTHOG_HOST || !posthog.__loaded) {
+    return;
+  }
 
-  useEffect(() => {
-    if (!POSTHOG_KEY || !POSTHOG_HOST || !posthog.__loaded) {
-      return;
-    }
+  const key = search ? `${pathname}?${search}` : pathname;
+  if (lastCapturedPageviewKey === key) {
+    return;
+  }
+  lastCapturedPageviewKey = key;
 
-    posthog.capture("$pageview", {
-      $current_url: window.location.href,
-      path: pathname,
-      search: searchParams.toString(),
-      title: document.title,
-    });
-  }, [pathname, searchParams]);
+  const locationSearch = search ? `?${search}` : "";
+  const currentUrl =
+    window.location.pathname === pathname && window.location.search === locationSearch
+      ? window.location.href
+      : `${window.location.origin}${pathname}${locationSearch}`;
 
-  return null;
+  posthog.capture("$pageview", {
+    $current_url: currentUrl,
+    path: pathname,
+    search,
+    title: document.title,
+  });
 }
 
 export function PostHogProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const search = searchParams.toString();
+
   useEffect(() => {
     if (!POSTHOG_KEY || !POSTHOG_HOST || posthog.__loaded) {
       return;
@@ -50,6 +63,7 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
     posthog.init(POSTHOG_KEY, {
       api_host: POSTHOG_HOST,
       autocapture: true,
+      // One manual $pageview per load and per client navigation, including search changes.
       capture_pageview: false,
       capture_pageleave: true,
       cross_subdomain_cookie: true,
@@ -92,6 +106,12 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
+    // Declared after init so the first load is captured once posthog.capture
+    // accepts events. A child effect runs first and used to drop that pageview.
+    captureRoutePageview(pathname, search);
+  }, [pathname, search]);
+
+  useEffect(() => {
     if (!POSTHOG_KEY || !POSTHOG_HOST) {
       return;
     }
@@ -121,10 +141,5 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
     return () => document.removeEventListener("click", handleClick, true);
   }, []);
 
-  return (
-    <>
-      <PostHogPageView />
-      {children}
-    </>
-  );
+  return children;
 }
