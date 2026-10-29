@@ -179,8 +179,22 @@ function HeroBanner() {
 
 export function MasterclassLandingPage() {
   useEffect(() => {
-    void ensureMasterclassReplayEoReady();
-    return bindMasterclassReplayEoSuccessRedirect(MASTERCLASS_REPLAY_YOUTUBE_URL);
+    const shouldAutoOpen =
+      typeof window !== "undefined" &&
+      new URLSearchParams(window.location.search).get("watch") === "1";
+
+    let cancelled = false;
+    (async () => {
+      await ensureMasterclassReplayEoReady();
+      if (cancelled || !shouldAutoOpen) return;
+      await openMasterclassReplayEoForm();
+    })();
+
+    const unbind = bindMasterclassReplayEoSuccessRedirect(MASTERCLASS_REPLAY_YOUTUBE_URL);
+    return () => {
+      cancelled = true;
+      unbind();
+    };
   }, []);
 
   return (
