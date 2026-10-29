@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Get the free masterclass replay: How I went from overlooked to $300k Principal & Leadership Roles.",
 };
 
-const YOUTUBE_REPLAY_URL = "https://youtu.be/lIHCdGZgUJw";
+const YOUTUBE_REPLAY_URL = "https://youtu.be/vgsnCR-8ezE";
 
 export default function MasterclassReplayRoute() {
   return (
