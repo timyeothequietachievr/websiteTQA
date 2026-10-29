@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { BookLogoCloudC148 } from "@/components/book/book-logo-cloud-c148";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
@@ -10,6 +10,12 @@ import {
   MASTERCLASS_LANDING,
   activeHeroOption,
 } from "@/lib/masterclass-landing-content";
+import {
+  MASTERCLASS_REPLAY_YOUTUBE_URL,
+  bindMasterclassReplayEoSuccessRedirect,
+  ensureMasterclassReplayEoReady,
+  openMasterclassReplayEoForm,
+} from "@/lib/masterclass-replay-eo";
 
 const C = MASTERCLASS_LANDING;
 const HERO = MASTERCLASS_HERO_OPTIONS[activeHeroOption];
@@ -46,7 +52,11 @@ function SectionTitle({ children, onDark = false }: { children: ReactNode; onDar
   );
 }
 
-function RegisterAnchorCta({
+function openReplayForm() {
+  void openMasterclassReplayEoForm();
+}
+
+function WatchReplayCta({
   label,
   variant = "primary",
 }: {
@@ -54,7 +64,7 @@ function RegisterAnchorCta({
   variant?: "primary" | "cream" | "ink";
 }) {
   return (
-    <Button href="#register" variant={variant} size="lg" className="min-h-11">
+    <Button variant={variant} size="lg" className="min-h-11" onClick={openReplayForm}>
       {label}
     </Button>
   );
@@ -64,7 +74,7 @@ function MasterclassTopBar() {
   return (
     <div
       role="region"
-      aria-label="Live masterclass"
+      aria-label="Masterclass replay"
       className="relative"
       style={{
         background: "var(--tqa-ember-deep)",
@@ -73,13 +83,14 @@ function MasterclassTopBar() {
       }}
     >
       <div className="mx-auto flex max-w-[1200px] items-center justify-center px-5 py-2.5 sm:px-8 lg:px-12">
-        <a
-          href={C.topBar.href}
-          className="min-h-11 min-w-0 text-center font-sans text-[13px] font-semibold leading-snug no-underline sm:text-[14px]"
+        <button
+          type="button"
+          onClick={openReplayForm}
+          className="min-h-11 min-w-0 cursor-pointer border-0 bg-transparent text-center font-sans text-[13px] font-semibold leading-snug sm:text-[14px]"
           style={{ color: "inherit", display: "inline-flex", alignItems: "center" }}
         >
           {C.topBar.label}
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -137,7 +148,7 @@ function HeroBanner() {
           {C.hero.dateLine}
         </p>
         <div className="mt-6">
-          <RegisterAnchorCta label={C.hero.cta} variant={HERO.ctaVariant} />
+          <WatchReplayCta label={C.hero.cta} variant={HERO.ctaVariant} />
         </div>
       </div>
 
@@ -167,12 +178,18 @@ function HeroBanner() {
 }
 
 export function MasterclassLandingPage() {
+  useEffect(() => {
+    void ensureMasterclassReplayEoReady();
+    return bindMasterclassReplayEoSuccessRedirect(MASTERCLASS_REPLAY_YOUTUBE_URL);
+  }, []);
+
   return (
     <div className="min-h-full bg-paper">
       <Navigation
         hideNavLinks
         ctaLabel={C.stickyCta.label}
         ctaHref={C.stickyCta.href}
+        onCtaClick={openReplayForm}
         promoBanner={<MasterclassTopBar />}
       />
 
@@ -186,43 +203,6 @@ export function MasterclassLandingPage() {
 
         {/* 2. Logos */}
         <BookLogoCloudC148 heading={C.logosHeading} />
-
-        {/* 3. Register */}
-        <section id={C.register.sectionId} className="scroll-mt-28 border-y border-charcoal/10 py-14 sm:py-18">
-          <Container>
-            <div className="mx-auto max-w-[720px] text-center">
-              <SectionTitle>{C.register.headline}</SectionTitle>
-            </div>
-            <div className="mx-auto mt-8 grid max-w-[920px] gap-4 sm:grid-cols-2">
-              {C.register.sessions.map((session) => (
-                <div
-                  key={session.href}
-                  className="flex flex-col items-start rounded-lg bg-paper p-6 text-left ring-1 ring-ink/15"
-                >
-                  <p className="font-display text-xl font-semibold text-ink">{session.title}</p>
-                  <div className="mt-4 space-y-2">
-                    {session.lines.map((line) => (
-                      <p key={line} className="font-sans text-[14px] leading-relaxed text-warm-700">
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="mt-6">
-                    <a
-                      href={session.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-h-11 items-center justify-center rounded px-6 font-sans text-[15px] font-bold"
-                      style={{ background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}
-                    >
-                      {session.cta}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Container>
-        </section>
 
         {/* 4. What you'll get */}
         <ContainedBand tone="sunrise" padY="clamp(56px, 6vw, 80px)">
@@ -241,7 +221,7 @@ export function MasterclassLandingPage() {
               ))}
             </ul>
             <div className="mt-10">
-              <RegisterAnchorCta label="Save my seat →" />
+              <WatchReplayCta label={C.hero.cta} />
             </div>
           </div>
         </ContainedBand>
@@ -359,7 +339,7 @@ export function MasterclassLandingPage() {
                 ))}
               </div>
               <div className="mt-8">
-                <RegisterAnchorCta label="Save my seat →" variant="ink" />
+                <WatchReplayCta label={C.hero.cta} variant="ink" />
               </div>
             </div>
           </div>
@@ -435,7 +415,7 @@ export function MasterclassLandingPage() {
                 {C.closing.copy2}
               </p>
               <div className="mt-8 flex flex-col items-center">
-                <RegisterAnchorCta label={C.closing.cta} />
+                <WatchReplayCta label={C.closing.cta} />
               </div>
             </div>
           </Container>

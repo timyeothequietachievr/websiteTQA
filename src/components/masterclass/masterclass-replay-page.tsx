@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { Navigation } from "@/components/revamp/navigation";
 import { Container, Button } from "@/components/revamp/primitives";
 import { FooterRev } from "@/components/revamp/sections-3";
-
-const DEFAULT_EO_FORM_ID = "96ef9e38-8a7a-11f1-8c9e-5dbe765ef454";
-const EO_SCRIPT_LOADED_ATTR = "data-eo-loaded";
-const EO_SUCCESS_EVENT = "emailoctopus:form.success";
+import {
+  MASTERCLASS_REPLAY_EO_FORM_ID,
+  MASTERCLASS_REPLAY_YOUTUBE_URL,
+  bindMasterclassReplayEoSuccessRedirect,
+  openMasterclassReplayEoForm,
+} from "@/lib/masterclass-replay-eo";
 
 export type MasterclassReplayPageProps = {
   /** Optional post-signup destination (overrides EO form redirect). */
@@ -18,82 +20,13 @@ export type MasterclassReplayPageProps = {
   description?: string;
 };
 
-function getForm(formId: string): HTMLElement | null {
-  return document.querySelector(`[data-form="${formId}"]:not(script)`) as HTMLElement | null;
-}
-
-function getScript(formId: string): HTMLScriptElement | null {
-  return document.querySelector(`script[data-form="${formId}"]`) as HTMLScriptElement | null;
-}
-
-function showForm(form: HTMLElement) {
-  form.style.removeProperty("display");
-  form.classList.add("active");
-}
-
-function isVisible(form: HTMLElement) {
-  return form.classList.contains("active") && getComputedStyle(form).display !== "none";
-}
-
-/**
- * Load EO script and wait until it has fully executed.
- * Form node appears mid-script; opening too early gets overwritten by EO’s hide.
- */
-function ensureReady(formId: string): Promise<HTMLElement | null> {
-  const src = `https://eomail5.com/form/${formId}.js`;
-
-  return new Promise((resolve) => {
-    const existingForm = getForm(formId);
-    const existingScript = getScript(formId);
-
-    if (existingForm && existingScript?.getAttribute(EO_SCRIPT_LOADED_ATTR) === "1") {
-      resolve(existingForm);
-      return;
-    }
-
-    const finish = (scriptEl: HTMLScriptElement) => {
-      scriptEl.setAttribute(EO_SCRIPT_LOADED_ATTR, "1");
-      window.setTimeout(() => resolve(getForm(formId)), 80);
-    };
-
-    if (existingScript) {
-      if (existingScript.getAttribute(EO_SCRIPT_LOADED_ATTR) === "1") {
-        resolve(getForm(formId));
-        return;
-      }
-      existingScript.addEventListener("load", () => finish(existingScript), { once: true });
-      window.setTimeout(() => finish(existingScript), 400);
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = src;
-    script.setAttribute("data-form", formId);
-    script.addEventListener("load", () => finish(script), { once: true });
-    script.addEventListener("error", () => resolve(null), { once: true });
-    document.body.appendChild(script);
-  });
-}
-
-async function openMasterclassForm(formId: string) {
-  const form = await ensureReady(formId);
-  if (!form) return false;
-  for (let i = 0; i < 12; i += 1) {
-    showForm(form);
-    await new Promise((r) => window.setTimeout(r, 40));
-    if (isVisible(form)) return true;
-  }
-  return isVisible(form);
-}
-
 /**
  * Dedicated landing for the masterclass replay Email Octopus popup.
  * Loads EO only on this page and opens the modal once the script is ready.
  */
 export function MasterclassReplayPage({
-  successRedirectUrl,
-  eoFormId = DEFAULT_EO_FORM_ID,
+  successRedirectUrl = MASTERCLASS_REPLAY_YOUTUBE_URL,
+  eoFormId = MASTERCLASS_REPLAY_EO_FORM_ID,
   eyebrow = "Free masterclass replay",
   title = "Watch Masterclass: How I went from overlooked to $300k Principal & Leadership Roles",
   description = "Enter your email in the form to get the replay links sent to your inbox.",
@@ -103,7 +36,7 @@ export function MasterclassReplayPage({
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const opened = await openMasterclassForm(eoFormId);
+      const opened = await openMasterclassReplayEoForm(eoFormId);
       if (cancelled) return;
       setStatus(opened ? "ready" : "error");
     })();
@@ -112,27 +45,9 @@ export function MasterclassReplayPage({
     };
   }, [eoFormId]);
 
-  // EO form success fires this event, then may navigate to its own redirect URL.
-  // Assign immediately and briefly re-assert so our destination wins the race.
   useEffect(() => {
     if (!successRedirectUrl) return;
-
-    const go = () => {
-      window.top!.location.href = successRedirectUrl;
-    };
-
-    const onSuccess = (event: Event) => {
-      const detail = (event as CustomEvent<{ form_id?: string }>).detail;
-      if (detail?.form_id && detail.form_id !== eoFormId) return;
-      go();
-      const intervalId = window.setInterval(go, 16);
-      window.setTimeout(() => window.clearInterval(intervalId), 400);
-    };
-
-    document.addEventListener(EO_SUCCESS_EVENT, onSuccess);
-    return () => {
-      document.removeEventListener(EO_SUCCESS_EVENT, onSuccess);
-    };
+    return bindMasterclassReplayEoSuccessRedirect(successRedirectUrl, eoFormId);
   }, [eoFormId, successRedirectUrl]);
 
   return (
@@ -157,7 +72,7 @@ export function MasterclassReplayPage({
                   type="button"
                   data-eo-form-toggle-id={eoFormId}
                   onClick={() => {
-                    void openMasterclassForm(eoFormId);
+                    void openMasterclassReplayEoForm(eoFormId);
                   }}
                   className="inline-flex h-12 items-center justify-center rounded px-6 font-sans text-[15px] font-bold"
                   style={{ background: "var(--tqa-ember)", color: "var(--tqa-paper)" }}

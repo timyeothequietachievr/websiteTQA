@@ -58,27 +58,27 @@ export const MASTERCLASS_LANDING = {
   },
 
   topBar: {
-    label: "Free live masterclass · 28 & 29 October 2026 · Save my seat →",
-    href: "#register",
+    label: "Watch the masterclass replay · Watch the replay →",
+    href: "#watch-replay",
   },
 
   stickyCta: {
-    label: "Save my seat",
-    href: "#register",
+    label: "Watch the replay",
+    href: "#watch-replay",
   },
 
   hero: {
-    eyebrow: "Free live masterclass · 60 minutes",
+    eyebrow: "Free masterclass replay",
     h1: "Overlooked to $300k Principal & Leadership Roles",
     sub1:
       "If someone else keeps landing your dream job, it's not your technical skills. It's how senior hiring decisions get made.",
     pov: "Final rounds don't go to the best candidate. They go to the lowest-risk hire.",
     sub2:
       "I'll show you the 4 rules that landed me Head of Design at three $700M fintech startups. My clients now use them to land $250k–$350k Principal, Staff and Leadership roles.",
-    dateLine: "28 & 29 October 2026 · 2 live sessions",
+    dateLine: "Next masterclass: TBC",
     timezoneLink: "See it in your time zone →",
-    cta: "Save my seat →",
-    micro: "Free. Live only.",
+    cta: "Watch the replay →",
+    micro: "Free. Enter your email to watch.",
     proof:
       "3x Head of Design at $700M fintech startups · 20+ years in tech · Coached [TIM TO CONFIRM: 1,000+] people through job offers and salary negotiations",
   },
@@ -276,8 +276,8 @@ export const MASTERCLASS_LANDING = {
     copy1:
       "60 minutes. The rules nobody taught you about how senior hiring decisions get made. From someone who was laid off with 28 days to leave Australia, and then became 3x Head of Design at $700M startups.",
     copy2: "Tired of being overlooked for the job and salary you deserve?",
-    cta: "Save my seat →",
-    micro: "Free. Live only.",
+    cta: "Watch the replay →",
+    micro: "Free. Enter your email to watch.",
   },
 
   disclaimer:

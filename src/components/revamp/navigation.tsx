@@ -68,6 +68,7 @@ export function Navigation({
   wordmarkTagline = "Career Coach",
   promoBanner,
   hidePromoBanner = false,
+  onCtaClick,
 }: {
   ctaLabel?: string;
   ctaHref?: string;
@@ -77,6 +78,8 @@ export function Navigation({
   /** Replace the sitewide masterclass toaster (e.g. page-specific top bar). */
   promoBanner?: ReactNode;
   hidePromoBanner?: boolean;
+  /** When set, sticky CTA acts as a button (e.g. open Email Octopus popup). */
+  onCtaClick?: () => void;
 } = {}) {
   const NAV = MAIN_NAV;
   const [scrolled, setScrolled] = useState(false);
@@ -114,20 +117,38 @@ export function Navigation({
             <div className="hidden lg:block" aria-hidden />
           )}
           <div className="flex items-center gap-3">
-            <Link
-              href={ctaHref}
-              className="inline-flex shrink-0 items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
-              style={{
-                background: "var(--tqa-ember)",
-                color: "var(--tqa-paper)",
-                borderRadius: "4px",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
-            >
-              {ctaLabel}
-              <span aria-hidden>→</span>
-            </Link>
+            {onCtaClick ? (
+              <button
+                type="button"
+                onClick={onCtaClick}
+                className="inline-flex h-10 shrink-0 cursor-pointer items-center gap-2 border-0 px-4 font-sans text-[14px] font-semibold"
+                style={{
+                  background: "var(--tqa-ember)",
+                  color: "var(--tqa-paper)",
+                  borderRadius: "4px",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
+              >
+                {ctaLabel}
+                <span aria-hidden>→</span>
+              </button>
+            ) : (
+              <Link
+                href={ctaHref}
+                className="inline-flex shrink-0 items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
+                style={{
+                  background: "var(--tqa-ember)",
+                  color: "var(--tqa-paper)",
+                  borderRadius: "4px",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
+              >
+                {ctaLabel}
+                <span aria-hidden>→</span>
+              </Link>
+            )}
             {!hideNavLinks ? (
               <button
                 type="button"

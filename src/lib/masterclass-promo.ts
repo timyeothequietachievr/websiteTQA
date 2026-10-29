@@ -25,8 +25,8 @@ export const MASTERCLASS_PROMO = {
   /** Primary live destination — the /masterclass landing page. */
   liveUrl: "/masterclass",
 
-  /** Dedicated replay gate (Email Octopus popup). Keep stable across months. */
-  replayPath: "/masterclassreplay",
+  /** Replay landing — CTAs open the Email Octopus popup, then redirect to YouTube. */
+  replayPath: "/masterclass",
 
   /**
    * Sitewide toaster copy — line 1 (lead) then line 2 (title).
