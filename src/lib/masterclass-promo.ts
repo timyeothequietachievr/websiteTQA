@@ -32,9 +32,9 @@ export const MASTERCLASS_PROMO = {
    * Sitewide toaster copy — line 1 (lead) then line 2 (title).
    * Live mode also renders sessions[] as signup links under the title.
    */
-  toasterLine1: "Watch Masterclass Replay:",
-  toasterLine2:
-    "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
+  /** Replay mode: single-line toaster (line2 unused). */
+  toasterLine1: "Watch the masterclass replay",
+  toasterLine2: "",
 
   /** Live RSVP options — one link per time slot. Empty when mode is "replay". */
   sessions: [

@@ -68,9 +68,15 @@ export function MasterclassPromoBanner() {
             style={{ color: "inherit" }}
           >
             <span className="block font-sans text-[13px] font-semibold leading-snug sm:text-[14px]">
-              {MASTERCLASS_PROMO.toasterLine1}
-              <br />
-              {MASTERCLASS_PROMO.toasterLine2}{" "}
+              {MASTERCLASS_PROMO.toasterLine2 ? (
+                <>
+                  {MASTERCLASS_PROMO.toasterLine1}
+                  <br />
+                  {MASTERCLASS_PROMO.toasterLine2}{" "}
+                </>
+              ) : (
+                <>{MASTERCLASS_PROMO.toasterLine1} </>
+              )}
               <span aria-hidden className="text-sunrise">
                 →
               </span>

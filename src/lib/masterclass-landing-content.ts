@@ -52,13 +52,13 @@ export const activeHeroOption: MasterclassHeroOptionId = 1;
 
 export const MASTERCLASS_LANDING = {
   meta: {
-    title: "Free Masterclass: Overlooked to $300k Principal & Leadership Roles | Tim Yeo",
+    title: "Masterclass Replay: Overlooked to $300k Principal & Leadership Roles | Tim Yeo",
     description:
-      "Free live masterclass, Thu 29 Oct 2026. Why final rounds go to the lowest-risk hire, not the best candidate, and how senior tech pros land $250k–$350k roles.",
+      "Watch the free masterclass replay. Why final rounds go to the lowest-risk hire, not the best candidate, and how senior tech pros land $250k–$350k roles.",
   },
 
   topBar: {
-    label: "Watch the masterclass replay · Watch the replay →",
+    label: "Watch the masterclass replay →",
     href: "#watch-replay",
   },
 
@@ -224,7 +224,7 @@ export const MASTERCLASS_LANDING = {
         rest: ", written an Amazon #1 book, The Quiet Achiever, been a keynote speaker at conferences, and coached 1,000+ people.",
       },
       {
-        bold: "In this masterclass",
+        bold: "In this masterclass replay",
         rest: ", I'll show you exactly what I changed, and how my clients now land $300k Principal and leadership roles.",
       },
     ],
@@ -251,11 +251,11 @@ export const MASTERCLASS_LANDING = {
     },
     {
       q: "Am I senior enough for this?",
-      a: "This is designed for people who are ambitious, brilliant at their craft and want to level up in their career but don't know how. If that's you, join us.",
+      a: "This is designed for people who are ambitious, brilliant at their craft and want to level up in their career but don't know how. If that's you, watch the replay.",
     },
     {
       q: "Is this only for Asian men in tech?",
-      a: "No. I coach women and non-Asians too. If you're brilliant at your craft and keep getting overlooked, join us.",
+      a: "No. I coach women and non-Asians too. If you're brilliant at your craft and keep getting overlooked, watch the replay.",
     },
     {
       q: "Will there be a pitch?",
@@ -263,11 +263,11 @@ export const MASTERCLASS_LANDING = {
     },
     {
       q: "I've been burned by career coaches before.",
-      a: "I get it. That's why my coaching comes with a 100% work-for-free guarantee. I'll explain exactly how it works on the call.",
+      a: "I get it. That's why my coaching comes with a 100% work-for-free guarantee. I'll explain exactly how it works in the replay.",
     },
     {
       q: "How long is it?",
-      a: "60 minutes, including live Q&A.",
+      a: "About 60 minutes.",
     },
   ],
 
