@@ -6,7 +6,7 @@
  * - "replay" → after the session: send people to the current replay gate (EO signup)
  *
  * When Tim asks to "post up the replay" → set mode to "replay", point replayPath at the
- * month’s gate (e.g. /masterclassreplayaug26), and refresh session times next cycle.
+ * month’s gate (e.g. /masterclassreplay), and refresh the post-signup YouTube URL on that page.
  * When promoting the next live session → set mode to "live", update sessions[] + toaster lines.
  */
 export type MasterclassPromoMode = "live" | "replay";
@@ -20,19 +20,19 @@ export type MasterclassSession = {
 
 export const MASTERCLASS_PROMO = {
   /** Flip this when switching between live RSVP and replay signup. */
-  mode: "live" as MasterclassPromoMode,
+  mode: "replay" as MasterclassPromoMode,
 
   /** Primary live destination — the /masterclass landing page. */
   liveUrl: "/masterclass",
 
   /** Dedicated replay gate (Email Octopus popup). Keep stable across months. */
-  replayPath: "/masterclassreplayaug26",
+  replayPath: "/masterclassreplay",
 
   /**
    * Sitewide toaster copy — line 1 (lead) then line 2 (title).
    * Live mode also renders sessions[] as signup links under the title.
    */
-  toasterLine1: "Free Live Masterclass:",
+  toasterLine1: "Watch Masterclass Replay:",
   toasterLine2:
     "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
 
