@@ -69,6 +69,8 @@ export function Navigation({
   promoBanner,
   hidePromoBanner = false,
   onCtaClick,
+  textLinkLabel,
+  textLinkHref,
 }: {
   ctaLabel?: string;
   ctaHref?: string;
@@ -80,6 +82,9 @@ export function Navigation({
   hidePromoBanner?: boolean;
   /** When set, sticky CTA acts as a button (e.g. open Email Octopus popup). */
   onCtaClick?: () => void;
+  /** Optional text link shown to the right of the primary CTA (e.g. Log in). */
+  textLinkLabel?: string;
+  textLinkHref?: string;
 } = {}) {
   const NAV = MAIN_NAV;
   const [scrolled, setScrolled] = useState(false);
@@ -149,6 +154,17 @@ export function Navigation({
                 <span aria-hidden>→</span>
               </Link>
             )}
+            {textLinkLabel && textLinkHref ? (
+              <Link
+                href={textLinkHref}
+                className="inline-flex h-10 shrink-0 items-center px-1 font-sans text-[14px] font-semibold underline underline-offset-4"
+                style={{ color: "var(--tqa-charcoal)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-ember)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--tqa-charcoal)")}
+              >
+                {textLinkLabel}
+              </Link>
+            ) : null}
             {!hideNavLinks ? (
               <button
                 type="button"
