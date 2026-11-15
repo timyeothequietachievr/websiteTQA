@@ -14,7 +14,7 @@ export const JOBBIE_LANDING = {
 
   hero: {
     eyebrow: "Your personal AI-powered talent recruiter",
-    h1: "Get past the ATS and into the room",
+    h1: "Never get ghosted by ATS again",
     lede: [
       "You can't show them how good you are if you never reach the interview.",
       "I built Jobbie so my clients don't have to job search on their own. Position yourself as a low-risk hire and get your fair shot at an interview.",

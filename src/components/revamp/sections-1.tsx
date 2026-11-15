@@ -175,7 +175,7 @@ function SocialProofStrip() {
       <div className="bg-paper py-5 sm:py-6">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-lg/7 font-semibold text-charcoal">
-            Trusted by quiet achievers from top companies around the world
+            Trusted by tech professionals from top companies around the world
           </h2>
           <div className="mx-auto mt-4 grid max-w-lg grid-cols-4 items-center gap-x-6 gap-y-4 sm:max-w-xl sm:grid-cols-6 sm:gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             {BOOK_COMPANY_LOGOS.map((logo) => (

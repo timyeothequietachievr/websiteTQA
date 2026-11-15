@@ -90,7 +90,7 @@ export function CoachingLandingPage() {
         <CoachingHero />
 
         <BookLogoCloudC148
-          heading="Trusted by tech professionals"
+          heading="Trusted by tech professionals from top companies around the world"
           reviewsHref="#testimonials"
         />
 
@@ -265,12 +265,7 @@ export function CoachingLandingPage() {
                   </DisclosureButton>
                 </dt>
                 <DisclosurePanel as="dd" className="mt-3">
-                  <p className="font-reading text-[16px] leading-relaxed text-warm-700">
-                    Coaching includes 1 year access to these premium tools. Values are approximate
-                    1-year retail. Offers that are almost gone or temporarily unavailable are not
-                    listed.
-                  </p>
-                  <ul className="mt-4 space-y-3">
+                  <ul className="space-y-3">
                     {COACHING_AI_TOOLS_FULL.map((tool) => (
                       <li
                         key={tool.name}

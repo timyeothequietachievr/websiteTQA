@@ -305,15 +305,12 @@ export const COACHING_AI_TOOLS_FEATURED = [
 
 export const COACHING_AI_TOOLS_FULL = [
   { name: "Brain.fm", value: "$100", blurb: "Focus music for deep work" },
-  { name: "Customer.io Essentials", value: "$1,200", blurb: "Customer engagement for product-led teams" },
   { name: "ElevenLabs Creator", value: "$264", blurb: "Voice, video, image and music generation" },
-  { name: "Fin AI Agent + Advanced", value: "$7,140", blurb: "AI customer service agent (5 seats)" },
   { name: "Framer Pro", value: "$360", blurb: "Design-first website builder" },
   { name: "Gamma Pro", value: "$216", blurb: "AI presentations and websites" },
   { name: "Google AI Pro", value: "$240", blurb: "Gemini, NotebookLM, Flow, 5 TB storage" },
   { name: "Granola Business", value: "$1,680", blurb: "AI notepad for meetings (10 seats)" },
   { name: "Higgsfield Pro", value: "$348", blurb: "Agentic AI content creation" },
-  { name: "Jam Team", value: "$1,920", blurb: "Bug reports for developers (10 seats)" },
   { name: "Linear Business", value: "$1,080", blurb: "Product planning and issue tracking (5 seats)" },
   { name: "Lovable Pro", value: "$252", blurb: "AI app builder from idea to production" },
   { name: "Magic Patterns Starter", value: "$240", blurb: "AI prototyping for product teams" },
@@ -321,7 +318,6 @@ export const COACHING_AI_TOOLS_FULL = [
   { name: "Mobbin Team", value: "$1,920", blurb: "UI/UX reference library (10 seats)" },
   { name: "n8n Cloud Starter", value: "$240", blurb: "Visual AI and workflow automation" },
   { name: "Notion Business", value: "$240", blurb: "Collaborative AI workspace" },
-  { name: "Pangram Professional", value: "$540", blurb: "AI content detector" },
   { name: "PostHog Scale", value: "$16,500", blurb: "Product analytics with 2× monthly limits" },
   { name: "Railway Hobby", value: "$245", blurb: "AI-native cloud hosting" },
   { name: "Readwise + Reader", value: "$120", blurb: "Reading, highlights and AI unpack" },
@@ -329,21 +325,20 @@ export const COACHING_AI_TOOLS_FULL = [
   { name: "Runway Pro", value: "$336", blurb: "AI video, image and audio models" },
   { name: "Stripe Atlas", value: "$200", blurb: "40% off company incorporation" },
   { name: "Supercut Pro", value: "$1,800", blurb: "AI screen recording (10 seats)" },
-  { name: "Waking Up", value: "$129", blurb: "Meditation and mental OS" },
   { name: "Wispr Flow Pro", value: "$180", blurb: "Voice dictation with zero edits" },
   { name: "X Premium", value: "$360", blurb: "Grok, Grok Build/Cursor and X Premium" },
 ] as const;
 
 export const COACHING_AI_TOOLS = {
   eyebrow: "Included with coaching",
-  title: "1 year free of AI tools",
+  title: "1 year free subscriptions to AI tools",
   intro: [
-    "AI has changed the game. Employers now expect AI skills as a baseline requirement. But learning and paying for these tools are costly. That's why I've partnered with 20+ leading AI companies to offer you 1 year subscription to all of them.",
+    "AI has changed the game. Employers now expect AI skills as a baseline requirement. But learning and paying for these tools are costly. That's why I've partnered with 20+ leading AI companies to offer you 1 year subscriptions to the most important AI tools employers are looking for.",
     "Free for all my coaching clients; not sold separately.",
   ],
   totalValueLabel: "Total value",
-  totalValue: "$38,000+",
-  otherCountLabel: "+ 21 more tools",
+  totalValue: "$27,000+",
+  otherCountLabel: "+ 16 more tools",
   faqTitle: "What's included in the 1 year AI tools access?",
 } as const;
 
@@ -360,7 +355,7 @@ export const COACHING_EVERYTHING_INCLUDED = {
     },
     {
       lead: "1 year free subscription of premium AI tools.",
-      body: "Notion, Wispr Flow, Mobbin, Granola, Lovable, Framer, Google AI Pro and 20+ more — worth over $38,000.",
+      body: "Notion, Wispr Flow, Mobbin, Granola, Lovable, Framer, Google AI Pro and 16+ more — worth over $27,000.",
       learnMoreHref: "#PremiumAItools",
     },
   ],

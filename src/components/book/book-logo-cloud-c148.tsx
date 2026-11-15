@@ -3,7 +3,7 @@ import { BOOK_COMPANY_LOGOS } from "@/lib/book-company-logos";
 
 export function BookLogoCloudC148({
   reviewsHref,
-  heading = "Trusted by quiet achievers from top companies around the world",
+  heading = "Trusted by tech professionals from top companies around the world",
 }: {
   /** Omit to hide the reviews CTA. */
   reviewsHref?: string;
