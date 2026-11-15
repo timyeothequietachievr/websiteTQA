@@ -89,7 +89,10 @@ export function CoachingLandingPage() {
       <main>
         <CoachingHero />
 
-        <BookLogoCloudC148 reviewsHref="#testimonials" />
+        <BookLogoCloudC148
+          heading="Trusted by tech professionals"
+          reviewsHref="#testimonials"
+        />
 
         <CoachingStory />
 

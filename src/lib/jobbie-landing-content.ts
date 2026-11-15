@@ -242,7 +242,7 @@ export const JOBBIE_LANDING = {
     },
     {
       q: "Will it apply for jobs for me?",
-      a: "No. Jobbie never applies or sends messages on anyone's behalf. You decide which roles to go for, and you apply. I help you go in warm, prepared and confident. If I'm directly connected to a person in the company and it makes sense, I'll make a warm introduction if it helps you cut through.",
+      a: "No. Jobbie never applies or sends messages on anyone's behalf. You decide which roles to go for, and you apply. If I'm directly connected to a person in the company and it makes sense, I'll make a warm introduction if it helps you cut through.",
     },
     {
       q: "Will you message hiring managers pretending to be me?",
@@ -274,11 +274,7 @@ export const JOBBIE_LANDING = {
     },
     {
       q: "Where do the roles come from?",
-      a: "Every role links to the original posting, with the job description. LinkedIn is read from public pages only.",
-    },
-    {
-      q: "Is my information private?",
-      a: "Yes. Your data is private. It's never shared or sold.",
+      a: "Every day, Jobbie trawls over 150 company career sites, plus private job boards only available to a private community of design leaders.",
     },
   ],
 

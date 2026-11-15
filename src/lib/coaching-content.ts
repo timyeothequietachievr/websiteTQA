@@ -359,7 +359,7 @@ export const COACHING_EVERYTHING_INCLUDED = {
       learnMoreHref: "#Jobbie",
     },
     {
-      lead: "1 year subscription of premium AI tools.",
+      lead: "1 year free subscription of premium AI tools.",
       body: "Notion, Wispr Flow, Mobbin, Granola, Lovable, Framer, Google AI Pro and 20+ more — worth over $38,000.",
       learnMoreHref: "#PremiumAItools",
     },
