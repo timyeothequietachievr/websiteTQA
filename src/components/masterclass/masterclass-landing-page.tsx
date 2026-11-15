@@ -150,6 +150,9 @@ function HeroBanner() {
         </p>
         <div className="mt-6">
           <WatchReplayCta label={C.hero.cta} variant={HERO.ctaVariant} />
+          <p className="mt-3 font-sans text-sm leading-relaxed" style={{ color: HERO.body }}>
+            {C.hero.micro}
+          </p>
         </div>
       </div>
 
@@ -380,6 +383,9 @@ export function MasterclassLandingPage() {
               </p>
               <div className="mt-8 flex flex-col items-center">
                 <WatchReplayCta label={C.closing.cta} />
+                <p className="mt-3 font-sans text-sm leading-relaxed text-warm-700">
+                  {C.closing.micro}
+                </p>
               </div>
             </div>
           </Container>

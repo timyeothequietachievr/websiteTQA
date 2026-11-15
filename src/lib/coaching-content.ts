@@ -47,7 +47,7 @@ export const COACHING_DIFFERENT = {
     {
       segments: [
         { text: "Skills can be practised", bold: true },
-        { text: ". With practise, skills improve." },
+        { text: ". With practice, skills improve." },
       ],
     },
     {
@@ -67,7 +67,7 @@ export const COACHING_DIFFERENT = {
       segments: [
         { text: "We establish a " },
         {
-          text: "curriculum of practise specifically designed for introverts & quiet achievers",
+          text: "curriculum of practice specifically designed for introverts & quiet achievers",
           bold: true,
         },
       ],

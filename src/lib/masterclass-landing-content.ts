@@ -75,7 +75,7 @@ export const MASTERCLASS_LANDING = {
     pov: "Final rounds don't go to the best candidate. They go to the lowest-risk hire.",
     sub2:
       "I'll show you the 4 rules that landed me Head of Design at three $700M fintech startups. My clients now use them to land $250k–$350k Principal, Staff and Leadership roles.",
-    dateLine: "Next masterclass: TBC",
+    dateLine: "Recorded live · About 60 minutes",
     timezoneLink: "See it in your time zone →",
     cta: "Watch the replay →",
     micro: "Free. Enter your email to watch.",
