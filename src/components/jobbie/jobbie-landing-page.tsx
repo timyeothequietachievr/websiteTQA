@@ -6,8 +6,10 @@ import { FooterRev } from "@/components/revamp/sections-3";
 import { SocialProofStrip } from "@/components/revamp/sections-1";
 import { MasterclassResultsSection } from "@/components/masterclass/masterclass-results-options";
 import { Button, Container, ContainedBand } from "@/components/revamp/primitives";
-import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { JOBBIE_LANDING, JOBBIE_LOGIN_URL } from "@/lib/jobbie-landing-content";
+
+/** Jobbie CTAs send people to coaching How to apply. */
+const COACHING_APPLY_HREF = "/coaching#how-it-works";
 import {
   formatAsOfDisplay,
   formatRolesFound,
@@ -48,7 +50,7 @@ function DiscoveryCta({
   return (
     <div>
       <div className="inline-flex flex-col items-stretch">
-        <Button href={DISCOVERY_CALL_URL} variant={variant} size="lg">
+        <Button href={COACHING_APPLY_HREF} variant={variant} size="lg">
           Book a discovery call
           <span aria-hidden>→</span>
         </Button>
@@ -217,7 +219,7 @@ export function JobbieLandingPage({ stats }: { stats: JobbiePublicStats }) {
         hidePromoBanner
         wordmarkTagline="Jobbie"
         ctaLabel="Book a discovery call"
-        ctaHref={DISCOVERY_CALL_URL}
+        ctaHref={COACHING_APPLY_HREF}
         textLinkLabel={C.hero.loginLabel}
         textLinkHref={JOBBIE_LOGIN_URL}
       />
