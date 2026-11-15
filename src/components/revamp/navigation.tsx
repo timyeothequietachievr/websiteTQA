@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { MAIN_NAV } from "@/lib/main-nav";
 import { MasterclassPromoBanner } from "./masterclass-promo-banner";
@@ -82,28 +82,19 @@ export function Navigation({
   hidePromoBanner?: boolean;
   /** When set, sticky CTA acts as a button (e.g. open Email Octopus popup). */
   onCtaClick?: () => void;
-  /** Optional text link shown to the right of the primary CTA (e.g. Log in). */
+  /** Optional text link shown to the left of the primary CTA (e.g. Log in). */
   textLinkLabel?: string;
   textLinkHref?: string;
 } = {}) {
   const NAV = MAIN_NAV;
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
   return (
     <header
       id="top"
       className="sticky top-0 z-[100]"
       style={{
-        background: scrolled ? "rgba(245,240,211,0.92)" : "transparent",
-        backdropFilter: scrolled ? "saturate(140%) blur(8px)" : "none",
-        WebkitBackdropFilter: scrolled ? "saturate(140%) blur(8px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(30,30,30,0.08)" : "1px solid transparent",
-        transition: "background .2s ease, border-color .2s ease",
+        background: "var(--tqa-paper)",
+        borderBottom: "1px solid rgba(30,30,30,0.08)",
       }}
     >
       {hidePromoBanner ? null : promoBanner !== undefined ? promoBanner : <MasterclassPromoBanner />}
@@ -122,6 +113,17 @@ export function Navigation({
             <div className="hidden lg:block" aria-hidden />
           )}
           <div className="flex items-center gap-3">
+            {textLinkLabel && textLinkHref ? (
+              <Link
+                href={textLinkHref}
+                className="inline-flex h-10 shrink-0 items-center px-1 font-sans text-[14px] font-semibold underline underline-offset-4"
+                style={{ color: "var(--tqa-charcoal)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-ember)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--tqa-charcoal)")}
+              >
+                {textLinkLabel}
+              </Link>
+            ) : null}
             {onCtaClick ? (
               <button
                 type="button"
@@ -154,17 +156,6 @@ export function Navigation({
                 <span aria-hidden>→</span>
               </Link>
             )}
-            {textLinkLabel && textLinkHref ? (
-              <Link
-                href={textLinkHref}
-                className="inline-flex h-10 shrink-0 items-center px-1 font-sans text-[14px] font-semibold underline underline-offset-4"
-                style={{ color: "var(--tqa-charcoal)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--tqa-ember)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--tqa-charcoal)")}
-              >
-                {textLinkLabel}
-              </Link>
-            ) : null}
             {!hideNavLinks ? (
               <button
                 type="button"

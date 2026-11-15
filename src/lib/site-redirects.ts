@@ -63,7 +63,7 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
       "https://watery-crustacean-f88.notion.site/Speaking-for-event-organisers-e4dc6e4cf7db472c901150b3b1d199b4",
     permanent: true,
   },
-  { source: "/discoverycall", destination: "https://calendar.app.google/P2WJMi69ayBH8mFQ8", permanent: true },
+  { source: "/discoverycall", destination: "https://cal.id/thequietachievr/300k", permanent: true },
   {
     source: "/approov",
     destination: "https://www.notion.so/Proposal-e2605a306a024ac48d3d8ebadbf3539e",

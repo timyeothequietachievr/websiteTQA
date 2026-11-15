@@ -69,7 +69,7 @@ export const MASTERCLASS_LANDING = {
 
   hero: {
     eyebrow: "Free masterclass replay",
-    h1: "Overlooked to $300k Principal & Leadership Roles",
+    h1: "Overlooked to $300k Principal, Staff & Leadership Roles",
     sub1:
       "If someone else keeps landing your dream job, it's not your technical skills. It's how senior hiring decisions get made.",
     pov: "Final rounds don't go to the best candidate. They go to the lowest-risk hire.",
@@ -188,6 +188,29 @@ export const MASTERCLASS_LANDING = {
         subline: "+$50K + equity in 4 months",
         image: null,
         cardText: "Accessing the hidden job market, focused on interview craft",
+      },
+      {
+        headline: "2 x First round interviews in 2 weeks after being ghosted for 6 months",
+        subline:
+          "Senior Designer was applying for 100s of roles but never got through. Positioned and tailored the CV and portfolios; direct connection with the hiring manager.",
+        image: {
+          src: "/masterclass/results/first-round-interviews-ghosted.webp",
+          fallbackSrc: "/masterclass/results/first-round-interviews-ghosted.jpeg",
+          alt: "Client WhatsApp: Got an email for telephonic screening — breakthrough",
+        },
+        cardText: null,
+      },
+      {
+        headline:
+          "2 x Third-round whiteboarding interviews & Re-negotiated current salary in 5 weeks",
+        subline:
+          "Head of Design re-positioned his CV and portfolio and landed 2 interviews while re-negotiating his current salary. All in 5 weeks.",
+        image: {
+          src: "/masterclass/results/third-round-whiteboarding.webp",
+          fallbackSrc: "/masterclass/results/third-round-whiteboarding.jpeg",
+          alt: "Client WhatsApp: Interview scheduled on Monday — whiteboarding practice",
+        },
+        cardText: null,
       },
     ],
   },

@@ -4,6 +4,7 @@ import { useEffect, type ReactNode } from "react";
 import { BookLogoCloudC148 } from "@/components/book/book-logo-cloud-c148";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
+import { MasterclassResultsSection } from "@/components/masterclass/masterclass-results-options";
 import { Button, Container, ContainedBand } from "@/components/revamp/primitives";
 import {
   MASTERCLASS_HERO_OPTIONS,
@@ -234,9 +235,6 @@ export function MasterclassLandingPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-10">
-              <WatchReplayCta label={C.hero.cta} />
-            </div>
           </div>
         </ContainedBand>
 
@@ -262,56 +260,8 @@ export function MasterclassLandingPage() {
           </Container>
         </section>
 
-        {/* 7. Results proof wall */}
-        <ContainedBand tone="ink" padY="clamp(56px, 6vw, 72px)">
-          <div className="mx-auto max-w-[1200px]">
-            <SectionTitle onDark>{C.results.title}</SectionTitle>
-            <div className="mt-8 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-              {C.results.cards.map((card) => (
-                <div
-                  key={card.headline}
-                  className="flex h-full flex-col rounded-lg p-4 ring-1 ring-paper/20"
-                  style={{ background: "rgba(245,240,211,0.08)" }}
-                >
-                  <p className="font-display text-lg font-semibold leading-snug text-sunrise sm:text-xl">
-                    {card.headline}
-                  </p>
-                  <p className="mt-2 font-sans text-[13px] leading-relaxed text-paper/80">
-                    {card.subline}
-                  </p>
-                  <div className="mt-4 flex flex-1 items-center justify-center overflow-hidden rounded-lg bg-ink-deep/40">
-                    {card.image ? (
-                      <picture>
-                        <source srcSet={card.image.src} type="image/webp" />
-                        {/* eslint-disable-next-line @next/next/no-img-element -- local proof screenshots */}
-                        <img
-                          src={card.image.fallbackSrc}
-                          alt={card.image.alt}
-                          loading="lazy"
-                          decoding="async"
-                          className="h-auto w-full rounded-lg object-contain"
-                        />
-                      </picture>
-                    ) : (
-                      <p className="px-4 py-10 text-center font-display text-base font-semibold leading-snug text-paper/70 sm:text-lg">
-                        {card.cardText}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ))}
-              <a
-                href="/testimonials"
-                className="flex h-full min-h-full flex-col items-center justify-center rounded-lg p-4 text-center ring-1 ring-paper/20 transition hover:bg-paper/10"
-                style={{ background: "rgba(245,240,211,0.08)" }}
-              >
-                <span className="font-sans text-[15px] font-semibold text-paper underline underline-offset-4">
-                  Read more reviews →
-                </span>
-              </a>
-            </div>
-          </div>
-        </ContainedBand>
+        {/* 7. Results proof wall — 3-col; Style 1 (ink) until Tim picks colour */}
+        <MasterclassResultsSection colorStyle={1} />
 
         {/* 8. Meet Tim — Option 3: closed mouth straight · sunrise */}
         <ContainedBand tone="sunrise" padY="clamp(56px, 6vw, 80px)">

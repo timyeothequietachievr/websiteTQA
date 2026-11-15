@@ -7,7 +7,7 @@ export const COACHING_STORY_TITLE =
   "Being a quiet Asian in a loud tech company that desires the extrovert ideal is hard";
 
 export const DISCOVERY_CALL_TOPICS = [
-  "What the challenges you are facing",
+  "What challenges you are facing",
   "What you have tried",
   "The outcomes that you want",
   "The help you need",
@@ -24,6 +24,13 @@ export type CoachingDifferentParagraph = {
 export const COACHING_DIFFERENT = {
   title: "What makes Tim\u2019s coaching different?",
   paragraphs: [
+    {
+      segments: [
+        {
+          text: "Tim has been a designer and design leader for 20yrs+. His advice comes from personal lived experience and coaching over 1000+ designers.",
+        },
+      ],
+    },
     {
       segments: [
         { text: "Our belief is that " },
@@ -187,27 +194,182 @@ export const COACH_TRAITS = [
 ] as const;
 
 export const WHAT_YOU_GET_ITEMS = [
-  "Personalised coaching plan with prioritised goals and actions. What to do first, what to do next, with clear steps on how to accomplish each of them.",
-  "All access to The Quiet Leadership School content",
-  "Video recordings and transcripts of every session.",
-  "Text support between sessions (next-business-day response).",
-  "Digital edition of the book (ePub, PDF, audiobook).",
+  {
+    lead: "12 x 1:1 coaching sessions",
+    body: "booked at your convenience. No fixed schedule, no group sessions; just 100% focus on you",
+  },
+  {
+    lead: "Personalised coaching plan",
+    body: "with prioritised goals and actions to help you focus. Clear steps on how to accomplish each of them.",
+  },
+  {
+    lead: "Full access to the $300k Career Accelerator curriculum",
+    body: "from Day 1",
+  },
+  {
+    body: "Video recordings and transcripts of every session.",
+  },
+  {
+    lead: "Ongoing support",
+    body: "Unlimited text messages between sessions, rehearsal, async preparation and feedback, salary negotiation etc.",
+  },
+  {
+    body: "Digital edition of The Quiet Achiever book (ePub, PDF, audiobook).",
+  },
 ] as const;
 
-export const WHAT_YOU_GET_PERIOD = "Typical coaching engagements last 3 to 12 months.";
+/** After How it works — Jobbie intro (key points from /jobbie). */
+export const COACHING_JOBBIE = {
+  eyebrow: "Introducing Jobbie",
+  title: "Never get ghosted again",
+  lede: "Jobbie is your personal AI-powered talent recruiter for coaching clients. Roles found every day, checked by me, with a tailored CV and a warm way in — so you get past the ATS and into the room.",
+  points: [
+    {
+      lead: "Roles found for you, every day.",
+      body: "Jobbie trawls 150+ company career sites plus private design-leader Slack groups. Roles are scored against your profile for fit, then I hand-review every role against your brief. Only matching roles reach you.",
+    },
+    {
+      lead: "Connect with hiring managers directly.",
+      body: "Jobbie searches through the organisation and ranks likely hiring managers, peers and recruiters with their contact information. If Tim Yeo is connected, he can make a warm introduction.",
+    },
+    {
+      lead: "A CV and cover letter tailored to each role.",
+      body: "Jobbie tailors a unique version of your CV to suit every job application. Each version is positioned to cut through ATS and reach the human behind it. You review the final CV + cover letter before you proceed.",
+    },
+  ],
+  ctaMicrocopy: "Free for all my coaching clients. Not sold separately.",
+  ctaLabel: "See how Jobbie works",
+  ctaHref: "/jobbie",
+  /** Same MacBook hero asset as /jobbie */
+  screenshotSrc: "/assets/jobbie-hero-screenshot.webp",
+  screenshotFallbackSrc: "/assets/jobbie-hero-screenshot.jpg",
+  screenshotAlt: "Jobbie opportunities board on a MacBook screen",
+} as const;
+
+/**
+ * Premium AI / product tools included with coaching (live list Nov 2026).
+ * Excludes offers marked almost gone or temporarily unavailable.
+ * Values are approximate 1-year retail.
+ */
+export const COACHING_AI_TOOLS_FEATURED = [
+  {
+    name: "Notion Business",
+    value: "$240",
+    blurb: "Collaborative AI workspace where teams and agents work together.",
+    logoSrc: "/assets/ai-tool-logos/notion.svg",
+    logoAlt: "Notion",
+  },
+  {
+    name: "Wispr Flow Pro",
+    value: "$180",
+    blurb: "Effortless voice dictation with zero edits — share context as fast as you think.",
+    logoSrc: "/assets/ai-tool-logos/wispr.png",
+    logoAlt: "Wispr Flow",
+  },
+  {
+    name: "Mobbin Team",
+    value: "$1,920",
+    blurb: "The world's most comprehensive UI/UX design reference library for mobile and web.",
+    logoSrc: "/assets/ai-tool-logos/mobbin.svg",
+    logoAlt: "Mobbin",
+  },
+  {
+    name: "Granola Business",
+    value: "$1,680",
+    blurb: "The AI notepad for people in back-to-back meetings.",
+    logoSrc: "/assets/ai-tool-logos/granola.png",
+    logoAlt: "Granola",
+  },
+  {
+    name: "Lovable Pro",
+    value: "$252",
+    blurb: "AI app builder that takes you from idea to a working product.",
+    logoSrc: "/assets/ai-tool-logos/lovable.png",
+    logoAlt: "Lovable",
+  },
+  {
+    name: "Framer Pro",
+    value: "$360",
+    blurb: "Design-first website builder — ship and manage your site without engineering.",
+    logoSrc: "/assets/ai-tool-logos/framer.svg",
+    logoAlt: "Framer",
+  },
+  {
+    name: "Google AI Pro",
+    value: "$240",
+    blurb: "Higher access to Gemini, NotebookLM, Flow, 5 TB of storage, and more.",
+    logoSrc: "/assets/ai-tool-logos/google.svg",
+    logoAlt: "Google",
+  },
+] as const;
+
+export const COACHING_AI_TOOLS_FULL = [
+  { name: "Brain.fm", value: "$100", blurb: "Focus music for deep work" },
+  { name: "Customer.io Essentials", value: "$1,200", blurb: "Customer engagement for product-led teams" },
+  { name: "ElevenLabs Creator", value: "$264", blurb: "Voice, video, image and music generation" },
+  { name: "Fin AI Agent + Advanced", value: "$7,140", blurb: "AI customer service agent (5 seats)" },
+  { name: "Framer Pro", value: "$360", blurb: "Design-first website builder" },
+  { name: "Gamma Pro", value: "$216", blurb: "AI presentations and websites" },
+  { name: "Google AI Pro", value: "$240", blurb: "Gemini, NotebookLM, Flow, 5 TB storage" },
+  { name: "Granola Business", value: "$1,680", blurb: "AI notepad for meetings (10 seats)" },
+  { name: "Higgsfield Pro", value: "$348", blurb: "Agentic AI content creation" },
+  { name: "Jam Team", value: "$1,920", blurb: "Bug reports for developers (10 seats)" },
+  { name: "Linear Business", value: "$1,080", blurb: "Product planning and issue tracking (5 seats)" },
+  { name: "Lovable Pro", value: "$252", blurb: "AI app builder from idea to production" },
+  { name: "Magic Patterns Starter", value: "$240", blurb: "AI prototyping for product teams" },
+  { name: "Manus", value: "$240", blurb: "General AI agent with monthly credits" },
+  { name: "Mobbin Team", value: "$1,920", blurb: "UI/UX reference library (10 seats)" },
+  { name: "n8n Cloud Starter", value: "$240", blurb: "Visual AI and workflow automation" },
+  { name: "Notion Business", value: "$240", blurb: "Collaborative AI workspace" },
+  { name: "Pangram Professional", value: "$540", blurb: "AI content detector" },
+  { name: "PostHog Scale", value: "$16,500", blurb: "Product analytics with 2× monthly limits" },
+  { name: "Railway Hobby", value: "$245", blurb: "AI-native cloud hosting" },
+  { name: "Readwise + Reader", value: "$120", blurb: "Reading, highlights and AI unpack" },
+  { name: "Replit Core", value: "$240", blurb: "Build apps with natural language" },
+  { name: "Runway Pro", value: "$336", blurb: "AI video, image and audio models" },
+  { name: "Stripe Atlas", value: "$200", blurb: "40% off company incorporation" },
+  { name: "Supercut Pro", value: "$1,800", blurb: "AI screen recording (10 seats)" },
+  { name: "Waking Up", value: "$129", blurb: "Meditation and mental OS" },
+  { name: "Wispr Flow Pro", value: "$180", blurb: "Voice dictation with zero edits" },
+  { name: "X Premium", value: "$360", blurb: "Grok, Grok Build/Cursor and X Premium" },
+] as const;
+
+export const COACHING_AI_TOOLS = {
+  eyebrow: "Included with coaching",
+  title: "1 year free of AI tools",
+  intro: [
+    "AI has changed the game. Employers now expect AI skills as a baseline requirement. But learning and paying for these tools are costly. That's why I've partnered with 20+ leading AI companies to offer you 1 year subscription to all of them.",
+    "Free for all my coaching clients; not sold separately.",
+  ],
+  totalValueLabel: "Total value",
+  totalValue: "$38,000+",
+  otherCountLabel: "+ 21 more tools",
+  faqTitle: "What's included in the 1 year AI tools access?",
+} as const;
+
+export const COACHING_EVERYTHING_INCLUDED = {
+  eyebrow: "$300k Career Accelerator",
+  title: "Every coaching client gets:",
+  lede: "Everything you need to land your next role — from application to negotiating multiple job offers. You never have to job search alone again.",
+  alsoGetTitle: "Starting November 2026, you also get:",
+  extras: [
+    {
+      lead: "Jobbie — your personal AI-powered talent recruiter.",
+      body: "Roles found every day, hand-reviewed, with people research and tailored CVs. Free for coaching clients.",
+      learnMoreHref: "#Jobbie",
+    },
+    {
+      lead: "1 year subscription of premium AI tools.",
+      body: "Notion, Wispr Flow, Mobbin, Granola, Lovable, Framer, Google AI Pro and 20+ more — worth over $38,000.",
+      learnMoreHref: "#PremiumAItools",
+    },
+  ],
+} as const;
 
 export type CoachingTestimonial = {
   quote: string;
   name: string;
   role: string;
-};
-
-/** Featured pull-quote — Notion “Thuan Nguyen” review; shown below Tim’s story on /coaching */
-export const FEATURED_COACHING_TESTIMONIAL: CoachingTestimonial = {
-  quote:
-    "Your coaching helped me feel safe enough to contribute in meetings. And the more I speak, the more confident I feel. I also started recording short videos of myself and shared those. Eventually they started praising me both publicly and privately for both my work and the video storytelling. Just yesterday, an exec saw a concept I shared and told my boss they want it on the roadmap! Wild 😵‍💫 I definitely feel far more confident in my own voice, ideas, and influence. Several colleagues have remarked how rare it is to have that kind of visibility.",
-  name: "Thuan Nguyen",
-  role: "",
 };
 
 export const TESTIMONIALS: CoachingTestimonial[] = [
@@ -288,7 +450,7 @@ export const TESTIMONIALS: CoachingTestimonial[] = [
 export const FAQS = [
   {
     q: "How much are coaching engagements?",
-    a: "Clients typically make an investment of $6,000 and upwards over a coaching period of 3–12 months. Based on the discovery call, we will agree on the right cadence and package to achieve all your goals.",
+    a: "Clients typically make an investment of $10,000 and upwards over a coaching period of 3–12 months. Based on the discovery call, we will agree on the right cadence to achieve your goals.",
   },
   {
     q: "How does the 100% work-for-free guarantee work?",
@@ -304,7 +466,7 @@ export const FAQS = [
   },
   {
     q: "What's a discovery call exactly?",
-    a: "A strategic conversation — not chit-chat. See the How it works section on this page for what we cover and what to expect by the end of the call.",
+    a: "A strategic conversation — not chit-chat. See the How to apply section on this page for what we cover and what to expect by the end of the call.",
     howItWorksAnchor: true,
   },
   {

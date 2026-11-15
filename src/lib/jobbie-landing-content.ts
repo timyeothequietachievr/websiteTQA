@@ -27,7 +27,7 @@ export const JOBBIE_LANDING = {
   pain: {
     title: "The hardest part is sometimes getting to the human stage of the interview process",
     intro: [
-      "You have the experience. You're brillant at your craft. But somehow you are not cutting through.",
+      "You have the experience. You're brilliant at your craft. But somehow you are not cutting through.",
       "Employers are struggling to sieve through the tidal wave of applications. That's where applicant tracking systems (ATS) come in.",
       "ATS is technology designed to filter and rank applicants so only the lowest risk candidates are sent to the next round.",
       "The problem is ATS doesn't get it right every time. For many applicants, their CVs are rejected before a human being even gets to read it. Even though they are fully qualified for the role.",
@@ -37,7 +37,7 @@ export const JOBBIE_LANDING = {
     items: [
       "Sending application after application, and hearing nothing back",
       '"Thanks for your application. Unfortunately..."',
-      "Spending hours every day trawling...",
+      "Spending hours every day trolling LinkedIn for jobs.",
       "Watching people who are louder (not better) get the interview through someone they know",
       'Hating the idea of messaging a stranger on LinkedIn, so you just hit "Apply" and hope',
     ],
@@ -143,6 +143,7 @@ export const JOBBIE_LANDING = {
     ],
   },
 
+  /** Kept in sync with MASTERCLASS_LANDING.results — live wall uses that shared set (7 cards). */
   proof: {
     title: "What changed for the tech professionals I work with",
     cards: [
@@ -179,14 +180,37 @@ export const JOBBIE_LANDING = {
       },
       {
         headline: "+$20K in 9 weeks, after being made redundant on maternity leave",
-        subline: "5 opportunities, 2 offers, peace of mind with their newborn child",
+        subline: "4 months redundancy, landed their role after 2 months",
         image: null,
-        cardText: null as string | null,
+        cardText: "5 opportunities, 2 offers, peace of mind with their newborn child" as string | null,
       },
       {
         headline: "VP → next Exec role",
         subline: "+$50K + equity in 4 months",
         image: null,
+        cardText: "Accessing the hidden job market, focused on interview craft" as string | null,
+      },
+      {
+        headline: "2 x First round interviews in 2 weeks after being ghosted for 6 months",
+        subline:
+          "Senior Designer was applying for 100s of roles but never got through. Positioned and tailored the CV and portfolios; direct connection with the hiring manager.",
+        image: {
+          src: "/masterclass/results/first-round-interviews-ghosted.webp",
+          fallbackSrc: "/masterclass/results/first-round-interviews-ghosted.jpeg",
+          alt: "Client WhatsApp: Got an email for telephonic screening — breakthrough",
+        },
+        cardText: null as string | null,
+      },
+      {
+        headline:
+          "2 x Third-round whiteboarding interviews & Re-negotiated current salary in 5 weeks",
+        subline:
+          "Head of Design re-positioned his CV and portfolio and landed 2 interviews while re-negotiating his current salary. All in 5 weeks.",
+        image: {
+          src: "/masterclass/results/third-round-whiteboarding.webp",
+          fallbackSrc: "/masterclass/results/third-round-whiteboarding.jpeg",
+          alt: "Client WhatsApp: Interview scheduled on Monday — whiteboarding practice",
+        },
         cardText: null as string | null,
       },
     ],
@@ -259,7 +283,7 @@ export const JOBBIE_LANDING = {
   ],
 
   closing: {
-    title: "Ready to get in the room?",
+    title: "Tired of getting ghosted? Let Jobbie work for you.",
     rememberLabel: "Remember:",
     remember:
       "the best time to look for a job is when you don't need one. The next best time is now.",

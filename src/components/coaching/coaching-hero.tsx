@@ -36,7 +36,7 @@ export function CoachingHero() {
             className="flex flex-col justify-center lg:col-span-7"
             style={{ padding: "clamp(32px, 5vw, 72px)" }}
           >
-            <CoachingEyebrow>Asian Men in Tech</CoachingEyebrow>
+            <CoachingEyebrow>DESIGNERS IN TECH</CoachingEyebrow>
 
             <h1
               className="mt-6 font-display font-semibold text-paper"
@@ -47,7 +47,8 @@ export function CoachingHero() {
                 textWrap: "balance",
               }}
             >
-              Land $250k&ndash;$350k Principal or Leadership roles
+              I help you land $250k&ndash;$350k Principal, Staff &amp; Leadership
+              roles
             </h1>
 
             <p

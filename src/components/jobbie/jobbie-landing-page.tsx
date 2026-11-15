@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
 import { SocialProofStrip } from "@/components/revamp/sections-1";
+import { MasterclassResultsSection } from "@/components/masterclass/masterclass-results-options";
 import { Button, Container, ContainedBand } from "@/components/revamp/primitives";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import { JOBBIE_LANDING, JOBBIE_LOGIN_URL } from "@/lib/jobbie-landing-content";
@@ -347,58 +348,8 @@ export function JobbieLandingPage({ stats }: { stats: JobbiePublicStats }) {
           </div>
         </ContainedBand>
 
-        {/* 8. Proof — paper */}
-        <section className="border-t border-charcoal/10 py-14 sm:py-18">
-          <Container>
-            <div className="mx-auto max-w-[1200px]">
-              <SectionTitle>{C.proof.title}</SectionTitle>
-              <div className="mt-8 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-                {C.proof.cards.map((card) => (
-                  <div
-                    key={card.headline}
-                    className="flex h-full flex-col rounded-lg bg-paper-soft p-4 ring-1 ring-ink/15"
-                  >
-                    <p className="font-display text-lg font-semibold leading-snug text-ink sm:text-xl">
-                      {card.headline}
-                    </p>
-                    <p className="mt-2 font-sans text-[13px] leading-relaxed text-warm-700">
-                      {card.subline}
-                    </p>
-                    {card.image || card.cardText ? (
-                      <div className="mt-4 flex flex-1 items-center justify-center overflow-hidden rounded-lg bg-paper">
-                        {card.image ? (
-                          <picture>
-                            <source srcSet={card.image.src} type="image/webp" />
-                            <img
-                              src={card.image.fallbackSrc}
-                              alt={card.image.alt}
-                              loading="lazy"
-                              decoding="async"
-                              className="h-auto w-full rounded-lg object-contain"
-                            />
-                          </picture>
-                        ) : (
-                          <p className="px-4 py-10 text-center font-display text-base font-semibold leading-snug text-ink/70 sm:text-lg">
-                            {card.cardText}
-                          </p>
-                        )}
-                      </div>
-                    ) : null}
-                  </div>
-                ))}
-                <a
-                  href="/testimonials"
-                  className="flex h-full min-h-full flex-col items-center justify-center rounded-lg bg-paper-soft p-4 text-center ring-1 ring-ink/15 transition hover:bg-paper"
-                >
-                  <span className="font-sans text-[15px] font-semibold text-ink underline underline-offset-4">
-                    {C.proof.reviewsLink}
-                  </span>
-                </a>
-              </div>
-
-            </div>
-          </Container>
-        </section>
+        {/* 8. Proof — three-column, Style 3 (sunrise) */}
+        <MasterclassResultsSection colorStyle={3} />
 
         {/* 9. Cost of doing nothing */}
         <section className="border-t border-charcoal/10 py-14 sm:py-18">

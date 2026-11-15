@@ -9,7 +9,10 @@ import { CoachingDifferent } from "@/components/coaching/coaching-different";
 import { CoachingFeaturedQuote } from "@/components/coaching/coaching-featured-quote";
 import { CoachingHero } from "@/components/coaching/coaching-hero";
 import { CoachingClosingSections } from "@/components/coaching/coaching-closing-sections";
+import { CoachingInclusions } from "@/components/coaching/coaching-inclusions";
+import { CoachingOfferingSection } from "@/components/coaching/coaching-offering-section";
 import { CoachingStory } from "@/components/coaching/coaching-story";
+import { MasterclassResultsSection } from "@/components/masterclass/masterclass-results-options";
 import { Navigation } from "@/components/revamp/navigation";
 import { FooterRev } from "@/components/revamp/sections-3";
 import { Container, ContainedBand, Button } from "@/components/revamp/primitives";
@@ -17,15 +20,14 @@ import { ProfileAvatar } from "@/components/revamp/profile-avatar";
 import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import {
   COACH_TRAITS,
+  COACHING_AI_TOOLS,
+  COACHING_AI_TOOLS_FULL,
   DISCOVERY_CALL_TOPICS,
   FAQS,
   HELP_WITH,
   HELP_WITH_CLOSING,
-  STEPS,
   TESTIMONIALS,
   TOPICS,
-  WHAT_YOU_GET_ITEMS,
-  WHAT_YOU_GET_PERIOD,
 } from "@/lib/coaching-content";
 import { getProfilePhoto } from "@/lib/profile-photos";
 
@@ -93,6 +95,72 @@ export function CoachingLandingPage() {
 
         <CoachingFeaturedQuote />
 
+        <AccentSection tone="ink" id="how-it-works">
+          <SectionTitle onDark>How to apply</SectionTitle>
+
+          <div className="mt-8 max-w-3xl">
+            <p className="font-reading text-[17px] leading-relaxed text-paper/85">
+              <em className="text-paper">Book a discovery call.</em>
+              {" "}
+              The discovery call is a strategic, serious conversation; not chit chat. We&rsquo;ll
+              talk about:
+            </p>
+            <ul className="mt-4 space-y-2 font-reading text-[17px] leading-relaxed text-paper/85">
+              {DISCOVERY_CALL_TOPICS.map((topic) => (
+                <li key={topic} className="flex gap-3">
+                  <span className="text-sunrise" aria-hidden>
+                    →
+                  </span>
+                  {topic}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 space-y-4 font-reading text-[17px] leading-relaxed text-paper/85">
+              <p>
+                <em className="text-paper">To be clear, this is a decision call.</em>
+                {" "}
+                By the end of the call, you should have everything you need to help you make a
+                decision if coaching is for you or not.
+              </p>
+              <p>
+                <em className="text-paper">Come prepared.</em>
+                {" "}
+                Bring any questions you have. I&rsquo;m happy to address them. By the end of the
+                call, you should have everything you need to decide if this is something you want
+                to progress with or not.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <DiscoveryCta variant="cream" onDark withGuaranteeLabel />
+          </div>
+        </AccentSection>
+
+        <CoachingOfferingSection colorStyle={5} />
+
+        <CoachingInclusions />
+
+        <MasterclassResultsSection colorStyle={4} />
+
+        <CoachingDifferent />
+
+        <section className="bg-paper-soft py-14 sm:py-16">
+          <Container>
+            <h2 className="font-display text-2xl font-semibold text-charcoal sm:text-3xl">
+              What&rsquo;s it like having me as your coach?
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              {COACH_TRAITS.map((item) => (
+                <div key={item.title} className="rounded-lg bg-paper p-5 ring-1 ring-charcoal/10">
+                  <h3 className="font-sans font-bold text-charcoal">{item.title}</h3>
+                  <p className="mt-2 font-reading text-[15px] leading-relaxed text-warm-700">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
         <AccentSection tone="sunrise">
           <SectionTitle>What can I help you with?</SectionTitle>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -120,90 +188,6 @@ export function CoachingLandingPage() {
             </div>
           </div>
         </AccentSection>
-
-        <AccentSection tone="ink" id="how-it-works">
-          <SectionTitle onDark>How it works</SectionTitle>
-          <ol className="mt-8 grid gap-4 lg:grid-cols-3">
-            {STEPS.map((s) => (
-              <li key={s.n} className="rounded-lg bg-paper/10 p-6 ring-1 ring-paper/20">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-sunrise">
-                  {s.n}
-                </span>
-                <h3 className="font-display mt-2 text-xl font-semibold text-paper">{s.title}</h3>
-                <p className="mt-1 font-sans text-xs font-semibold text-sunrise">{s.meta}</p>
-                <p className="mt-3 font-reading text-sm leading-relaxed text-paper/85">{s.body}</p>
-              </li>
-            ))}
-          </ol>
-
-          <div className="mt-10">
-            <DiscoveryCta variant="cream" onDark withGuaranteeLabel />
-          </div>
-
-          <div className="mt-12 max-w-3xl">
-            <h3 className="font-display text-xl font-semibold text-paper sm:text-2xl">
-              What do we talk about in the discovery call?
-            </h3>
-            <p className="mt-4 font-reading text-[17px] leading-relaxed text-paper/85">
-              The discovery call is a strategic, serious conversation. It&rsquo;s not chit chat. We&rsquo;ll talk about:
-            </p>
-            <ul className="mt-4 space-y-2 font-reading text-[17px] leading-relaxed text-paper/85">
-              {DISCOVERY_CALL_TOPICS.map((topic) => (
-                <li key={topic} className="flex gap-3">
-                  <span className="text-sunrise" aria-hidden>
-                    →
-                  </span>
-                  {topic}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 space-y-4 font-reading text-[17px] leading-relaxed text-paper/85">
-              <p>
-                <em className="text-paper">To be clear, this is a decision call.</em> By the end
-                of the call, you should have everything you need to help you make a decision if coaching is for you or
-                not.
-              </p>
-              <p>
-                <em className="text-paper">Come prepared.</em> Bring any questions you have.
-                I&rsquo;m happy to address them. By the end of the call, you should have everything you need to decide if
-                this is something you want to progress with or not.
-              </p>
-            </div>
-          </div>
-
-          <div id="what-you-get-with-coaching" className="mt-12 border-t border-paper/15 pt-10 scroll-mt-28">
-            <h3 className="font-display text-xl font-semibold text-paper sm:text-2xl">What you get with coaching</h3>
-            <ul className="mt-6 max-w-3xl space-y-3 font-reading text-[17px] leading-relaxed text-paper/85">
-              {WHAT_YOU_GET_ITEMS.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="text-sunrise" aria-hidden>
-                    →
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 font-reading text-[17px] font-semibold text-paper">{WHAT_YOU_GET_PERIOD}</p>
-          </div>
-        </AccentSection>
-
-        <CoachingDifferent />
-
-        <section className="bg-paper-soft py-14 sm:py-16">
-          <Container>
-            <h2 className="font-display text-2xl font-semibold text-charcoal sm:text-3xl">
-              What&rsquo;s it like having me as your coach?
-            </h2>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              {COACH_TRAITS.map((item) => (
-                <div key={item.title} className="rounded-lg bg-paper p-5 ring-1 ring-charcoal/10">
-                  <h3 className="font-sans font-bold text-charcoal">{item.title}</h3>
-                  <p className="mt-2 font-reading text-[15px] leading-relaxed text-warm-700">{item.body}</p>
-                </div>
-              ))}
-            </div>
-          </Container>
-        </section>
 
         <section id="testimonials" className="py-14 sm:py-16">
           <Container>
@@ -255,7 +239,7 @@ export function CoachingLandingPage() {
                       <>
                         A strategic conversation — not chit-chat. See the{" "}
                         <Link href="#how-it-works" className="font-semibold text-ember underline underline-offset-4">
-                          How it works
+                          How to apply
                         </Link>{" "}
                         section on this page for what we cover and what to expect by the end of the call.
                       </>
@@ -265,6 +249,47 @@ export function CoachingLandingPage() {
                   </DisclosurePanel>
                 </Disclosure>
               ))}
+              <Disclosure as="div" className="py-5">
+                <dt>
+                  <DisclosureButton className="group flex w-full items-center justify-between text-left">
+                    <span className="font-sans text-base font-semibold text-charcoal">
+                      {COACHING_AI_TOOLS.faqTitle}
+                    </span>
+                    <ChevronDownIcon
+                      aria-hidden
+                      className="size-5 shrink-0 text-warm-500 group-data-open:rotate-180"
+                    />
+                  </DisclosureButton>
+                </dt>
+                <DisclosurePanel as="dd" className="mt-3">
+                  <p className="font-reading text-[16px] leading-relaxed text-warm-700">
+                    Coaching includes 1 year access to these premium tools. Values are approximate
+                    1-year retail. Offers that are almost gone or temporarily unavailable are not
+                    listed.
+                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {COACHING_AI_TOOLS_FULL.map((tool) => (
+                      <li
+                        key={tool.name}
+                        className="flex flex-col gap-0.5 border-t border-charcoal/10 pt-3 first:border-t-0 first:pt-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
+                      >
+                        <span className="font-sans text-[15px] font-semibold text-ink">
+                          1 year free of {tool.name}
+                          <span className="mt-0.5 block font-reading text-[14px] font-normal text-warm-700 sm:mt-0 sm:inline sm:before:content-['_·_']">
+                            {tool.blurb}
+                          </span>
+                        </span>
+                        <span className="shrink-0 font-mono text-[12px] font-bold uppercase tracking-[0.12em] text-warm-700">
+                          {tool.value} value
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-5 font-sans text-sm font-semibold text-ink">
+                    Combined value: {COACHING_AI_TOOLS.totalValue}
+                  </p>
+                </DisclosurePanel>
+              </Disclosure>
             </dl>
           </Container>
         </section>
