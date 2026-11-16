@@ -340,6 +340,8 @@ export const COACHING_AI_TOOLS = {
   totalValue: "$27,000+",
   otherCountLabel: "+ 16 more tools",
   faqTitle: "What's included in the 1 year AI tools access?",
+  faqAnswer:
+    "Coaching includes 1 year access to premium AI tools such as Notion Business, Mobbin, Lovable Pro, Wispr Flow Pro, Granola Business, Framer Pro, Google AI Pro, and more. Combined value over $27,000. Full list shared during the discovery call.",
 } as const;
 
 export const COACHING_EVERYTHING_INCLUDED = {

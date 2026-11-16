@@ -21,7 +21,6 @@ import { DISCOVERY_CALL_URL } from "@/lib/site-data";
 import {
   COACH_TRAITS,
   COACHING_AI_TOOLS,
-  COACHING_AI_TOOLS_FULL,
   DISCOVERY_CALL_TOPICS,
   FAQS,
   HELP_WITH,
@@ -266,28 +265,11 @@ export function CoachingLandingPage() {
                     />
                   </DisclosureButton>
                 </dt>
-                <DisclosurePanel as="dd" className="mt-3">
-                  <ul className="space-y-3">
-                    {COACHING_AI_TOOLS_FULL.map((tool) => (
-                      <li
-                        key={tool.name}
-                        className="flex flex-col gap-0.5 border-t border-charcoal/10 pt-3 first:border-t-0 first:pt-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
-                      >
-                        <span className="font-sans text-[15px] font-semibold text-ink">
-                          1 year free of {tool.name}
-                          <span className="mt-0.5 block font-reading text-[14px] font-normal text-warm-700 sm:mt-0 sm:inline sm:before:content-['_·_']">
-                            {tool.blurb}
-                          </span>
-                        </span>
-                        <span className="shrink-0 font-mono text-[12px] font-bold uppercase tracking-[0.12em] text-warm-700">
-                          {tool.value} value
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-5 font-sans text-sm font-semibold text-ink">
-                    Combined value: {COACHING_AI_TOOLS.totalValue}
-                  </p>
+                <DisclosurePanel
+                  as="dd"
+                  className="mt-3 font-reading text-[16px] leading-relaxed text-warm-700"
+                >
+                  {COACHING_AI_TOOLS.faqAnswer}
                 </DisclosurePanel>
               </Disclosure>
             </dl>
