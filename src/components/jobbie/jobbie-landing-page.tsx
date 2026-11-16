@@ -163,41 +163,37 @@ function HeroBanner({ stats }: { stats: JobbiePublicStats }) {
             </p>
           ))}
         </div>
-        <div className="mt-8">
-          <DiscoveryCta
-            variant="cream"
-            note={C.hero.ctaMicrocopy}
-            noteClassName="text-paper/75"
-            afterButton={
-              <div
-                className="mt-10 w-full rounded-md px-5 py-4"
-                style={{ background: "rgba(26,26,58,0.45)" }}
-              >
-                <div
-                  className="font-display font-bold"
-                  style={{
-                    fontSize: "26px",
-                    letterSpacing: "-0.02em",
-                    color: "var(--tqa-paper)",
-                    lineHeight: 1,
-                  }}
-                >
-                  {formatRolesFound(stats.rolesFound)}
-                </div>
-                <div
-                  className="font-mono font-bold uppercase"
-                  style={{
-                    fontSize: "10px",
-                    letterSpacing: "0.18em",
-                    color: "rgba(245,240,211,0.7)",
-                    marginTop: "4px",
-                  }}
-                >
-                  Roles found (at {formatAsOfDisplay(stats.asOf)})
-                </div>
-              </div>
-            }
-          />
+        <div className="mt-8 max-w-md">
+          <div
+            className="w-full rounded-md px-5 py-4"
+            style={{ background: "rgba(26,26,58,0.45)" }}
+          >
+            <div
+              className="font-display font-bold"
+              style={{
+                fontSize: "26px",
+                letterSpacing: "-0.02em",
+                color: "var(--tqa-paper)",
+                lineHeight: 1,
+              }}
+            >
+              {formatRolesFound(stats.rolesFound)}
+            </div>
+            <div
+              className="font-mono font-bold uppercase"
+              style={{
+                fontSize: "10px",
+                letterSpacing: "0.18em",
+                color: "rgba(245,240,211,0.7)",
+                marginTop: "4px",
+              }}
+            >
+              Roles found (at {formatAsOfDisplay(stats.asOf)})
+            </div>
+          </div>
+          <p className="mt-3 font-sans text-sm leading-relaxed text-paper/75">
+            {C.hero.ctaMicrocopy}
+          </p>
         </div>
       </div>
 
@@ -216,9 +212,10 @@ export function JobbieLandingPage({ stats }: { stats: JobbiePublicStats }) {
     <div className="min-h-full bg-paper">
       <Navigation
         hideNavLinks
-        hideCta
         hidePromoBanner
         wordmarkTagline="Jobbie"
+        ctaLabel="Book a discovery call"
+        ctaHref={COACHING_APPLY_HREF}
         textLinkLabel={C.hero.loginLabel}
         textLinkHref={JOBBIE_LOGIN_URL}
       />
