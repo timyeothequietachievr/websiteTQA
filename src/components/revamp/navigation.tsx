@@ -65,6 +65,7 @@ export function Navigation({
   ctaLabel = "Work with me",
   ctaHref = "/#work-with-me",
   hideNavLinks = false,
+  hideCta = false,
   wordmarkTagline = "Career Coach",
   promoBanner,
   hidePromoBanner = false,
@@ -76,6 +77,8 @@ export function Navigation({
   ctaHref?: string;
   /** Coaching page: wordmark + CTA only */
   hideNavLinks?: boolean;
+  /** Hide the primary CTA button (e.g. Jobbie masthead keeps Log in only). */
+  hideCta?: boolean;
   wordmarkTagline?: string;
   /** Replace the sitewide masterclass toaster (e.g. page-specific top bar). */
   promoBanner?: ReactNode;
@@ -124,38 +127,40 @@ export function Navigation({
                 {textLinkLabel}
               </Link>
             ) : null}
-            {onCtaClick ? (
-              <button
-                type="button"
-                onClick={onCtaClick}
-                className="inline-flex h-10 shrink-0 cursor-pointer items-center gap-2 border-0 px-4 font-sans text-[14px] font-semibold"
-                style={{
-                  background: "var(--tqa-ember)",
-                  color: "var(--tqa-paper)",
-                  borderRadius: "4px",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
-              >
-                {ctaLabel}
-                <span aria-hidden>→</span>
-              </button>
-            ) : (
-              <Link
-                href={ctaHref}
-                className="inline-flex shrink-0 items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
-                style={{
-                  background: "var(--tqa-ember)",
-                  color: "var(--tqa-paper)",
-                  borderRadius: "4px",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
-              >
-                {ctaLabel}
-                <span aria-hidden>→</span>
-              </Link>
-            )}
+            {!hideCta ? (
+              onCtaClick ? (
+                <button
+                  type="button"
+                  onClick={onCtaClick}
+                  className="inline-flex h-10 shrink-0 cursor-pointer items-center gap-2 border-0 px-4 font-sans text-[14px] font-semibold"
+                  style={{
+                    background: "var(--tqa-ember)",
+                    color: "var(--tqa-paper)",
+                    borderRadius: "4px",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
+                >
+                  {ctaLabel}
+                  <span aria-hidden>→</span>
+                </button>
+              ) : (
+                <Link
+                  href={ctaHref}
+                  className="inline-flex shrink-0 items-center gap-2 h-10 px-4 font-sans font-semibold text-[14px]"
+                  style={{
+                    background: "var(--tqa-ember)",
+                    color: "var(--tqa-paper)",
+                    borderRadius: "4px",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "var(--tqa-ember-deep)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "var(--tqa-ember)")}
+                >
+                  {ctaLabel}
+                  <span aria-hidden>→</span>
+                </Link>
+              )
+            ) : null}
             {!hideNavLinks ? (
               <button
                 type="button"

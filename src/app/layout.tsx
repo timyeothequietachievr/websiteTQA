@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { GoogleAnalyticsProvider } from "@/components/analytics/google-analytics-provider";
 import { PostHogProvider } from "@/components/analytics/posthog-provider";
+import { ScrollToHash } from "@/components/revamp/scroll-to-hash";
 import "./globals.css";
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thequietachievr.com").replace(
@@ -42,7 +43,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Suspense fallback={null}>
           <GoogleAnalyticsProvider>
-            <PostHogProvider>{children}</PostHogProvider>
+            <PostHogProvider>
+              <ScrollToHash />
+              {children}
+            </PostHogProvider>
           </GoogleAnalyticsProvider>
         </Suspense>
       </body>

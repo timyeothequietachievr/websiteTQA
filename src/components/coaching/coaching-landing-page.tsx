@@ -35,13 +35,15 @@ function AccentSection({
   tone,
   children,
   id,
+  className = "",
 }: {
   tone: "sunrise" | "ink";
   children: ReactNode;
   id?: string;
+  className?: string;
 }) {
   return (
-    <ContainedBand tone={tone} id={id} padY="clamp(56px, 6vw, 80px)">
+    <ContainedBand tone={tone} id={id} className={className} padY="clamp(56px, 6vw, 80px)">
       <div className="mx-auto max-w-[1200px]">{children}</div>
     </ContainedBand>
   );
@@ -98,7 +100,7 @@ export function CoachingLandingPage() {
 
         <CoachingFeaturedQuote />
 
-        <AccentSection tone="ink" id="how-it-works">
+        <AccentSection tone="ink" id="how-it-works" className="scroll-mt-28">
           <SectionTitle onDark>How to apply</SectionTitle>
 
           <div className="mt-8 max-w-3xl">

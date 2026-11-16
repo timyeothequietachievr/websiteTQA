@@ -7,14 +7,14 @@ import { SocialProofStrip } from "@/components/revamp/sections-1";
 import { MasterclassResultsSection } from "@/components/masterclass/masterclass-results-options";
 import { Button, Container, ContainedBand } from "@/components/revamp/primitives";
 import { JOBBIE_LANDING, JOBBIE_LOGIN_URL } from "@/lib/jobbie-landing-content";
-
-/** Jobbie CTAs send people to coaching How to apply. */
-const COACHING_APPLY_HREF = "/coaching#how-it-works";
 import {
   formatAsOfDisplay,
   formatRolesFound,
   type JobbiePublicStats,
 } from "@/lib/jobbie-stats";
+
+/** In-page Jobbie CTAs → coaching How to apply. */
+const COACHING_APPLY_HREF = "/coaching#how-it-works";
 
 const C = JOBBIE_LANDING;
 
@@ -216,10 +216,9 @@ export function JobbieLandingPage({ stats }: { stats: JobbiePublicStats }) {
     <div className="min-h-full bg-paper">
       <Navigation
         hideNavLinks
+        hideCta
         hidePromoBanner
         wordmarkTagline="Jobbie"
-        ctaLabel="Book a discovery call"
-        ctaHref={COACHING_APPLY_HREF}
         textLinkLabel={C.hero.loginLabel}
         textLinkHref={JOBBIE_LOGIN_URL}
       />
