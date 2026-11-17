@@ -13,8 +13,14 @@ export function formatAsOfDisplay(asOf: string): string {
   return raw;
 }
 
-/** Last known live count from Jobbie (js_jobs) when the remote check is unavailable. */
-const FALLBACK_ROLES_FOUND = 3648;
+/**
+ * Last known live snapshot from Jobbie (js_jobs) when the remote check is unavailable.
+ * Keep these in sync: rolesFound + asOf (DDMMYYYY, Australia/Sydney) from the last successful count.
+ */
+const FALLBACK_STATS: JobbiePublicStats = {
+  asOf: "18112026",
+  rolesFound: 4098,
+};
 
 const PUBLIC_STATS_URL =
   process.env.JOBBIE_STATS_URL ??
@@ -104,5 +110,5 @@ export async function getJobbiePublicStats(): Promise<JobbiePublicStats> {
     // fall through
   }
 
-  return { asOf: asOfDdmmyyyy(), rolesFound: FALLBACK_ROLES_FOUND };
+  return FALLBACK_STATS;
 }
