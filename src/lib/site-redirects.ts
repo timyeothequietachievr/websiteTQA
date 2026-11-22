@@ -71,8 +71,12 @@ export const LEGACY_SITE_REDIRECTS: SiteRedirect[] = [
   },
   // /masterclass is a dedicated landing page (src/app/masterclass) — do not redirect it.
   // Per-session Luma short links — keep in sync with MASTERCLASS_LANDING.register.sessions.
-  { source: "/masterclass01", destination: "https://luma.com/fzslx2w9", permanent: false },
-  { source: "/masterclass02", destination: "https://luma.com/64m0y3ed", permanent: false },
+  { source: "/masterclass01", destination: "https://luma.com/j1gfdbyr", permanent: false },
+  { source: "/masterclass02", destination: "https://luma.com/hxd20ho7", permanent: false },
+  // Lead-up: old replay gates → live signup page (no replay CTA this cycle).
+  { source: "/masterclassreplay", destination: "/masterclass", permanent: false },
+  { source: "/masterclassreplayjul26", destination: "/masterclass", permanent: false },
+  { source: "/masterclassreplayaug26", destination: "/masterclass", permanent: false },
   { source: "/masterclasslinkedin", destination: "https://www.linkedin.com/events/7483755299858825216?viewAsMember=true", permanent: true },
   { source: "/300k", destination: "https://cal.id/thequietachievr/300k", permanent: true },
   { source: "/300kfollowup", destination: "https://calendar.app.google/6wYiWtx3Wmk8BxP47", permanent: true },

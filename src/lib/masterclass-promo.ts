@@ -2,17 +2,17 @@
  * Monthly masterclass promo — single switch for the sitewide toaster.
  *
  * Modes:
- * - "live"   → weeks before the session: date + session links → /masterclass landing
+ * - "live"   → weeks before the session: date + title → /masterclass landing
  * - "replay" → after the session: send people to the current replay gate (EO signup)
  *
  * When Tim asks to "post up the replay" → set mode to "replay", point replayPath at the
  * month’s gate (e.g. /masterclassreplay), and refresh the post-signup YouTube URL on that page.
- * When promoting the next live session → set mode to "live", update sessions[] + toaster lines.
+ * When promoting the next live session → set mode to "live", update toaster lines.
  */
 export type MasterclassPromoMode = "live" | "replay";
 
 export type MasterclassSession = {
-  /** Short label shown as the clickable time link in the toaster. */
+  /** Short label shown as the clickable time link in the toaster (Sep/Oct dual-session layout). */
   label: string;
   /** Prefer /masterclass so the landing page owns RSVP; short links stay for ads. */
   href: string;
@@ -20,7 +20,7 @@ export type MasterclassSession = {
 
 export const MASTERCLASS_PROMO = {
   /** Flip this when switching between live RSVP and replay signup. */
-  mode: "replay" as MasterclassPromoMode,
+  mode: "live" as MasterclassPromoMode,
 
   /** Primary live destination — the /masterclass landing page. */
   liveUrl: "/masterclass",
@@ -29,21 +29,24 @@ export const MASTERCLASS_PROMO = {
   replayPath: "/masterclass?watch=1",
 
   /**
-   * Sitewide toaster copy — line 1 (lead) then line 2 (title).
-   * /masterclass uses its own short top bar (“Watch the masterclass replay”).
+   * Sitewide toaster copy — Aug 2-line layout:
+   * line 1 = lead + dates, line 2 = title.
    */
-  toasterLine1: "Watch Masterclass Replay:",
+  toasterLine1: "Free Live Masterclass (3 Dec AU | 2 Dec US):",
   toasterLine2:
-    "How I went from Overlooked to $300k Principal & Leadership Roles in Tech",
+    "How I went from Overlooked to $300k Principal, Staff & Leadership Roles",
 
-  /** Live RSVP options — one link per time slot. Empty when mode is "replay". */
+  /**
+   * Dual-session labels kept for reference / short links.
+   * Not rendered in the current Aug-style toaster.
+   */
   sessions: [
     {
-      label: "Session 1: 28 Oct 4pm PT / 7pm ET · 29 Oct 10am AEST",
+      label: "Session 1: 2 Dec 2:55pm PT / 5:55pm ET · 3 Dec 9:55am AEST",
       href: "/masterclass",
     },
     {
-      label: "Session 2: 29 Oct 8am BST / 7pm AEST",
+      label: "Session 2: 3 Dec 7:55am GMT / 6:55pm AEST",
       href: "/masterclass",
     },
   ] satisfies MasterclassSession[],

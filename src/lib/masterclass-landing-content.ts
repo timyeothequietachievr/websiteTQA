@@ -52,33 +52,33 @@ export const activeHeroOption: MasterclassHeroOptionId = 1;
 
 export const MASTERCLASS_LANDING = {
   meta: {
-    title: "Masterclass Replay: Overlooked to $300k Principal & Leadership Roles | Tim Yeo",
+    title: "Free Masterclass: Overlooked to $300k Principal & Leadership Roles | Tim Yeo",
     description:
-      "Watch the free masterclass replay. Why final rounds go to the lowest-risk hire, not the best candidate, and how senior tech pros land $250k–$350k roles.",
+      "Free live masterclass, Thu 3 Dec 2026. Why final rounds go to the lowest-risk hire, not the best candidate, and how senior tech pros land $250k–$350k roles.",
   },
 
   topBar: {
-    label: "Watch the masterclass replay →",
-    href: "#watch-replay",
+    label: "Free live masterclass · 2 & 3 December 2026 · Save my seat →",
+    href: "#register",
   },
 
   stickyCta: {
-    label: "Watch the replay",
-    href: "#watch-replay",
+    label: "Save my seat",
+    href: "#register",
   },
 
   hero: {
-    eyebrow: "Free masterclass replay",
+    eyebrow: "Free live masterclass · 60 minutes",
     h1: "Overlooked to $300k Principal, Staff & Leadership Roles",
     sub1:
       "If someone else keeps landing your dream job, it's not your technical skills. It's how senior hiring decisions get made.",
     pov: "Final rounds don't go to the best candidate. They go to the lowest-risk hire.",
     sub2:
       "I'll show you the 4 rules that landed me Head of Design at three $700M fintech startups. My clients now use them to land $250k–$350k Principal, Staff and Leadership roles.",
-    dateLine: "Recorded live · About 60 minutes",
+    dateLine: "2 & 3 December 2026 · 2 live sessions",
     timezoneLink: "See it in your time zone →",
-    cta: "Watch the replay →",
-    micro: "Free. Enter your email to watch.",
+    cta: "Save my seat →",
+    micro: "Free. Live only.",
     proof:
       "3x Head of Design at $700M fintech startups · 20+ years in tech · Coached [TIM TO CONFIRM: 1,000+] people through job offers and salary negotiations",
   },
@@ -91,19 +91,19 @@ export const MASTERCLASS_LANDING = {
       {
         title: "Session 1 · US, Asia, AU friendly time",
         lines: [
-          "29 Oct (Thu) · Sydney 10:00am | Singapore 7:00am",
-          "28 Oct (Wed) · New York (ET) 7:00pm | Los Angeles (PT) 4:00pm | London 11:00pm",
+          "3 Dec (Thu) · Sydney 9:55am | Singapore 6:55am",
+          "2 Dec (Wed) · New York (ET) 5:55pm | Los Angeles (PT) 2:55pm | London 10:55pm",
         ],
         cta: "Save my seat →",
-        href: "https://luma.com/fzslx2w9",
+        href: "https://luma.com/j1gfdbyr",
       },
       {
         title: "Session 2 · UK, Europe, Asia, AU friendly time",
         lines: [
-          "29 Oct (Thu) · Sydney 7:00pm | Singapore 4:00pm | London 8:00am | Berlin/Paris (CET) 9:00am",
+          "3 Dec (Thu) · Sydney 6:55pm | Singapore 3:55pm | London 7:55am | Berlin/Paris (CET) 8:55am",
         ],
         cta: "Save my seat →",
-        href: "https://luma.com/64m0y3ed",
+        href: "https://luma.com/hxd20ho7",
       },
     ],
   },
@@ -247,7 +247,7 @@ export const MASTERCLASS_LANDING = {
         rest: ", written an Amazon #1 book, The Quiet Achiever, been a keynote speaker at conferences, and coached 1,000+ people.",
       },
       {
-        bold: "In this masterclass replay",
+        bold: "In this masterclass",
         rest: ", I'll show you exactly what I changed, and how my clients now land $300k Principal and leadership roles.",
       },
     ],
@@ -274,11 +274,11 @@ export const MASTERCLASS_LANDING = {
     },
     {
       q: "Am I senior enough for this?",
-      a: "This is designed for people who are ambitious, brilliant at their craft and want to level up in their career but don't know how. If that's you, watch the replay.",
+      a: "This is designed for people who are ambitious, brilliant at their craft and want to level up in their career but don't know how. If that's you, join us.",
     },
     {
       q: "Is this only for Asian men in tech?",
-      a: "No. I coach women and non-Asians too. If you're brilliant at your craft and keep getting overlooked, watch the replay.",
+      a: "No. I coach women and non-Asians too. If you're brilliant at your craft and keep getting overlooked, join us.",
     },
     {
       q: "Will there be a pitch?",
@@ -286,11 +286,11 @@ export const MASTERCLASS_LANDING = {
     },
     {
       q: "I've been burned by career coaches before.",
-      a: "I get it. That's why my coaching comes with a 100% work-for-free guarantee. I'll explain exactly how it works in the replay.",
+      a: "I get it. That's why my coaching comes with a 100% work-for-free guarantee. I'll explain exactly how it works on the call.",
     },
     {
       q: "How long is it?",
-      a: "About 60 minutes.",
+      a: "60 minutes, including live Q&A.",
     },
   ],
 
@@ -299,8 +299,8 @@ export const MASTERCLASS_LANDING = {
     copy1:
       "60 minutes. The rules nobody taught you about how senior hiring decisions get made. From someone who was laid off with 28 days to leave Australia, and then became 3x Head of Design at $700M startups.",
     copy2: "Tired of being overlooked for the job and salary you deserve?",
-    cta: "Watch the replay →",
-    micro: "Free. Enter your email to watch.",
+    cta: "Save my seat →",
+    micro: "Free. Live only.",
   },
 
   disclaimer:

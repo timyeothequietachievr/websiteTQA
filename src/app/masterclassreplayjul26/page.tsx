@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { MasterclassReplayPage } from "@/components/masterclass/masterclass-replay-page";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Masterclass Replay (Jul 26) | Tim Yeo",
+  title: "Masterclass | Tim Yeo",
   description:
-    "Get the free masterclass replay: How I went from overlooked to $300k Principal & Leadership Roles.",
+    "Free live masterclass: How I went from overlooked to $300k Principal & Leadership Roles.",
 };
 
-const YOUTUBE_REPLAY_URL = "https://youtu.be/ziv_zoiJRI4";
-
+/** Lead-up period: point old replay gates at the live signup page. */
 export default function MasterclassReplayJul26Route() {
-  return (
-    <MasterclassReplayPage
-      successRedirectUrl={YOUTUBE_REPLAY_URL}
-      eyebrow="Free masterclass replay · Jul 26"
-      title="Watch Masterclass: How I went from overlooked to $300k Principal & Leadership Roles"
-      description="Enter your email in the form — you’ll be taken to the replay right after."
-    />
-  );
+  redirect("/masterclass");
 }
