@@ -1,0 +1,13 @@
+---
+description: Hide/show the coaching AI tools band and FAQ via one flag
+alwaysApply: true
+---
+
+# Coaching AI tools (show / hide)
+
+Single switch: `SHOW_COACHING_AI_TOOLS` in `src/lib/coaching-content.ts`.
+
+- **`false` (current):** hide the Premium AI tools band on `/coaching`, the “1 year free subscription…” offering bullet, and the AI tools FAQ.
+- **`true`:** restore all three. Copy, logos, and layout stay in `COACHING_AI_TOOLS*` / `CoachingAiToolsSection` — do not delete them.
+
+When Tim says “bring back the AI tools”, set `SHOW_COACHING_AI_TOOLS` to `true` and verify `/coaching` shows the band, offering bullet (`#PremiumAItools`), and FAQ.

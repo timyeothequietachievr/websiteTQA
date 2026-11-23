@@ -7,7 +7,7 @@ import {
   NewBadge,
   type NewBadgeVariant,
 } from "@/components/coaching/coaching-new-badge";
-import { COACHING_JOBBIE } from "@/lib/coaching-content";
+import { COACHING_JOBBIE, SHOW_COACHING_AI_TOOLS } from "@/lib/coaching-content";
 
 /** Same optimized hero screenshot as /jobbie (1600×1165). */
 const SCREENSHOT_W = 1600;
@@ -123,7 +123,7 @@ function JobbieSection({ newBadge = 4 }: { newBadge?: NewBadgeVariant }) {
   );
 }
 
-/** Jobbie + AI tools — offering checklist lives in CoachingOfferingSection (after How to apply). */
+/** Jobbie (+ AI tools when SHOW_COACHING_AI_TOOLS). Offering checklist is in CoachingOfferingSection. */
 export function CoachingInclusions({
   newBadge = 4,
 }: {
@@ -132,7 +132,9 @@ export function CoachingInclusions({
   return (
     <>
       <JobbieSection newBadge={newBadge} />
-      <CoachingAiToolsSection option={3} newBadge={newBadge} />
+      {SHOW_COACHING_AI_TOOLS ? (
+        <CoachingAiToolsSection option={3} newBadge={newBadge} />
+      ) : null}
     </>
   );
 }

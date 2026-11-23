@@ -25,6 +25,7 @@ import {
   FAQS,
   HELP_WITH,
   HELP_WITH_CLOSING,
+  SHOW_COACHING_AI_TOOLS,
   TESTIMONIALS,
   TOPICS,
 } from "@/lib/coaching-content";
@@ -253,25 +254,27 @@ export function CoachingLandingPage() {
                   </DisclosurePanel>
                 </Disclosure>
               ))}
-              <Disclosure as="div" className="py-5">
-                <dt>
-                  <DisclosureButton className="group flex w-full items-center justify-between text-left">
-                    <span className="font-sans text-base font-semibold text-charcoal">
-                      {COACHING_AI_TOOLS.faqTitle}
-                    </span>
-                    <ChevronDownIcon
-                      aria-hidden
-                      className="size-5 shrink-0 text-warm-500 group-data-open:rotate-180"
-                    />
-                  </DisclosureButton>
-                </dt>
-                <DisclosurePanel
-                  as="dd"
-                  className="mt-3 font-reading text-[16px] leading-relaxed text-warm-700"
-                >
-                  {COACHING_AI_TOOLS.faqAnswer}
-                </DisclosurePanel>
-              </Disclosure>
+              {SHOW_COACHING_AI_TOOLS ? (
+                <Disclosure as="div" className="py-5">
+                  <dt>
+                    <DisclosureButton className="group flex w-full items-center justify-between text-left">
+                      <span className="font-sans text-base font-semibold text-charcoal">
+                        {COACHING_AI_TOOLS.faqTitle}
+                      </span>
+                      <ChevronDownIcon
+                        aria-hidden
+                        className="size-5 shrink-0 text-warm-500 group-data-open:rotate-180"
+                      />
+                    </DisclosureButton>
+                  </dt>
+                  <DisclosurePanel
+                    as="dd"
+                    className="mt-3 font-reading text-[16px] leading-relaxed text-warm-700"
+                  >
+                    {COACHING_AI_TOOLS.faqAnswer}
+                  </DisclosurePanel>
+                </Disclosure>
+              ) : null}
             </dl>
           </Container>
         </section>

@@ -4,6 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { Container } from "@/components/revamp/primitives";
 import {
   COACHING_EVERYTHING_INCLUDED,
+  SHOW_COACHING_AI_TOOLS,
   WHAT_YOU_GET_ITEMS,
 } from "@/lib/coaching-content";
 
@@ -108,11 +109,13 @@ function coreItems(): ListItem[] {
 }
 
 function extraItems(): ListItem[] {
-  return COACHING_EVERYTHING_INCLUDED.extras.map((e) => ({
-    lead: e.lead,
-    body: e.body,
-    learnMoreHref: e.learnMoreHref,
-  }));
+  return COACHING_EVERYTHING_INCLUDED.extras
+    .filter((e) => SHOW_COACHING_AI_TOOLS || e.learnMoreHref !== "#PremiumAItools")
+    .map((e) => ({
+      lead: e.lead,
+      body: e.body,
+      learnMoreHref: e.learnMoreHref,
+    }));
 }
 
 function ArrowList({ items, palette }: { items: ListItem[]; palette: SplitPalette }) {

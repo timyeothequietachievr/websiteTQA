@@ -247,9 +247,16 @@ export const COACHING_JOBBIE = {
 } as const;
 
 /**
+ * Flip to `true` to restore the AI tools band, offering bullet, and FAQ on /coaching.
+ * Content below stays in place so “bring back the AI tools” is one switch.
+ */
+export const SHOW_COACHING_AI_TOOLS = false;
+
+/**
  * Premium AI / product tools included with coaching (live list Nov 2026).
  * Excludes offers marked almost gone or temporarily unavailable.
  * Values are approximate 1-year retail.
+ * Hidden on /coaching while SHOW_COACHING_AI_TOOLS is false.
  */
 export const COACHING_AI_TOOLS_FEATURED = [
   {
@@ -349,6 +356,7 @@ export const COACHING_EVERYTHING_INCLUDED = {
   title: "Every coaching client gets:",
   lede: "Everything you need to land your next role — from application to negotiating multiple job offers. You never have to job search alone again.",
   alsoGetTitle: "Starting November 2026, you also get:",
+  /** Keep the AI tools bullet in source; filter with SHOW_COACHING_AI_TOOLS at render. */
   extras: [
     {
       lead: "Jobbie — your personal AI-powered talent recruiter.",
