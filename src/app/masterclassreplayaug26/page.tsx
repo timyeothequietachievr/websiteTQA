@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Masterclass | Tim Yeo",
+  title: "Masterclass Replay | Tim Yeo",
   description:
-    "Free live masterclass: How I went from overlooked to $300k Principal & Leadership Roles.",
+    "Get the free masterclass replay: How I went from overlooked to $300k Principal & Leadership Roles.",
 };
 
-/** Lead-up period: point old replay gates at the live signup page. */
+/** Older month gate → canonical replay signup (EO popup → YouTube). */
 export default function MasterclassReplayAug26Route() {
-  redirect("/masterclass");
+  redirect("/masterclassreplay");
 }
